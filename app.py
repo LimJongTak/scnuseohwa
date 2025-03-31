@@ -59,7 +59,7 @@ def home():
         <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMTdfOTMg%2FMDAxNjk3NTUzOTg2MTA0.gSsQkjIa5rPWf5unvG3aJBLnSGRFHjBJ2WINbtprCzUg.4CrMPrfv_mFch9NGukuol4bBFRWbxTJE0_7_L82QfSUg.JPEG.ka14410%2F1697553982351.jpg&type=sc960_832" alt="1차라인업 실루엣">
         <h3>1차 라인업</h3>
         <p>2025년 국립순천대학교 대동제 1차 라인업</p>
-        <!-- Instagram URL을 대신 처리할 수 있는 /gift로 리디렉션 -->
+        <!-- 서버 측 리디렉션 -->
         <button onclick="window.location.href='/gift'">라인업 보러가기</button>
     </div>
 </body>
@@ -68,9 +68,9 @@ def home():
 
 @app.route('/gift')
 def gift():
-    # Instagram 페이지로 리디렉션
-    return redirect("https://www.youtube.com/shorts/DGTyFxyKSrM")
+    # 서버 측 리디렉션 처리
+    return redirect("https://www.youtube.com/shorts/DGTyFxyKSrM", code=302)
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # Heroku에서 PORT 환경 변수를 가져오고, 없으면 기본 5000번 포트를 사용
+    port = int(os.environ.get("PORT", 5000))  
     app.run(host="0.0.0.0", port=port, debug=False)
