@@ -69,7 +69,7 @@ def home():
 @app.route('/gift')
 def gift():
     # Instagram 페이지로 리디렉션
-    return redirect("https://www.instagram.com/scnu_seohwa")
+    return redirect("https://www.youtube.com/shorts/DGTyFxyKSrM")
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))  # Heroku에서 PORT 환경 변수를 가져오고, 없으면 기본 5000번 포트를 사용
