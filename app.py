@@ -12,7 +12,7 @@ def home():
     <meta charset="UTF-8">
     <title>서화총학생회</title>
     
-    <meta property="og:title" content="서화" />
+    <meta property="og:title" content="서화총학생회" />
     <meta property="og:description" content="2025년 국립순천대학교 대동제 1차 라인업" />
     <meta property="og:image" content="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMTdfOTMg%2FMDAxNjk3NTUzOTg2MTA0.gSsQkjIa5rPWf5unvG3aJBLnSGRFHjBJ2WINbtprCzUg.4CrMPrfv_mFch9NGukuol4bBFRWbxTJE0_7_L82QfSUg.JPEG.ka14410%2F1697553982351.jpg&type=sc960_832" />
     <meta property="og:url" content="https://scnuseohwa.site" />
@@ -59,7 +59,7 @@ def home():
         <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMTdfOTMg%2FMDAxNjk3NTUzOTg2MTA0.gSsQkjIa5rPWf5unvG3aJBLnSGRFHjBJ2WINbtprCzUg.4CrMPrfv_mFch9NGukuol4bBFRWbxTJE0_7_L82QfSUg.JPEG.ka14410%2F1697553982351.jpg&type=sc960_832" alt="1차라인업 실루엣">
         <h3>1차 라인업</h3>
         <p>2025년 국립순천대학교 대동제 1차 라인업</p>
-        <button onclick="location.href='/gift'">라인업 보러러가기</button>
+        <button onclick="location.href='/gift'">라인업 보러가기</button>
     </div>
 </body>
 </html>
