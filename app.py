@@ -60,7 +60,7 @@ def home():
 
 @app.route('/gift')
 def gift():
-    return redirect("https://www.instagram.com/scnu_seohwa?igsh=MWN5MmZnNWtlaHd4")
+    return redirect("https://www.instagram.com/reel/DGPE5SlTaj6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==")
 
 if __name__ == '__main__':
     # Heroku에서 제공하는 포트를 사용하도록 수정
