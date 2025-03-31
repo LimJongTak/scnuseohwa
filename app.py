@@ -89,7 +89,7 @@ def gift():
     <div class="redirect-container">
         <h3>1차 라인업 영상 보러가기</h3>
         <p>아래 버튼을 눌러 영상을 확인하세요!</p>
-        <a href="https://www.youtube.com/shorts/DGTyFxyKSrMhttps://www.youtube.com/watch?v=S0fz__s5Aew" target="_blank">영상 보러가기 ▶</a>
+        <a href="https://www.youtube.com/shorts/S0fz__s5Aew" target="_blank">영상 보러가기 ▶</a>
     </div>
 </body>
 </html>
