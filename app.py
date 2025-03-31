@@ -11,6 +11,14 @@ def home():
 <head>
     <meta charset="UTF-8">
     <title>서화총학생회</title>
+    
+    <!-- OG 태그 추가 -->
+    <meta property="og:title" content="서화총학생회" />
+    <meta property="og:description" content="2025년 국립순천대학교 대동제 1차 라인업" />
+    <meta property="og:image" content="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMTdfOTMg%2FMDAxNjk3NTUzOTg2MTA0.gSsQkjIa5rPWf5unvG3aJBLnSGRFHjBJ2WINbtprCzUg.4CrMPrfv_mFch9NGukuol4bBFRWbxTJE0_7_L82QfSUg.JPEG.ka14410%2F1697553982351.jpg&type=sc960_832" />
+    <meta property="og:url" content="https://scnuseohwa.site" />
+    <meta property="og:type" content="website" />
+
     <style>
         body {
             background-color: #fae2e5;
