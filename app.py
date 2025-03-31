@@ -1,4 +1,5 @@
 from flask import Flask, render_template_string, redirect
+import os  # os 모듈을 추가하여 환경 변수를 사용합니다
 
 app = Flask(__name__)
 
@@ -62,4 +63,6 @@ def gift():
     return redirect("https://www.instagram.com/scnu_seohwa?igsh=MWN5MmZnNWtlaHd4")
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    # Heroku에서 제공하는 포트를 사용하도록 수정
+    port = int(os.environ.get("PORT", 5000))  # Heroku에서 PORT 환경 변수를 가져오고, 없으면 기본 5000번 포트를 사용
+    app.run(host="0.0.0.0", port=port, debug=False)  # host='0.0.0.0'으로 설정하여 모든 IP에서 접속 가능하게 설정
