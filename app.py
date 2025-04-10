@@ -24,7 +24,7 @@ def home():
     <div class="container">
         <header class="header">
             <div class="logo">
-                Fairy Tale
+                
             </div>
             <nav class="menu">
                 <a href="/">메인</a>
@@ -43,8 +43,8 @@ def home():
         </div>
 
         <footer class="footer">
+            <p class="footer-text">COPYRIGHT ⓒ 2025 국립순천대학교 서화총학생회 사이트 제작팀</p>
             <a href="https://scnu.ac.kr" class="footer-button">사이트 정보</a>
-            <p>COPYRIGHT ⓒ 2025 국립순천대학교 서화총학생회 사이트 제작팀</p>
         </footer>
     </div>
 
