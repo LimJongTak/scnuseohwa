@@ -5,8 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template_string('''
-<!DOCTYPE html>
+    return render_template_string('''<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -22,9 +21,10 @@ def home():
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh; /* 변경: 콘텐츠가 길어질 경우 스크롤 가능하게 */
             margin: 0;
             font-family: Arial, sans-serif;
+            flex-direction: column;
         }
         .gift-container {
             width: 320px;
@@ -33,6 +33,7 @@ def home():
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             text-align: center;
             overflow: hidden;
+            margin-bottom: 20px; /* 버튼과 구분을 위해 여백 추가 */
         }
         img { width: 100%; }
         button {
@@ -53,14 +54,12 @@ def home():
         <button onclick="window.location.href='/gift'">라인업 보러가기</button>
     </div>
 </body>
-</html>
-    ''')
+</html>''')
 
 # 중간 안내 페이지 추가 (배경 동일하게 적용)
 @app.route('/gift')
 def gift():
-    return render_template_string('''
-<!DOCTYPE html>
+    return render_template_string('''<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -70,8 +69,10 @@ def gift():
             background: radial-gradient(circle at center, #8E7DBE 0%, #A6D6D6 100%);
             display: flex;
             align-items: center; justify-content: center;
-            height: 100vh; margin: 0;
+            min-height: 100vh; /* 변경: 콘텐츠가 길어질 경우 스크롤 가능하게 */
+            margin: 0;
             font-family: Arial, sans-serif;
+            flex-direction: column;
         }
         .redirect-container {
             text-align: center; background-color: #fff;
@@ -93,8 +94,7 @@ def gift():
         <a href="https://www.youtube.com/shorts/S0fz__s5Aew" target="_blank">영상 보러가기 ▶</a>
     </div>
 </body>
-</html>
-''')
+</html>''')
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))  
