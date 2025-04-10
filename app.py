@@ -18,7 +18,7 @@ def home():
     <meta property="og:type" content="website" />
     <style>
         body {
-            background-color: #fae2e5;
+            background: radial-gradient(circle at center, #8E7DBE 0%, #A6D6D6 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -56,7 +56,7 @@ def home():
 </html>
     ''')
 
-# 중간 안내 페이지 추가
+# 중간 안내 페이지 추가 (배경 동일하게 적용)
 @app.route('/gift')
 def gift():
     return render_template_string('''
@@ -67,9 +67,10 @@ def gift():
     <title>라인업 바로가기</title>
     <style>
         body {
+            background: radial-gradient(circle at center, #8E7DBE 0%, #A6D6D6 100%);
             display: flex;
             align-items: center; justify-content: center;
-            height: 100vh; margin: 0; background-color: #fae2e5;
+            height: 100vh; margin: 0;
             font-family: Arial, sans-serif;
         }
         .redirect-container {
