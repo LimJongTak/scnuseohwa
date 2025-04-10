@@ -24,7 +24,7 @@ def home():
     <div class="container">
         <header class="header">
             <div class="logo">
-                
+                Fairy Tale
             </div>
             <nav class="menu">
                 <a href="/">메인</a>
@@ -39,6 +39,8 @@ def home():
 
         <div class="main-content">
             <div class="intro">
+                <h2>2025년 대동제</h2>
+                <p>국립순천대학교 대동제 1차 라인업을 소개합니다.</p>
             </div>
         </div>
 

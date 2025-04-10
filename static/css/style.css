@@ -121,12 +121,16 @@ body {
         right: 0;
         padding: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%; /* 모바일에서 메뉴 아이템을 꽉 차게 보이도록 */
     }
 
     .menu-open a {
         margin: 10px 0;
         text-decoration: none;
         color: #8E7DBE;
+        padding: 10px 15px;
+        font-size: 1rem;
+        background-color: transparent;
     }
 
     .menu-open a:hover {
