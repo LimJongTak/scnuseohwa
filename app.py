@@ -39,7 +39,7 @@ def home():
     <nav class="menu">
         <a href="/">메인</a>
         <a href="/notice">공지사항</a>
-        <a href="/booth-food">부스 & 푸드트럭 리스트</a>
+        <a href="/booth-food">부스&푸드트럭</a>
         <a href="/map">지도</a>
         <a href="/schedule">축제 일정</a>
         <a href="/qna">QnA</a>
@@ -52,7 +52,7 @@ def home():
     <div class="menu-open">
         <a href="/">메인</a>
         <a href="/notice">공지사항</a>
-        <a href="/booth-food">부스 & 푸드트럭 리스트</a>
+        <a href="/booth-food">부스&푸드트럭</a>
         <a href="/map">지도</a>
         <a href="/schedule">축제 일정</a>
         <a href="/qna">QnA</a>
