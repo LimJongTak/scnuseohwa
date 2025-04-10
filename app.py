@@ -69,14 +69,17 @@ def home():
         function toggleMenu() {
     const menu = document.querySelector('.menu-open');
     const menuBar = document.querySelector('.menu-bar');
+    
+    // 메뉴가 열리면 X로 변경하고, 닫히면 햄버거 아이콘으로 변경
     if (menu.style.display === "flex") {
         menu.style.display = "none";
-        menuBar.classList.remove('open');
+        menuBar.classList.remove('open'); // X 아이콘을 다시 햄버거로
     } else {
         menu.style.display = "flex";
-        menuBar.classList.add('open');
+        menuBar.classList.add('open'); // 햄버거 아이콘을 X로 변경
     }
 }
+
     </script>
 </body>
 </html>

@@ -48,10 +48,18 @@ body {
 
 /* 메뉴 아이콘 색상을 흰색으로 변경 */
 .menu-bar {
-    display: none;
+    display: block;
     font-size: 30px;
     cursor: pointer;
     color: white; /* 메뉴 아이콘을 흰색으로 설정 */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* 메뉴가 열린 후, 햄버거 메뉴 아이콘이 X로 변경 */
+.menu-bar.open {
+    content: '×';
 }
 
 /* 수정된 footer 스타일 */
@@ -131,5 +139,20 @@ body {
     /* 햄버거 메뉴 아이콘이 X로 변경 */
     .menu-bar.open {
         content: '×';
+    }
+}
+
+/* PC 화면에서 메뉴를 햄버거 메뉴처럼 보이도록 설정 */
+@media (min-width: 768px) {
+    .header nav {
+        display: flex; /* PC에서 메뉴 항목을 가로로 표시 */
+    }
+
+    .menu-bar {
+        display: none; /* PC 화면에서는 햄버거 메뉴 아이콘 숨기기 */
+    }
+
+    .menu-open {
+        display: flex !important; /* 모바일에서는 숨기지 않도록 설정 */
     }
 }
