@@ -23,36 +23,20 @@ def home():
 <body>
     <div class="container">
         <header class="header">
-            <header class="header">
-    <!-- 로고 -->
-    <div class="logo">
-        <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Fairy Tale Logo" width="350" height="350" />
-    </div>
-
-    <!-- 네비게이션 메뉴 -->
-    <nav class="menu">
-        <a href="/">메인</a>
-        <a href="/notice">공지사항</a>
-        <a href="/booth-food">부스 & 푸드트럭 리스트</a>
-        <a href="/map">지도</a>
-        <a href="/schedule">축제 일정</a>
-        <a href="/qna">QnA</a>
-    </nav>
-
-    <!-- 햄버거 메뉴 버튼 -->
-    <div class="menu-bar" onclick="toggleMenu()">&#9776;</div>
-
-    <!-- 숨겨진 메뉴 -->
-    <div class="menu-open">
-        <a href="/">메인</a>
-        <a href="/notice">공지사항</a>
-        <a href="/booth-food">부스 & 푸드트럭 리스트</a>
-        <a href="/map">지도</a>
-        <a href="/schedule">축제 일정</a>
-        <a href="/qna">QnA</a>
-    </div>
-</header>
-
+            <!-- 이미지 로고 삽입 -->
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Fairy Tale Logo" width="350" height="350" />
+            </div>
+            <nav class="menu">
+                <a href="/">메인</a>
+                <a href="/notice">공지사항</a>
+                <a href="/booth-food">부스 & 푸드트럭 리스트</a>
+                <a href="/map">지도</a>
+                <a href="/schedule">축제 일정</a>
+                <a href="/qna">QnA</a>
+            </nav>
+            <div class="menu-bar" onclick="toggleMenu()">&#9776;</div>
+        </header>
 
         <div class="main-content">
             <div class="intro">
@@ -66,25 +50,21 @@ def home():
     </div>
 
     <script>
-        // 햄버거 메뉴 아이콘 클릭 시 토글 기능
-function toggleMenu() {
-    const menu = document.querySelector('.menu-open');
-    const menuBar = document.querySelector('.menu-bar');
-    if (menu.style.display === "flex") {
-        menu.style.display = "none";
-        menuBar.classList.remove('open');
-    } else {
-        menu.style.display = "flex";
-        menuBar.classList.add('open');  // 이 부분에서 'open' 클래스를 추가하여 X로 변경
-    }
-}
-
-
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-open');
+            const menuBar = document.querySelector('.menu-bar');
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+                menuBar.classList.remove('open');
+            } else {
+                menu.style.display = "flex";
+                menuBar.classList.add('open');
+            }
+        }
     </script>
 </body>
 </html>
     ''')
-
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))  
