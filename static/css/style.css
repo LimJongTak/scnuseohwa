@@ -136,7 +136,8 @@ body {
     }
 
     /* 메뉴바 클릭시 메뉴가 보이도록 설정 */
-    .menu-bar:focus + .menu-open {
+    .menu-bar:focus + .menu-open,
+    .menu-bar.open + .menu-open {
         display: flex;
     }
 }

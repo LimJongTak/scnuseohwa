@@ -50,8 +50,15 @@ def home():
 
     <script>
         function toggleMenu() {
-            const menu = document.getElementById('menuOpen');
-            menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+            const menu = document.querySelector('.menu-open');
+            const menuBar = document.querySelector('.menu-bar');
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+                menuBar.classList.remove('open');
+            } else {
+                menu.style.display = "flex";
+                menuBar.classList.add('open');
+            }
         }
     </script>
 </body>
