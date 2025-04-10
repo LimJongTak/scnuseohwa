@@ -23,8 +23,9 @@ def home():
 <body>
     <div class="container">
         <header class="header">
+            <!-- 이미지 로고 삽입 -->
             <div class="logo">
-                Fairy Tale
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Fairy Tale Logo" width="400" height="400" />
             </div>
             <nav class="menu">
                 <a href="/">메인</a>
