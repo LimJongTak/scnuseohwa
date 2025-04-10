@@ -1,9 +1,15 @@
+/* footer 스타일을 맨 하단에 고정 */
 .footer-container {
     background-color: transparent; /* 배경을 투명으로 설정 */
     padding: 10px;
     text-align: center;
     font-size: 14px;
     color: #333;
+    position: fixed; /* 페이지 하단에 고정 */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10; /* 다른 요소들 위로 오도록 설정 */
 }
 
 .footer-button {

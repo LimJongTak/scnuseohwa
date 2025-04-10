@@ -28,7 +28,13 @@ def home():
     <div class="logo">
         <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Fairy Tale Logo" width="350" height="350" />
     </div>
-
+    <div>
+        <h2>국립순천대학교</h2>
+        <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
+    </div>
+    <div>
+        <p> 메뉴 넣을 자리 </p>
+    </div>
     <!-- 네비게이션 메뉴 -->
     <nav class="menu">
         <a href="/">메인</a>
