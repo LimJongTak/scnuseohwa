@@ -1,0 +1,43 @@
+/* Header Menu Styles */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu-container a {
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: transparent;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-container a:hover {
+    background-color: #0dbfef;
+    color: #fff;
+}
+
+/* Style the page's body content */
+body {
+    background: radial-gradient(circle at center, #8E7DBE 0%, #A6D6D6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    padding-top: 60px; /* Space for the fixed header */
+}

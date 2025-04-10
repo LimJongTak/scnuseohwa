@@ -1,0 +1,35 @@
+.footer-container {
+    width: 100%;
+    background-color: transparent; /* 배경을 투명으로 설정 */
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse; /* 위아래 순서를 반전시킴 */
+}
+
+.footer-text {
+    margin: 5px 0;
+}
+
+.footer-button {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.footer-button:hover {
+    background-color: #ffffff;
+    color: #00B5E2;
+}

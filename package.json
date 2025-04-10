@@ -1,0 +1,12 @@
+{
+  "name": "flask-scss-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass src/scss:public/css",  
+    "watch-css": "sass --watch src/scss:public/css"  
+  },
+  "devDependencies": {
+    "sass": "^1.86.3"  
+  }
+}

@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template_string('''<!DOCTYPE html>
+    return render_template_string('''
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -15,86 +16,66 @@ def home():
     <meta property="og:image" content="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMTdfOTMg%2FMDAxNjk3NTUzOTg2MTA0.gSsQkjIa5rPWf5unvG3aJBLnSGRFHjBJ2WINbtprCzUg.4CrMPrfv_mFch9NGukuol4bBFRWbxTJE0_7_L82QfSUg.JPEG.ka14410%2F1697553982351.jpg&type=sc960_832" />
     <meta property="og:url" content="https://scnuseohwa.site" />
     <meta property="og:type" content="website" />
-    <style>
-        body {
-            background: radial-gradient(circle at center, #8E7DBE 0%, #A6D6D6 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh; /* 변경: 콘텐츠가 길어질 경우 스크롤 가능하게 */
-            margin: 0;
-            font-family: Arial, sans-serif;
-            flex-direction: column;
-        }
-        .gift-container {
-            width: 320px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: center;
-            overflow: hidden;
-            margin-bottom: 20px; /* 버튼과 구분을 위해 여백 추가 */
-        }
-        img { width: 100%; }
-        button {
-            background-color: #0dbfef;
-            border: none; color: white;
-            padding: 10px 20px; font-size: 16px;
-            cursor: pointer; border-radius: 5px; margin-bottom: 15px;
-        }
-        h3 { padding: 0 10px; }
-        a { text-decoration: none; color: white; }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body.css') }}" />
 </head>
 <body>
-    <div class="gift-container">
-        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMTdfOTMg%2FMDAxNjk3NTUzOTg2MTA0.gSsQkjIa5rPWf5unvG3aJBLnSGRFHjBJ2WINbtprCzUg.4CrMPrfv_mFch9NGukuol4bBFRWbxTJE0_7_L82QfSUg.JPEG.ka14410%2F1697553982351.jpg&type=sc960_832" alt="1차라인업 실루엣">
-        <h3>1차 라인업</h3>
-        <p>2025년 국립순천대학교 대동제 1차 라인업</p>
-        <button onclick="window.location.href='/gift'">라인업 보러가기</button>
+    <!-- Header: Menu -->
+    <div class="menu-container">
+        <a href="/">메인</a>
+        <a href="/notice">공지사항</a>
+        <a href="/booth-food">부스 & 푸드트럭 리스트</a>
+        <a href="/map">지도</a>
+        <a href="/schedule">축제 일정</a>
+        <a href="/qna">QnA</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-container">
+        <p class="footer-text">COPYRIGHT ⓒ 2025 국립순천대학교 서화총학생회 사이트 제작팀</p>
+        <a href="https://scnu.ac.kr" class="footer-button">사이트 정보</a>
     </div>
 </body>
-</html>''')
+</html>
+    ''')
 
-# 중간 안내 페이지 추가 (배경 동일하게 적용)
-@app.route('/gift')
-def gift():
-    return render_template_string('''<!DOCTYPE html>
+@app.route('/notice')
+def notice():
+    return render_template_string('''
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>라인업 바로가기</title>
-    <style>
-        body {
-            background: radial-gradient(circle at center, #8E7DBE 0%, #A6D6D6 100%);
-            display: flex;
-            align-items: center; justify-content: center;
-            min-height: 100vh; /* 변경: 콘텐츠가 길어질 경우 스크롤 가능하게 */
-            margin: 0;
-            font-family: Arial, sans-serif;
-            flex-direction: column;
-        }
-        .redirect-container {
-            text-align: center; background-color: #fff;
-            padding: 20px; border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        a {
-            text-decoration: none; color: white;
-            padding: 10px 20px; background-color: #0dbfef;
-            border-radius: 5px; display: inline-block;
-            font-size: 16px; margin-top: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/notice.css') }}" />
 </head>
 <body>
-    <div class="redirect-container">
-        <h3>1차 라인업 영상 보러가기</h3>
-        <p>아래 버튼을 눌러 영상을 확인하세요!</p>
-        <a href="https://www.youtube.com/shorts/S0fz__s5Aew" target="_blank">영상 보러가기 ▶</a>
+    <div class="notice-container">
+        <div class="notice-header">
+            <h2>키워드 검색</h2>
+        </div>
+        <div class="notice-list">
+            <div class="notice-item">
+                <p>2024 강원대학교 백령대동제 개최 안내</p>
+                <span>상세보기</span>
+            </div>
+            <div class="notice-item">
+                <p>2024 강원대학교 백령대동제 개최 안내</p>
+                <span>상세보기</span>
+            </div>
+            <div class="notice-item">
+                <p>신규 게시물</p>
+                <span>상세보기</span>
+            </div>
+            <!-- 추가 공지사항 항목들 -->
+        </div>
+        <div class="pagination">
+            <button>1</button>
+            <button>2</button>
+        </div>
     </div>
 </body>
-</html>''')
+</html>
+    ''')
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))  
