@@ -39,14 +39,12 @@ def home():
 
         <div class="main-content">
             <div class="intro">
-                <h2>2025년 대동제</h2>
-                <p>국립순천대학교 대동제 1차 라인업을 소개합니다.</p>
             </div>
         </div>
 
         <footer class="footer">
-            <p class="footer-text">COPYRIGHT ⓒ 2025 국립순천대학교 서화총학생회 사이트 제작팀</p>
-            <a href="https://scnu.ac.kr" class="footer-button">사이트 정보</a>
+            <p class="footer-text">COPYRIGHT ⓒ 2025 국립순천대학교 서화총학생회</p>
+            <a href="https://naver.com" class="footer-button">사이트 제작자</a>
         </footer>
     </div>
 
