@@ -18,61 +18,42 @@ def home():
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/body.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 </head>
 <body>
-    <!-- Header: Menu -->
-    <div class="menu-container">
-        <a href="/">메인</a>
-        <a href="/notice">공지사항</a>
-        <a href="/booth-food">부스 & 푸드트럭 리스트</a>
-        <a href="/map">지도</a>
-        <a href="/schedule">축제 일정</a>
-        <a href="/qna">QnA</a>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                Fairy Tale
+            </div>
+            <nav class="menu">
+                <a href="/">메인</a>
+                <a href="/notice">공지사항</a>
+                <a href="/booth-food">부스 & 푸드트럭 리스트</a>
+                <a href="/map">지도</a>
+                <a href="/schedule">축제 일정</a>
+                <a href="/qna">QnA</a>
+            </nav>
+            <div class="menu-bar" onclick="toggleMenu()">&#9776;</div>
+        </header>
+
+        <div class="main-content">
+            <div class="intro">
+            </div>
+        </div>
+
+        <footer class="footer">
+            <a href="https://scnu.ac.kr" class="footer-button">사이트 정보</a>
+            <p>COPYRIGHT ⓒ 2025 국립순천대학교 서화총학생회 사이트 제작팀</p>
+        </footer>
     </div>
 
-    <!-- Footer -->
-    <div class="footer-container">
-        <p class="footer-text">COPYRIGHT ⓒ 2025 국립순천대학교 서화총학생회 사이트 제작팀</p>
-        <a href="https://scnu.ac.kr" class="footer-button">사이트 정보</a>
-    </div>
-</body>
-</html>
-    ''')
-
-@app.route('/notice')
-def notice():
-    return render_template_string('''
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/notice.css') }}" />
-</head>
-<body>
-    <div class="notice-container">
-        <div class="notice-header">
-            <h2>키워드 검색</h2>
-        </div>
-        <div class="notice-list">
-            <div class="notice-item">
-                <p>2024 강원대학교 백령대동제 개최 안내</p>
-                <span>상세보기</span>
-            </div>
-            <div class="notice-item">
-                <p>2024 강원대학교 백령대동제 개최 안내</p>
-                <span>상세보기</span>
-            </div>
-            <div class="notice-item">
-                <p>신규 게시물</p>
-                <span>상세보기</span>
-            </div>
-            <!-- 추가 공지사항 항목들 -->
-        </div>
-        <div class="pagination">
-            <button>1</button>
-            <button>2</button>
-        </div>
-    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menuOpen');
+            menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+        }
+    </script>
 </body>
 </html>
     ''')

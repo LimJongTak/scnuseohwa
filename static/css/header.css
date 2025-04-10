@@ -1,43 +1,25 @@
-/* Header Menu Styles */
-.menu-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.header {
+    background: transparent; /* 배경을 투명으로 설정 */
     padding: 20px;
-    background: transparent;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.menu-container a {
+.header .logo {
+    font-size: 2.5rem;
+    color: #8E7DBE;
+}
+
+.header nav a {
+    margin: 0 15px;
     text-decoration: none;
-    padding: 12px 20px;
-    background-color: transparent;
-    color: white;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 18px;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem;
+    color: #8E7DBE;
+    padding: 10px;
 }
 
-.menu-container a:hover {
-    background-color: #0dbfef;
-    color: #fff;
-}
-
-/* Style the page's body content */
-body {
-    background: radial-gradient(circle at center, #8E7DBE 0%, #A6D6D6 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    flex-direction: column;
-    padding-top: 60px; /* Space for the fixed header */
+.header nav a:hover {
+    color: #ffffff;
+    background-color: #8E7DBE;
+    border-radius: 5px;
 }
