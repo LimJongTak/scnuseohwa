@@ -66,19 +66,19 @@ def home():
     </div>
 
     <script>
-        function toggleMenu() {
+        // 햄버거 메뉴 아이콘 클릭 시 토글 기능
+function toggleMenu() {
     const menu = document.querySelector('.menu-open');
     const menuBar = document.querySelector('.menu-bar');
-    
-    // 메뉴가 열리면 X로 변경하고, 닫히면 햄버거 아이콘으로 변경
     if (menu.style.display === "flex") {
         menu.style.display = "none";
-        menuBar.classList.remove('open'); // X 아이콘을 다시 햄버거로
+        menuBar.classList.remove('open');
     } else {
         menu.style.display = "flex";
-        menuBar.classList.add('open'); // 햄버거 아이콘을 X로 변경
+        menuBar.classList.add('open');  // 이 부분에서 'open' 클래스를 추가하여 X로 변경
     }
 }
+
 
     </script>
 </body>
