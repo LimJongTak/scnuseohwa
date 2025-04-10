@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>서화총학생회</title>
+    <meta property="og:title" content="서화총학생회" />
+    <meta property="og:description" content="2025년 국립순천대학교 대동제 1차 라인업" />
+    <meta property="og:image" content="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMTdfOTMg%2FMDAxNjk3NTUzOTg2MTA0.gSsQkjIa5rPWf5unvG3aJBLnSGRFHjBJ2WINbtprCzUg.4CrMPrfv_mFch9NGukuol4bBFRWbxTJE0_7_L82QfSUg.JPEG.ka14410%2F1697553982351.jpg&type=sc960_832" />
+    <meta property="og:url" content="https://scnuseohwa.site" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Fairy Tale Logo" width="350" height="350" />
+            </div>
+            <div>
+                <h2>국립순천대학교</h2>
+                <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
+            </div>
+            <nav class="menu">
+                <a href="/">메인</a>
+                <a href="/notice">공지사항</a>
+                <a href="/booth-food">부스&푸드트럭</a>
+                <a href="/map">지도</a>
+                <a href="/schedule">축제 일정</a>
+                <a href="/qna">QnA</a>
+            </nav>
+            <div class="menu-bar" onclick="toggleMenu()">&#9776;</div>
+        </header>
+
+        <div class="main-content">
+            <h2>메인 페이지</h2>
+            <p>여기는 메인 페이지입니다.</p>
+        </div>
+
+        <footer class="footer">
+            <p class="footer-text">COPYRIGHT ⓒ 2025 국립순천대학교 서화총학생회</p>
+            <a href="https://naver.com" class="footer-button">사이트 제작자</a>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-open');
+            const menuBar = document.querySelector('.menu-bar');
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+                menuBar.classList.remove('open');
+            } else {
+                menu.style.display = "flex";
+                menuBar.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -55,7 +55,6 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    transition: transform 0.3s ease; /* 크기 변화 방지 */
 }
 
 /* 수정된 footer 스타일 */

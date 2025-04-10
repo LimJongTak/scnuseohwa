@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>QnA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Fairy Tale Logo" width="350" height="350" />
+            </div>
+            <div>
+                <h2>국립순천대학교</h2>
+                <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
+            </div>
+            <nav class="menu">
+                <a href="/">메인</a>
+                <a href="/notice">공지사항</a>
+                <a href="/booth-food">부스&푸드트럭</a>
+                <a href="/map">지도</a>
+                <a href="/schedule">축제 일정</a>
+                <a href="/qna">QnA</a>
+            </nav>
+            <div class="menu-bar" onclick="toggleMenu()">&#9776;</div>
+        </header>
+
+        <div class="main-content">
+            <h2>QnA</h2>
+            <p>궁금한 사항이 있으면 여기에 질문을 남겨주세요!</p>
+
+            <!-- 질문 게시판 -->
+            <div class="qna-board">
+                <div class="qna-item">
+                    <p><strong>질문 1:</strong> 대동제 공연 일정은 어떻게 되나요?</p>
+                    <p>답변: 대동제 공연 일정은 2025년 5월 28일(수)부터 5월 29일(목)까지 진행됩니다.</p>
+                </div>
+                <div class="qna-item">
+                    <p><strong>질문 2:</strong> 행사 입장 시 티켓이 필요한가요?</p>
+                    <p>답변: 행사 입장은 무료이며, 사전 예약제로 운영됩니다. 자세한 사항은 공지를 참고하세요.</p>
+                </div>
+                <!-- 추가 질문 및 답변 -->
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="footer-text">COPYRIGHT ⓒ 2025 국립순천대학교 서화총학생회</p>
+            <a href="https://naver.com" class="footer-button">사이트 제작자</a>
+        </footer>
+    </div>
+</body>
+</html>
