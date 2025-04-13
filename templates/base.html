@@ -15,6 +15,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/creator.css') }}">
 
     <style>
+          /* 로딩 GIF 중앙 배치 */
+          #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+        #loading img {
+            width: 100px; /* 원하는 크기로 조절 */
+            height: auto;
+        }
+
+        /* 페이지 로딩 후 로딩 이미지 숨기기 */
+        body.loaded #loading {
+            display: none;
+        }
         canvas#bg-canvas {
             position: fixed;
             top: 0;
@@ -25,6 +42,10 @@
     </style>
 
     <script>
+         // 페이지 로딩 후 로딩 이미지 숨기기
+         window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
         // 메뉴 토글
         function toggleMenu() {
             const menu = document.getElementById('hamburger-menu');
@@ -110,6 +131,9 @@
     </script>
 </head>
 <body>
+    <div id="loading">
+        <img src="{{ url_for('static', filename='images/loading.gif') }}" alt="Loading...">
+    </div>
     <canvas id="bg-canvas"></canvas>
 
     <div class="container">
