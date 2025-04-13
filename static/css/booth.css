@@ -41,8 +41,9 @@
 /* 부스 섹션 버튼 스타일 */
 .booth-section-button {
     padding: 15px 30px;
-    background-color: #0dbfef;
-    color: white;
+    background-color: white;
+    color: #5A3F7D;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     font-size: 18px;
@@ -52,7 +53,7 @@
 }
 
 .booth-section-button:hover {
-    background-color: #09a8c1;
+    background-color: white;
 }
 
 .booth-section-button:active {
