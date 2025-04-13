@@ -9,8 +9,8 @@
         <button class="tab-button" id="day2-tab">2DAY</button>
     </div>
 
-    <!-- 1day 일정 (기본으로 숨김) -->
-    <div class="schedule-day" id="day1" style="display: none;">
+    <!-- 1day 일정 -->
+    <div class="schedule-day" id="day1">
         <div class="schedule-item" id="item-1">
             <p class="schedule-time">10:00 ~ 19:00</p>
             <p class="schedule-detail">주간 프로그램 운영 (부스 운영 등)</p>
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <!-- 2day 일정 (기본으로 숨김) -->
+    <!-- 2day 일정 -->
     <div class="schedule-day" id="day2" style="display: none;">
         <div class="schedule-item" id="item-9">
             <p class="schedule-time">18:00 ~ 19:00</p>
@@ -78,31 +78,3 @@
     </div>
 </div>
 {% endblock %}
-
-<script>
-    window.addEventListener("DOMContentLoaded", function () {
-        const day1Tab = document.getElementById("day1-tab");
-        const day2Tab = document.getElementById("day2-tab");
-        const day1Content = document.getElementById("day1");
-        const day2Content = document.getElementById("day2");
-
-        // 기본적으로 1DAY 일정만 보이게 설정
-        day1Content.style.display = "block";
-        day2Content.style.display = "none";
-
-        // 탭 전환
-        day1Tab.addEventListener("click", () => {
-            day1Tab.classList.add("active");
-            day2Tab.classList.remove("active");
-            day1Content.style.display = "block";
-            day2Content.style.display = "none";
-        });
-
-        day2Tab.addEventListener("click", () => {
-            day2Tab.classList.add("active");
-            day1Tab.classList.remove("active");
-            day2Content.style.display = "block";
-            day1Content.style.display = "none";
-        });
-    });
-</script>
