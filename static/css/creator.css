@@ -1,25 +1,18 @@
-/* 사이트 제작자 정보 슬라이드 효과 */
-.site-info-item {
-    margin-bottom: 20px;
-    overflow: hidden; /* 애니메이션이 내용 밖으로 넘어가지 않도록 */
+/* 전체 컨테이너 */
+.site-info-container {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
 }
 
-.site-info-content {
-    display: none;
-    opacity: 0;
-    transform: translateY(-20px); /* 처음에는 화면 밖에 위치 */
-    animation: slideUp 0.5s forwards; /* 애니메이션 효과 */
+/* 제목 스타일 */
+.site-info-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
-/* 슬라이드 애니메이션 */
-@keyframes slideUp {
-    to {
-        opacity: 1;
-        transform: translateY(0); /* 원래 위치로 이동 */
-    }
-}
-
-/* 버튼 스타일 */
+/* 각 정보 항목의 버튼 */
 .site-info-button {
     background-color: #8E7DBE;
     color: white;
@@ -35,8 +28,25 @@
     position: relative;
 }
 
+/* 버튼 클릭시 색상 변화 */
 .site-info-button:hover {
     background-color: #5A3F7D;
+}
+
+/* 버튼 클릭시 내용 */
+.site-info-content {
+    background-color: #B0A0D7;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* 아이템 및 버튼 스타일 */
+.site-info-item {
+    margin-bottom: 20px;
 }
 
 /* 드롭다운 화살표 */
@@ -50,4 +60,9 @@
 /* 버튼 클릭 시 화살표 회전 */
 .site-info-item.active .dropdown-icon {
     transform: rotate(180deg); /* 화살표가 회전 */
+}
+
+/* 부드러운 애니메이션 */
+.site-info-content {
+    transition: display 0.3s ease;
 }
