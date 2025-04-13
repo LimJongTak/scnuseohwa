@@ -20,6 +20,26 @@
                 menuBar.classList.add("open");
             }
         }
+
+        function toggleContent(el) {
+            const allItems = document.querySelectorAll('.notice-item');
+            const allContents = document.querySelectorAll('.notice-content');
+
+            allItems.forEach(item => {
+                if (item !== el) item.classList.remove('active');
+            });
+            allContents.forEach(content => {
+                if (el.nextElementSibling !== content) content.style.display = 'none';
+            });
+
+            el.classList.toggle('active');
+            const content = el.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
     </script>
 </head>
 <body>

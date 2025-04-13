@@ -2,23 +2,25 @@
 
 {% block content %}
 <div class="notice-container">
+    <img src="{{ url_for('static', filename='images/logo.svg') }}" class="notice-logo" alt="logo" />
     <h2 class="notice-title">공지사항</h2>
 
-    <div class="notice-item">
-        <span>2025 국립순천대학교 Fairy Tale 개최 안내</span>
-        <span class="dropdown-icon">▼</span>
-    </div>
-    <div class="notice-item">
-        <span>2025 국립순천대학교 Fairy Tale 개최 안내</span>
-        <span class="dropdown-icon">▼</span>
-    </div>
-    <div class="notice-item">
-        <span>2025 국립순천대학교 Fairy Tale 개최 안내</span>
-        <span class="dropdown-icon">▼</span>
-    </div>
-    <div class="notice-item">
-        <span>2025 국립순천대학교 Fairy Tale 개최 안내</span>
-        <span class="dropdown-icon">▼</span>
+    <div class="accordion">
+        <div class="notice-item" onclick="toggleContent(this)">
+            <span>2025 국립순천대학교 Fairy Tale 개최 안내</span>
+            <span class="dropdown-icon">▼</span>
+        </div>
+        <div class="notice-content">
+            <p>2025년 5월 28일과 29일, 국립순천대학교에서 열리는 Fairy Tale 축제에 여러분을 초대합니다! 다양한 공연, 부스, 먹거리, 그리고 1차 라인업 공개도 기대해주세요!</p>
+        </div>
+
+        <div class="notice-item" onclick="toggleContent(this)">
+            <span>2025 국립순천대학교 Fairy Tale 개최 안내</span>
+            <span class="dropdown-icon">▼</span>
+        </div>
+        <div class="notice-content">
+            <p>본 공지사항은 행사 일정 및 라인업 변경 시 업데이트될 수 있습니다. 자주 확인해주세요.</p>
+        </div>
     </div>
 </div>
 {% endblock %}
