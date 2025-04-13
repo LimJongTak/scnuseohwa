@@ -19,7 +19,7 @@ body {
 /* 모바일 배경 이미지 설정 */
 @media (max-width: 768px) {
     body {
-        background-image: url("../images/mobile.svg"); /* 모바일용 배경 */
+        background-image: url("../images/mobile.png"); /* 모바일용 배경 */
         background-size: cover; /* 모바일 화면에 맞게 배경을 꽉 채움 */
     }
 }
