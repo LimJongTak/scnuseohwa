@@ -38,11 +38,41 @@
     background-color: #5A3F7D;
 }
 
-/* 부스 섹션 스타일 */
+/* 부스 섹션 버튼 스타일 */
+.booth-section-button {
+    padding: 15px 30px;
+    background-color: #0dbfef;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.booth-section-button:hover {
+    background-color: #09a8c1;
+}
+
+.booth-section-button:active {
+    transform: scale(0.98);
+}
+
+/* 부스 버튼 그룹 스타일 */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 부스 정보 섹션 */
 .booth-info {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .booth-section {
@@ -73,24 +103,7 @@
     margin: 5px 0;
 }
 
-/* 부스 버튼 스타일 */
-.booth-button {
-    padding: 10px 20px;
-    background-color: #0dbfef;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.booth-button:hover {
-    background-color: #09a8c1;
-}
-
-/* 부스 및 푸드트럭 정보 텍스트 */
+/* 부스 정보 상세보기 스타일 */
 .booth-description {
     font-size: 14px;
     color: #B0B0B0;
@@ -103,7 +116,6 @@
     margin-top: 10px;
 }
 
-/* 추가된 부스 및 푸드트럭 상세정보 */
 .booth-detail {
     font-size: 14px;
     color: #fff;
@@ -120,31 +132,4 @@
 /* 메뉴 버튼 스타일 */
 .booth-button-container {
     margin-top: 20px;
-}
-
-/* 부스 목록 버튼 스타일 */
-.booth-section-button {
-    padding: 15px 30px;
-    background-color: #8E7DBE;
-    color: white;
-    border-radius: 10px;
-    font-size: 18px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
-    width: 250px;
-    text-align: center;
-}
-
-.booth-section-button:hover {
-    background-color: #5A3F7D;
-}
-
-.booth-section-button:active {
-    transform: scale(0.98);
-}
-
-.booth-section-button:focus {
-    outline: none;
 }
