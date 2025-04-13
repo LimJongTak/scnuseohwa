@@ -18,10 +18,10 @@ def notice():
 def booth_food():
     return render_template("booth_food.html", page_title="부스 & 푸드트럭", show_header_info=False)
 
-# 지도 페이지
-@app.route('/map')
-def map_page():
-    return render_template("map.html", page_title="지도", show_header_info=False)
+# 라인업페이지지
+@app.route('/lineup')
+def lineup_page():
+    return render_template("lineup.html", page_title="라인업", show_header_info=False)
 
 # 축제 일정 페이지
 @app.route('/schedule')
