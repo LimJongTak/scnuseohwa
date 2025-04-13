@@ -4,6 +4,7 @@ body {
     background-size: 400% 400%;
     animation: gradientBackground 15s ease infinite;
     overflow: hidden;
+    margin: 0; /* body 여백 제거 */
 }
 
 /* 배경을 반짝이게 하는 애니메이션 */
@@ -23,7 +24,7 @@ body {
     color: white;
     z-index: 1;
     position: relative;
-    height: 100%; /* 페이지 높이에 맞추기 */
+    height: 100vh; /* 화면 전체 높이로 설정 */
 }
 
 /* 각 항목을 위한 스타일 */
