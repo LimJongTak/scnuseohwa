@@ -68,7 +68,7 @@ body {
     font-size: 30px;
     cursor: pointer;
     color: white;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     z-index: 1001; /* 항상 최상단 */
