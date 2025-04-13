@@ -32,7 +32,7 @@ body {
     box-shadow: none;
     border: none;
     position: relative;
-    z-index: 1;
+    z-index: 1000;
 }
 
 .header .logo {
@@ -63,7 +63,7 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 10000; /* 항상 최상단 */
+    z-index: 1001; /* 항상 최상단 */
 }
 
 /* 푸터 */
@@ -117,7 +117,7 @@ body {
         width: 200px;
         border-radius: 5px;
         font-weight: bold;
-        z-index: 9999; /* 햄버거 메뉴 최상단 */
+        z-index: 1002; /* 햄버거 메뉴 최상단 */
     }
 
     .menu-open a {
@@ -132,7 +132,8 @@ body {
         align-items: center;
         justify-content: center;
         height: 100%;
-        z-index: 10000;
+        z-index: 1003;
+        pointer-events: auto;
     }
 
     .menu-open a:hover {
@@ -142,7 +143,7 @@ body {
     }
 
     .menu-bar.open + .menu-open {
-        display: flex;
+        display: flex !important;;
     }
 
     .menu-bar.open {
@@ -179,4 +180,7 @@ body {
 
 h2, .festival-title {
     font-family: 'WantedSans-Medium', sans-serif;
+}
+body, html {
+    overflow: visible !important;
 }
