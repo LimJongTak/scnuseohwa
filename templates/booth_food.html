@@ -10,43 +10,56 @@
         <button class="tab-button" id="food-truck-button">푸드트럭존</button>
     </div>
 
-    <!-- 대운동장 부스 리스트 -->
-    <div class="booth-info" id="stadium-info" style="display:none;">
-        <div class="booth-section">
-            <h3>부스(분홍)</h3>
-            <img src="{{ url_for('static', filename='images/booth_pink.jpg') }}" alt="부스(분홍)">
+    <!-- 대운동장 부스 버튼 -->
+    <div id="stadium-buttons" style="display:none;">
+        <button class="booth-option" id="booth-pink">부스(파랑)</button>
+        <button class="booth-option" id="booth-orange">부스(주황)</button>
+        <button class="booth-option" id="booth-green">부스(초록)</button>
+    </div>
+
+    <!-- 푸드트럭존 부스 버튼 -->
+    <div id="food-truck-buttons" style="display:none;">
+        <button class="booth-option" id="food-truck-1">푸드트럭1존</button>
+        <button class="booth-option" id="food-truck-2">푸드트럭2존</button>
+    </div>
+
+    <!-- 대운동장 부스 정보 -->
+    <div id="stadium-info" style="display:none;">
+        <div class="booth-section" id="booth-pink-info" style="display:none;">
+            <h3>부스(파랑)</h3>
+            <img src="{{ url_for('static', filename='images/booth_pink.jpg') }}" alt="부스(파랑)">
             <p>설명: 재미있는 체험이 가득한 부스입니다.</p>
             <p class="booth-number">부스 번호: 1-4</p>
-            <button class="booth-button">부스 정보</button>
+            <button class="booth-button" onclick="window.location.href='/booth-detail/1'">부스 정보</button>
         </div>
-        <div class="booth-section">
-            <h3>부스(노랑)</h3>
-            <img src="{{ url_for('static', filename='images/booth_yellow.jpg') }}" alt="부스(노랑)">
+        <div class="booth-section" id="booth-orange-info" style="display:none;">
+            <h3>부스(주황)</h3>
+            <img src="{{ url_for('static', filename='images/booth_orange.jpg') }}" alt="부스(주황)">
             <p>설명: 다양한 활동이 펼쳐지는 부스입니다.</p>
             <p class="booth-number">부스 번호: 5-8</p>
-            <button class="booth-button">부스 정보</button>
+            <button class="booth-button" onclick="window.location.href='/booth-detail/2'">부스 정보</button>
         </div>
-        <div class="booth-section">
-            <h3>부스(파랑)</h3>
-            <img src="{{ url_for('static', filename='images/booth_blue.jpg') }}" alt="부스(파랑)">
+        <div class="booth-section" id="booth-green-info" style="display:none;">
+            <h3>부스(초록)</h3>
+            <img src="{{ url_for('static', filename='images/booth_green.jpg') }}" alt="부스(초록)">
             <p>설명: 시원한 체험을 제공하는 부스입니다.</p>
             <p class="booth-number">부스 번호: 9-12</p>
-            <button class="booth-button">부스 정보</button>
+            <button class="booth-button" onclick="window.location.href='/booth-detail/3'">부스 정보</button>
         </div>
     </div>
 
-    <!-- 푸드트럭존 부스 리스트 -->
-    <div class="booth-info" id="food-truck-info" style="display:none;">
+    <!-- 푸드트럭존 부스 정보 -->
+    <div id="food-truck-info" style="display:none;">
         <div class="booth-section">
-            <h3>푸드트럭존(푸드1)</h3>
-            <img src="{{ url_for('static', filename='images/food_truck_1.jpg') }}" alt="푸드트럭존(푸드1)">
+            <h3>푸드트럭1존</h3>
+            <img src="{{ url_for('static', filename='images/food_truck_1.jpg') }}" alt="푸드트럭1존">
             <p>설명: 맛있는 음식을 즐길 수 있는 푸드트럭입니다.</p>
             <p class="booth-number">푸드트럭 번호: 1</p>
             <button class="booth-button">푸드트럭 정보</button>
         </div>
         <div class="booth-section">
-            <h3>푸드트럭존(푸드2)</h3>
-            <img src="{{ url_for('static', filename='images/food_truck_2.jpg') }}" alt="푸드트럭존(푸드2)">
+            <h3>푸드트럭2존</h3>
+            <img src="{{ url_for('static', filename='images/food_truck_2.jpg') }}" alt="푸드트럭2존">
             <p>설명: 다양한 메뉴가 준비되어 있는 푸드트럭입니다.</p>
             <p class="booth-number">푸드트럭 번호: 2</p>
             <button class="booth-button">푸드트럭 정보</button>
@@ -56,16 +69,52 @@
 </div>
 
 <script>
-    // 대운동장 버튼 클릭 시
+    // 대운동장 버튼 클릭 시 부스 버튼 표시
     document.getElementById('stadium-button').addEventListener('click', function() {
-        document.getElementById('stadium-info').style.display = 'block';
+        document.getElementById('stadium-buttons').style.display = 'block';
+        document.getElementById('food-truck-buttons').style.display = 'none';
+        document.getElementById('stadium-info').style.display = 'none';
         document.getElementById('food-truck-info').style.display = 'none';
     });
 
-    // 푸드트럭존 버튼 클릭 시
+    // 푸드트럭존 버튼 클릭 시 푸드트럭 버튼 표시
     document.getElementById('food-truck-button').addEventListener('click', function() {
+        document.getElementById('stadium-buttons').style.display = 'none';
+        document.getElementById('food-truck-buttons').style.display = 'block';
         document.getElementById('stadium-info').style.display = 'none';
-        document.getElementById('food-truck-info').style.display = 'block';
+        document.getElementById('food-truck-info').style.display = 'none';
+    });
+
+    // 부스 정보 버튼 클릭 시 해당 부스 정보 표시
+    document.querySelectorAll('.booth-option').forEach(button => {
+        button.addEventListener('click', function() {
+            if (this.id === 'booth-pink') {
+                document.getElementById('stadium-info').style.display = 'block';
+                document.getElementById('booth-pink-info').style.display = 'block';
+                document.getElementById('booth-orange-info').style.display = 'none';
+                document.getElementById('booth-green-info').style.display = 'none';
+                document.getElementById('food-truck-info').style.display = 'none';
+            } else if (this.id === 'booth-orange') {
+                document.getElementById('stadium-info').style.display = 'block';
+                document.getElementById('booth-pink-info').style.display = 'none';
+                document.getElementById('booth-orange-info').style.display = 'block';
+                document.getElementById('booth-green-info').style.display = 'none';
+                document.getElementById('food-truck-info').style.display = 'none';
+            } else if (this.id === 'booth-green') {
+                document.getElementById('stadium-info').style.display = 'block';
+                document.getElementById('booth-pink-info').style.display = 'none';
+                document.getElementById('booth-orange-info').style.display = 'none';
+                document.getElementById('booth-green-info').style.display = 'block';
+                document.getElementById('food-truck-info').style.display = 'none';
+            } else if (this.id === 'food-truck-1') {
+                document.getElementById('stadium-info').style.display = 'none';
+                document.getElementById('food-truck-info').style.display = 'block';
+            } else if (this.id === 'food-truck-2') {
+                document.getElementById('stadium-info').style.display = 'none';
+                document.getElementById('food-truck-info').style.display = 'block';
+            }
+        });
     });
 </script>
+
 {% endblock %}

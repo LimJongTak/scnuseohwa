@@ -121,3 +121,55 @@
 .booth-button-container {
     margin-top: 20px;
 }
+
+/* 대운동장 부스(주황), 부스(파랑), 부스(초록) 버튼 스타일 */
+.stadium-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.stadium-button {
+    background-color: #FFA500; /* 주황색 */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.stadium-button:hover {
+    background-color: #FF8C00;
+}
+
+.stadium-button:active {
+    transform: scale(0.98);
+}
+
+/* 푸드트럭존 버튼 스타일 */
+.food-truck-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.food-truck-button {
+    background-color: #FFCC00; /* 노랑색 */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.food-truck-button:hover {
+    background-color: #FFB300;
+}
+
+.food-truck-button:active {
+    transform: scale(0.98);
+}
