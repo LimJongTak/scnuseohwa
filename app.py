@@ -1,9 +1,3 @@
-from flask import Flask, render_template_string
-import os  
-
-app = Flask(__name__)
-
-# 메인 페이지
 @app.route('/')
 def home():
     return render_template_string('''
@@ -14,24 +8,70 @@ def home():
     <title>서화총학생회</title>
     <meta property="og:title" content="서화총학생회" />
     <meta property="og:description" content="2025년 국립순천대학교 대동제 1차 라인업" />
-    <meta property="og:image" content="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMTdfOTMg%2FMDAxNjk3NTUzOTg2MTA0.gSsQkjIa5rPWf5unvG3aJBLnSGRFHjBJ2WINbtprCzUg.4CrMPrfv_mFch9NGukuol4bBFRWbxTJE0_7_L82QfSUg.JPEG.ka14410%2F1697553982351.jpg&type=sc960_832" />
+    <meta property="og:image" content="..." />
     <meta property="og:url" content="https://scnuseohwa.site" />
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <style>
+        .menu-open {
+            display: none;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 999;
+        }
+        .menu-open a {
+            color: #8E7DBE;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .menu-open a:hover {
+            background: #8E7DBE;
+            color: white;
+            border-radius: 5px;
+        }
+        @media (min-width: 769px) {
+            .menu-open {
+                display: flex !important;
+                position: static;
+                flex-direction: row;
+                background: transparent;
+                padding: 0;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('hamburger-menu');
+            const menuBar = document.getElementById('menu-bar');
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+                menuBar.classList.remove("open");
+            } else {
+                menu.style.display = "flex";
+                menuBar.classList.add("open");
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <header class="header">
             <div class="logo">
-                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Fairy Tale Logo" width="350" height="350" />
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" width="350" height="350" />
             </div>
             <div>
                 <h2>국립순천대학교</h2>
                 <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
             </div>
-            <nav class="menu">
+            <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
+            <nav id="hamburger-menu" class="menu-open">
                 <a href="/">메인</a>
                 <a href="/notice">공지사항</a>
                 <a href="/booth-food">부스&푸드트럭</a>
@@ -39,7 +79,6 @@ def home():
                 <a href="/schedule">축제 일정</a>
                 <a href="/qna">QnA</a>
             </nav>
-            <div class="menu-bar" onclick="toggleMenu()">&#9776;</div>
         </header>
 
         <div class="main-content">
@@ -67,6 +106,9 @@ def notice():
     <meta charset="UTF-8">
     <title>공지사항</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/notice.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 </head>
 <body>
     <div class="container">
@@ -78,7 +120,8 @@ def notice():
                 <h2>국립순천대학교</h2>
                 <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
             </div>
-            <nav class="menu">
+            <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
+            <nav id="hamburger-menu" class="menu-open">
                 <a href="/">메인</a>
                 <a href="/notice">공지사항</a>
                 <a href="/booth-food">부스&푸드트럭</a>
@@ -116,6 +159,9 @@ def booth_food():
     <meta charset="UTF-8">
     <title>부스 & 푸드트럭</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/booth_food.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />                              
 </head>
 <body>
     <div class="container">
@@ -127,7 +173,8 @@ def booth_food():
                 <h2>국립순천대학교</h2>
                 <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
             </div>
-            <nav class="menu">
+            <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
+            <nav id="hamburger-menu" class="menu-open">
                 <a href="/">메인</a>
                 <a href="/notice">공지사항</a>
                 <a href="/booth-food">부스&푸드트럭</a>
@@ -164,18 +211,23 @@ def map():
 <head>
     <meta charset="UTF-8">
     <title>지도</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />                              
 </head>
 <body>
     <div class="container">
         <header class="header">
             <div class="logo">
                 <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Fairy Tale Logo" width="350" height="350" />
+                
             </div>
             <div>
                 <h2>국립순천대학교</h2>
                 <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
             </div>
-            <nav class="menu">
+            <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
+            <nav id="hamburger-menu" class="menu-open">
                 <a href="/">메인</a>
                 <a href="/notice">공지사항</a>
                 <a href="/booth-food">부스&푸드트럭</a>
@@ -208,6 +260,9 @@ def schedule():
 <head>
     <meta charset="UTF-8">
     <title>축제 일정</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />                              
 </head>
 <body>
     <div class="container">
@@ -219,7 +274,8 @@ def schedule():
                 <h2>국립순천대학교</h2>
                 <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
             </div>
-            <nav class="menu">
+            <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
+            <nav id="hamburger-menu" class="menu-open">
                 <a href="/">메인</a>
                 <a href="/notice">공지사항</a>
                 <a href="/booth-food">부스&푸드트럭</a>
@@ -255,6 +311,9 @@ def qna():
 <head>
     <meta charset="UTF-8">
     <title>QnA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />                              
 </head>
 <body>
     <div class="container">
@@ -266,7 +325,8 @@ def qna():
                 <h2>국립순천대학교</h2>
                 <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
             </div>
-            <nav class="menu">
+            <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
+            <nav id="hamburger-menu" class="menu-open">
                 <a href="/">메인</a>
                 <a href="/notice">공지사항</a>
                 <a href="/booth-food">부스&푸드트럭</a>
