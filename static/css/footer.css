@@ -1,17 +1,67 @@
 /* footer 스타일을 맨 하단에 고정 */
 .footer-container {
-    background-color: transparent; /* 배경을 투명으로 설정 */
+    background-color: transparent;
     padding: 10px;
     text-align: center;
     font-size: 14px;
     color: #333;
-    position: fixed; /* 페이지 하단에 고정 */
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    z-index: 10; /* 다른 요소들 위로 오도록 설정 */
+    z-index: 10;
 }
 
+/* 폰트 설정 */
+@font-face {
+    font-family: 'GRAVD___';
+    src: url('../fonts/GRAVD___.TTF') format('truetype');
+}
+
+/* 가로 정렬을 위한 행 스타일 */
+.footer-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center; /* 높이 정렬 */
+    justify-content: center;
+}
+
+/* 카피라이트 텍스트 */
+.footer-text {
+    margin: 0;
+    font-size: 0.95rem;
+    color: white;
+}
+
+/* 사이트 제작자 버튼 스타일 */
+.footer-button-inline {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* 호버 시 흰색 밑줄 효과 */
+.footer-button-inline::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.footer-button-inline:hover::after {
+    transform: scaleX(1);
+}
+
+/* 기존 .footer-button 클래스는 필요시 사용 */
 .footer-button {
     text-decoration: none;
     color: white;
@@ -19,28 +69,4 @@
 
 .footer-button:hover {
     color: transparent;
-}
-
-@font-face {
-    font-family: 'GRAVD___';
-    src: url('../fonts/GRAVD___.TTF') format('truetype');
-}
-
-.footer-row {
-    display: flex;
-    gap: 20px; /* 간격 조절 */
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-button-inline {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 0.95rem;
-}
-
-.footer-button-inline:hover {
-    text-decoration: underline;
 }
