@@ -5,47 +5,47 @@
     <h2 class="site-info-title">사이트 제작자</h2>
     
     <!-- 정보 항목들 -->
-    <div class="accordion">
-        <div class="notice-item" onclick="toggleContent(this)">
-            <span>임종탁</span>
+    <div class="site-info-item">
+        <button class="site-info-button" id="info1-btn">
+            임종탁
             <span class="dropdown-icon">▼</span>
-        </div>
-        <div class="notice-content">
+        </button>
+        <div class="site-info-content" id="info1-content">
             <p>직책 : 서화총학생회 부총학생회장</p>
-            <a href="https://www.instagram.com/takkk_2/" target="_blank" class="site-info-link">Instagram</a>
+            <a href="https://www.instagram.com/takkk_2/" target="_blank">Instagram</a>
         </div>
     </div>
 
-    <div class="accordion">
-        <div class="notice-item" onclick="toggleContent(this)">
-            <span>박세은</span>
+    <div class="site-info-item">
+        <button class="site-info-button" id="info2-btn">
+            박세은
             <span class="dropdown-icon">▼</span>
-        </div>
-        <div class="notice-content">
+        </button>
+        <div class="site-info-content" id="info2-content">
             <p>직책 : 서화총학생회 여학생협의회장</p>
-            <a href="https://www.instagram.com/iridesny_s/" target="_blank" class="site-info-link">Instagram</a>
+            <a href="https://www.instagram.com/iridesny_s/" target="_blank">Instagram</a>
         </div>
     </div>
 
-    <div class="accordion">
-        <div class="notice-item" onclick="toggleContent(this)">
-            <span>전유빈</span>
+    <div class="site-info-item">
+        <button class="site-info-button" id="info3-btn">
+            전유빈
             <span class="dropdown-icon">▼</span>
-        </div>
-        <div class="notice-content">
+        </button>
+        <div class="site-info-content" id="info3-content">
             <p>직책 : 서화총학생회 디자인홍보국차장</p>
-            <a href="https://www.instagram.com/yuu__binn/" target="_blank" class="site-info-link">Instagram</a>
+            <a href="https://www.instagram.com/yuu__binn/" target="_blank">Instagram</a>
         </div>
     </div>
 
-    <div class="accordion">
-        <div class="notice-item" onclick="toggleContent(this)">
-            <span>김가온누리</span>
+    <div class="site-info-item">
+        <button class="site-info-button" id="info4-btn">
+            김가온누리
             <span class="dropdown-icon">▼</span>
-        </div>
-        <div class="notice-content">
+        </button>
+        <div class="site-info-content" id="info4-content">
             <p>직책 : 서화총학생회 대외협력국차장</p>
-            <a href="https://www.instagram.com/nuri_2536_/" target="_blank" class="site-info-link">Instagram</a>
+            <a href="https://www.instagram.com/nuri_2536_/" target="_blank">Instagram</a>
         </div>
     </div>
 
@@ -55,7 +55,7 @@
 <script>
     // 콘텐츠 토글 기능
     function toggleContent(el) {
-        const content = el.nextElementSibling;  // content는 .notice-content
+        const content = el.nextElementSibling;  // content는 .site-info-content
         const icon = el.querySelector('.dropdown-icon');
 
         // 콘텐츠 표시 또는 숨기기
@@ -67,4 +67,18 @@
             icon.textContent = '▲'; // 화살표를 위로 설정
         }
     }
+
+    // 각 버튼에 클릭 이벤트 추가
+    document.getElementById('info1-btn').addEventListener('click', function () {
+        toggleContent(this);
+    });
+    document.getElementById('info2-btn').addEventListener('click', function () {
+        toggleContent(this);
+    });
+    document.getElementById('info3-btn').addEventListener('click', function () {
+        toggleContent(this);
+    });
+    document.getElementById('info4-btn').addEventListener('click', function () {
+        toggleContent(this);
+    });
 </script>
