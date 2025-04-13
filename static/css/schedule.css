@@ -11,6 +11,7 @@
     margin-bottom: 20px;
 }
 
+/* 탭 버튼 스타일 */
 .schedule-tabs {
     display: flex;
     justify-content: center;
@@ -29,19 +30,22 @@
     transition: background-color 0.3s;
 }
 
+/* 탭 버튼 hover 스타일 */
 .tab-button:hover {
     background-color: #5A3F7D;
 }
 
+/* 활성화된 탭 스타일 */
 .tab-button.active {
     background-color: #5A3F7D;
 }
 
-/* 일정을 구성하는 아이템 */
+/* 일정 아이템 스타일 */
 .schedule-day {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .schedule-item {
@@ -52,25 +56,39 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     width: 80%;
     text-align: left;
+    transition: background-color 0.3s ease, border 0.3s ease;
 }
 
+/* 일정 시간 스타일 */
 .schedule-time {
     font-size: 18px;
     font-weight: bold;
 }
 
+/* 일정 설명 스타일 */
 .schedule-detail {
     font-size: 16px;
     color: #B0B0B0;
 }
 
-/* 현재 진행 중인 시간 강조 */
+/* 진행 중인 일정 강조 */
 .schedule-item.active {
     background-color: rgba(255, 255, 255, 0.6);
     border: 2px solid #0dbfef;
 }
 
-/* 1day와 2day를 구분 */
-#day1, #day2 {
-    width: 100%;
+/* 기본적으로 1DAY 일정이 보이도록 하고, 2DAY는 숨겨져 있음 */
+#day1 {
+    display: block;
+}
+
+#day2 {
+    display: none;
+}
+
+/* 화면 크기가 작을 경우, 일정의 크기 조정 */
+@media (max-width: 768px) {
+    .schedule-item {
+        width: 90%;  /* 모바일 화면에서는 일정의 크기를 조금 더 작게 설정 */
+    }
 }
