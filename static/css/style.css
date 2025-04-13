@@ -1,6 +1,6 @@
 /* 기본 배경 이미지 설정 (PC) */
 body {
-    background-image: url("../images/bg.webp"); /* PC용 배경 */
+    background-image: url("../images/web.svg"); /* PC용 배경 */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -19,7 +19,7 @@ body {
 /* 모바일 배경 이미지 설정 */
 @media (max-width: 768px) {
     body {
-        background-image: url("../images/mbg.webp"); /* 모바일용 배경 */
+        background-image: url("../images/mobile.svg"); /* 모바일용 배경 */
     }
 }
 
