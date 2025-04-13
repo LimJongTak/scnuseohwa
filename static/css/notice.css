@@ -1,80 +1,52 @@
-.notice-wrapper {
-    max-width: 700px;
-    margin: 30px auto;
-    padding: 20px;
-}
-
-.search-box {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 24px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    margin-bottom: 24px;
-    outline: none;
-}
-
-.notice-card {
-    display: flex;
-    align-items: center;
-    background: white;
-    padding: 12px 16px;
-    margin-bottom: 12px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    font-weight: bold;
-}
-
-.notice-id {
-    background-color: #3498db;
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #8058C8, #A677E0, #BA68C8);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Pretendard', sans-serif;
     color: white;
-    font-weight: bold;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
+}
+
+.notice-container {
+    max-width: 600px;
+    margin: 100px auto;
     text-align: center;
-    border-radius: 50%;
-    margin-right: 12px;
+    padding: 0 20px;
 }
 
-.notice-category {
-    background-color: #e74c3c;
-    color: white;
-    font-size: 12px;
-    padding: 3px 6px;
-    border-radius: 4px;
-    margin-right: 10px;
+.notice-logo {
+    width: 120px;
+    margin-bottom: 20px;
 }
 
 .notice-title {
-    flex-grow: 1;
-    font-size: 16px;
-    color: #333;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.notice-item {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 15px 0;
+    padding: 16px 28px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease;
+}
+
+.notice-item:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .dropdown-icon {
-    font-size: 14px;
-    color: #888;
-}
-
-.pagination {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.page {
-    display: inline-block;
-    margin: 0 4px;
-    padding: 6px 12px;
-    background: #ddd;
-    border-radius: 6px;
-    color: #000;
-    text-decoration: none;
+    font-size: 22px;
     font-weight: bold;
-}
-
-.page.current {
-    background: #3498db;
-    color: #fff;
 }
