@@ -88,7 +88,7 @@
 .notice-item {
     animation: slideUp 0.6s ease both;
 }
-.notice-item:nth-child(1) { animation-delay: 0s; }
-.notice-item:nth-child(3) { animation-delay: 0.1s; }
-.notice-item:nth-child(5) { animation-delay: 0.2s; }
+.notice-item:nth-child(1) { animation-delay: 0.5s; }
+.notice-item:nth-child(3) { animation-delay: 0.7s; }
+.notice-item:nth-child(5) { animation-delay: 0.9s; }
 /* 주의: notice-item과 notice-content가 번갈아 있어서 홀수로 설정 */
