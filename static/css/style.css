@@ -93,7 +93,7 @@ body {
 }
 
 .footer .footer-button:hover {
-    background: white;
+    background: transparent;
 }
 
 /* 모바일 스타일 */
