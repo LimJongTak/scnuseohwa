@@ -1,6 +1,6 @@
-/* 배경 이미지 설정 */
+/* 기본 배경 이미지 설정 (PC) */
 body {
-    background-image: url("../images/bg.png");
+    background-image: url("../images/bg.svg"); /* PC용 배경 */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -14,6 +14,13 @@ body {
     font-family: Arial, sans-serif;
     flex-direction: column;
     color: #ffffff;
+}
+
+/* 모바일 배경 이미지 설정 */
+@media (max-width: 768px) {
+    body {
+        background-image: url("../images/mbg.svg"); /* 모바일용 배경 */
+    }
 }
 
 /* 전체 컨테이너 */
