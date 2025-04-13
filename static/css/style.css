@@ -1,6 +1,6 @@
 /* 기본 배경 이미지 설정 (PC) */
 body {
-    background-image: url("../images/web.svg"); /* PC용 배경 */
+    background-image: url("../images/bg.png"); /* PC용 배경 */
     background-repeat: no-repeat;
     background-attachment: fixed; /* 배경 고정 */
     background-position: center;
