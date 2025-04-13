@@ -1,3 +1,9 @@
+from flask import Flask, render_template_string
+import os  
+
+app = Flask(__name__)
+
+# 메인 페이지
 @app.route('/')
 def home():
     return render_template_string('''
