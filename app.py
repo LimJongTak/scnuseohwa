@@ -66,14 +66,13 @@ def generate_template(page_title, content_html, show_header_text=True):
 </html>
 ''')
 
-
-
+# 메인 페이지 (헤더 텍스트 있음)
 @app.route('/')
 def home():
     content = '<div class="intro"><p>메인 페이지입니다.</p></div>'
-    return generate_template("서화총학생회", content, show_logo_info=True)
+    return generate_template("서화총학생회", content, show_header_text=True)
 
-
+# 기타 페이지 (헤더 텍스트 없음)
 @app.route('/notice')
 def notice():
     content = '''
@@ -84,8 +83,7 @@ def notice():
             <li><a href="#">기타 공지사항</a></li>
         </ul>
     '''
-    return generate_template("공지사항", content, show_logo_info=False)
-
+    return generate_template("공지사항", content, show_header_text=False)
 
 @app.route('/booth-food')
 def booth_food():
@@ -97,12 +95,12 @@ def booth_food():
             <li><a href="#">푸드트럭 2</a></li>
         </ul>
     '''
-    return generate_template("부스 & 푸드트럭", content, show_logo_info=False)
+    return generate_template("부스 & 푸드트럭", content, show_header_text=False)
 
 @app.route('/map')
 def map():
     content = '<h2>지도</h2><p>여기 지도 정보를 추가할 수 있습니다.</p>'
-    return generate_template("지도", content, show_logo_info=False)
+    return generate_template("지도", content, show_header_text=False)
 
 @app.route('/schedule')
 def schedule():
@@ -113,12 +111,12 @@ def schedule():
             <li>2025년 5월 29일 - 폐막식</li>
         </ul>
     '''
-    return generate_template("축제 일정", content, show_logo_info=False)
+    return generate_template("축제 일정", content, show_header_text=False)
 
 @app.route('/qna')
 def qna():
     content = '<h2>QnA</h2><p>여기 QnA를 추가할 수 있습니다.</p>'
-    return generate_template("QnA", content, show_logo_info=False)
+    return generate_template("QnA", content, show_header_text=False)
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
