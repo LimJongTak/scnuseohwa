@@ -2,67 +2,79 @@
 
 {% block content %}
 <div class="site-info-container">
-    <h2 class="site-info-title">Site Information</h2>
+    <h2 class="site-info-title">사이트 제작자</h2>
     
     <!-- 정보 항목들 -->
     <div class="site-info-item">
         <button class="site-info-button" id="info1-btn">
-            000(...)
+            임종탁
+            <span class="dropdown-icon">▼</span>
         </button>
         <div class="site-info-content" id="info1-content">
             <p>다음과 같습니다.</p>
         </div>
     </div>
-    
+
     <div class="site-info-item">
         <button class="site-info-button" id="info2-btn">
-            000(...)
+            박세은
+            <span class="dropdown-icon">▼</span>
         </button>
         <div class="site-info-content" id="info2-content">
             <p>다음과 같습니다.</p>
         </div>
     </div>
-    
+
     <div class="site-info-item">
         <button class="site-info-button" id="info3-btn">
-            000(...)
+            전유빈
+            <span class="dropdown-icon">▼</span>
         </button>
         <div class="site-info-content" id="info3-content">
             <p>다음과 같습니다.</p>
         </div>
     </div>
-    
+
     <div class="site-info-item">
         <button class="site-info-button" id="info4-btn">
-            000(...)
+            김가온누리
+            <span class="dropdown-icon">▼</span>
         </button>
         <div class="site-info-content" id="info4-content">
             <p>다음과 같습니다.</p>
         </div>
     </div>
-</div>
 
+</div>
 {% endblock %}
 
 <script>
     // 버튼 클릭 시 내용 표시
     document.getElementById('info1-btn').addEventListener('click', function () {
         const content = document.getElementById('info1-content');
+        const icon = this.querySelector('.dropdown-icon');
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        icon.textContent = content.style.display === 'block' ? '▲' : '▼';
     });
 
     document.getElementById('info2-btn').addEventListener('click', function () {
         const content = document.getElementById('info2-content');
+        const icon = this.querySelector('.dropdown-icon');
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        icon.textContent = content.style.display === 'block' ? '▲' : '▼';
     });
 
     document.getElementById('info3-btn').addEventListener('click', function () {
         const content = document.getElementById('info3-content');
+        const icon = this.querySelector('.dropdown-icon');
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        icon.textContent = content.style.display === 'block' ? '▲' : '▼';
     });
 
     document.getElementById('info4-btn').addEventListener('click', function () {
         const content = document.getElementById('info4-content');
+        const icon = this.querySelector('.dropdown-icon');
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        icon.textContent = content.style.display === 'block' ? '▲' : '▼';
     });
 </script>

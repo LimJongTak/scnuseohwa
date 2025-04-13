@@ -41,9 +41,28 @@
     border-radius: 10px;
     display: none;
     margin-top: 10px;
+    text-align: left;
 }
 
 /* 아이템 및 버튼 스타일 */
 .site-info-item {
     margin-bottom: 20px;
+}
+
+/* 드롭다운 화살표 */
+.dropdown-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+/* 버튼 클릭 시 화살표 회전 */
+.site-info-item.active .dropdown-icon {
+    transform: rotate(180deg); /* 화살표가 회전 */
+}
+
+/* 부드러운 애니메이션 */
+.site-info-content {
+    transition: display 0.3s ease;
 }
