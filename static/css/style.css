@@ -1,6 +1,6 @@
 /* 기본 스타일 */
 body {
-    background-image: url("../images/bg.svg"); /* Default background for desktop */
+    background-image: url("../images/bg.png"); /* Default background for desktop */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
