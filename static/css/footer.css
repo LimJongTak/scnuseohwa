@@ -25,3 +25,22 @@
     font-family: 'GRAVD___';
     src: url('../fonts/GRAVD___.TTF') format('truetype');
 }
+
+.footer-row {
+    display: flex;
+    gap: 20px; /* 간격 조절 */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-button-inline {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.footer-button-inline:hover {
+    text-decoration: underline;
+}
