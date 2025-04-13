@@ -160,5 +160,10 @@ body {
 }
 
 h2, .festival-title {
-    font-family: 'GRAVD___', sans-serif;
+    font-family: 'WantedSans-Medium', sans-serif;
+}
+
+@font-face {
+    font-family: 'WantedSans-Medium';
+    src: url('WantedSans-Medium.ttf') format('truetype');
 }
