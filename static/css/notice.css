@@ -1,8 +1,22 @@
+/* 배경 캔버스 스타일 */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, #a855f7, #4338ca);
+}
+
 .notice-container {
     max-width: 600px;
     margin: 100px auto;
     text-align: center;
     padding: 0 20px;
+    color: white;
+    z-index: 1;
+    position: relative;
 }
 
 .notice-logo {

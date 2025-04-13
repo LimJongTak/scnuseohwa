@@ -8,7 +8,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/notice.css') }}">
 
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(to bottom right, #7b4397, #dc2430); /* fallback */
+        }
+        canvas#bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+
     <script>
+        // 메뉴 토글
         function toggleMenu() {
             const menu = document.getElementById('hamburger-menu');
             const menuBar = document.getElementById('menu-bar');
@@ -21,6 +37,7 @@
             }
         }
 
+        // 공지 토글
         function toggleContent(el) {
             const allItems = document.querySelectorAll('.notice-item');
             const allContents = document.querySelectorAll('.notice-content');
@@ -34,15 +51,64 @@
 
             el.classList.toggle('active');
             const content = el.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
+            content.style.display = (content.style.display === "block") ? "none" : "block";
         }
+
+        // 별빛 배경 애니메이션
+        window.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('bg-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            function initParticles() {
+                const total = 80;
+                particles = [];
+                for (let i = 0; i < total; i++) {
+                    particles.push({
+                        x: Math.random() * window.innerWidth,
+                        y: Math.random() * window.innerHeight,
+                        radius: Math.random() * 2 + 1,
+                        speedX: (Math.random() - 0.5) * 0.5,
+                        speedY: (Math.random() - 0.5) * 0.5,
+                        alpha: Math.random()
+                    });
+                }
+            }
+
+            function drawParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha})`;
+                    ctx.fill();
+                    p.x += p.speedX;
+                    p.y += p.speedY;
+
+                    if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+                });
+                requestAnimationFrame(drawParticles);
+            }
+
+            resizeCanvas();
+            initParticles();
+            drawParticles();
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                initParticles();
+            });
+        });
     </script>
 </head>
 <body>
+    <canvas id="bg-canvas"></canvas> <!-- ⭐ 별빛 배경 캔버스 추가 -->
+
     <div class="container">
         <header class="header">
             {% if show_header_info %}
