@@ -5,42 +5,42 @@
     <h2 class="site-info-title">사이트 제작자</h2>
     
     <!-- 정보 항목들 -->
-    <div class="site-info-item">
-        <button class="site-info-button" id="info1-btn">
-            임종탁
+    <div class="accordion">
+        <div class="notice-item" onclick="toggleContent(this)">
+            <span>임종탁</span>
             <span class="dropdown-icon">▼</span>
-        </button>
-        <div class="site-info-content" id="info1-content">
+        </div>
+        <div class="notice-content">
             <p>다음과 같습니다.</p>
         </div>
     </div>
 
-    <div class="site-info-item">
-        <button class="site-info-button" id="info2-btn">
-            박세은
+    <div class="accordion">
+        <div class="notice-item" onclick="toggleContent(this)">
+            <span>박세은</span>
             <span class="dropdown-icon">▼</span>
-        </button>
-        <div class="site-info-content" id="info2-content">
+        </div>
+        <div class="notice-content">
             <p>다음과 같습니다.</p>
         </div>
     </div>
 
-    <div class="site-info-item">
-        <button class="site-info-button" id="info3-btn">
-            전유빈
+    <div class="accordion">
+        <div class="notice-item" onclick="toggleContent(this)">
+            <span>전유빈</span>
             <span class="dropdown-icon">▼</span>
-        </button>
-        <div class="site-info-content" id="info3-content">
+        </div>
+        <div class="notice-content">
             <p>다음과 같습니다.</p>
         </div>
     </div>
 
-    <div class="site-info-item">
-        <button class="site-info-button" id="info4-btn">
-            김가온누리
+    <div class="accordion">
+        <div class="notice-item" onclick="toggleContent(this)">
+            <span>김가온누리</span>
             <span class="dropdown-icon">▼</span>
-        </button>
-        <div class="site-info-content" id="info4-content">
+        </div>
+        <div class="notice-content">
             <p>다음과 같습니다.</p>
         </div>
     </div>
@@ -49,32 +49,18 @@
 {% endblock %}
 
 <script>
-    // 버튼 클릭 시 내용 표시
-    document.getElementById('info1-btn').addEventListener('click', function () {
-        const content = document.getElementById('info1-content');
-        const icon = this.querySelector('.dropdown-icon');
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        icon.textContent = content.style.display === 'block' ? '▲' : '▼';
-    });
+    // 콘텐츠 토글 기능
+    function toggleContent(el) {
+        const content = el.nextElementSibling;  // content는 .notice-content
+        const icon = el.querySelector('.dropdown-icon');
 
-    document.getElementById('info2-btn').addEventListener('click', function () {
-        const content = document.getElementById('info2-content');
-        const icon = this.querySelector('.dropdown-icon');
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        icon.textContent = content.style.display === 'block' ? '▲' : '▼';
-    });
-
-    document.getElementById('info3-btn').addEventListener('click', function () {
-        const content = document.getElementById('info3-content');
-        const icon = this.querySelector('.dropdown-icon');
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        icon.textContent = content.style.display === 'block' ? '▲' : '▼';
-    });
-
-    document.getElementById('info4-btn').addEventListener('click', function () {
-        const content = document.getElementById('info4-content');
-        const icon = this.querySelector('.dropdown-icon');
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        icon.textContent = content.style.display === 'block' ? '▲' : '▼';
-    });
+        // 콘텐츠 표시 또는 숨기기
+        if (content.style.display === 'block') {
+            content.style.display = 'none';
+            icon.textContent = '▼'; // 화살표를 아래로 설정
+        } else {
+            content.style.display = 'block';
+            icon.textContent = '▲'; // 화살표를 위로 설정
+        }
+    }
 </script>
