@@ -5,6 +5,13 @@ app = Flask(__name__)
 
 # 공통 HTML 템플릿 생성 함수
 def generate_template(page_title, content_html, show_header_text=True):
+    header_extra = '''
+        <div>
+            <h2>국립순천대학교</h2>
+            <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
+        </div>
+    ''' if show_header_text else ''
+
     return render_template_string(f'''
 <!DOCTYPE html>
 <html lang="ko">
@@ -34,12 +41,7 @@ def generate_template(page_title, content_html, show_header_text=True):
             <div class="logo">
                 <img src="{{{{ url_for('static', filename='images/logo.svg') }}}}" width="350" height="350" />
             </div>
-            {'''
-            <div>
-                <h2>국립순천대학교</h2>
-                <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
-            </div>
-            ''' if show_header_text else ''}
+            {header_extra}
             <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
             <nav id="hamburger-menu" class="menu-open">
                 <a href="/">메인</a>
@@ -63,6 +65,7 @@ def generate_template(page_title, content_html, show_header_text=True):
 </body>
 </html>
 ''')
+
 
 
 @app.route('/')
