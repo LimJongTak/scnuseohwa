@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 
 # 공통 HTML 템플릿 생성 함수
-def generate_template(page_title, content_html):
+def generate_template(page_title, content_html, show_header_text=True):
     return render_template_string(f'''
 <!DOCTYPE html>
 <html lang="ko">
@@ -34,10 +34,12 @@ def generate_template(page_title, content_html):
             <div class="logo">
                 <img src="{{{{ url_for('static', filename='images/logo.svg') }}}}" width="350" height="350" />
             </div>
+            {'''
             <div>
                 <h2>국립순천대학교</h2>
                 <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
             </div>
+            ''' if show_header_text else ''}
             <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
             <nav id="hamburger-menu" class="menu-open">
                 <a href="/">메인</a>
@@ -62,10 +64,12 @@ def generate_template(page_title, content_html):
 </html>
 ''')
 
+
 @app.route('/')
 def home():
     content = '<div class="intro"><p>메인 페이지입니다.</p></div>'
-    return generate_template("서화총학생회", content)
+    return generate_template("서화총학생회", content, show_logo_info=True)
+
 
 @app.route('/notice')
 def notice():
@@ -77,7 +81,8 @@ def notice():
             <li><a href="#">기타 공지사항</a></li>
         </ul>
     '''
-    return generate_template("공지사항", content)
+    return generate_template("공지사항", content, show_logo_info=False)
+
 
 @app.route('/booth-food')
 def booth_food():
@@ -89,12 +94,12 @@ def booth_food():
             <li><a href="#">푸드트럭 2</a></li>
         </ul>
     '''
-    return generate_template("부스 & 푸드트럭", content)
+    return generate_template("부스 & 푸드트럭", content, show_logo_info=False)
 
 @app.route('/map')
 def map():
     content = '<h2>지도</h2><p>여기 지도 정보를 추가할 수 있습니다.</p>'
-    return generate_template("지도", content)
+    return generate_template("지도", content, show_logo_info=False)
 
 @app.route('/schedule')
 def schedule():
@@ -105,12 +110,12 @@ def schedule():
             <li>2025년 5월 29일 - 폐막식</li>
         </ul>
     '''
-    return generate_template("축제 일정", content)
+    return generate_template("축제 일정", content, show_logo_info=False)
 
 @app.route('/qna')
 def qna():
     content = '<h2>QnA</h2><p>여기 QnA를 추가할 수 있습니다.</p>'
-    return generate_template("QnA", content)
+    return generate_template("QnA", content, show_logo_info=False)
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
