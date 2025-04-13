@@ -14,20 +14,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/booth.css') }}">
 
     <style>
-        /* For background images */
-        body {
-            background-image: url("../images/bg.png"); /* Default background for desktop */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                background-image: url("../images/mbg.png"); /* Mobile-specific background */
-            }
-        }
-
         canvas#bg-canvas {
             position: fixed;
             top: 0;
@@ -158,6 +144,7 @@
                 <a href="{{ url_for('creator') }}" class="footer-button-inline">사이트 제작자</a>
             </div>
         </footer>
+        
     </div>
 </body>
 </html>

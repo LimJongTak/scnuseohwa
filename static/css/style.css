@@ -1,6 +1,6 @@
-/* 기본 스타일 */
+/* 배경 이미지 설정 */
 body {
-    background-image: url("../images/bg.png"); /* Default background for desktop */
+    background-image: url("../images/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -14,86 +14,6 @@ body {
     font-family: Arial, sans-serif;
     flex-direction: column;
     color: #ffffff;
-}
-
-/* 모바일 스타일: 768px 이하 */
-@media (max-width: 768px) {
-    body {
-        background-image: url("../images/mbg.png"); /* Mobile-specific background */
-    }
-
-    .header nav {
-        display: none;
-    }
-
-    .menu-bar {
-        display: block;
-    }
-
-    .menu-open {
-        display: none;
-        flex-direction: column;
-        background: rgba(255, 255, 255, 0.7);
-        position: absolute;
-        top: 70px;
-        right: 0;
-        padding: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: 200px;
-        border-radius: 5px;
-        font-weight: bold;
-        z-index: 1002; /* 햄버거 메뉴 최상단 */
-    }
-
-    .menu-open a {
-        margin: 10px 0;
-        text-decoration: none;
-        color: #8E7DBE;
-        padding: 10px 15px;
-        font-size: 1rem;
-        background-color: transparent;
-        line-height: 1.5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        z-index: 1003;
-        pointer-events: auto;
-    }
-
-    .menu-open a:hover {
-        background: #8E7DBE;
-        color: white;
-        border-radius: 5px;
-    }
-
-    .menu-bar.open + .menu-open {
-        display: flex !important;
-    }
-
-    .menu-bar.open {
-        font-size: 40px;
-        z-index: 10000;
-    }
-}
-
-/* PC 스타일: 769px 이상 */
-@media (min-width: 769px) {
-    body {
-        background-image: url("../images/bg.png"); /* Default background for desktop */
-    }
-
-    .header nav {
-        display: flex;
-    }
-
-    .menu-bar {
-        display: none;
-    }
-
-    .menu-open {
-        display: flex !important;
-    }
 }
 
 /* 전체 컨테이너 */
@@ -176,6 +96,78 @@ body {
     background: transparent;
 }
 
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+    .header nav {
+        display: none;
+    }
+
+    .menu-bar {
+        display: block;
+    }
+
+    .menu-open {
+        display: none;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        border-radius: 5px;
+        font-weight: bold;
+        z-index: 1002; /* 햄버거 메뉴 최상단 */
+    }
+
+    .menu-open a {
+        margin: 10px 0;
+        text-decoration: none;
+        color: #8E7DBE;
+        padding: 10px 15px;
+        font-size: 1rem;
+        background-color: transparent;
+        line-height: 1.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        z-index: 1003;
+        pointer-events: auto;
+    }
+
+    .menu-open a:hover {
+        background: #8E7DBE;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .menu-bar.open + .menu-open {
+        display: flex !important;;
+    }
+
+    .menu-bar.open {
+        font-size: 40px;
+        z-index: 10000;
+    }
+}
+
+/* PC 스타일 */
+@media (min-width: 769px) {
+    .header nav {
+        display: flex;
+    }
+
+    .menu-bar {
+        display: none;
+    }
+
+    .menu-open {
+        display: flex !important;
+    }
+}
+
 /* 폰트 적용 */
 @font-face {
     font-family: 'GRAVD___';
@@ -190,7 +182,6 @@ body {
 h2, .festival-title {
     font-family: 'WantedSans-Medium', sans-serif;
 }
-
 body, html {
     overflow: visible !important;
 }
