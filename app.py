@@ -31,7 +31,7 @@ def schedule():
 # QnA 페이지
 @app.route('/qna')
 def qna():
-    return render_template("qna.html", page_title="QnA", show_header_info=False)
+    return render_template("qna.html", page_title="자주 묻는 질문", show_header_info=False)
 
 # 서버 실행
 if __name__ == '__main__':
