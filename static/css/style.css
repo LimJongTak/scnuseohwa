@@ -1,4 +1,4 @@
-/* 기존 body 스타일을 업데이트 */
+/* 배경 이미지 설정 */
 body {
     background-image: url("../images/background.png");
     background-repeat: no-repeat;
@@ -14,23 +14,25 @@ body {
     font-family: Arial, sans-serif;
     flex-direction: column;
     color: #ffffff;
-    
 }
 
-/* 그 외 기존 스타일 유지 */
+/* 전체 컨테이너 */
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: transparent; /* 배경을 투명하게 설정 */
+    background: transparent;
 }
 
+/* 헤더 영역 */
 .header {
-    background: transparent; /* 배경을 투명하게 설정 */
+    background: transparent;
     padding: 20px;
     text-align: center;
     box-shadow: none;
     border: none;
+    position: relative;
+    z-index: 1;
 }
 
 .header .logo {
@@ -52,20 +54,21 @@ body {
     border-radius: 5px;
 }
 
-/* 메뉴 아이콘 색상을 흰색으로 변경 */
+/* 햄버거 아이콘 */
 .menu-bar {
     display: block;
     font-size: 30px;
     cursor: pointer;
-    color: white; /* 메뉴 아이콘을 흰색으로 설정 */
+    color: white;
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 10000; /* 항상 최상단 */
 }
 
-/* 수정된 footer 스타일 */
+/* 푸터 */
 .footer {
-    background: transparent; /* 배경을 투명하게 설정 */
+    background: transparent;
     padding: 20px;
     text-align: center;
     display: flex;
@@ -73,11 +76,11 @@ body {
     align-items: center;
     box-shadow: none;
     border: none;
-    margin-top: auto; /* 페이지 하단에 고정 */
+    margin-top: auto;
 }
 
 .footer .footer-text {
-    margin-bottom: 10px; /* copyright을 위로 올리기 위한 margin 추가 */
+    margin-bottom: 10px;
 }
 
 .footer .footer-button {
@@ -92,7 +95,7 @@ body {
     background: #09a8c1;
 }
 
-/* 모바일에서 햄버거 메뉴 보이기 */
+/* 모바일 스타일 */
 @media (max-width: 768px) {
     .header nav {
         display: none;
@@ -100,23 +103,21 @@ body {
 
     .menu-bar {
         display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
     }
 
     .menu-open {
         display: none;
         flex-direction: column;
-        background: rgba(255, 255, 255, 0.7); /* 투명도 70% */
+        background: rgba(255, 255, 255, 0.7);
         position: absolute;
         top: 70px;
         right: 0;
         padding: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: 200px; /* 메뉴를 작게 보이도록 설정 */
+        width: 200px;
         border-radius: 5px;
         font-weight: bold;
+        z-index: 9999; /* 햄버거 메뉴 최상단 */
     }
 
     .menu-open a {
@@ -127,10 +128,10 @@ body {
         font-size: 1rem;
         background-color: transparent;
         line-height: 1.5;
-        display: flex; 
+        display: flex;
         align-items: center;
         justify-content: center;
-        height: 100%
+        height: 100%;
     }
 
     .menu-open a:hover {
@@ -139,42 +140,41 @@ body {
         border-radius: 5px;
     }
 
-    /* 메뉴바 클릭시 메뉴가 보이도록 설정 */
     .menu-bar.open + .menu-open {
         display: flex;
     }
 
-    /* 햄버거 메뉴 아이콘이 X로 변경 */
     .menu-bar.open {
         font-size: 40px;
     }
 }
 
-/* PC 화면에서 메뉴를 햄버거 메뉴처럼 보이도록 설정 */
+/* PC 스타일 */
 @media (min-width: 769px) {
     .header nav {
-        display: flex; /* PC에서 메뉴 항목을 가로로 표시 */
+        display: flex;
     }
 
     .menu-bar {
-        display: none; /* PC 화면에서는 햄버거 메뉴 아이콘 숨기기 */
+        display: none;
     }
 
     .menu-open {
-        display: flex !important; /* 모바일에서는 숨기지 않도록 설정 */
+        display: flex !important;
     }
 }
 
+/* 폰트 적용 */
 @font-face {
     font-family: 'GRAVD___';
     src: url('../fonts/GRAVD___.TTF') format('truetype');
 }
 
-h2, .festival-title {
-    font-family: 'WantedSans-Medium', sans-serif;
-}
-
 @font-face {
     font-family: 'WantedSans-Medium';
     src: url('WantedSans-Medium.ttf') format('truetype');
+}
+
+h2, .festival-title {
+    font-family: 'WantedSans-Medium', sans-serif;
 }
