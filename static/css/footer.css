@@ -14,11 +14,12 @@
 
 .footer-button {
     text-decoration: none;
-    color: #0dbfef;
+    font-weight: bold;
+    color: transparent;
 }
 
 .footer-button:hover {
-    color: #09a8c1;
+    color: transparent;
 }
 
 @font-face {
