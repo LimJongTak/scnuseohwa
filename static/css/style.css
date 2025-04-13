@@ -19,7 +19,7 @@ body {
 /* 모바일 스타일: 768px 이하 */
 @media (max-width: 768px) {
     body {
-        background-image: url("../images/mbg.svg"); /* Mobile-specific background */
+        background-image: url("../images/mbg.png"); /* Mobile-specific background */
     }
 
     .header nav {
@@ -80,7 +80,7 @@ body {
 /* PC 스타일: 769px 이상 */
 @media (min-width: 769px) {
     body {
-        background-image: url("../images/bg.svg"); /* Default background for desktop */
+        background-image: url("../images/bg.png"); /* Default background for desktop */
     }
 
     .header nav {
