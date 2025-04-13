@@ -1,8 +1,161 @@
 {% extends "base.html" %}
+
 {% block content %}
-    <h2>축제 일정</h2>
-    <ul>
-        <li>2025년 5월 28일 - 개막식</li>
-        <li>2025년 5월 29일 - 폐막식</li>
-    </ul>
+<div class="schedule-container">
+    <h2 class="schedule-title">축제 일정</h2>
+
+    <div class="schedule-tabs">
+        <button class="tab-button" id="day1-tab">1DAY</button>
+        <button class="tab-button" id="day2-tab">2DAY</button>
+    </div>
+
+    <!-- 1day 일정 -->
+    <div class="schedule-day" id="day1">
+        <div class="schedule-item" id="item-1">
+            <p class="schedule-time">10:00 ~ 19:00</p>
+            <p class="schedule-detail">주간 프로그램 운영 (부스 운영 등)</p>
+        </div>
+        <div class="schedule-item" id="item-2">
+            <p class="schedule-time">16:00 ~ 17:00</p>
+            <p class="schedule-detail">축제 부스 리허설 및 안전점검</p>
+        </div>
+        <div class="schedule-item" id="item-3">
+            <p class="schedule-time">18:00 ~ 19:00</p>
+            <p class="schedule-detail">동아리 오프닝 공연</p>
+        </div>
+        <div class="schedule-item" id="item-4">
+            <p class="schedule-time">19:00 ~ 19:30</p>
+            <p class="schedule-detail">개회식</p>
+        </div>
+        <div class="schedule-item" id="item-5">
+            <p class="schedule-time">19:30 ~ 20:30</p>
+            <p class="schedule-detail">출범식</p>
+        </div>
+        <div class="schedule-item" id="item-6">
+            <p class="schedule-time">20:30 ~ 21:00</p>
+            <p class="schedule-detail">초청 가수 공연(1)</p>
+        </div>
+        <div class="schedule-item" id="item-7">
+            <p class="schedule-time">21:00 ~ 21:30</p>
+            <p class="schedule-detail">초청 가수 공연(2)</p>
+        </div>
+        <div class="schedule-item" id="item-8">
+            <p class="schedule-time">21:30 ~ 22:00</p>
+            <p class="schedule-detail">초청 가수 공연(3)</p>
+        </div>
+    </div>
+
+    <!-- 2day 일정 -->
+    <div class="schedule-day" id="day2" style="display: none;">
+        <div class="schedule-item" id="item-9">
+            <p class="schedule-time">18:00 ~ 19:00</p>
+            <p class="schedule-detail">동아리 오프닝 공연</p>
+        </div>
+        <div class="schedule-item" id="item-10">
+            <p class="schedule-time">19:00 ~ 19:30</p>
+            <p class="schedule-detail">개회식</p>
+        </div>
+        <div class="schedule-item" id="item-11">
+            <p class="schedule-time">18:00 ~ 19:00</p>
+            <p class="schedule-detail">향림 가요제</p>
+        </div>
+        <div class="schedule-item" id="item-12">
+            <p class="schedule-time">19:00 ~ 20:30</p>
+            <p class="schedule-detail">장기자랑</p>
+        </div>
+        <div class="schedule-item" id="item-13">
+            <p class="schedule-time">20:30 ~ 21:30</p>
+            <p class="schedule-detail">초청 가수 공연(1)</p>
+        </div>
+        <div class="schedule-item" id="item-14">
+            <p class="schedule-time">21:30 ~ 22:00</p>
+            <p class="schedule-detail">초청 가수 공연(2)</p>
+        </div>
+        <div class="schedule-item" id="item-15">
+            <p class="schedule-time">22:00 ~ 22:10</p>
+            <p class="schedule-detail">폐막식</p>
+        </div>
+        <!-- 추가 일정을 추가 -->
+    </div>
+</div>
 {% endblock %}
+
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+    const day1Tab = document.getElementById("day1-tab");
+    const day2Tab = document.getElementById("day2-tab");
+    const day1Content = document.getElementById("day1");
+    const day2Content = document.getElementById("day2");
+
+    // 탭 전환
+    day1Tab.addEventListener("click", () => {
+        day1Tab.classList.add("active");
+        day2Tab.classList.remove("active");
+        day1Content.style.display = "block";
+        day2Content.style.display = "none";
+    });
+
+    day2Tab.addEventListener("click", () => {
+        day2Tab.classList.add("active");
+        day1Tab.classList.remove("active");
+        day2Content.style.display = "block";
+        day1Content.style.display = "none";
+    });
+
+    // 현재 시간에 맞는 일정 강조
+    function highlightCurrentEvent() {
+        const now = new Date();
+        const currentHour = now.getHours();
+        const currentMinute = now.getMinutes();
+
+        // 1day 일정
+        const itemsDay1 = [
+            { start: { hour: 10, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-1" },
+            { start: { hour: 16, minute: 0 }, end: { hour: 17, minute: 0 }, id: "item-2" },
+            { start: { hour: 18, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-3" },
+            { start: { hour: 19, minute: 0 }, end: { hour: 19, minute: 30 }, id: "item-4" },
+            { start: { hour: 19, minute: 30 }, end: { hour: 20, minute: 30 }, id: "item-5" },
+            { start: { hour: 20, minute: 30 }, end: { hour: 21, minute: 0 }, id: "item-6" },
+            { start: { hour: 21, minute: 0 }, end: { hour: 21, minute: 30 }, id: "item-7" },
+            { start: { hour: 21, minute: 30 }, end: { hour: 22, minute: 0 }, id: "item-8" }
+        ];
+
+        // 2day 일정
+        const itemsDay2 = [
+            { start: { hour: 18, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-9" },
+            { start: { hour: 19, minute: 0 }, end: { hour: 19, minute: 30 }, id: "item-10" },
+            { start: { hour: 18, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-11" },
+            { start: { hour: 19, minute: 0 }, end: { hour: 20, minute: 30 }, id: "item-12" },
+            { start: { hour: 20, minute: 30 }, end: { hour: 21, minute: 0 }, id: "item-13" },
+            { start: { hour: 21, minute: 0 }, end: { hour: 21, minute: 30 }, id: "item-14" },
+            { start: { hour: 22, minute: 0 }, end: { hour: 22, minute: 10 }, id: "item-15" }
+        ];
+
+        // 시간대 비교 및 active 추가
+        function checkTime(items) {
+            items.forEach(item => {
+                const startTime = item.start.hour * 60 + item.start.minute;
+                const endTime = item.end.hour * 60 + item.end.minute;
+                const currentTime = currentHour * 60 + currentMinute;
+
+                const itemElement = document.getElementById(item.id);
+                if (currentTime >= startTime && currentTime <= endTime) {
+                    itemElement.classList.add("active");
+                } else {
+                    itemElement.classList.remove("active");
+                }
+            });
+        }
+
+        checkTime(itemsDay1);
+        checkTime(itemsDay2);
+    }
+
+    // 처음 페이지 로드 시 진행 중인 일정 강조
+    highlightCurrentEvent();
+
+    // 일정 새로고침
+    setInterval(highlightCurrentEvent, 60000); // 1분마다 확인
+});
+
+</script>
