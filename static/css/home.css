@@ -15,13 +15,18 @@ body {
 
 /* 링크 항목들을 가운데 정렬하고 간격 설정 */
 .links-container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 100px;
     color: white;
     z-index: 1;
     position: relative;
+    height: 100%; /* 페이지 높이에 맞추기 */
 }
 
+/* 각 항목을 위한 스타일 */
 .link-item {
     display: block;
     text-decoration: none;
@@ -35,7 +40,8 @@ body {
     transition: background 0.3s ease, transform 0.2s, box-shadow 0.3s ease;
     position: relative;
     z-index: 1;
-    margin: 10px 0;
+    margin: 10px 0; /* 항목 간격 */
+    text-align: center;
 }
 
 /* 각 항목의 hover 효과 */
