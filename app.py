@@ -126,15 +126,8 @@ def notice():
                 <h2>국립순천대학교</h2>
                 <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
             </div>
-            <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
-            <nav id="hamburger-menu" class="menu-open">
-                <a href="/">메인</a>
-                <a href="/notice">공지사항</a>
-                <a href="/booth-food">부스&푸드트럭</a>
-                <a href="/map">지도</a>
-                <a href="/schedule">축제 일정</a>
-                <a href="/qna">QnA</a>
-            </nav>
+            <script src="{{ url_for('static', filename='js/common.js') }}"></script>
+
         </header>
 
         <div class="main-content">
@@ -180,14 +173,8 @@ def booth_food():
                 <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
             </div>
             <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
-            <nav id="hamburger-menu" class="menu-open">
-                <a href="/">메인</a>
-                <a href="/notice">공지사항</a>
-                <a href="/booth-food">부스&푸드트럭</a>
-                <a href="/map">지도</a>
-                <a href="/schedule">축제 일정</a>
-                <a href="/qna">QnA</a>
-            </nav>
+            <script src="{{ url_for('static', filename='js/common.js') }}"></script>
+
         </header>
 
         <div class="main-content">
@@ -233,14 +220,8 @@ def map():
                 <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
             </div>
             <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
-            <nav id="hamburger-menu" class="menu-open">
-                <a href="/">메인</a>
-                <a href="/notice">공지사항</a>
-                <a href="/booth-food">부스&푸드트럭</a>
-                <a href="/map">지도</a>
-                <a href="/schedule">축제 일정</a>
-                <a href="/qna">QnA</a>
-            </nav>
+            <script src="{{ url_for('static', filename='js/common.js') }}"></script>
+
         </header>
 
         <div class="main-content">
@@ -280,15 +261,8 @@ def schedule():
                 <h2>국립순천대학교</h2>
                 <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
             </div>
-            <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
-            <nav id="hamburger-menu" class="menu-open">
-                <a href="/">메인</a>
-                <a href="/notice">공지사항</a>
-                <a href="/booth-food">부스&푸드트럭</a>
-                <a href="/map">지도</a>
-                <a href="/schedule">축제 일정</a>
-                <a href="/qna">QnA</a>
-            </nav>
+            <script src="{{ url_for('static', filename='js/common.js') }}"></script>
+
         </header>
 
         <div class="main-content">
@@ -331,15 +305,8 @@ def qna():
                 <h2>국립순천대학교</h2>
                 <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
             </div>
-            <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">&#9776;</div>
-            <nav id="hamburger-menu" class="menu-open">
-                <a href="/">메인</a>
-                <a href="/notice">공지사항</a>
-                <a href="/booth-food">부스&푸드트럭</a>
-                <a href="/map">지도</a>
-                <a href="/schedule">축제 일정</a>
-                <a href="/qna">QnA</a>
-            </nav>
+            <script src="{{ url_for('static', filename='js/common.js') }}"></script>
+
         </header>
 
         <div class="main-content">
