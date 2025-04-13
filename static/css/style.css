@@ -132,6 +132,7 @@ body {
         align-items: center;
         justify-content: center;
         height: 100%;
+        z-index: 10000;
     }
 
     .menu-open a:hover {
@@ -146,6 +147,7 @@ body {
 
     .menu-bar.open {
         font-size: 40px;
+        z-index: 10000;
     }
 }
 
