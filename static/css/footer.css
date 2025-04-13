@@ -20,3 +20,8 @@
 .footer-button:hover {
     color: #09a8c1;
 }
+
+@font-face {
+    font-family: 'GRAVD___';
+    src: url('../fonts/GRAVD___.TTF') format('truetype');
+}
