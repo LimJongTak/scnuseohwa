@@ -1,11 +1,3 @@
-/* 전체 배경 스타일 */
-body {
-    background: linear-gradient(135deg, #6a7eb0, #c7a9d5);
-    background-size: 400% 400%;
-    animation: gradientBackground 15s ease infinite;
-    overflow: hidden;
-    margin: 0; /* body 여백 제거 */
-}
 
 /* 배경을 반짝이게 하는 애니메이션 */
 @keyframes gradientBackground {
