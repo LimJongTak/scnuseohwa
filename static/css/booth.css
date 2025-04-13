@@ -75,25 +75,19 @@
 
 /* 부스 버튼 스타일 */
 .booth-button {
-    padding: 15px 30px;  /* 버튼 크기 증가 */
-    background: linear-gradient(135deg, #0dbfef, #5a3f7d); /* 그라디언트 배경 */
+    padding: 10px 20px;
+    background-color: #0dbfef;
     color: white;
     border: none;
-    border-radius: 10px; /* 둥근 모서리 크기 증가 */
-    font-size: 18px;  /* 글자 크기 증가 */
-    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* 색상 변화 및 크기 변형 */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    transition: background-color 0.3s;
 }
 
 .booth-button:hover {
-    background: linear-gradient(135deg, #09a8c1, #8e67b2); /* 마우스 오버 시 그라디언트 변경 */
-    transform: scale(1.08); /* 마우스 오버 시 확대 효과 */
-}
-
-.booth-button:active {
-    transform: scale(0.98); /* 클릭 시 축소 효과 */
+    background-color: #09a8c1;
 }
 
 /* 부스 및 푸드트럭 정보 텍스트 */
@@ -128,60 +122,29 @@
     margin-top: 20px;
 }
 
-/* 대운동장 부스(주황), 부스(파랑), 부스(초록) 버튼 스타일 */
-.stadium-buttons {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.stadium-button {
-    background: linear-gradient(135deg, #FFA500, #FF8C00); /* 주황색 그라디언트 */
+/* 부스 목록 버튼 스타일 */
+.booth-section-button {
+    padding: 15px 30px;
+    background-color: #8E7DBE;
     color: white;
-    padding: 5px 10px;  /* 버튼 크기 증가 */
-    border-radius: 8px;  /* 둥근 모서리 크기 증가 */
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s;
-    font-weight: bold;
-    font-size: 5px;  /* 글자 크기 증가 */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    width: 250px;
+    text-align: center;
 }
 
-.stadium-button:hover {
-    background: linear-gradient(135deg, #FF8C00, #FF6347);
-    transform: scale(1.08);  /* 마우스 오버 시 확대 효과 */
+.booth-section-button:hover {
+    background-color: #5A3F7D;
 }
 
-.stadium-button:active {
+.booth-section-button:active {
     transform: scale(0.98);
 }
 
-/* 푸드트럭존 버튼 스타일 */
-.food-truck-buttons {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.food-truck-button {
-    background: linear-gradient(135deg, #FFCC00, #FFB300); /* 노란색 그라디언트 */
-    color: white;
-    padding: 5px 10px;  /* 버튼 크기 증가 */
-    border-radius: 8px;  /* 둥근 모서리 크기 증가 */
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s;
-    font-weight: bold;
-    font-size: 5px;  /* 글자 크기 증가 */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.food-truck-button:hover {
-    background: linear-gradient(135deg, #FFB300, #FF9800);
-    transform: scale(1.08);  /* 마우스 오버 시 확대 효과 */
-}
-
-.food-truck-button:active {
-    transform: scale(0.98);
+.booth-section-button:focus {
+    outline: none;
 }

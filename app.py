@@ -37,7 +37,21 @@ def qna():
 def creator():
     return render_template("creator.html", page_title="사이트 제작자", show_header_info=False)
 
+booths = {
+    1: {"name": "부스(파랑)", "description": "재미있는 체험이 가득한 부스입니다.", "number": "1-4", "details": "이 부스에서는 다양한 체험 활동이 준비되어 있습니다. 아이부터 어른까지 모두 참여할 수 있습니다."},
+    2: {"name": "부스(주황)", "description": "다양한 음식을 제공하는 부스입니다.", "number": "2-1", "details": "주황색 부스에서는 특선 메뉴와 함께 다양한 음식을 즐길 수 있습니다."},
+    3: {"name": "부스(초록)", "description": "체험형 놀이 부스입니다.", "number": "3-3", "details": "초록색 부스에서는 다양한 체험 활동이 제공됩니다. 가족 단위로 즐길 수 있습니다."}
+}
 
+@app.route('/booth/<int:booth_id>')
+def booth_info(booth_id):
+    # 부스 정보를 booth_id를 이용해 가져오기
+    booth = booths.get(booth_id)
+    
+    if booth:
+        return render_template('booth-info.html', booth=booth)
+    else:
+        return "부스 정보를 찾을 수 없습니다.", 404
 # 서버 실행
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
