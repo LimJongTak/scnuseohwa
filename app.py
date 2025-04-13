@@ -20,7 +20,7 @@ def booth_food():
 
 # 라인업페이지지
 @app.route('/lineup')
-def lineup_page():
+def lineup():
     return render_template("lineup.html", page_title="라인업", show_header_info=False)
 
 # 축제 일정 페이지
