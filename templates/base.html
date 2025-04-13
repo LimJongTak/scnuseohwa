@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <title>{{ page_title }}</title>
 
-    <!-- 스타일시트 -->
+    <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/notice.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/qna.css') }}">
 
-    <!-- 캔버스 배경 스타일 -->
     <style>
         canvas#bg-canvas {
             position: fixed;
@@ -22,7 +21,6 @@
         }
     </style>
 
-    <!-- JavaScript -->
     <script>
         // 메뉴 토글
         function toggleMenu() {
@@ -37,11 +35,10 @@
             }
         }
 
-        // 콘텐츠 펼치기
+        // 콘텐츠 토글 (공지사항/QnA 공통)
         function toggleContent(el) {
             const allItems = document.querySelectorAll('.notice-item, .qna-item');
             const allContents = document.querySelectorAll('.notice-content, .qna-content');
-
 
             allItems.forEach(item => {
                 if (item !== el) item.classList.remove('active');
@@ -55,9 +52,11 @@
             content.style.display = (content.style.display === "block") ? "none" : "block";
         }
 
-        // 별빛 애니메이션 캔버스
+        // 별빛 배경
         window.addEventListener('DOMContentLoaded', () => {
             const canvas = document.getElementById('bg-canvas');
+            if (!canvas) return;
+
             const ctx = canvas.getContext('2d');
             let particles = [];
 
