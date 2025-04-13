@@ -39,8 +39,8 @@
 
         // 콘텐츠 펼치기
         function toggleContent(el) {
-            const allItems = document.querySelectorAll('.notice-item, .qna-item');
-            const allContents = document.querySelectorAll('.notice-content, .qna-content');
+            const allItems = document.querySelectorAll('.notice-item');
+            const allContents = document.querySelectorAll('.notice-content');
 
             allItems.forEach(item => {
                 if (item !== el) item.classList.remove('active');
@@ -128,7 +128,7 @@
                 <a href="/booth-food">부스&푸드트럭</a>
                 <a href="/map">지도</a>
                 <a href="/schedule">축제 일정</a>
-                <a href="/qna">자주 묻는 질문</a>
+                <a href="/qna">자주 하는 질문</a>
             </nav>
         </header>
 
