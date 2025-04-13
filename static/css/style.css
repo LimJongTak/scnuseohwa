@@ -85,14 +85,15 @@ body {
 
 .footer .footer-button {
     text-decoration: none;
-    background: #0dbfef;
+    background: transparent;
     color: white;
+    font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
 }
 
 .footer .footer-button:hover {
-    background: #09a8c1;
+    background: transparent;
 }
 
 /* 모바일 스타일 */
