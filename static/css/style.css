@@ -1,6 +1,6 @@
 /* 배경 이미지 설정 */
 body {
-    background-image: url("../images/background.png");
+    background-image: url("../images/bg.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
