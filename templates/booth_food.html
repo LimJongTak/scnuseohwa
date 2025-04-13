@@ -1,9 +1,78 @@
 {% extends "base.html" %}
+
 {% block content %}
-    <h2>부스 & 푸드트럭</h2>
-    <ul>
-        <li><a href="#">부스 1</a></li>
-        <li><a href="#">푸드트럭 1</a></li>
-        <li><a href="#">푸드트럭 2</a></li>
-    </ul>
+    <div class="booth-container">
+        <h2 class="booth-title">부스 & 푸드트럭</h2>
+
+        <!-- 대운동장과 푸드트럭존 버튼 -->
+        <div class="menu-tabs">
+            <button class="tab-button active" onclick="showBooth('stadium')">대운동장</button>
+            <button class="tab-button" onclick="showBooth('foodtruck')">푸드트럭존</button>
+        </div>
+
+        <!-- 대운동장 부스 정보 -->
+        <div id="stadium" class="booth-info">
+            <div class="booth-section">
+                <h3>부스(분홍)</h3>
+                <img src="{{ url_for('static', filename='images/stadium-pink-booth.jpg') }}" alt="부스(분홍)">
+                <p>부스에 대한 간단한 설명</p>
+                <p>부스 번호: 1-4</p>
+                <p>상세 내용: 부스 위치 및 정보</p>
+            </div>
+            <div class="booth-section">
+                <h3>부스(노랑)</h3>
+                <img src="{{ url_for('static', filename='images/stadium-yellow-booth.jpg') }}" alt="부스(노랑)">
+                <p>부스에 대한 간단한 설명</p>
+                <p>부스 번호: 5-8</p>
+                <p>상세 내용: 부스 위치 및 정보</p>
+            </div>
+            <div class="booth-section">
+                <h3>부스(파랑)</h3>
+                <img src="{{ url_for('static', filename='images/stadium-blue-booth.jpg') }}" alt="부스(파랑)">
+                <p>부스에 대한 간단한 설명</p>
+                <p>부스 번호: 9-12</p>
+                <p>상세 내용: 부스 위치 및 정보</p>
+            </div>
+        </div>
+
+        <!-- 푸드트럭존 정보 -->
+        <div id="foodtruck" class="booth-info" style="display:none;">
+            <div class="booth-section">
+                <h3>푸드트럭 1</h3>
+                <img src="{{ url_for('static', filename='images/foodtruck1.jpg') }}" alt="푸드트럭 1">
+                <p>푸드트럭에 대한 간단한 설명</p>
+                <p>판매 메뉴: 시럽빙수, 레인보우빙수</p>
+                <p>운영 시간: 11:00 ~ 17:00</p>
+            </div>
+            <div class="booth-section">
+                <h3>푸드트럭 2</h3>
+                <img src="{{ url_for('static', filename='images/foodtruck2.jpg') }}" alt="푸드트럭 2">
+                <p>푸드트럭에 대한 간단한 설명</p>
+                <p>판매 메뉴: 떡볶이, 튀김</p>
+                <p>운영 시간: 10:00 ~ 18:00</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showBooth(section) {
+            const stadium = document.getElementById('stadium');
+            const foodtruck = document.getElementById('foodtruck');
+            const tabs = document.querySelectorAll('.tab-button');
+
+            // 모든 탭 비활성화
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // 선택된 탭만 활성화
+            if (section === 'stadium') {
+                stadium.style.display = 'block';
+                foodtruck.style.display = 'none';
+                tabs[0].classList.add('active');
+            } else {
+                stadium.style.display = 'none';
+                foodtruck.style.display = 'block';
+                tabs[1].classList.add('active');
+            }
+        }
+    </script>
 {% endblock %}
