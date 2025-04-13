@@ -33,6 +33,11 @@ def schedule():
 def qna():
     return render_template("qna.html", page_title="자주 묻는 질문", show_header_info=False)
 
+@app.route('/creator')
+def creator():
+    return render_template("creator.html", page_title="사이트 제작자", show_header_info=False)
+
+
 # 서버 실행
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
