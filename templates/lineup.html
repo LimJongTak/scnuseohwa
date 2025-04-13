@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="lineup-container">
+        <header class="lineup-header">
+            <div class="lineup-title">
+                <h1>라인업</h1>
+            </div>
+            <div class="tab-buttons">
+                <button class="tab-button active" id="day1-tab">Day 1</button>
+                <button class="tab-button" id="day2-tab">Day 2</button>
+            </div>
+        </header>
+
+        <div class="lineup-content">
+            <!-- Day 1 콘텐츠 -->
+            <div id="day1-content" class="day-content active">
+                <div class="artist-intro">
+                    <h2>아티스트 소개</h2>
+                    <p>가나다라마사바야 자차카타파하</p>
+                </div>
+                <div class="popular-songs">
+                    <h3>주요 인기곡</h3>
+                    <ul>
+                        <li>가나다라마사바야</li>
+                        <li>가나다라마사바야</li>
+                        <li>가나다라마사바야</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 2 콘텐츠 -->
+            <div id="day2-content" class="day-content">
+                <div class="artist-intro">
+                    <h2>아티스트 소개</h2>
+                    <p>가나다라마사바야 자차카타파하</p>
+                </div>
+                <div class="popular-songs">
+                    <h3>주요 인기곡</h3>
+                    <ul>
+                        <li>가나다라마사바야</li>
+                        <li>가나다라마사바야</li>
+                        <li>가나다라마사바야</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel">
+            <button class="prev-btn">&#10094;</button>
+            <div class="carousel-content">
+                <img src="{{ url_for('static', filename='images/lineup-placeholder.jpg') }}" alt="Artist Image">
+            </div>
+            <button class="next-btn">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        // Tab Switching
+        const day1Tab = document.getElementById('day1-tab');
+        const day2Tab = document.getElementById('day2-tab');
+        const day1Content = document.getElementById('day1-content');
+        const day2Content = document.getElementById('day2-content');
+
+        day1Tab.addEventListener('click', () => {
+            day1Tab.classList.add('active');
+            day2Tab.classList.remove('active');
+            day1Content.classList.add('active');
+            day2Content.classList.remove('active');
+        });
+
+        day2Tab.addEventListener('click', () => {
+            day2Tab.classList.add('active');
+            day1Tab.classList.remove('active');
+            day2Content.classList.add('active');
+            day1Content.classList.remove('active');
+        });
+    </script>
+{% endblock %}
