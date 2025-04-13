@@ -72,3 +72,52 @@
     font-size: 16px;
     margin: 5px 0;
 }
+
+/* 부스 버튼 스타일 */
+.booth-button {
+    padding: 10px 20px;
+    background-color: #0dbfef;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.booth-button:hover {
+    background-color: #09a8c1;
+}
+
+/* 부스 및 푸드트럭 정보 텍스트 */
+.booth-description {
+    font-size: 14px;
+    color: #B0B0B0;
+    margin-top: 5px;
+}
+
+.booth-number {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* 추가된 부스 및 푸드트럭 상세정보 */
+.booth-detail {
+    font-size: 14px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.booth-detail p {
+    margin: 5px 0;
+}
+
+/* 메뉴 버튼 스타일 */
+.booth-button-container {
+    margin-top: 20px;
+}
