@@ -4,13 +4,16 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    width: 100%;
+    max-width: 800px; /* 중앙 정렬을 위한 최대 너비 설정 */
+    margin: 0 auto;
 }
 
 /* 헤더 영역 */
 .lineup-header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* 가운데 정렬 */
     align-items: center;
     background: transparent;
     color: white;
@@ -25,7 +28,9 @@
 /* 탭 버튼 영역 */
 .tab-buttons {
     display: flex;
+    justify-content: center; /* 탭 버튼들을 가운데 정렬 */
     gap: 20px;
+    margin-top: 20px; /* 탭 버튼과 라인업 내용 사이 간격 추가 */
 }
 
 /* 탭 버튼 스타일 */
