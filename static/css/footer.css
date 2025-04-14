@@ -12,6 +12,11 @@
     z-index: 10;
 }
 
+/* 페이지 내용이 footer와 겹치지 않도록 여백을 추가 */
+body {
+    padding-bottom: 50px; /* footer의 높이에 맞는 여백 추가 */
+}
+
 /* 폰트 설정 */
 @font-face {
     font-family: 'GRAVD___';
