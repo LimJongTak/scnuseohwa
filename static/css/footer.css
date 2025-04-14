@@ -5,9 +5,9 @@
     text-align: center;
     font-size: 14px;
     color: #333;
-    position: fixed;  /* 푸터를 화면 하단에 고정 */
+    position: absolute;  /* 페이지가 길어져도 항상 하단에 고정되도록 설정 */
     left: 0;
-    bottom: -60px; /* 기본적으로 푸터를 화면 아래로 숨기기 */
+    bottom: -60px;  /* 기본적으로 푸터를 화면 아래로 숨기기 */
     width: 100%;
     z-index: 10;
     transition: bottom 0.3s ease-in-out; /* 부드러운 이동 애니메이션 */
@@ -15,7 +15,6 @@
 
 /* 푸터 텍스트 스타일 */
 .footer-text {
-    margin-top: 50px; /* 윗 부분에 50px의 여백 추가 */
     margin-bottom: 10px;
     font-size: 0.95rem;
     color: white;
@@ -23,7 +22,6 @@
 
 /* 사이트 제작자 버튼 스타일 */
 .footer-button-inline {
-    position: relative;
     text-decoration: none;
     color: white;
     font-weight: bold;
