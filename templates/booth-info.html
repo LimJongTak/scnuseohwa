@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="booth-detail-container">
-    <h2 class="booth-title">부스(파랑) 상세 정보</h2>
+    <h2 class="booth-title">{{ booth.name }} 상세 정보</h2>
     <div class="booth-detail">
         <!-- 부스 이미지 -->
         <div class="booth-image">
@@ -11,15 +11,15 @@
 
         <!-- 부스 설명 및 번호 -->
         <div class="booth-description">
-            <p><strong>부스 제목:</strong> 재미있는 체험이 가득한 부스입니다.</p>
-            <p><strong>부스 번호:</strong> 1-4</p>
-            <p><strong>부스 설명:</strong> 이 부스에서는 다양한 체험 활동이 준비되어 있습니다. 아이부터 어른까지 모두 참여할 수 있습니다.</p>
+            <p><strong>부스 제목:</strong> {{ booth.name }}</p>
+            <p><strong>부스 번호:</strong> {{ booth.number }}</p>
+            <p><strong>부스 설명:</strong> {{ booth.description }}</p>
         </div>
-    </div>
-
-    <!-- 상세 정보 버튼 -->
-    <div class="booth-info-button-container">
-        <button class="booth-info-button" onclick="location.href='/booth/1/detail'">부스 상세 정보 보기</button>
+        
+        <!-- 부스 상세 정보 -->
+        <div class="booth-info-button-container">
+            <p><strong>상세 정보:</strong> {{ booth.details }}</p>
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -13,6 +13,10 @@ body {
     font-family: Arial, sans-serif;
     color: #ffffff;
 }
+.link-item p {
+    font-weight: bold; /* 굵은 글씨 */
+}
+
 
 /* 모바일 배경 이미지 설정 */
 @media (max-width: 768px) {
