@@ -5,9 +5,9 @@
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 세로 정렬 */
-    align-items: center; /* 가로 정렬 */
-    height: 100%; /* 부모 요소의 높이를 꽉 채움 */
+    justify-content: center;  /* 세로 가운데 정렬 */
+    align-items: center;      /* 가로 가운데 정렬 */
+    height: 100vh;            /* 화면 전체를 차지 */
 }
 
 .schedule-title {
@@ -51,7 +51,8 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* 가로 중앙 정렬 */
-    width: 100%;
+    width: 80%; /* 일정의 가로 너비를 좁혀서 중앙에 정렬 */
+    margin: 0 auto;  /* 가운데 정렬 */
 }
 
 .schedule-item {
@@ -60,7 +61,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    width: 60%; /* 일정의 가로 너비를 좁혀서 중앙에 정렬 */
+    width: 100%;  /* 가로 너비를 부모에 맞추기 */
     text-align: left;
     transition: background-color 0.3s ease, border 0.3s ease;
 }
