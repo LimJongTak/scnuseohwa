@@ -21,7 +21,7 @@
 
 /* hover 스타일 */
 .link-item a:hover {
-    color: gray; /* hover 시 텍스트 색상 변화 */
+    color: rgb(196, 196, 196); /* hover 시 텍스트 색상 변화 */
     transform: scale(1.05); /* hover 시 텍스트 확대 */
 }
 

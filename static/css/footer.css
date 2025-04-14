@@ -5,22 +5,18 @@
     text-align: center;
     font-size: 14px;
     color: #333;
-    position: fixed;
+    position: absolute;  /* fixed에서 absolute로 변경 */
     left: 0;
     bottom: 0;
     width: 100%;
     z-index: 10;
+    margin-top: 20px; /* 본문 내용과 겹치지 않도록 여백 추가 */
 }
 
 /* 페이지 내용이 footer와 겹치지 않도록 여백을 추가 */
 body {
-    padding-bottom: 50px; /* footer의 높이에 맞는 여백 추가 */
-}
-
-/* 폰트 설정 */
-@font-face {
-    font-family: 'GRAVD___';
-    src: url('../fonts/GRAVD___.TTF') format('truetype');
+    padding-bottom: 60px; /* footer의 높이에 맞는 여백 추가 (여백 크기 조정) */
+    margin: 0;
 }
 
 /* 가로 정렬을 위한 행 스타일 */

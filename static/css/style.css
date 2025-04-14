@@ -21,6 +21,7 @@ body {
     body {
         background-image: url("../images/mobile.png"); /* 모바일용 배경 */
         background-size: cover; /* 모바일 화면에 맞게 배경을 꽉 채움 */
+        background-attachment: scroll; /* 모바일에서는 고정된 배경이 불필요하여 변경 */
     }
 }
 
@@ -30,6 +31,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background: transparent;
+    width: 100%; /* 화면 크기에 맞게 컨테이너 크기 조정 */
 }
 
 /* 헤더 영역 */
@@ -152,7 +154,7 @@ body {
     }
 
     .menu-bar.open + .menu-open {
-        display: flex !important;;
+        display: flex !important;
     }
 
     .menu-bar.open {
