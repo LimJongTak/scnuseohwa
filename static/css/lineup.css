@@ -60,7 +60,7 @@
 .lineup-content {
     width: 100%;
     padding: 20px;
-    background: #D8B7DD; /* 파스텔 연보라색 배경 */
+    background: transparent; /* 파스텔 연보라색 배경 */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
