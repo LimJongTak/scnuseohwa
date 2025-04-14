@@ -153,7 +153,7 @@
 .prev-btn,
 .next-btn {
     background-color: white;
-    color: transparent;
+    color: gray;
     padding: 8px;
     border: none;
     border-radius: 50%;
