@@ -58,13 +58,16 @@
 
 /* 라인업 콘텐츠 */
 .lineup-content {
-    width: 100%;
+    width: 350px; /* 가로 크기 350px로 설정 */
+    height: 700px; /* 세로 크기 700px로 설정 */
     padding: 20px;
-    background: transparent; /* 파스텔 연보라색 배경 */
+    background: transparent; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    overflow-y: auto; /* 내용이 넘칠 경우 스크롤을 추가 */
 }
+
 
 /* Day 콘텐츠 */
 .day-content {
@@ -126,12 +129,12 @@
 }
 
 .carousel-content {
-    width: 100%;
+    width: 300px;
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #E5E5E5;
+    background-color: transparent;
     border-radius: 10px;
 }
 
