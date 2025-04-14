@@ -82,16 +82,16 @@ body {
     align-items: center;
     box-shadow: none;
     border: none;
-    margin-top: auto;
-    position: fixed;  /* 페이지가 길어져도 항상 하단에 고정되도록 설정 */
-    bottom: -60px; /* 기본적으로 푸터를 화면 아래로 숨기기 */
+    position: fixed;  /* 페이지 내용이 길어져도 항상 하단에 고정되도록 설정 */
+    bottom: 0;
+    left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
     transition: bottom 0.3s ease-in-out; /* 부드러운 이동 애니메이션 */
 }
 
 /* 푸터 텍스트 스타일 */
-.footer-text {
+.footer .footer-text {
     margin-bottom: 10px;
     font-size: 0.95rem;
     color: white;
@@ -219,6 +219,7 @@ body {
 h2, .festival-title {
     font-family: 'WantedSans-Medium', sans-serif;
 }
+
 body, html {
     overflow: visible !important;
 }
