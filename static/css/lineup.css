@@ -59,7 +59,7 @@
 /* 라인업 콘텐츠 */
 .lineup-content {
     width: 350px; /* 가로 크기 350px로 설정 */
-    height: 100px; /* 세로 크기 700px로 설정 */
+    height: 1000px; /* 세로 크기 700px로 설정 */
     padding: 20px;
     background: transparent; 
     border-radius: 10px;
