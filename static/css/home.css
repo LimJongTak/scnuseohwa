@@ -5,39 +5,6 @@
     100% { background-position: 0% 50%; }
 }
 
-/* 전체 컨테이너 스타일 */
-.home-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(45deg, #A4B0F1, #6A4B7C);
-    background-size: 400% 400%;
-    animation: gradientBackground 15s ease infinite;
-}
-
-/* 링크 아이템 스타일 */
-.link-item {
-    position: relative;
-    margin: 15px 0;
-    padding: 15px 30px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    text-align: center;
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.link-item:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    transform: scale(1.05); /* 마우스 오버 시 크기 증가 */
-}
-
 /* 별 모양 효과를 주기 위한 스타일 */
 .link-item:after {
     content: '';
@@ -51,7 +18,6 @@
     animation: sparkle 1s infinite alternate;
 }
 
-/* 별 반짝임 애니메이션 */
 @keyframes sparkle {
     0% { opacity: 0; transform: translateY(0) scale(0.5); }
     100% { opacity: 1; transform: translateY(-5px) scale(1); }
