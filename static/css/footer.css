@@ -1,5 +1,6 @@
 /* 푸터 스타일을 고정 위치로 설정 */
 .footer-container {
+    padding-bottom: 100px;
     background-color: transparent;
     padding: 10px;
     text-align: center;
