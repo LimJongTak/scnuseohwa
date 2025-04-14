@@ -14,62 +14,11 @@ body {
     color: #ffffff;
 }
 
-/* 모바일 배경 이미지 설정 */
-@media (max-width: 768px) {
-    body {
-        background-image: url("../images/mobile.png"); /* 모바일용 배경 */
-        background-size: cover; /* 모바일 화면에 맞게 배경을 꽉 채움 */
-    }
-}
-
 /* 전체 컨테이너 */
 .container {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 60px); /* 푸터 높이를 제외한 전체 화면 높이로 설정 */
-    background: transparent;
-}
-
-/* 헤더 영역 */
-.header {
-    background: transparent;
-    padding: 20px;
-    text-align: center;
-    box-shadow: none;
-    border: none;
-    position: relative;
-    z-index: 1000;
-}
-
-.header .logo {
-    font-size: 2.5rem;
-    color: #8E7DBE;
-}
-
-.header nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 1rem;
-    color: #8E7DBE;
-    padding: 10px;
-}
-
-.header nav a:hover {
-    color: #ffffff;
-    background-color: #8E7DBE;
-    border-radius: 5px;
-}
-
-/* 햄버거 아이콘 */
-.menu-bar {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001; /* 항상 최상단 */
+    flex-grow: 1; /* 푸터가 고정되도록 할 수 있도록 설정 */
 }
 
 /* 푸터 */
@@ -82,12 +31,8 @@ body {
     align-items: center;
     box-shadow: none;
     border: none;
-    position: fixed;  /* 페이지 내용이 길어져도 항상 하단에 고정되도록 설정 */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    transition: bottom 0.3s ease-in-out; /* 부드러운 이동 애니메이션 */
+    position: relative; /* 푸터가 내용 끝에 고정되도록 설정 */
+    margin-top: 30px; /* 푸터와 내용 간의 여백 */
 }
 
 /* 푸터 텍스트 스타일 */
