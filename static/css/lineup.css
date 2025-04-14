@@ -13,7 +13,8 @@
 .lineup-header {
     width: 100%;
     display: flex;
-    justify-content: center; /* 가운데 정렬 */
+    flex-direction: column; /* 두 줄로 정렬을 위해 flex-direction을 column으로 설정 */
+    justify-content: center;
     align-items: center;
     background: transparent;
     color: white;
@@ -23,6 +24,7 @@
 /* 제목 스타일 */
 .lineup-title h1 {
     margin: 0;
+    font-size: 2.5rem;
 }
 
 /* 탭 버튼 영역 */
@@ -30,7 +32,7 @@
     display: flex;
     justify-content: center; /* 탭 버튼들을 가운데 정렬 */
     gap: 20px;
-    margin-top: 20px; /* 탭 버튼과 라인업 내용 사이 간격 추가 */
+    margin-top: 10px; /* 탭 버튼과 제목 사이 간격 추가 */
 }
 
 /* 탭 버튼 스타일 */
