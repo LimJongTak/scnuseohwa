@@ -42,7 +42,7 @@
 
 /* 부스 섹션 버튼 스타일 */
 .booth-section-button {
-    padding: 15px 30px;
+    padding: 12px 24px;  /* 원래 크기에서 30px 정도 줄임 (15px->12px, 30px->24px) */
     background-color: white;
     color: #5A3F7D;
     font-weight: bold;
