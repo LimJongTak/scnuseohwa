@@ -15,6 +15,14 @@
         <div class="lineup-content">
             <!-- Day 1 콘텐츠 -->
             <div id="day1-content" class="day-content active">
+                <!-- 이미지 슬라이드 부분을 Day 1 내용 위로 이동 -->
+                <div class="carousel">
+                    <button class="prev-btn">&#10094;</button>
+                    <div class="carousel-content">
+                        <img src="{{ url_for('static', filename='images/lineup-placeholder.jpg') }}" alt="Artist Image">
+                    </div>
+                    <button class="next-btn">&#10095;</button>
+                </div>
                 <div class="artist-intro">
                     <h2>유재석</h2>
                     <p>국민MC</p>
@@ -31,6 +39,14 @@
 
             <!-- Day 2 콘텐츠 -->
             <div id="day2-content" class="day-content">
+                <!-- 이미지 슬라이드 부분을 Day 2 내용 위로 이동 -->
+                <div class="carousel">
+                    <button class="prev-btn">&#10094;</button>
+                    <div class="carousel-content">
+                        <img src="{{ url_for('static', filename='images/lineup-placeholder.jpg') }}" alt="Artist Image">
+                    </div>
+                    <button class="next-btn">&#10095;</button>
+                </div>
                 <div class="artist-intro">
                     <h2>강호동</h2>
                     <p>천하장사</p>
@@ -44,15 +60,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
-
-        <!-- Carousel (이미지 슬라이드) -->
-        <div class="carousel">
-            <button class="prev-btn">&#10094;</button>
-            <div class="carousel-content">
-                <img src="{{ url_for('static', filename='images/lineup-placeholder.jpg') }}" alt="Artist Image">
-            </div>
-            <button class="next-btn">&#10095;</button>
         </div>
     </div>
 
