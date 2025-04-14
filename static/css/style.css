@@ -14,11 +14,61 @@ body {
     color: #ffffff;
 }
 
+/* 모바일 배경 이미지 설정 */
+@media (max-width: 768px) {
+    body {
+        background-image: url("../images/mobile.png"); /* 모바일용 배경 */
+        background-size: cover; /* 모바일 화면에 맞게 배경을 꽉 채움 */
+    }
+}
+
 /* 전체 컨테이너 */
 .container {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* 푸터가 고정되도록 할 수 있도록 설정 */
+    flex-grow: 1; /* 푸터가 내용 아래로 밀리게 설정 */
+}
+
+/* 헤더 영역 */
+.header {
+    background: transparent;
+    padding: 20px;
+    text-align: center;
+    box-shadow: none;
+    border: none;
+    position: relative;
+    z-index: 1000;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    color: #8E7DBE;
+}
+
+.header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #8E7DBE;
+    padding: 10px;
+}
+
+.header nav a:hover {
+    color: #ffffff;
+    background-color: #8E7DBE;
+    border-radius: 5px;
+}
+
+/* 햄버거 아이콘 */
+.menu-bar {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001; /* 항상 최상단 */
 }
 
 /* 푸터 */
@@ -31,51 +81,26 @@ body {
     align-items: center;
     box-shadow: none;
     border: none;
-    position: relative; /* 푸터가 내용 끝에 고정되도록 설정 */
-    margin-top: 30px; /* 푸터와 내용 간의 여백 */
+    margin-top: auto;
+    width: 100%;
 }
 
 /* 푸터 텍스트 스타일 */
 .footer .footer-text {
     margin-bottom: 10px;
-    font-size: 0.95rem;
-    color: white;
 }
 
-/* 사이트 제작자 버튼 스타일 */
-.footer-button-inline {
+.footer .footer-button {
     text-decoration: none;
+    background: transparent;
     color: white;
     font-weight: bold;
-    font-size: 0.95rem;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-/* 호버 시 흰색 밑줄 효과 */
-.footer-button-inline::after {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-}
-
-.footer-button-inline:hover::after {
-    transform: scaleX(1);
-}
-
-/* 기존 .footer-button 클래스는 필요시 사용 */
-.footer-button {
-    text-decoration: none;
-    color: white;
-}
-
-.footer-button:hover {
-    color: transparent;
+.footer .footer-button:hover {
+    background: transparent;
 }
 
 /* 모바일 스타일 */
@@ -164,7 +189,6 @@ body {
 h2, .festival-title {
     font-family: 'WantedSans-Medium', sans-serif;
 }
-
 body, html {
     overflow: visible !important;
 }
