@@ -1,12 +1,11 @@
 /* 푸터 스타일을 고정 위치로 설정 */
 .footer-container {
-    padding-bottom: 100px;
     background-color: transparent;
     padding: 10px;
     text-align: center;
     font-size: 14px;
     color: #333;
-    position: absolute;  /* 페이지가 길어져도 항상 하단에 고정되도록 설정 */
+    position: fixed;  /* 페이지가 길어져도 항상 하단에 고정되도록 설정 */
     left: 0;
     bottom: 0;
     width: 100%;
