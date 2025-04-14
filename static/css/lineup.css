@@ -99,6 +99,22 @@
 .popular-songs li {
     font-size: 16px;
     margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* 앨범 이미지 */
+.album-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* 노래 제목 및 아티스트 이름 */
+.song-details {
+    display: flex;
+    flex-direction: column;
 }
 
 /* 이미지 캐러셀 */
@@ -154,4 +170,12 @@
 .prev-btn:hover,
 .next-btn:hover {
     background-color: #5A3F7D;
+}
+
+/* 라인 추가 */
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    margin: 20px 0;
 }
