@@ -26,7 +26,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 푸터가 화면 하단에 고정될 수 있도록 설정 */
+    min-height: 100vh; /* 푸터 높이를 제외한 전체 화면 높이로 설정 */
     background: transparent;
 }
 
@@ -73,21 +73,22 @@ body {
 }
 
 /* 푸터 */
-.footer {
-    background: transparent;
-    padding: 20px;
+.footer-container {
+    background-color: transparent;
+    padding: 10px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: none;
-    border: none;
-    margin-top: auto;
+    font-size: 14px;
+    color: #333;
+    position: absolute; /* 푸터를 페이지 내용의 끝에 고정시키기 위해 position absolute 사용 */
+    left: 0;
+    bottom: 0;
     width: 100%;
+    z-index: 10;
+    margin-top: 50px; /* copyright와 사이트 제작자 사이에 여백을 50px 추가 */
 }
 
 /* 푸터 텍스트 스타일 */
-.footer .footer-text {
+.footer-text {
     margin-bottom: 10px;
 }
 
@@ -152,7 +153,7 @@ body {
     }
 
     .menu-bar.open + .menu-open {
-        display: flex !important; ;
+        display: flex !important;
     }
 
     .menu-bar.open {
