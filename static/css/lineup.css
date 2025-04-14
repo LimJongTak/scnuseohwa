@@ -1,3 +1,4 @@
+/* 전체 컨테이너 */
 .lineup-container {
     display: flex;
     flex-direction: column;
@@ -5,25 +6,29 @@
     padding: 20px;
 }
 
+/* 헤더 영역 */
 .lineup-header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #8E7DBE;
+    background: transparent;
     color: white;
     padding: 15px;
 }
 
+/* 제목 스타일 */
 .lineup-title h1 {
     margin: 0;
 }
 
+/* 탭 버튼 영역 */
 .tab-buttons {
     display: flex;
     gap: 20px;
 }
 
+/* 탭 버튼 스타일 */
 .tab-button {
     padding: 10px 20px;
     background-color: #B0A0D7;
@@ -34,23 +39,27 @@
     font-size: 16px;
 }
 
+/* 탭 버튼 호버 스타일 */
 .tab-button:hover {
     background-color: #5A3F7D;
 }
 
+/* 활성화된 탭 버튼 */
 .tab-button.active {
     background-color: #5A3F7D;
 }
 
+/* 라인업 콘텐츠 */
 .lineup-content {
     width: 100%;
     padding: 20px;
-    background: #D8B7DD;
+    background: #D8B7DD; /* 파스텔 연보라색 배경 */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
+/* Day 콘텐츠 */
 .day-content {
     display: none;
 }
@@ -59,6 +68,7 @@
     display: block;
 }
 
+/* 아티스트 소개 */
 .artist-intro {
     margin-bottom: 20px;
 }
@@ -68,6 +78,7 @@
     margin-bottom: 10px;
 }
 
+/* 인기곡 리스트 */
 .popular-songs h3 {
     font-size: 20px;
     margin-bottom: 10px;
@@ -107,6 +118,7 @@
     border-radius: 10px;
 }
 
+/* 이전/다음 버튼 */
 .prev-btn,
 .next-btn {
     position: absolute;
@@ -121,14 +133,17 @@
     transform: translateY(-50%);
 }
 
+/* 이전 버튼 위치 */
 .prev-btn {
     left: 10px;
 }
 
+/* 다음 버튼 위치 */
 .next-btn {
     right: 10px;
 }
 
+/* 버튼 호버 스타일 */
 .prev-btn:hover,
 .next-btn:hover {
     background-color: #5A3F7D;

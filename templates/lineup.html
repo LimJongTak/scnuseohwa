@@ -7,8 +7,8 @@
                 <h1>라인업</h1>
             </div>
             <div class="tab-buttons">
-                <button class="tab-button active" id="day1-tab">Day 1</button>
-                <button class="tab-button" id="day2-tab">Day 2</button>
+                <button class="tab-button active" id="day1-tab">1 Day</button>
+                <button class="tab-button" id="day2-tab">2 DAY</button>
             </div>
         </header>
 
@@ -46,6 +46,7 @@
             </div>
         </div>
 
+        <!-- Carousel (이미지 슬라이드) -->
         <div class="carousel">
             <button class="prev-btn">&#10094;</button>
             <div class="carousel-content">
@@ -56,12 +57,13 @@
     </div>
 
     <script>
-        // Tab Switching
+        // Tab Switching 기능
         const day1Tab = document.getElementById('day1-tab');
         const day2Tab = document.getElementById('day2-tab');
         const day1Content = document.getElementById('day1-content');
         const day2Content = document.getElementById('day2-content');
 
+        // Day 1 클릭 시
         day1Tab.addEventListener('click', () => {
             day1Tab.classList.add('active');
             day2Tab.classList.remove('active');
@@ -69,11 +71,35 @@
             day2Content.classList.remove('active');
         });
 
+        // Day 2 클릭 시
         day2Tab.addEventListener('click', () => {
             day2Tab.classList.add('active');
             day1Tab.classList.remove('active');
             day2Content.classList.add('active');
             day1Content.classList.remove('active');
+        });
+
+        // Carousel (슬라이드) 기능
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const carouselContent = document.querySelector('.carousel-content');
+        let currentIndex = 0;
+        const images = [
+            "{{ url_for('static', filename='images/lineup-placeholder.jpg') }}", 
+            "{{ url_for('static', filename='images/lineup-placeholder2.jpg') }}", 
+            "{{ url_for('static', filename='images/lineup-placeholder3.jpg') }}"
+        ];
+
+        // 이전 이미지
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            carouselContent.innerHTML = `<img src="${images[currentIndex]}" alt="Artist Image">`;
+        });
+
+        // 다음 이미지
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            carouselContent.innerHTML = `<img src="${images[currentIndex]}" alt="Artist Image">`;
         });
     </script>
 {% endblock %}
