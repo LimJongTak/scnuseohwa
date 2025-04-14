@@ -30,10 +30,12 @@
     transition: background-color 0.3s;
 }
 
+/* 탭 버튼 호버 스타일 */
 .tab-button:hover {
     background-color: #5A3F7D;
 }
 
+/* 활성화된 탭 버튼 */
 .tab-button.active {
     background-color: #5A3F7D;
 }
@@ -52,12 +54,15 @@
     transition: background-color 0.3s;
 }
 
-.booth-section-button:hover {
-    background-color: white;
+/* 부스 버튼 활성화 스타일 */
+.booth-section-button.active {
+    background-color: #5A3F7D;
+    color: white;
 }
 
-.booth-section-button:active {
-    transform: scale(0.98);
+/* 부스 섹션 버튼 호버 스타일 */
+.booth-section-button:hover {
+    background-color: #f1f1f1;
 }
 
 /* 부스 버튼 그룹 스타일 */
