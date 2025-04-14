@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
     const day1Tab = document.getElementById("day1-tab");
     const day2Tab = document.getElementById("day2-tab");
     const day1Content = document.getElementById("day1");
@@ -64,8 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 const itemElement = document.getElementById(item.id);
                 if (currentTime >= startTime && currentTime <= endTime) {
                     itemElement.classList.add("active");
+                    itemElement.classList.add("highlight"); // 추가: 활성화된 항목에 highlight 클래스 추가
                 } else {
                     itemElement.classList.remove("active");
+                    itemElement.classList.remove("highlight"); // 추가: highlight 클래스 제거
                 }
             });
         }
@@ -79,4 +81,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 일정 새로고침
     setInterval(highlightCurrentEvent, 60000); // 1분마다 확인
-});
+};
