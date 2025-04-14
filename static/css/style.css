@@ -21,7 +21,6 @@ body {
     body {
         background-image: url("../images/mobile.png"); /* 모바일용 배경 */
         background-size: cover; /* 모바일 화면에 맞게 배경을 꽉 채움 */
-        background-attachment: scroll; /* 모바일에서는 고정된 배경이 불필요하여 변경 */
     }
 }
 
@@ -29,9 +28,8 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: calc(100vh - 60px); /* 푸터 높이를 제외한 전체 화면 높이로 설정 */
     background: transparent;
-    width: 100%; /* 화면 크기에 맞게 컨테이너 크기 조정 */
 }
 
 /* 헤더 영역 */
@@ -87,8 +85,12 @@ body {
     box-shadow: none;
     border: none;
     margin-top: auto;
+    position: fixed;  /* 페이지가 길어져도 항상 하단에 고정되도록 설정 */
+    bottom: 0;
+    width: 100%;
 }
 
+/* 푸터 텍스트 스타일 */
 .footer .footer-text {
     margin-bottom: 10px;
 }
@@ -154,7 +156,7 @@ body {
     }
 
     .menu-bar.open + .menu-open {
-        display: flex !important;
+        display: flex !important;;
     }
 
     .menu-bar.open {
