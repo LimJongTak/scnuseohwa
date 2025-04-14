@@ -5,29 +5,15 @@
     text-align: center;
     font-size: 14px;
     color: #333;
-    position: fixed;  /* 페이지 내용이 길어져도 화면 하단에 고정되도록 설정 */
+    position: fixed;  /* 푸터를 화면 하단에 고정 */
     left: 0;
-    bottom: 0;
+    bottom: -60px; /* 기본적으로 푸터를 화면 아래로 숨기기 */
     width: 100%;
     z-index: 10;
+    transition: bottom 0.3s ease-in-out; /* 부드러운 이동 애니메이션 */
 }
 
-/* 폰트 설정 */
-@font-face {
-    font-family: 'GRAVD___';
-    src: url('../fonts/GRAVD___.TTF') format('truetype');
-}
-
-/* 가로 정렬을 위한 행 스타일 */
-.footer-row {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: center; /* 높이 정렬 */
-    justify-content: center;
-}
-
-/* 카피라이트 텍스트 */
+/* 푸터 텍스트 스타일 */
 .footer-text {
     margin-top: 50px; /* 윗 부분에 50px의 여백 추가 */
     margin-bottom: 10px;
@@ -70,13 +56,4 @@
 
 .footer-button:hover {
     color: transparent;
-}
-
-html, body {
-    height: 100%; /* 페이지 전체 높이 설정 */
-    margin: 0; /* 기본 margin 제거 */
-}
-
-.container {
-    min-height: calc(100vh - 60px); /* 푸터 높이만큼 빼고 내용을 꽉 채우도록 설정 */
 }

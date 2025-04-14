@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/creator.css') }}">
 
     <style>
-          /* 로딩 GIF 중앙 배치 */
-          #loading {
+        /* 로딩 GIF 중앙 배치 */
+        #loading {
             position: fixed;
             top: 50%;
             left: 50%;
@@ -40,13 +40,81 @@
             z-index: -1;
             pointer-events: none;
         }
+
+        /* 푸터 스타일 */
+        .footer-container {
+            background-color: transparent;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            position: absolute;  /* 페이지가 길어져도 항상 하단에 고정되도록 설정 */
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        /* 푸터 텍스트 스타일 */
+        .footer-text {
+            margin-top: 50px; /* 윗 부분에 50px의 여백 추가 */
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: white;
+        }
+
+        .footer-button-inline {
+            position: relative;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .footer-button-inline::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-button-inline:hover::after {
+            transform: scaleX(1);
+        }
+
+        .footer-button {
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer-button:hover {
+            color: transparent;
+        }
+
+        html, body {
+            height: 100%; /* 페이지 전체 높이 설정 */
+            margin: 0; /* 기본 margin 제거 */
+        }
+
+        /* 컨텐츠 영역 */
+        .container {
+            min-height: calc(100vh - 60px); /* 푸터 높이를 제외한 화면 크기로 설정 */
+            padding-bottom: 60px; /* 푸터 높이만큼 여백 추가 */
+        }
     </style>
 
     <script>
-         // 페이지 로딩 후 로딩 이미지 숨기기
-         window.addEventListener('load', function() {
+        // 페이지 로딩 후 로딩 이미지 숨기기
+        window.addEventListener('load', function() {
             document.body.classList.add('loaded');
         });
+
         // 메뉴 토글
         function toggleMenu() {
             const menu = document.getElementById('hamburger-menu');
@@ -173,8 +241,6 @@
                 <a href="{{ url_for('creator') }}" class="footer-button-inline">사이트 제작자</a>
             </div>
         </div>
-        </footer>
-        
     </div>
 </body>
 </html>

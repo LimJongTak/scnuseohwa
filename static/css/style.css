@@ -6,15 +6,12 @@ body {
     background-position: center;
     background-size: cover; /* 화면을 꽉 채우도록 배경 크기 설정 */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* 최소 화면 높이를 설정하여 배경이 꽉 차도록 */
+    flex-direction: column;
+    min-height: 100vh; /* 페이지가 화면을 꽉 채우도록 설정 */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    flex-direction: column;
     color: #ffffff;
-    padding-bottom: 100px; /* 최하단에 100px 여백 추가 */
 }
 
 /* 모바일 배경 이미지 설정 */
@@ -29,7 +26,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 60px); /* 푸터 높이를 제외한 전체 화면 높이로 설정 */
+    min-height: 100vh; /* 푸터가 화면 하단에 고정될 수 있도록 설정 */
     background: transparent;
 }
 
@@ -86,8 +83,6 @@ body {
     box-shadow: none;
     border: none;
     margin-top: auto;
-    position: absolute;  /* 페이지가 길어져도 항상 하단에 고정되도록 설정 */
-    bottom: 0;
     width: 100%;
 }
 
