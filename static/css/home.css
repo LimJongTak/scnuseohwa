@@ -10,7 +10,7 @@
 /* 링크 항목 스타일 */
 .link-item a {
     text-decoration: none; /* 밑줄 제거 */
-    color: #00B3B3; /* 텍스트 색상 설정 */
+    color: white; /* 텍스트 색상 설정 */
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -21,7 +21,7 @@
 
 /* hover 스타일 */
 .link-item a:hover {
-    color: #009999; /* hover 시 텍스트 색상 변화 */
+    color: gray; /* hover 시 텍스트 색상 변화 */
     transform: scale(1.05); /* hover 시 텍스트 확대 */
 }
 
