@@ -5,6 +5,36 @@
     100% { background-position: 0% 50%; }
 }
 
+/* 링크 항목 스타일 */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.link-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #00B3B3;  /* 파스텔 색상 */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 250px;  /* 버튼 크기 고정 */
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* hover 스타일 */
+.link-item a:hover {
+    background-color: #009999;
+    transform: scale(1.05); /* hover 시 버튼이 커짐 */
+}
+
 /* 별 모양 효과를 주기 위한 스타일 */
 .link-item:after {
     content: '';
