@@ -1,11 +1,4 @@
-/* 배경을 반짝이게 하는 애니메이션 */
-@keyframes gradientBackground {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* 링크 항목 스타일 */
+/* 전체 스타일 */
 .home-container {
     display: flex;
     flex-direction: column;
@@ -14,25 +7,22 @@
     gap: 20px;
 }
 
+/* 링크 항목 스타일 */
 .link-item a {
-    text-decoration: none;
-    color: white;
+    text-decoration: none; /* 밑줄 제거 */
+    color: #00B3B3; /* 텍스트 색상 설정 */
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color: #00B3B3;  /* 파스텔 색상 */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 250px;  /* 버튼 크기 고정 */
     display: inline-block;
     margin-bottom: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 /* hover 스타일 */
 .link-item a:hover {
-    background-color: #009999;
-    transform: scale(1.05); /* hover 시 버튼이 커짐 */
+    color: #009999; /* hover 시 텍스트 색상 변화 */
+    transform: scale(1.05); /* hover 시 텍스트 확대 */
 }
 
 /* 별 모양 효과를 주기 위한 스타일 */

@@ -5,9 +5,9 @@
     text-align: center;
     font-size: 14px;
     color: #333;
-    position: fixed;
+    position: absolute; /* 변경된 부분: 절대 위치로 설정 */
     left: 0;
-    bottom: 0;
+    bottom: 0; /* 스크롤이 있는 경우에도 맨 아래에 위치 */
     width: 100%;
     z-index: 10;
 }
@@ -69,4 +69,9 @@
 
 .footer-button:hover {
     color: transparent;
+}
+
+/* 페이지의 내용이 많을 경우 footer가 맨 아래에 고정되도록 추가 */
+body {
+    padding-bottom: 40px; /* footer가 겹치지 않도록 충분한 여백을 추가 */
 }
