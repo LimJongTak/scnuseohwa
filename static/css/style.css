@@ -26,7 +26,8 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* 푸터가 내용 아래로 밀리게 설정 */
+    min-height: calc(100vh - 60px); /* 푸터 높이를 제외한 전체 화면 높이로 설정 */
+    background: transparent;
 }
 
 /* 헤더 영역 */
@@ -69,126 +70,4 @@ body {
     top: 20px;
     right: 20px;
     z-index: 1001; /* 항상 최상단 */
-}
-
-/* 푸터 */
-.footer {
-    background: transparent;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: none;
-    border: none;
-    margin-top: auto;
-    width: 100%;
-}
-
-/* 푸터 텍스트 스타일 */
-.footer .footer-text {
-    margin-bottom: 10px;
-}
-
-.footer .footer-button {
-    text-decoration: none;
-    background: transparent;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.footer .footer-button:hover {
-    background: transparent;
-}
-
-/* 모바일 스타일 */
-@media (max-width: 768px) {
-    .header nav {
-        display: none;
-    }
-
-    .menu-bar {
-        display: block;
-    }
-
-    .menu-open {
-        display: none;
-        flex-direction: column;
-        background: rgba(255, 255, 255, 0.7);
-        position: absolute;
-        top: 70px;
-        right: 0;
-        padding: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: 200px;
-        border-radius: 5px;
-        font-weight: bold;
-        z-index: 1002; /* 햄버거 메뉴 최상단 */
-    }
-
-    .menu-open a {
-        margin: 10px 0;
-        text-decoration: none;
-        color: #8E7DBE;
-        padding: 10px 15px;
-        font-size: 1rem;
-        background-color: transparent;
-        line-height: 1.5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        z-index: 1003;
-        pointer-events: auto;
-    }
-
-    .menu-open a:hover {
-        background: #8E7DBE;
-        color: white;
-        border-radius: 5px;
-    }
-
-    .menu-bar.open + .menu-open {
-        display: flex !important; ;
-    }
-
-    .menu-bar.open {
-        font-size: 40px;
-        z-index: 10000;
-    }
-}
-
-/* PC 스타일 */
-@media (min-width: 769px) {
-    .header nav {
-        display: flex;
-    }
-
-    .menu-bar {
-        display: none;
-    }
-
-    .menu-open {
-        display: flex !important;
-    }
-}
-
-/* 폰트 적용 */
-@font-face {
-    font-family: 'GRAVD___';
-    src: url('../fonts/GRAVD___.TTF') format('truetype');
-}
-
-@font-face {
-    font-family: 'WantedSans-Medium';
-    src: url('WantedSans-Medium.ttf') format('truetype');
-}
-
-h2, .festival-title {
-    font-family: 'WantedSans-Medium', sans-serif;
-}
-body, html {
-    overflow: visible !important;
 }

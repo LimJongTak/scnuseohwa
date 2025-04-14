@@ -5,38 +5,23 @@
     text-align: center;
     font-size: 14px;
     color: #333;
-    position: absolute; /* 페이지 내용이 길어져도 화면 하단에 고정되도록 설정 */
+    position: absolute;  /* 페이지가 길어져도 항상 하단에 고정되도록 설정 */
     left: 0;
     bottom: 0;
     width: 100%;
     z-index: 10;
 }
 
-/* 폰트 설정 */
-@font-face {
-    font-family: 'GRAVD___';
-    src: url('../fonts/GRAVD___.TTF') format('truetype');
-}
-
-/* 가로 정렬을 위한 행 스타일 */
-.footer-row {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: center; /* 높이 정렬 */
-    justify-content: center;
-}
-
-/* 카피라이트 텍스트 */
+/* 푸터 텍스트 스타일 */
 .footer-text {
-    margin: 0;
+    margin-top: 50px; /* 윗 부분에 50px의 여백 추가 */
+    margin-bottom: 10px;
     font-size: 0.95rem;
     color: white;
 }
 
 /* 사이트 제작자 버튼 스타일 */
 .footer-button-inline {
-    position: relative;
     text-decoration: none;
     color: white;
     font-weight: bold;
