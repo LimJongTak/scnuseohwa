@@ -14,6 +14,7 @@ body {
     font-family: Arial, sans-serif;
     flex-direction: column;
     color: #ffffff;
+    padding-bottom: 100px; /* 최하단에 100px 여백 추가 */
 }
 
 /* 모바일 배경 이미지 설정 */
