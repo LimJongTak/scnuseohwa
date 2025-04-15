@@ -76,21 +76,25 @@
 /* 부스 정보 섹션 */
 .booth-info {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;  /* 가로 중앙 정렬 */
     flex-wrap: wrap;
     margin-top: 30px;
+    gap: 20px;  /* 아이템 간 간격 추가 */
 }
 
+/* 부스 세부 정보 스타일 */
 .booth-section {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    width: 250px;
+    width: 350px;  /* 가로 350px로 설정 */
+    height: auto;  /* 세로 높이는 자동으로 맞추기 */
     margin-bottom: 20px;
     padding: 20px;
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* 부스 이미지 스타일 */
 .booth-section img {
     width: 100%;
     height: auto;
@@ -98,12 +102,14 @@
     margin-bottom: 10px;
 }
 
+/* 부스 제목 */
 .booth-section h3 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* 부스 설명 */
 .booth-section p {
     font-size: 16px;
     margin: 5px 0;
@@ -138,6 +144,11 @@
 /* 지도 스타일 */
 #map {
     margin-top: 30px;
+    width: 100%;
+    max-width: 600px;  /* 지도 크기 조정 */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;  /* 지도 가운데 정렬 */
 }
 
 /* 메뉴 버튼 스타일 */
@@ -148,11 +159,4 @@
 /* 부스 정보 숨기기 스타일 */
 .info-list {
     display: none;
-}
-
-/* 지도 스타일 */
-#map {
-    margin-top: 30px;
-    max-width: 100%;
-    border-radius: 10px;
 }
