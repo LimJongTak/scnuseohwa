@@ -135,7 +135,24 @@
     margin: 5px 0;
 }
 
+/* 지도 스타일 */
+#map {
+    margin-top: 30px;
+}
+
 /* 메뉴 버튼 스타일 */
 .booth-button-container {
     margin-top: 20px;
+}
+
+/* 부스 정보 숨기기 스타일 */
+.info-list {
+    display: none;
+}
+
+/* 지도 스타일 */
+#map {
+    margin-top: 30px;
+    max-width: 100%;
+    border-radius: 10px;
 }
