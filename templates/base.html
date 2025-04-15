@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>{{ page_title }}</title>
 
+    <!-- Open Graph 메타 태그 추가 -->
+    <meta property="og:title" content="서화총학생회" />
+    <meta property="og:description" content="서화총학생회의 공식 사이트입니다." />
+    <meta property="og:image" content="https://scnuseohwa.site/images/thumbnail.png" />
+    <meta property="og:url" content="https://scnuseohwa.site" />
+    <meta property="og:type" content="website" />
+
     <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">  <!-- Updated link for footer styles -->
@@ -16,7 +23,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/creator.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/schedule.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='js/schedule.js') }}">
-
 
     <style>
         /* 로딩 GIF 중앙 배치 */
