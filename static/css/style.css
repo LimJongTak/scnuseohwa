@@ -70,10 +70,10 @@ body {
     font-size: 30px;
     cursor: pointer;
     color: white;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001; /* 항상 최상단 */
+    position: fixed;  /* 햄버거 버튼을 고정시킴 */
+    top: 20px;        /* 화면 상단에서 20px 떨어지게 설정 */
+    right: 20px;      /* 화면 오른쪽에서 20px 떨어지게 설정 */
+    z-index: 1001;    /* 최상단에 위치 */
 }
 
 /* 햄버거 메뉴 */
@@ -81,7 +81,7 @@ body {
     display: none;  /* 기본적으로 메뉴는 숨김 */
     flex-direction: column;
     background: rgba(255, 255, 255, 0.7); /* 흰색 배경에 70% 투명도 */
-    position: absolute;
+    position: fixed;  /* 메뉴를 고정시켜서 스크롤에 맞게 내리도록 함 */
     top: 70px; /* 햄버거 버튼 바로 아래 */
     right: 0;
     padding: 10px;
