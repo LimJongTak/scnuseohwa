@@ -24,11 +24,11 @@
     </div>
 
     <!-- 지도와 부스/푸드트럭 정보 표시 -->
-    <div id="map" style="display: block; text-align: center;">
-        <img src="{{ url_for('static', filename='images/map.png') }}" alt="부스 지도" style="width: 100%; max-width: 600px; border-radius: 10px; border: 5px solid white; padding: 10px; box-sizing: border-box;">
+    <div id="map" style="display: none;">
+        <img src="{{ url_for('static', filename='images/map.png') }}" alt="부스 지도" style="width: 100%; max-width: 600px;">
     </div>
 
-    <div id="booth-info" class="info-list" style="display: block;">
+    <div id="booth-info" class="info-list" style="display: none;">
         <!-- 동적으로 부스 정보가 표시될 자리 -->
     </div>
 </div>
