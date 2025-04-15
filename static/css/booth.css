@@ -52,6 +52,7 @@
     margin-top: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-bottom: 20px;
 }
 
 /* 부스 버튼 활성화 스타일 */
