@@ -62,12 +62,24 @@ window.onload = function () {
                 const currentTime = currentHour * 60 + currentMinute;
 
                 const itemElement = document.getElementById(item.id);
+                const itemText = itemElement.querySelector(".schedule-detail");
+
                 if (currentTime >= startTime && currentTime <= endTime) {
                     itemElement.classList.add("active");
-                    itemElement.classList.add("highlight"); // 추가: 활성화된 항목에 highlight 클래스 추가
+                    itemElement.classList.add("highlight"); // 활성화된 항목에 highlight 클래스 추가
+
+                    // "진행 중" 텍스트 추가
+                    if (!itemText.innerHTML.includes("진행 중")) {
+                        itemText.innerHTML += "<span class='current-event'> 진행 중</span>";
+                    }
                 } else {
                     itemElement.classList.remove("active");
-                    itemElement.classList.remove("highlight"); // 추가: highlight 클래스 제거
+                    itemElement.classList.remove("highlight"); // highlight 클래스 제거
+
+                    // "진행 중" 텍스트 제거
+                    if (itemText.innerHTML.includes("진행 중")) {
+                        itemText.innerHTML = itemText.innerHTML.replace("<span class='current-event'> 진행 중</span>", "");
+                    }
                 }
             });
         }

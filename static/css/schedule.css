@@ -22,6 +22,14 @@
     gap: 20px;
     margin-bottom: 40px;
 }
+/* 진행 중 텍스트 스타일 */
+.current-event {
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
 
 /* 탭 버튼 스타일 */
 .tab-button {
@@ -84,8 +92,26 @@
 
 /* 진행 중인 일정 강조 */
 .schedule-item.active {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 255, 255, 0.6); /* 강조된 항목에 파란색 배경 */
     border: 2px solid #0dbfef;
+    color: white; /* 텍스트 색상 진하게 */
+}
+
+/* 진행 중 텍스트 추가 스타일 */
+.schedule-item.highlight {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #0dbfef; /* 진행 중인 텍스트 강조 */
+    border: 2px solid #0dbfef;
+    font-weight: bold;
+    transform: scale(1.05); /* 강조된 항목 확대 */
+    transition: transform 0.3s ease;
+}
+
+.schedule-item.highlight::after {
+    content: " 진행 중";
+    font-size: 16px;
+    color: red;
+    margin-left: 10px;
 }
 
 /* 기본적으로 1DAY 일정이 보이도록 하고, 2DAY는 숨겨져 있음 */
@@ -100,8 +126,8 @@
 /* 화면 크기가 작을 경우, 일정의 크기 조정 */
 @media (max-width: 768px) {
     .schedule-item {
-        width: 90%;  /* 모바일 화면에서는 일정의 크기를 조금 더 작게 설정 */
-        padding: 15px;  /* 모바일에서 패딩을 줄여서 더 여백을 확보 */
+        width: 90%;
+        padding: 15px; /* 모바일에서 패딩을 줄여서 더 여백을 확보 */
     }
 
     .tab-button {
