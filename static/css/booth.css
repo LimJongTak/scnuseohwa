@@ -88,7 +88,7 @@
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     width: 350px;  /* 가로 350px로 설정 */
-    height: auto;  /* 세로 높이는 자동으로 맞추기 */
+    height: 100px;  /* 세로 높이는 자동으로 맞추기 */
     margin-bottom: 20px;
     padding: 20px;
     text-align: center;
