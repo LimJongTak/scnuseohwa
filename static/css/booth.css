@@ -73,7 +73,6 @@
     gap: 15px;
     margin-top: 20px;
 }
-
 /* 부스 정보 섹션 */
 .booth-info {
     display: flex;
@@ -98,8 +97,10 @@
     padding: 20px;
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;  /* 내용이 영역을 벗어나지 않도록 숨김 */
+    display: flex;
+    flex-direction: column;
 }
-
 
 /* 부스 이미지 스타일 */
 .booth-section img {
@@ -114,12 +115,19 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;  /* 텍스트가 한 줄로 표시되고 넘치지 않도록 설정 */
 }
 
 /* 부스 설명 */
 .booth-section p {
     font-size: 16px;
     margin: 5px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;  /* 텍스트가 한 줄로 표시되고 넘치지 않도록 설정 */
+    display: block;
 }
 
 /* 부스 정보 상세보기 스타일 */
