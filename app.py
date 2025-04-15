@@ -6,7 +6,7 @@ app = Flask(__name__)
 # 메인 페이지 (로고 및 날짜 포함)
 @app.route('/')
 def home():
-    return render_template("home.html", page_title="서화총학생회", show_header_info=True)
+    return render_template("home.html", page_title="서화 총학생회", show_header_info=True)
 
 # 공지사항 페이지
 @app.route('/notice')

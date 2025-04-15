@@ -5,15 +5,15 @@
     <title>{{ page_title }}</title>
 
     <!-- Open Graph 메타 태그 추가 -->
-    <meta property="og:title" content="서화 총학생회" />
-    <meta property="og:description" content="90년의 동화를, 100년의 서약으로" />
-    <meta property="og:image" content="https://scnuseohwa.site/images/thumbnail.png" />
-    <meta property="og:url" content="https://scnuseohwa.site" />
+    <meta property="og:title" content="{{ page_title }}" />
+    <meta property="og:description" content="서화총학생회의 공식 사이트입니다." />
+    <meta property="og:image" content="{{ url_for('static', filename='images/thumbnail.png') }}" />
+    <meta property="og:url" content="{{ request.url }}" />
     <meta property="og:type" content="website" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">  <!-- Updated link for footer styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/notice.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/qna.css') }}">
@@ -34,7 +34,7 @@
             z-index: 9999;
         }
         #loading img {
-            width: 100px; /* 원하는 크기로 조절 */
+            width: 100px;
             height: auto;
         }
 
