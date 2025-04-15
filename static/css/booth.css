@@ -145,6 +145,8 @@
 #map {
     margin-top: 30px;
     max-width: 100%;
+    width: 100%;  /* 지도 크기 꽉 채우기 */
+    height: auto;  /* 높이는 자동으로 맞추기 */
     border-radius: 10px;
     display: block;
     margin: 0 auto;  /* 지도 가운데 정렬 */
