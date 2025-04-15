@@ -76,24 +76,51 @@
         let info = '';
         if (color === 'blue') {
             info = `
-                <h3>부스(파랑)</h3>
-                <p>재미있는 체험이 가득한 부스입니다.</p>
-                <p><strong>부스 번호:</strong> 1-4</p>
-                <p>이 부스에서는 다양한 체험 활동이 준비되어 있습니다. 아이부터 어른까지 모두 참여할 수 있습니다.</p>
+                <div class="booth-section">
+                    <img src="{{ url_for('static', filename='images/booth_blue.jpg') }}" alt="부스(파랑)" />
+                    <div class="booth-text">
+                        <h3>부스(파랑)</h3>
+                        <p>재미있는 체험이 가득한 부스입니다.</p>
+                        <p><strong>부스 번호:</strong> 1-4</p>
+                        <p>이 부스에서는 다양한 체험 활동이 준비되어 있습니다. 아이부터 어른까지 모두 참여할 수 있습니다.</p>
+                        <p><a href="#" class="booth-info-link">자세히 보기</a></p>
+                    </div>
+                    <div class="booth-degree">
+                        <img src="{{ url_for('static', filename='images/degree-icon.png') }}" alt="부스 정도" />
+                    </div>
+                </div>
             `;
         } else if (color === 'green') {
             info = `
-                <h3>부스(초록)</h3>
-                <p>체험형 놀이 부스입니다.</p>
-                <p><strong>부스 번호:</strong> 2-2</p>
-                <p>어린이를 위한 체험 부스로, 다양한 놀이 기구와 체험이 마련되어 있습니다.</p>
+                <div class="booth-section">
+                    <img src="{{ url_for('static', filename='images/booth_green.jpg') }}" alt="부스(초록)" />
+                    <div class="booth-text">
+                        <h3>부스(초록)</h3>
+                        <p>체험형 놀이 부스입니다.</p>
+                        <p><strong>부스 번호:</strong> 2-2</p>
+                        <p>어린이를 위한 체험 부스로, 다양한 놀이 기구와 체험이 마련되어 있습니다.</p>
+                        <p><a href="#" class="booth-info-link">자세히 보기</a></p>
+                    </div>
+                    <div class="booth-degree">
+                        <img src="{{ url_for('static', filename='images/degree-icon.png') }}" alt="부스 정도" />
+                    </div>
+                </div>
             `;
         } else if (color === 'orange') {
             info = `
-                <h3>부스(주황)</h3>
-                <p>다양한 음식을 제공하는 부스입니다.</p>
-                <p><strong>부스 번호:</strong> 3-1</p>
-                <p>다양한 종류의 음식을 제공하며, 많은 사람들에게 인기 있는 부스입니다.</p>
+                <div class="booth-section">
+                    <img src="{{ url_for('static', filename='images/booth_orange.jpg') }}" alt="부스(주황)" />
+                    <div class="booth-text">
+                        <h3>부스(주황)</h3>
+                        <p>다양한 음식을 제공하는 부스입니다.</p>
+                        <p><strong>부스 번호:</strong> 3-1</p>
+                        <p>다양한 종류의 음식을 제공하며, 많은 사람들에게 인기 있는 부스입니다.</p>
+                        <p><a href="#" class="booth-info-link">자세히 보기</a></p>
+                    </div>
+                    <div class="booth-degree">
+                        <img src="{{ url_for('static', filename='images/degree-icon.png') }}" alt="부스 정도" />
+                    </div>
+                </div>
             `;
         }
 
@@ -120,17 +147,35 @@
         let info = '';
         if (zone === '1') {
             info = `
-                <h3>푸드트럭(1존)</h3>
-                <p>다양한 음식을 제공하는 푸드트럭입니다.</p>
-                <p><strong>푸드트럭 번호:</strong> 1-1</p>
-                <p>핫도그, 핫윙, 햄버거 등 다양한 먹거리가 준비되어 있습니다.</p>
+                <div class="booth-section">
+                    <img src="{{ url_for('static', filename='images/foodtruck_1.jpg') }}" alt="푸드트럭(1존)" />
+                    <div class="booth-text">
+                        <h3>푸드트럭(1존)</h3>
+                        <p>다양한 음식을 제공하는 푸드트럭입니다.</p>
+                        <p><strong>푸드트럭 번호:</strong> 1-1</p>
+                        <p>핫도그, 핫윙, 햄버거 등 다양한 먹거리가 준비되어 있습니다.</p>
+                        <p><a href="#" class="booth-info-link">자세히 보기</a></p>
+                    </div>
+                    <div class="booth-degree">
+                        <img src="{{ url_for('static', filename='images/degree-icon.png') }}" alt="푸드트럭 정도" />
+                    </div>
+                </div>
             `;
         } else if (zone === '2') {
             info = `
-                <h3>푸드트럭(2존)</h3>
-                <p>디저트 전문 푸드트럭입니다.</p>
-                <p><strong>푸드트럭 번호:</strong> 2-2</p>
-                <p>마카롱, 아이스크림, 디저트가 다양하게 준비되어 있습니다.</p>
+                <div class="booth-section">
+                    <img src="{{ url_for('static', filename='images/foodtruck_2.jpg') }}" alt="푸드트럭(2존)" />
+                    <div class="booth-text">
+                        <h3>푸드트럭(2존)</h3>
+                        <p>디저트 전문 푸드트럭입니다.</p>
+                        <p><strong>푸드트럭 번호:</strong> 2-2</p>
+                        <p>마카롱, 아이스크림, 디저트가 다양하게 준비되어 있습니다.</p>
+                        <p><a href="#" class="booth-info-link">자세히 보기</a></p>
+                    </div>
+                    <div class="booth-degree">
+                        <img src="{{ url_for('static', filename='images/degree-icon.png') }}" alt="푸드트럭 정도" />
+                    </div>
+                </div>
             `;
         }
 
