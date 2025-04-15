@@ -6,20 +6,20 @@
     
     <!-- 대운동장 및 푸드트럭존 버튼 -->
     <div class="menu-tabs">
-        <button id="daeun-tab" class="tab-button" onclick="toggleButtons('daeun')">대운동장</button>
+        <button id="daeun-tab" class="tab-button active" onclick="toggleButtons('daeun')">대운동장</button>
         <button id="foodtruck-tab" class="tab-button" onclick="toggleButtons('foodtruck')">푸드트럭존</button>
     </div>
 
     <!-- 대운동장 버튼 클릭 시 -->
     <div id="daeun-buttons" class="button-group" style="display: none;">
-        <button id="booth-blue" class="booth-section-button" onclick="showBoothInfo('blue')">부스(파랑)</button>
+        <button id="booth-blue" class="booth-section-button active" onclick="showBoothInfo('blue')">부스(파랑)</button>
         <button id="booth-green" class="booth-section-button" onclick="showBoothInfo('green')">부스(초록)</button>
         <button id="booth-orange" class="booth-section-button" onclick="showBoothInfo('orange')">부스(주황)</button>
     </div>
 
     <!-- 푸드트럭존 버튼 클릭 시 -->
     <div id="foodtruck-buttons" class="button-group" style="display: none;">
-        <button id="foodtruck-1" class="booth-section-button" onclick="showFoodtruckInfo('1')">푸드트럭(1존)</button>
+        <button id="foodtruck-1" class="booth-section-button active" onclick="showFoodtruckInfo('1')">푸드트럭(1존)</button>
         <button id="foodtruck-2" class="booth-section-button" onclick="showFoodtruckInfo('2')">푸드트럭(2존)</button>
     </div>
 
