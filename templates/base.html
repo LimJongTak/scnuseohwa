@@ -5,10 +5,10 @@
     <title>{{ page_title }}</title>
 
     <!-- Open Graph 메타 태그 추가 -->
-    <meta property="og:title" content="서화총학생회" />
+    <meta property="og:title" content="{{ page_title }}" />
     <meta property="og:description" content="서화총학생회의 공식 사이트입니다." />
-    <meta property="og:image" content="https://scnuseohwa.site/images/thumbnail.png" />
-    <meta property="og:url" content="https://scnuseohwa.site" />
+    <meta property="og:image" content="{{ url_for('static', filename='images/thumbnail.png') }}" />
+    <meta property="og:url" content="{{ request.url }}" />
     <meta property="og:type" content="website" />
 
     <!-- CSS -->
