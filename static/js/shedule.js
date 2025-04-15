@@ -45,13 +45,14 @@ window.onload = function () {
 
         // 2day 일정
         const itemsDay2 = [
-            { start: { hour: 18, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-9" },
-            { start: { hour: 19, minute: 0 }, end: { hour: 19, minute: 30 }, id: "item-10" },
-            { start: { hour: 18, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-11" },
-            { start: { hour: 19, minute: 0 }, end: { hour: 20, minute: 30 }, id: "item-12" },
-            { start: { hour: 20, minute: 30 }, end: { hour: 21, minute: 0 }, id: "item-13" },
-            { start: { hour: 21, minute: 0 }, end: { hour: 21, minute: 30 }, id: "item-14" },
-            { start: { hour: 22, minute: 0 }, end: { hour: 22, minute: 10 }, id: "item-15" }
+            { start: { hour: 10, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-9" },
+            { start: { hour: 18, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-10" },
+            { start: { hour: 19, minute: 0 }, end: { hour: 19, minute: 30 }, id: "item-11" },
+            { start: { hour: 18, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-12" },
+            { start: { hour: 19, minute: 0 }, end: { hour: 20, minute: 30 }, id: "item-13" },
+            { start: { hour: 20, minute: 30 }, end: { hour: 21, minute: 0 }, id: "item-14" },
+            { start: { hour: 21, minute: 0 }, end: { hour: 21, minute: 30 }, id: "item-15" },
+            { start: { hour: 22, minute: 0 }, end: { hour: 22, minute: 10 }, id: "item-16" }
         ];
 
         // 시간대 비교 및 active 추가
