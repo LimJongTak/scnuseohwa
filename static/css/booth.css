@@ -78,9 +78,14 @@
 .booth-info {
     display: flex;
     justify-content: center;  /* 가로 중앙 정렬 */
+    align-items: center;  /* 세로 중앙 정렬 */
     flex-wrap: wrap;
     margin-top: 30px;
     gap: 20px;  /* 아이템 간 간격 추가 */
+    width: 100%;  /* 전체 가로 크기 설정 */
+    height: 100%;  /* 전체 세로 크기 설정 */
+    box-sizing: border-box;  /* 여백 및 테두리 크기를 포함하도록 설정 */
+    padding: 0 20px;  /* 여백 추가 */
 }
 
 /* 부스 세부 정보 스타일 */
@@ -88,12 +93,13 @@
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     width: 350px;  /* 가로 350px로 설정 */
-    height: 100px;  /* 세로 높이는 자동으로 맞추기 */
+    height: auto;  /* 세로 높이는 자동으로 맞추기 */
     margin-bottom: 20px;
     padding: 20px;
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
+
 
 /* 부스 이미지 스타일 */
 .booth-section img {
@@ -145,8 +151,8 @@
 /* 지도 스타일 */
 #map {
     margin-top: 30px;
-    width: 600px;  /* 지도 가로 크기를 600px로 설정 */
-    height: 500px; /* 지도 세로 크기를 500px로 설정 */
+    width: 350px;  /* 지도 가로 크기를 600px로 설정 */
+    height: 300px; /* 지도 세로 크기를 500px로 설정 */
     border-radius: 10px;
     display: block;
     margin: 0 auto;  /* 지도 가운데 정렬 */
