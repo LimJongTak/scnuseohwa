@@ -30,7 +30,7 @@ window.onload = function () {
         const now = new Date();
         const currentHour = now.getHours();
         const currentMinute = now.getMinutes();
-
+        
         // 1day 일정
         const itemsDay1 = [
             { start: { hour: 10, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-1" },
