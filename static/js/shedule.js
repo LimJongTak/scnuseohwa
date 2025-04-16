@@ -74,7 +74,7 @@ window.onload = function () {
 
         // DEMO 일정
         const itemsDemo = [
-            { start: { hour: 13, minute: 0 }, end: { hour: 23, minute: 59 }, id: "demo-item-1" } // Demo Item
+            { start: { hour: 13, minute: 0 }, end: { hour: 23, minute: 59 }, id: "demo-item-2" } // 데모 일정2
         ];
 
         // 시간대 비교 및 active 추가
@@ -107,15 +107,14 @@ window.onload = function () {
             });
         }
 
-        // 각 일정을 체크하여 진행 중 이벤트 처리
         checkTime(itemsDay1);
         checkTime(itemsDay2);
-        checkTime(itemsDemo); // 데모 일정도 체크
+        checkTime(itemsDemo); // 데모 일정에 대해서도 체크
     }
 
     // 처음 페이지 로드 시 진행 중인 일정 강조
     highlightCurrentEvent();
 
-    // 일정 새로고침
+    // 1분마다 업데이트
     setInterval(highlightCurrentEvent, 60000); // 1분마다 확인
 };
