@@ -107,9 +107,10 @@ window.onload = function () {
             });
         }
 
+        // 각 일정을 체크하여 진행 중 이벤트 처리
         checkTime(itemsDay1);
         checkTime(itemsDay2);
-        checkTime(itemsDemo); // 데모 일정에 대해서도 체크
+        checkTime(itemsDemo); // 데모 일정도 체크
     }
 
     // 처음 페이지 로드 시 진행 중인 일정 강조
