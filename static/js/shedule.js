@@ -45,49 +45,46 @@ window.onload = function () {
     // 현재 시간에 맞는 일정 강조
     function highlightCurrentEvent() {
         const now = new Date();
-        const currentHour = now.getHours();
-        const currentMinute = now.getMinutes();
         
         // 1day 일정
         const itemsDay1 = [
-            { start: { hour: 10, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-1" },
-            { start: { hour: 16, minute: 0 }, end: { hour: 17, minute: 0 }, id: "item-2" },
-            { start: { hour: 18, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-3" },
-            { start: { hour: 19, minute: 0 }, end: { hour: 19, minute: 30 }, id: "item-4" },
-            { start: { hour: 19, minute: 30 }, end: { hour: 20, minute: 30 }, id: "item-5" },
-            { start: { hour: 20, minute: 30 }, end: { hour: 21, minute: 0 }, id: "item-6" },
-            { start: { hour: 21, minute: 0 }, end: { hour: 21, minute: 30 }, id: "item-7" },
-            { start: { hour: 21, minute: 30 }, end: { hour: 22, minute: 0 }, id: "item-8" }
+            { start: new Date("2025-05-28 10:00"), end: new Date("2025-05-28 19:00"), id: "item-1" },
+            { start: new Date("2025-05-28 16:00"), end: new Date("2025-05-28 17:00"), id: "item-2" },
+            { start: new Date("2025-05-28 18:00"), end: new Date("2025-05-28 19:00"), id: "item-3" },
+            { start: new Date("2025-05-28 19:00"), end: new Date("2025-05-28 19:30"), id: "item-4" },
+            { start: new Date("2025-05-28 19:30"), end: new Date("2025-05-28 20:30"), id: "item-5" },
+            { start: new Date("2025-05-28 20:30"), end: new Date("2025-05-28 21:00"), id: "item-6" },
+            { start: new Date("2025-05-28 21:00"), end: new Date("2025-05-28 21:30"), id: "item-7" },
+            { start: new Date("2025-05-28 21:30"), end: new Date("2025-05-28 22:00"), id: "item-8" }
         ];
 
         // 2day 일정
         const itemsDay2 = [
-            { start: { hour: 10, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-9" },
-            { start: { hour: 18, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-10" },
-            { start: { hour: 19, minute: 0 }, end: { hour: 19, minute: 30 }, id: "item-11" },
-            { start: { hour: 18, minute: 0 }, end: { hour: 19, minute: 0 }, id: "item-12" },
-            { start: { hour: 19, minute: 0 }, end: { hour: 20, minute: 30 }, id: "item-13" },
-            { start: { hour: 20, minute: 30 }, end: { hour: 21, minute: 0 }, id: "item-14" },
-            { start: { hour: 21, minute: 0 }, end: { hour: 21, minute: 30 }, id: "item-15" },
-            { start: { hour: 22, minute: 0 }, end: { hour: 22, minute: 10 }, id: "item-16" }
+            { start: new Date("2025-05-29 10:00"), end: new Date("2025-05-29 19:00"), id: "item-9" },
+            { start: new Date("2025-05-29 18:00"), end: new Date("2025-05-29 19:00"), id: "item-10" },
+            { start: new Date("2025-05-29 19:00"), end: new Date("2025-05-29 19:30"), id: "item-11" },
+            { start: new Date("2025-05-29 19:30"), end: new Date("2025-05-29 20:00"), id: "item-12" },
+            { start: new Date("2025-05-29 20:00"), end: new Date("2025-05-29 20:30"), id: "item-13" },
+            { start: new Date("2025-05-29 20:30"), end: new Date("2025-05-29 21:00"), id: "item-14" },
+            { start: new Date("2025-05-29 21:00"), end: new Date("2025-05-29 21:30"), id: "item-15" },
+            { start: new Date("2025-05-29 22:00"), end: new Date("2025-05-29 22:10"), id: "item-16" }
         ];
 
         // DEMO 일정
         const itemsDemo = [
-            { start: { hour: 13, minute: 0 }, end: { hour: 23, minute: 59 }, id: "demo-item-2" } // 데모 일정2
+            { start: new Date("2025-04-16 13:00"), end: new Date("2025-04-16 23:59"), id: "demo-item-2" } // 데모 일정2
         ];
 
         // 시간대 비교 및 active 추가
         function checkTime(items) {
             items.forEach(item => {
-                const startTime = item.start.hour * 60 + item.start.minute;
-                const endTime = item.end.hour * 60 + item.end.minute;
-                const currentTime = currentHour * 60 + currentMinute;
+                const currentTime = now.getTime();
 
                 const itemElement = document.getElementById(item.id);
                 const itemText = itemElement.querySelector(".schedule-detail");
 
-                if (currentTime >= startTime && currentTime <= endTime) {
+                // 일정이 진행 중인지 확인
+                if (currentTime >= item.start.getTime() && currentTime <= item.end.getTime()) {
                     itemElement.classList.add("active");
                     itemElement.classList.add("highlight"); // 활성화된 항목에 highlight 클래스 추가
 
