@@ -45,6 +45,8 @@ window.onload = function () {
     // 현재 시간에 맞는 일정 강조
     function highlightCurrentEvent() {
         const now = new Date();
+        const currentHour = now.getHours();
+        const currentMinute = now.getMinutes();
         
         // 1day 일정
         const itemsDay1 = [
