@@ -27,5 +27,60 @@
             <p>자주 하는 질문 →</p>
         </a>
     </div>
+
+    <!-- 라인업 섹션 -->
+    <section id="lineup">
+        <h2>라인업</h2>
+        <div class="section-line"></div>
+        <div class="carousel">
+            <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+            <div class="carousel-track">
+                <div class="carousel-item"><img src="{{ url_for('static', filename='images/lineup1.jpg') }}" alt="Lineup Image 1"></div>
+                <div class="carousel-item"><img src="{{ url_for('static', filename='images/lineup2.jpg') }}" alt="Lineup Image 2"></div>
+                <div class="carousel-item"><img src="{{ url_for('static', filename='images/lineup3.jpg') }}" alt="Lineup Image 3"></div>
+            </div>
+            <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+        </div>
+        <div class="section-line"></div>
+    </section>
+
+    <!-- 지도 섹션 -->
+    <section id="map-section">
+        <h2>지도</h2>
+        <div class="section-line"></div>
+        <div id="map"></div>
+    </section>
 </div>
+
+<!-- 카카오 지도 API 스크립트 -->
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0cddc61d238179b69f60a5e5fc79699c"></script>
+<script>
+    // 카카오 지도 초기화
+    var mapContainer = document.getElementById('map');
+    var mapOption = {
+        center: new kakao.maps.LatLng(34.9694, 127.4808), // 지도의 중심좌표 (순천대학교)
+        level: 3 // 확대 레벨
+    };
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+    var markerPosition = new kakao.maps.LatLng(34.9694, 127.4808);
+    var marker = new kakao.maps.Marker({ position: markerPosition });
+    marker.setMap(map);
+
+    // 캐러셀 기능 구현
+    var carouselIndex = 0;
+    var track = document.querySelector('.carousel-track');
+    var items = document.querySelectorAll('.carousel-item');
+    var totalItems = items.length;
+    var prevBtn = document.querySelector('.carousel-prev');
+    var nextBtn = document.querySelector('.carousel-next');
+
+    nextBtn.addEventListener('click', function() {
+        carouselIndex = (carouselIndex + 1) % totalItems;
+        track.style.transform = 'translateX(' + (-carouselIndex * 100) + '%)';
+    });
+    prevBtn.addEventListener('click', function() {
+        carouselIndex = (carouselIndex - 1 + totalItems) % totalItems;
+        track.style.transform = 'translateX(' + (-carouselIndex * 100) + '%)';
+    });
+</script>
 {% endblock %}
