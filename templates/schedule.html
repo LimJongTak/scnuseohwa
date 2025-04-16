@@ -11,6 +11,7 @@
 
     <!-- 1day 일정 -->
     <div class="schedule-day" id="day1">
+        <!-- Day 1 일정 (2025년 5월 28일) -->
         <div class="schedule-item" id="item-1">
             <p class="schedule-time">10:00 ~ 19:00</p>
             <p class="schedule-detail">주간 프로그램 운영 (부스 운영 등)</p>
@@ -47,6 +48,7 @@
 
     <!-- 2day 일정 -->
     <div class="schedule-day" id="day2" style="display: none;">
+        <!-- Day 2 일정 (2025년 5월 29일) -->
         <div class="schedule-item" id="item-9">
             <p class="schedule-time">10:00 ~ 19:00</p>
             <p class="schedule-detail">주간 프로그램 운영 (부스 운영 등)</p>
@@ -83,13 +85,67 @@
 </div>
 
 <script>
-    // 탭 클릭 시 Day 1, Day 2 일정 표시
+    // 일정 정보 (startTime, endTime 포함)
+    const schedule = [
+        {
+            title: "주간 프로그램 운영",
+            description: "부스 운영 등",
+            startTime: new Date("2025-05-28 10:00"),
+            endTime: new Date("2025-05-28 19:00")
+        },
+        {
+            title: "축제 부스 리허설 및 안전점검",
+            description: "",
+            startTime: new Date("2025-05-28 16:00"),
+            endTime: new Date("2025-05-28 17:00")
+        },
+        {
+            title: "동아리 오프닝 공연",
+            description: "",
+            startTime: new Date("2025-05-28 18:00"),
+            endTime: new Date("2025-05-28 19:00")
+        },
+        {
+            title: "개회식",
+            description: "",
+            startTime: new Date("2025-05-28 19:00"),
+            endTime: new Date("2025-05-28 19:30")
+        },
+        {
+            title: "출범식",
+            description: "",
+            startTime: new Date("2025-05-28 19:30"),
+            endTime: new Date("2025-05-28 20:30")
+        },
+        {
+            title: "초청 가수 공연(1)",
+            description: "초청 아티스트 공연",
+            startTime: new Date("2025-05-28 20:30"),
+            endTime: new Date("2025-05-28 21:00"),
+            artist: ["choi_yu_ree", "gummy"]
+        },
+        {
+            title: "초청 가수 공연(2)",
+            description: "초청 아티스트 공연",
+            startTime: new Date("2025-05-28 21:00"),
+            endTime: new Date("2025-05-28 21:30"),
+            artist: ["choi_yu_ree", "gummy"]
+        },
+        {
+            title: "초청 가수 공연(3)",
+            description: "초청 아티스트 공연",
+            startTime: new Date("2025-05-28 21:30"),
+            endTime: new Date("2025-05-28 22:00"),
+            artist: ["choi_yu_ree", "gummy"]
+        }
+    ];
+
+    // Day 1 탭 클릭 시
     const day1Tab = document.getElementById("day1-tab");
     const day2Tab = document.getElementById("day2-tab");
     const day1Content = document.getElementById("day1");
     const day2Content = document.getElementById("day2");
 
-    // Day 1 클릭 시
     day1Tab.addEventListener("click", () => {
         day1Tab.classList.add("active");
         day2Tab.classList.remove("active");
@@ -97,7 +153,7 @@
         day2Content.style.display = "none";
     });
 
-    // Day 2 클릭 시
+    // Day 2 탭 클릭 시
     day2Tab.addEventListener("click", () => {
         day2Tab.classList.add("active");
         day1Tab.classList.remove("active");
@@ -105,5 +161,4 @@
         day1Content.style.display = "none";
     });
 </script>
-
 {% endblock %}
