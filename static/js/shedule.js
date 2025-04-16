@@ -47,7 +47,7 @@ window.onload = function () {
         const now = new Date();
         const currentHour = now.getHours();
         const currentMinute = now.getMinutes();
-        
+
         // 1day 일정
         const itemsDay1 = [
             { start: new Date("2025-05-28 10:00"), end: new Date("2025-05-28 19:00"), id: "item-1" },
