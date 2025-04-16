@@ -84,7 +84,7 @@
     width: 100%;  /* 전체 가로 크기 설정 */
     height: 80px;  /* 세로 크기 설정 */
     box-sizing: border-box;  /* 여백 및 테두리 크기를 포함하도록 설정 */
-    padding: 0 20px;  /* 좌우 여백 20px 추가 */
+    padding: 20px 20px;  /* 좌우 여백 20px 추가 */
 }
 
 /* 부스 세부 정보 스타일 */
@@ -94,7 +94,7 @@
     width: calc(100% - 40px);  /* 가로 350px로 설정 */
     height: 80px;  /* 세로 높이는 자동으로 맞추기 */
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 20px 20px;
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;  /* 내용이 영역을 벗어나지 않도록 숨김 */
