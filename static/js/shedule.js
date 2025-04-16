@@ -82,7 +82,7 @@ window.onload = function () {
                 const itemElement = document.getElementById(item.id);
                 const itemText = itemElement.querySelector(".schedule-detail");
     
-                // 진행 중 텍스트가 없으면 추가하고, 이미 있으면 추가하지 않음
+                // 진행 중 텍스트가 이미 있으면 추가하지 않음
                 if (currentTime >= item.start.getTime() && currentTime <= item.end.getTime()) {
                     itemElement.classList.add("active");
                     itemElement.classList.add("highlight"); // 활성화된 항목에 highlight 클래스 추가
