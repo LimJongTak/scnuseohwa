@@ -5,15 +5,15 @@
     <title>{{ page_title }}</title>
 
     <!-- Open Graph 메타 태그 추가 -->
-    <meta property="og:title" content="{{ og_title }}" />
-    <meta property="og:description" content="{{ og_description }}" />
-    <meta property="og:image" content="{{ og_image }}" />
-    <meta property="og:url" content="{{ og_url }}" />
+    <meta property="og:title" content="서화 총학생회" />
+    <meta property="og:description" content="90년의 동화를, 100년의 서약으로" />
+    <meta property="og:image" content="https://scnuseohwa.site/images/thumbnail2.png" />
+    <meta property="og:url" content="https://scnuseohwa.site" />
     <meta property="og:type" content="website" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">  <!-- Updated link for footer styles -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/notice.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/qna.css') }}">
@@ -56,6 +56,89 @@
         // 페이지 로딩 후 로딩 이미지 숨기기
         window.addEventListener('load', function() {
             document.body.classList.add('loaded');
+        });
+
+        // 메뉴 토글
+        function toggleMenu() {
+            const menu = document.getElementById('hamburger-menu');
+            const menuBar = document.getElementById('menu-bar');
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+                menuBar.classList.remove("open");
+            } else {
+                menu.style.display = "flex";
+                menuBar.classList.add("open");
+            }
+        }
+
+        // 콘텐츠 토글 (공지사항/QnA 공통)
+        function toggleContent(el) {
+            const allItems = document.querySelectorAll('.notice-item, .qna-item');
+            const allContents = document.querySelectorAll('.notice-content, .qna-content');
+
+            allItems.forEach(item => {
+                if (item !== el) item.classList.remove('active');
+            });
+            allContents.forEach(content => {
+                if (el.nextElementSibling !== content) content.style.display = 'none';
+            });
+
+            el.classList.toggle('active');
+            const content = el.nextElementSibling;
+            content.style.display = (content.style.display === "block") ? "none" : "block";
+        }
+
+        // 별빛 배경
+        window.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('bg-canvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            function initParticles() {
+                const total = 80;
+                particles = [];
+                for (let i = 0; i < total; i++) {
+                    particles.push({
+                        x: Math.random() * window.innerWidth,
+                        y: Math.random() * window.innerHeight,
+                        radius: Math.random() * 2 + 1,
+                        speedX: (Math.random() - 0.5) * 0.5,
+                        speedY: (Math.random() - 0.5) * 0.5,
+                        alpha: Math.random()
+                    });
+                }
+            }
+
+            function drawParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha})`;
+                    ctx.fill();
+                    p.x += p.speedX;
+                    p.y += p.speedY;
+
+                    if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+                });
+                requestAnimationFrame(drawParticles);
+            }
+
+            resizeCanvas();
+            initParticles();
+            drawParticles();
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                initParticles();
+            });
         });
     </script>
 </head>
