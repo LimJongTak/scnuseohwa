@@ -49,26 +49,26 @@ window.onload = function () {
     
         // 1day 일정
         const itemsDay1 = [
-            { start: new Date("2025-05-28 10:00"), end: new Date("2025-05-28 19:00"), id: "item-1" },
-            { start: new Date("2025-05-28 16:00"), end: new Date("2025-05-28 17:00"), id: "item-2" },
-            { start: new Date("2025-05-28 18:00"), end: new Date("2025-05-28 19:00"), id: "item-3" },
-            { start: new Date("2025-05-28 19:00"), end: new Date("2025-05-28 19:30"), id: "item-4" },
-            { start: new Date("2025-05-28 19:30"), end: new Date("2025-05-28 20:30"), id: "item-5" },
-            { start: new Date("2025-05-28 20:30"), end: new Date("2025-05-28 21:00"), id: "item-6" },
-            { start: new Date("2025-05-28 21:00"), end: new Date("2025-05-28 21:30"), id: "item-7" },
-            { start: new Date("2025-05-28 21:30"), end: new Date("2025-05-28 22:00"), id: "item-8" }
+            { start: new Date("2025-04-17 10:00"), end: new Date("2025-04-17 19:00"), id: "item-1" },
+            { start: new Date("2025-04-17 16:00"), end: new Date("2025-04-17 17:00"), id: "item-2" },
+            { start: new Date("2025-04-17 18:00"), end: new Date("2025-04-17 19:00"), id: "item-3" },
+            { start: new Date("2025-04-17 19:00"), end: new Date("2025-04-17 19:30"), id: "item-4" },
+            { start: new Date("2025-04-17 19:30"), end: new Date("2025-04-17 20:30"), id: "item-5" },
+            { start: new Date("2025-04-17 20:30"), end: new Date("2025-04-17 21:00"), id: "item-6" },
+            { start: new Date("2025-04-17 21:00"), end: new Date("2025-04-17 21:30"), id: "item-7" },
+            { start: new Date("2025-04-16 21:30"), end: new Date("2025-04-16 22:00"), id: "item-8" }
         ];
     
         // 2day 일정
         const itemsDay2 = [
-            { start: new Date("2025-05-29 10:00"), end: new Date("2025-05-29 19:00"), id: "item-9" },
-            { start: new Date("2025-05-29 18:00"), end: new Date("2025-05-29 19:00"), id: "item-10" },
-            { start: new Date("2025-05-29 19:00"), end: new Date("2025-05-29 19:30"), id: "item-11" },
-            { start: new Date("2025-05-29 19:30"), end: new Date("2025-05-29 20:00"), id: "item-12" },
-            { start: new Date("2025-05-29 20:00"), end: new Date("2025-05-29 20:30"), id: "item-13" },
-            { start: new Date("2025-05-29 20:30"), end: new Date("2025-05-29 21:00"), id: "item-14" },
-            { start: new Date("2025-05-29 21:00"), end: new Date("2025-05-29 21:30"), id: "item-15" },
-            { start: new Date("2025-05-29 22:00"), end: new Date("2025-05-29 22:10"), id: "item-16" }
+            { start: new Date("2025-04-18 10:00"), end: new Date("2025-04-18 19:00"), id: "item-9" },
+            { start: new Date("2025-04-18 18:00"), end: new Date("2025-04-18 19:00"), id: "item-10" },
+            { start: new Date("2025-04-18 19:00"), end: new Date("2025-04-18 19:30"), id: "item-11" },
+            { start: new Date("2025-04-18 19:30"), end: new Date("2025-04-18 20:00"), id: "item-12" },
+            { start: new Date("2025-04-18 20:00"), end: new Date("2025-04-18 20:30"), id: "item-13" },
+            { start: new Date("2025-04-18 20:30"), end: new Date("2025-04-18 21:00"), id: "item-14" },
+            { start: new Date("2025-04-18 21:00"), end: new Date("2025-04-18 21:30"), id: "item-15" },
+            { start: new Date("2025-04-18 22:00"), end: new Date("2025-04-18 22:10"), id: "item-16" }
         ];
     
         // DEMO 일정
