@@ -72,6 +72,11 @@ window.onload = function () {
             { start: { hour: 22, minute: 0 }, end: { hour: 22, minute: 10 }, id: "item-16" }
         ];
 
+        // DEMO 일정
+        const itemsDemo = [
+            { start: { hour: 13, minute: 0 }, end: { hour: 23, minute: 59 }, id: "demo-item-1" } // Demo Item
+        ];
+
         // 시간대 비교 및 active 추가
         function checkTime(items) {
             items.forEach(item => {
@@ -104,6 +109,7 @@ window.onload = function () {
 
         checkTime(itemsDay1);
         checkTime(itemsDay2);
+        checkTime(itemsDemo); // 데모 일정에 대해서도 체크
     }
 
     // 처음 페이지 로드 시 진행 중인 일정 강조
