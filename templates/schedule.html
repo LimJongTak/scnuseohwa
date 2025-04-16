@@ -160,8 +160,9 @@ function highlightCurrentEvent() {
             item.classList.add("active");
             item.classList.add("highlight"); // 활성화된 항목에 highlight 클래스 추가
 
-            // "진행 중" 텍스트 추가
+            // "진행 중" 텍스트가 없으면 추가
             if (itemText && !itemText.innerHTML.includes("진행 중")) {
+                // 진행 중 텍스트를 이벤트 항목 아래에만 추가
                 itemText.innerHTML += "<span class='current-event'> 진행 중</span>";
             }
         } else {
@@ -175,6 +176,7 @@ function highlightCurrentEvent() {
         }
     });
 }
+
 
 // 페이지 로드 후 현재 진행 중인 이벤트 강조
 highlightCurrentEvent();
