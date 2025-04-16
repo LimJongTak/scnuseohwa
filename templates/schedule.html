@@ -163,10 +163,10 @@ function highlightCurrentEvent() {
             item.classList.add("highlight"); // 활성화된 항목에 highlight 클래스 추가
 
             // "진행 중" 텍스트가 없으면 추가, 이미 추가된 경우는 추가하지 않음
-            if (itemText && !isDisplayed) {
-                itemText.innerHTML += "<span class='current-event'> 진행 중</span>";
-                isDisplayed = true; // 텍스트가 추가되었으므로 다른 항목에는 추가하지 않음
-            }
+            // if (itemText && !isDisplayed) {
+            //     itemText.innerHTML += "<span class='current-event'> 진행 중</span>";
+            //     isDisplayed = true; // 텍스트가 추가되었으므로 다른 항목에는 추가하지 않음
+            // }
         } else {
             item.classList.remove("active");
             item.classList.remove("highlight"); // highlight 클래스 제거
