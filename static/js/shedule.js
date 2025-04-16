@@ -73,7 +73,7 @@ window.onload = function () {
     
         // DEMO 일정
         const itemsDemo = [
-            { start: new Date("2025-04-16 13:00"), end: new Date("2025-04-16 23:59"), id: "demo-item-2" }
+            { start: new Date("2025-05-30 13:00"), end: new Date("2025-05-30 23:59"), id: "demo-item-2" }
         ];
     
         // 시간대 비교 및 active 추가
