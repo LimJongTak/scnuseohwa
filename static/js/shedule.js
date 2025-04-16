@@ -1,28 +1,45 @@
 window.onload = function () {
     const day1Tab = document.getElementById("day1-tab");
     const day2Tab = document.getElementById("day2-tab");
+    const demoTab = document.getElementById("demo-tab");
     const day1Content = document.getElementById("day1");
     const day2Content = document.getElementById("day2");
+    const demoContent = document.getElementById("demo");
 
     // 초기 설정: day1이 활성화 상태로 시작
     day1Tab.classList.add("active");
     day1Content.style.display = "block";
     day2Content.style.display = "none";
+    demoContent.style.display = "none";
 
     // 1DAY 클릭 시
     day1Tab.addEventListener("click", function () {
         day1Tab.classList.add("active");
         day2Tab.classList.remove("active");
+        demoTab.classList.remove("active");
         day1Content.style.display = "block";
         day2Content.style.display = "none";
+        demoContent.style.display = "none";
     });
 
     // 2DAY 클릭 시
     day2Tab.addEventListener("click", function () {
         day2Tab.classList.add("active");
         day1Tab.classList.remove("active");
+        demoTab.classList.remove("active");
         day2Content.style.display = "block";
         day1Content.style.display = "none";
+        demoContent.style.display = "none";
+    });
+
+    // DEMO 클릭 시
+    demoTab.addEventListener("click", function () {
+        demoTab.classList.add("active");
+        day1Tab.classList.remove("active");
+        day2Tab.classList.remove("active");
+        demoContent.style.display = "block";
+        day1Content.style.display = "none";
+        day2Content.style.display = "none";
     });
 
     // 현재 시간에 맞는 일정 강조
