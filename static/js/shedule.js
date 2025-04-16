@@ -1,81 +1,57 @@
 window.onload = function () {
     const day1Tab = document.getElementById("day1-tab");
     const day2Tab = document.getElementById("day2-tab");
-    const demoTab = document.getElementById("demo-tab");
     const day1Content = document.getElementById("day1");
     const day2Content = document.getElementById("day2");
-    const demoContent = document.getElementById("demo");
 
     // 초기 설정: day1이 활성화 상태로 시작
     day1Tab.classList.add("active");
     day1Content.style.display = "block";
     day2Content.style.display = "none";
-    demoContent.style.display = "none";
 
     // 1DAY 클릭 시
     day1Tab.addEventListener("click", function () {
         day1Tab.classList.add("active");
         day2Tab.classList.remove("active");
-        demoTab.classList.remove("active");
         day1Content.style.display = "block";
         day2Content.style.display = "none";
-        demoContent.style.display = "none";
     });
 
     // 2DAY 클릭 시
     day2Tab.addEventListener("click", function () {
         day2Tab.classList.add("active");
         day1Tab.classList.remove("active");
-        demoTab.classList.remove("active");
         day2Content.style.display = "block";
         day1Content.style.display = "none";
-        demoContent.style.display = "none";
     });
 
-    // DEMO 클릭 시
-    demoTab.addEventListener("click", function () {
-        demoTab.classList.add("active");
-        day1Tab.classList.remove("active");
-        day2Tab.classList.remove("active");
-        demoContent.style.display = "block";
-        day1Content.style.display = "none";
-        day2Content.style.display = "none";
-    });
-
-    // 현재 시간에 맞는 일정 강조
+    // 일정에 따라 상태 변경 (past, current, future)
     function highlightCurrentEvent() {
         const now = new Date();
         const currentTime = now.getTime();
     
-        // 1day 일정
+        // 1day 일정 (2025년 5월 28일)
         const itemsDay1 = [
-            { start: new Date("2025-04-17 10:00"), end: new Date("2025-04-17 19:00"), id: "item-1" },
-            { start: new Date("2025-04-17 16:00"), end: new Date("2025-04-17 17:00"), id: "item-2" },
-            { start: new Date("2025-04-17 18:00"), end: new Date("2025-04-17 19:00"), id: "item-3" },
-            { start: new Date("2025-04-17 19:00"), end: new Date("2025-04-17 19:30"), id: "item-4" },
-            { start: new Date("2025-04-17 19:30"), end: new Date("2025-04-17 20:30"), id: "item-5" },
-            { start: new Date("2025-04-17 20:30"), end: new Date("2025-04-17 21:00"), id: "item-6" },
-            { start: new Date("2025-04-17 21:00"), end: new Date("2025-04-17 21:30"), id: "item-7" },
-            { start: new Date("2025-04-16 21:30"), end: new Date("2025-04-16 22:00"), id: "item-8" }
+            { start: new Date("2025-05-28 10:00"), end: new Date("2025-05-28 19:00"), id: "item-1" },
+            { start: new Date("2025-05-28 16:00"), end: new Date("2025-05-28 17:00"), id: "item-2" },
+            { start: new Date("2025-05-28 18:00"), end: new Date("2025-05-28 19:00"), id: "item-3" },
+            { start: new Date("2025-05-28 19:00"), end: new Date("2025-05-28 19:30"), id: "item-4" },
+            { start: new Date("2025-05-28 19:30"), end: new Date("2025-05-28 20:30"), id: "item-5" },
+            { start: new Date("2025-05-28 20:30"), end: new Date("2025-05-28 21:00"), id: "item-6" },
+            { start: new Date("2025-05-28 21:00"), end: new Date("2025-05-28 21:30"), id: "item-7" },
+            { start: new Date("2025-05-28 21:30"), end: new Date("2025-05-28 22:00"), id: "item-8" }
         ];
     
-        // 2day 일정
+        // 2day 일정 (2025년 5월 29일)
         const itemsDay2 = [
-            { start: new Date("2025-04-18 10:00"), end: new Date("2025-04-18 19:00"), id: "item-9" },
-            { start: new Date("2025-04-18 18:00"), end: new Date("2025-04-18 19:00"), id: "item-10" },
-            { start: new Date("2025-04-18 19:00"), end: new Date("2025-04-18 19:30"), id: "item-11" },
-            { start: new Date("2025-04-18 19:30"), end: new Date("2025-04-18 20:00"), id: "item-12" },
-            { start: new Date("2025-04-18 20:00"), end: new Date("2025-04-18 20:30"), id: "item-13" },
-            { start: new Date("2025-04-18 20:30"), end: new Date("2025-04-18 21:00"), id: "item-14" },
-            { start: new Date("2025-04-18 21:00"), end: new Date("2025-04-18 21:30"), id: "item-15" },
-            { start: new Date("2025-04-18 22:00"), end: new Date("2025-04-18 22:10"), id: "item-16" }
-        ];
-    
-        // DEMO 일정
-        const itemsDemo = [
-            
-            { start: new Date("2025-05-30 10:00"), end: new Date("2025-05-30 12:00"), id: "demo-item-1" },
-            { start: new Date("2025-05-30 13:00"), end: new Date("2025-05-30 23:59"), id: "demo-item-2" }
+            { start: new Date("2025-05-29 10:00"), end: new Date("2025-05-29 19:00"), id: "item-9" },
+            { start: new Date("2025-05-29 18:00"), end: new Date("2025-05-29 19:00"), id: "item-10" },
+            { start: new Date("2025-05-29 19:00"), end: new Date("2025-05-29 19:30"), id: "item-11" },
+            { start: new Date("2025-05-29 19:30"), end: new Date("2025-05-29 20:00"), id: "item-12" },
+            { start: new Date("2025-05-29 20:00"), end: new Date("2025-05-29 20:30"), id: "item-13" },
+            { start: new Date("2025-05-29 20:30"), end: new Date("2025-05-29 21:00"), id: "item-14" },
+            { start: new Date("2025-05-29 21:00"), end: new Date("2025-05-29 21:30"), id: "item-15" },
+            { start: new Date("2025-05-29 22:00"), end: new Date("2025-05-29 22:10"), id: "item-16" }
         ];
     
         // 시간대 비교 및 active 추가
@@ -107,13 +83,12 @@ window.onload = function () {
     
         checkTime(itemsDay1);
         checkTime(itemsDay2);
-        checkTime(itemsDemo); // 데모 일정에 대해서도 체크
     }
     
     // 페이지 로드 후 진행 중 일정 강조
     highlightCurrentEvent();
     
     // 1분마다 업데이트
-    setInterval(highlightCurrentEvent, 60000); // 1분마다 확인
-    
+    setInterval(highlightCurrentEvent, 60000);
+
 };

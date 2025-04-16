@@ -7,7 +7,6 @@
     <div class="schedule-tabs">
         <button class="tab-button active" id="day1-tab">1DAY</button>
         <button class="tab-button" id="day2-tab">2DAY</button>
-        <button class="tab-button" id="demo-tab">DEMO</button> <!-- 추가된 데모 버튼 -->
     </div>
 
     <!-- 1day 일정 -->
@@ -83,19 +82,6 @@
             <p class="schedule-detail">폐막식</p>
         </div>
     </div>
-
-    <!-- DEMO 일정 -->
-    <div class="schedule-day" id="demo" style="display: none;">
-        <!-- 데모용 일정들... -->
-        <div class="schedule-item" id="demo-item-1">
-            <p class="schedule-time">10:00 ~ 12:00</p>
-            <p class="schedule-detail">데모 일정</p>
-        </div>
-        <div class="schedule-item" id="demo-item-2">
-            <p class="schedule-time">13:00 ~ 23:59</p>
-            <p class="schedule-detail">데모 일정 2</p>
-        </div>
-    </div>
 </div>
 
 <script>
@@ -118,54 +104,32 @@ const schedule = [
     { title: "장기자랑", description: "", startTime: new Date("2025-05-29 20:00"), endTime: new Date("2025-05-29 20:30"), id: "item-13" },
     { title: "초청 가수 공연(1)", description: "초청 아티스트 공연", startTime: new Date("2025-05-29 20:30"), endTime: new Date("2025-05-29 21:00"), id: "item-14" },
     { title: "초청 가수 공연(2)", description: "초청 아티스트 공연", startTime: new Date("2025-05-29 21:00"), endTime: new Date("2025-05-29 21:30"), id: "item-15" },
-    { title: "폐막식", description: "", startTime: new Date("2025-05-29 22:00"), endTime: new Date("2025-05-29 22:10"), id: "item-16" },
-
-    // 데모 축제 이후로
-    { title: "데모 일정 1", description: "데모 일정 1", startTime: new Date("2025-05-30 10:00"), endTime: new Date("2025-05-30 12:00"), id: "demo-item-1" },
-    { title: "데모 일정 2", description: "데모 일정 2", startTime: new Date("2025-05-30 13:00"), endTime: new Date("2025-05-30 23:59"), id: "demo-item-2" }
+    { title: "폐막식", description: "", startTime: new Date("2025-05-29 22:00"), endTime: new Date("2025-05-29 22:10"), id: "item-16" }
 ];
 
-
-// 탭 클릭 시 Day 1, Day 2, DEMO 일정 표시
+// 탭 클릭 시 Day 1, Day 2 일정 표시
 const day1Tab = document.getElementById("day1-tab");
 const day2Tab = document.getElementById("day2-tab");
-const demoTab = document.getElementById("demo-tab");
 const day1Content = document.getElementById("day1");
 const day2Content = document.getElementById("day2");
-const demoContent = document.getElementById("demo");
 
 day1Tab.addEventListener("click", () => {
     day1Tab.classList.add("active");
     day2Tab.classList.remove("active");
-    demoTab.classList.remove("active");
     day1Content.style.display = "block";
     day2Content.style.display = "none";
-    demoContent.style.display = "none";
 });
 
 day2Tab.addEventListener("click", () => {
     day2Tab.classList.add("active");
     day1Tab.classList.remove("active");
-    demoTab.classList.remove("active");
     day2Content.style.display = "block";
     day1Content.style.display = "none";
-    demoContent.style.display = "none";
-});
-
-demoTab.addEventListener("click", () => {
-    demoTab.classList.add("active");
-    day1Tab.classList.remove("active");
-    day2Tab.classList.remove("active");
-    demoContent.style.display = "block";
-    day1Content.style.display = "none";
-    day2Content.style.display = "none";
 });
 
 // 일정에 따라 상태 변경 (past, current, future)
 function highlightCurrentEvent() {
     const now = new Date();
-    let isDisplayed = false;  // 진행 중 텍스트가 이미 표시되었는지 여부를 추적
-
     schedule.forEach(event => {
         const item = document.getElementById(event.id);
         const itemText = item.querySelector(".schedule-detail");
@@ -176,11 +140,10 @@ function highlightCurrentEvent() {
             item.classList.add("active");
             item.classList.add("highlight"); // 활성화된 항목에 highlight 클래스 추가
 
-            // "진행 중" 텍스트가 없으면 추가, 이미 추가된 경우는 추가하지 않음
-            // if (itemText && !isDisplayed) {
-            //     itemText.innerHTML += "<span class='current-event'> 진행 중</span>";
-            //     isDisplayed = true; // 텍스트가 추가되었으므로 다른 항목에는 추가하지 않음
-            // }
+            // "진행 중" 텍스트가 없으면 추가
+            if (itemText && !itemText.innerHTML.includes("진행 중")) {
+                itemText.innerHTML += "<span class='current-event'> 진행 중</span>";
+            }
         } else {
             item.classList.remove("active");
             item.classList.remove("highlight"); // highlight 클래스 제거
@@ -193,7 +156,7 @@ function highlightCurrentEvent() {
     });
 }
 
-// 페이지 로드 후 현재 진행 중인 이벤트 강조
+// 페이지 로드 후 진행 중 일정 강조
 highlightCurrentEvent();
 
 // 1분마다 업데이트
