@@ -148,12 +148,6 @@
     </div>
     <canvas id="bg-canvas"></canvas>
 
-    <!-- BGM 오디오 추가 -->
-    <audio id="bgm" autoplay loop>
-        <source src="{{ url_for('static', filename='music/bgm.mp3') }}" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-
     <div class="container">
         <header class="header">
             {% if show_header_info %}
