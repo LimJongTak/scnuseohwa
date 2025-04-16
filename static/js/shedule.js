@@ -73,6 +73,8 @@ window.onload = function () {
     
         // DEMO 일정
         const itemsDemo = [
+            
+            { start: new Date("2025-05-30 10:00"), end: new Date("2025-05-30 12:00"), id: "demo-item-1" },
             { start: new Date("2025-05-30 13:00"), end: new Date("2025-05-30 23:59"), id: "demo-item-2" }
         ];
     
