@@ -101,16 +101,15 @@
 <script>
 // 일정 정보 (startTime, endTime 포함)
 const schedule = [
-    { title: "주간 프로그램 운영", description: "부스 운영 등", startTime: new Date("2025-05-28 10:00"), endTime: new Date("2025-05-28 19:00") },
-    { title: "축제 부스 리허설 및 안전점검", description: "", startTime: new Date("2025-05-28 16:00"), endTime: new Date("2025-05-28 17:00") },
-    { title: "동아리 오프닝 공연", description: "", startTime: new Date("2025-05-28 18:00"), endTime: new Date("2025-05-28 19:00") },
-    { title: "개회식", description: "", startTime: new Date("2025-05-28 19:00"), endTime: new Date("2025-05-28 19:30") },
-    { title: "출범식", description: "", startTime: new Date("2025-05-28 19:30"), endTime: new Date("2025-05-28 20:30") },
-    { title: "초청 가수 공연(1)", description: "초청 아티스트 공연", startTime: new Date("2025-05-28 20:30"), endTime: new Date("2025-05-28 21:00"), artist: ["choi_yu_ree", "gummy"] },
-    { title: "초청 가수 공연(2)", description: "초청 아티스트 공연", startTime: new Date("2025-05-28 21:00"), endTime: new Date("2025-05-28 21:30"), artist: ["choi_yu_ree", "gummy"] },
-    { title: "초청 가수 공연(3)", description: "초청 아티스트 공연", startTime: new Date("2025-05-28 21:30"), endTime: new Date("2025-05-28 22:00"), artist: ["choi_yu_ree", "gummy"] },
-
-    { title: "데모 일정 2", description: "데모 일정 2", startTime: new Date("2025-04-16 13:00"), endTime: new Date("2025-04-16 23:59") }
+    { title: "주간 프로그램 운영", description: "부스 운영 등", startTime: new Date("2025-05-28 10:00"), endTime: new Date("2025-05-28 19:00"), id: "item-1" },
+    { title: "축제 부스 리허설 및 안전점검", description: "", startTime: new Date("2025-05-28 16:00"), endTime: new Date("2025-05-28 17:00"), id: "item-2" },
+    { title: "동아리 오프닝 공연", description: "", startTime: new Date("2025-05-28 18:00"), endTime: new Date("2025-05-28 19:00"), id: "item-3" },
+    { title: "개회식", description: "", startTime: new Date("2025-05-28 19:00"), endTime: new Date("2025-05-28 19:30"), id: "item-4" },
+    { title: "출범식", description: "", startTime: new Date("2025-05-28 19:30"), endTime: new Date("2025-05-28 20:30"), id: "item-5" },
+    { title: "초청 가수 공연(1)", description: "초청 아티스트 공연", startTime: new Date("2025-05-28 20:30"), endTime: new Date("2025-05-28 21:00"), id: "item-6" },
+    { title: "초청 가수 공연(2)", description: "초청 아티스트 공연", startTime: new Date("2025-05-28 21:00"), endTime: new Date("2025-05-28 21:30"), id: "item-7" },
+    { title: "초청 가수 공연(3)", description: "초청 아티스트 공연", startTime: new Date("2025-05-28 21:30"), endTime: new Date("2025-05-28 22:00"), id: "item-8" },
+    { title: "데모 일정 2", description: "데모 일정 2", startTime: new Date("2025-04-16 13:00"), endTime: new Date("2025-04-16 23:59"), id: "demo-item-2" }
 ];
 
 // 탭 클릭 시 Day 1, Day 2, DEMO 일정 표시
@@ -151,14 +150,30 @@ demoTab.addEventListener("click", () => {
 // 일정에 따라 상태 변경 (past, current, future)
 function highlightCurrentEvent() {
     const now = new Date();
-    const currentEvent = schedule.find(event => now >= event.startTime && now <= event.endTime);
-    if (currentEvent) {
-        const item = document.getElementById(currentEvent.title);
-        const detailText = item.querySelector('.schedule-detail');
-        if (detailText && !detailText.innerHTML.includes("진행 중")) {
-            detailText.innerHTML += "<span class='current-event'> 진행 중</span>";
+    schedule.forEach(event => {
+        const item = document.getElementById(event.id);
+        const itemText = item.querySelector(".schedule-detail");
+        const currentTime = now.getTime();
+
+        // 진행 중인 이벤트에 "진행 중" 텍스트 추가
+        if (currentTime >= event.startTime.getTime() && currentTime <= event.endTime.getTime()) {
+            item.classList.add("active");
+            item.classList.add("highlight"); // 활성화된 항목에 highlight 클래스 추가
+
+            // "진행 중" 텍스트 추가
+            if (itemText && !itemText.innerHTML.includes("진행 중")) {
+                itemText.innerHTML += "<span class='current-event'> 진행 중</span>";
+            }
+        } else {
+            item.classList.remove("active");
+            item.classList.remove("highlight"); // highlight 클래스 제거
+
+            // "진행 중" 텍스트 제거
+            if (itemText && itemText.innerHTML.includes("진행 중")) {
+                itemText.innerHTML = itemText.innerHTML.replace("<span class='current-event'> 진행 중</span>", "");
+            }
         }
-    }
+    });
 }
 
 // 페이지 로드 후 현재 진행 중인 이벤트 강조
