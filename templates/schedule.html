@@ -154,6 +154,10 @@ function highlightCurrentEvent() {
     const currentEvent = schedule.find(event => now >= event.startTime && now <= event.endTime);
     if (currentEvent) {
         document.getElementById(currentEvent.title).classList.add('highlight');  // 현재 진행 중인 이벤트 강조
+        const itemText = document.getElementById(currentEvent.title).querySelector(".schedule-detail");
+        if (itemText && !itemText.innerHTML.includes("진행 중")) {
+            itemText.innerHTML += "<span class='current-event'> 진행 중</span>";
+        }
     }
 }
 
