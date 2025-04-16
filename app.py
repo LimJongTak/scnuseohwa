@@ -3,6 +3,13 @@ import os
 
 app = Flask(__name__)
 
+from flask import make_response
+
+@app.after_request
+def apply_cache_control(response):
+    response.cache_control.no_store = True  # 캐시 저장 안 함
+    return response
+
 # 메인 페이지 (로고 및 날짜 포함)
 @app.route('/')
 def home():
