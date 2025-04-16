@@ -45,56 +45,56 @@ window.onload = function () {
     // 현재 시간에 맞는 일정 강조
     function highlightCurrentEvent() {
         const now = new Date();
-        const currentTime = now.getTime(); // 현재 시간을 밀리초로 얻기
-
+        const currentTime = now.getTime();
+    
         // 1day 일정
         const itemsDay1 = [
-            { start: new Date("2025-05-28 10:00").getTime(), end: new Date("2025-05-28 19:00").getTime(), id: "item-1" },
-            { start: new Date("2025-05-28 16:00").getTime(), end: new Date("2025-05-28 17:00").getTime(), id: "item-2" },
-            { start: new Date("2025-05-28 18:00").getTime(), end: new Date("2025-05-28 19:00").getTime(), id: "item-3" },
-            { start: new Date("2025-05-28 19:00").getTime(), end: new Date("2025-05-28 19:30").getTime(), id: "item-4" },
-            { start: new Date("2025-05-28 19:30").getTime(), end: new Date("2025-05-28 20:30").getTime(), id: "item-5" },
-            { start: new Date("2025-05-28 20:30").getTime(), end: new Date("2025-05-28 21:00").getTime(), id: "item-6" },
-            { start: new Date("2025-05-28 21:00").getTime(), end: new Date("2025-05-28 21:30").getTime(), id: "item-7" },
-            { start: new Date("2025-05-28 21:30").getTime(), end: new Date("2025-05-28 22:00").getTime(), id: "item-8" }
+            { start: new Date("2025-05-28 10:00"), end: new Date("2025-05-28 19:00"), id: "item-1" },
+            { start: new Date("2025-05-28 16:00"), end: new Date("2025-05-28 17:00"), id: "item-2" },
+            { start: new Date("2025-05-28 18:00"), end: new Date("2025-05-28 19:00"), id: "item-3" },
+            { start: new Date("2025-05-28 19:00"), end: new Date("2025-05-28 19:30"), id: "item-4" },
+            { start: new Date("2025-05-28 19:30"), end: new Date("2025-05-28 20:30"), id: "item-5" },
+            { start: new Date("2025-05-28 20:30"), end: new Date("2025-05-28 21:00"), id: "item-6" },
+            { start: new Date("2025-05-28 21:00"), end: new Date("2025-05-28 21:30"), id: "item-7" },
+            { start: new Date("2025-05-28 21:30"), end: new Date("2025-05-28 22:00"), id: "item-8" }
         ];
-
+    
         // 2day 일정
         const itemsDay2 = [
-            { start: new Date("2025-05-29 10:00").getTime(), end: new Date("2025-05-29 19:00").getTime(), id: "item-9" },
-            { start: new Date("2025-05-29 18:00").getTime(), end: new Date("2025-05-29 19:00").getTime(), id: "item-10" },
-            { start: new Date("2025-05-29 19:00").getTime(), end: new Date("2025-05-29 19:30").getTime(), id: "item-11" },
-            { start: new Date("2025-05-29 19:30").getTime(), end: new Date("2025-05-29 20:00").getTime(), id: "item-12" },
-            { start: new Date("2025-05-29 20:00").getTime(), end: new Date("2025-05-29 20:30").getTime(), id: "item-13" },
-            { start: new Date("2025-05-29 20:30").getTime(), end: new Date("2025-05-29 21:00").getTime(), id: "item-14" },
-            { start: new Date("2025-05-29 21:00").getTime(), end: new Date("2025-05-29 21:30").getTime(), id: "item-15" },
-            { start: new Date("2025-05-29 22:00").getTime(), end: new Date("2025-05-29 22:10").getTime(), id: "item-16" }
+            { start: new Date("2025-05-29 10:00"), end: new Date("2025-05-29 19:00"), id: "item-9" },
+            { start: new Date("2025-05-29 18:00"), end: new Date("2025-05-29 19:00"), id: "item-10" },
+            { start: new Date("2025-05-29 19:00"), end: new Date("2025-05-29 19:30"), id: "item-11" },
+            { start: new Date("2025-05-29 19:30"), end: new Date("2025-05-29 20:00"), id: "item-12" },
+            { start: new Date("2025-05-29 20:00"), end: new Date("2025-05-29 20:30"), id: "item-13" },
+            { start: new Date("2025-05-29 20:30"), end: new Date("2025-05-29 21:00"), id: "item-14" },
+            { start: new Date("2025-05-29 21:00"), end: new Date("2025-05-29 21:30"), id: "item-15" },
+            { start: new Date("2025-05-29 22:00"), end: new Date("2025-05-29 22:10"), id: "item-16" }
         ];
-
+    
         // DEMO 일정
         const itemsDemo = [
-            { start: new Date("2025-04-16 13:00").getTime(), end: new Date("2025-04-16 23:59").getTime(), id: "demo-item-2" } // 데모 일정2
+            { start: new Date("2025-04-16 13:00"), end: new Date("2025-04-16 23:59"), id: "demo-item-2" }
         ];
-
+    
         // 시간대 비교 및 active 추가
         function checkTime(items) {
             items.forEach(item => {
                 const itemElement = document.getElementById(item.id);
                 const itemText = itemElement.querySelector(".schedule-detail");
-
-                // 일정이 진행 중인지 확인
-                if (currentTime >= item.start && currentTime <= item.end) {
+    
+                // 진행 중 텍스트가 없으면 추가하고, 이미 있으면 추가하지 않음
+                if (currentTime >= item.start.getTime() && currentTime <= item.end.getTime()) {
                     itemElement.classList.add("active");
                     itemElement.classList.add("highlight"); // 활성화된 항목에 highlight 클래스 추가
-
-                    // "진행 중" 텍스트 추가
+    
+                    // "진행 중" 텍스트 추가 (중복 방지)
                     if (!itemText.innerHTML.includes("진행 중")) {
                         itemText.innerHTML += "<span class='current-event'> 진행 중</span>";
                     }
                 } else {
                     itemElement.classList.remove("active");
                     itemElement.classList.remove("highlight"); // highlight 클래스 제거
-
+    
                     // "진행 중" 텍스트 제거
                     if (itemText.innerHTML.includes("진행 중")) {
                         itemText.innerHTML = itemText.innerHTML.replace("<span class='current-event'> 진행 중</span>", "");
@@ -102,15 +102,16 @@ window.onload = function () {
                 }
             });
         }
-
+    
         checkTime(itemsDay1);
         checkTime(itemsDay2);
         checkTime(itemsDemo); // 데모 일정에 대해서도 체크
     }
-
-    // 처음 페이지 로드 시 진행 중인 일정 강조
+    
+    // 페이지 로드 후 진행 중 일정 강조
     highlightCurrentEvent();
-
+    
     // 1분마다 업데이트
     setInterval(highlightCurrentEvent, 60000); // 1분마다 확인
+    
 };
