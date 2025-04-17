@@ -9,8 +9,8 @@ def home():
     meta_info = {
         "og_title": "서화 총학생회",
         "og_description": "90년의 동화를, 100년의 서약으로",
-        "og_image": "https://scnuseohwa.site/images/thumbnail2.png",
-        "og_url": "https://scnuseohwa.site",
+        "og_image": "https://scnuseohwa.store/images/thumbnail2.png",
+        "og_url": "https://scnuseohwa.store",
         "og_type": "website",
         "favicon": "images/favicon.ico"  # 파비콘 경로
     }
