@@ -94,9 +94,9 @@
 {% block scripts %}
 <script>
    // Carousel (슬라이드) 기능
-   const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        const carouselContent = document.querySelector('.carousel-content');
+   const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        const carouselContent = document.querySelector('.carousel-item img');
         let currentIndex = 0;
         const images = [
             "{{ url_for('static', filename='images/mcyou.jpg') }}", 
