@@ -17,33 +17,12 @@ function initializeMap() {
     marker.setMap(map); // 마커를 지도에 표시
 }
 
-// 캐러셀 기능 구현
-function initializeCarousel() {
-    let carouselIndex = 0;
-    const track = document.querySelector('.carousel-track');
-    const items = document.querySelectorAll('.carousel-item');
-    const totalItems = items.length;
-    const prevBtn = document.querySelector('.carousel-prev');
-    const nextBtn = document.querySelector('.carousel-next');
-
-    // 캐러셀 다음 버튼 클릭 시
-    nextBtn.addEventListener('click', function() {
-        carouselIndex = (carouselIndex + 1) % totalItems;
-        track.style.transform = `translateX(${(-carouselIndex * 100)}%)`;
-    });
-
-    // 캐러셀 이전 버튼 클릭 시
-    prevBtn.addEventListener('click', function() {
-        carouselIndex = (carouselIndex - 1 + totalItems) % totalItems;
-        track.style.transform = `translateX(${(-carouselIndex * 100)}%)`;
-    });
-}
-
-// 카카오 지도 API 로딩 확인 후 실행
+// 카카오 지도 API 로딩 함수
 function loadKakaoMapApi(callback) {
     const script = document.createElement('script');
+    // 카카오 지도 API URL에 실제 'appkey' 값 넣기
     script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=0cddc61d238179b69f60a5e5fc79699c';
-    script.onload = callback;
+    script.onload = callback;  // 스크립트 로드 후 callback 실행
     script.onerror = function() {
         console.error("카카오 지도 API 로드 실패");
     };
@@ -55,6 +34,5 @@ window.addEventListener('load', function() {
     // 카카오 지도 API 로드 후 실행
     loadKakaoMapApi(function() {
         initializeMap();  // 지도 초기화
-        initializeCarousel();  // 캐러셀 초기화
     });
 });
