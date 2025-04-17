@@ -58,7 +58,7 @@
 
 .carousel-track {
     display: flex;
-    animation: carousel-animation 15s infinite;
+    transition: transform 0.5s ease;
 }
 
 .carousel-item {
@@ -75,14 +75,27 @@
     border-radius: 10px;
 }
 
-/* 애니메이션: 이미지 자동 전환 */
-@keyframes carousel-animation {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(-100%); }
-    40% { transform: translateX(-200%); }
-    60% { transform: translateX(-300%); }
-    80% { transform: translateX(-400%); }
-    100% { transform: translateX(0); }
+/* prev, next 버튼 스타일 */
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: grey;
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
 }
 
 /* 지도 섹션 */
