@@ -14,15 +14,21 @@ window.addEventListener('load', function() {
 
     // 이전 버튼 클릭 시 이미지 전환
     carouselPrev.addEventListener('click', function() {
-        carouselItems[currentIndex].style.display = 'none'; // 현재 이미지 숨기기
-        currentIndex = (currentIndex === 0) ? carouselItems.length - 1 : currentIndex - 1; // 인덱스 변경
-        carouselItems[currentIndex].style.display = 'block'; // 새 이미지 보이기
+        // 현재 이미지 숨기기
+        carouselItems[currentIndex].style.display = 'none'; 
+        // 인덱스 변경 (첫 번째 이미지로 돌아가면 마지막 이미지로 변경)
+        currentIndex = (currentIndex === 0) ? carouselItems.length - 1 : currentIndex - 1; 
+        // 새 이미지 보이기
+        carouselItems[currentIndex].style.display = 'block';
     });
 
     // 다음 버튼 클릭 시 이미지 전환
     carouselNext.addEventListener('click', function() {
-        carouselItems[currentIndex].style.display = 'none'; // 현재 이미지 숨기기
-        currentIndex = (currentIndex === carouselItems.length - 1) ? 0 : currentIndex + 1; // 인덱스 변경
-        carouselItems[currentIndex].style.display = 'block'; // 새 이미지 보이기
+        // 현재 이미지 숨기기
+        carouselItems[currentIndex].style.display = 'none'; 
+        // 인덱스 변경 (마지막 이미지에서 돌아가면 첫 번째 이미지로 변경)
+        currentIndex = (currentIndex === carouselItems.length - 1) ? 0 : currentIndex + 1; 
+        // 새 이미지 보이기
+        carouselItems[currentIndex].style.display = 'block';
     });
 });
