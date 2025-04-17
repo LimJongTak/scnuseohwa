@@ -48,7 +48,11 @@
 /* 캐러셀 스타일 */
 .carousel {
     position: relative;
-    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -58,27 +62,32 @@
 }
 
 .carousel-item {
-    flex: 0 0 100%;
-    width: 100%;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-item img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    border-radius: 10px;
 }
 
-.carousel-prev,
-.carousel-next {
+/* prev, next 버튼 스타일 */
+.carousel-prev, .carousel-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
+    background-color: white;
+    color: grey;
+    font-size: 30px;
     padding: 10px;
+    border: none;
+    border-radius: 50%;
     cursor: pointer;
-    z-index: 1;
+    z-index: 10;
 }
 
 .carousel-prev {
