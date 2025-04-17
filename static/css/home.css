@@ -4,43 +4,25 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    gap: 1px; /* 간격을 더 줄여서 항목들 간의 간격을 좁힘 */
+    gap: 1px;
 }
 
 /* 링크 항목 스타일 */
 .link-item a {
-    text-decoration: none; /* 밑줄 제거 */
-    color: white; /* 텍스트 색상 설정 */
+    text-decoration: none;
+    color: white;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     display: inline-block;
-    margin-bottom: 1px; /* 간격을 더 좁힘 */
+    margin-bottom: 1px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 /* hover 스타일 */
 .link-item a:hover {
-    color: rgb(196, 196, 196); /* hover 시 텍스트 색상 변화 */
-    transform: scale(1.05); /* hover 시 텍스트 확대 */
-}
-
-/* 별 모양 효과를 주기 위한 스타일 */
-.link-item:after {
-    content: '';
-    position: absolute;
-    background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%225%22 height=%225%22 fill=%22white%22%3E%3Ccircle cx=%222.5%22 cy=%222.5%22 r=%222.5%22 /%3E%3C/svg%3E') no-repeat center;
-    width: 5px;
-    height: 5px;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: sparkle 1s infinite alternate;
-}
-
-@keyframes sparkle {
-    0% { opacity: 0; transform: translateY(0) scale(0.5); }
-    100% { opacity: 1; transform: translateY(-5px) scale(1); }
+    color: rgb(196, 196, 196);
+    transform: scale(1.05);
 }
 
 /* 라인업 섹션 */
@@ -80,31 +62,32 @@
 }
 
 .carousel-item {
-    width: 350px; /* 이미지 크기 조정 */
-    flex: 0 0 350px;
+    width: 100%;
+    flex: 0 0 100%;
     display: flex;
     justify-content: center;
+    transition: transform 0.5s ease;
 }
 
 .carousel-item img {
     width: 100%;
-    height: 350px; /* 이미지 높이 설정 */
-    object-fit: cover; /* 이미지 비율 유지 */
+    height: auto;
     border-radius: 10px;
 }
 
+/* Prev/Next 버튼 */
 .carousel-prev, .carousel-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: white; /* 흰 배경 */
-    color: grey; /* 회색 화살표 */
+    background-color: white;  /* 흰 배경 */
+    color: grey;  /* 화살표 회색 */
     font-size: 30px;
     padding: 10px;
-    border: 1px solid #ccc; /* 테두리 추가 */
+    border: none;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 10;
+    z-index: 10;  /* 버튼이 이미지 위에 나타나도록 설정 */
 }
 
 .carousel-prev {
@@ -121,37 +104,30 @@
     height: auto;
     margin-top: 50px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.7);  /* 흰색 배경, 70% 투명도 */
-    border-radius: 10px;  /* 모서리 둥글게 */
-    padding: 20px;  /* 내부 여백 추가 */
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 20px;
 }
 
 #map-section h2 {
     font-size: 28px;
     font-weight: bold;
-    color: grey;  /* 제목 색상 */
-    margin-bottom: 20px;  /* 제목과 지도 간 간격 */
-}
-
-#map-section h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: grey;  /* 제목 색상 */
-    margin-bottom: 20px;  /* 제목과 지도 간 간격 */
+    color: grey;
+    margin-bottom: 20px;
 }
 
 #map-section .section-line {
     width: 50%;
     height: 2px;
-    background-color: white;  /* 구분선 색상 */
-    margin: 10px auto;  /* 구분선 중앙 정렬 */
+    background-color: white;
+    margin: 10px auto;
 }
 
 #map {
     width: 100%;
-    height: 500px; /* 지도 크기 설정 */
+    height: 500px;
     margin-top: 20px;
     border-radius: 10px;
-    border: 2px solid white; /* 지도에 경계선 추가 */
-    box-sizing: border-box; /* padding, border를 포함한 크기 계산 */
+    border: 2px solid white;
+    box-sizing: border-box;
 }
