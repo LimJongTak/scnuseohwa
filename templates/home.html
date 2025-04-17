@@ -93,30 +93,28 @@
 
 {% block scripts %}
 <script>
-    let currentIndex = 0; // 현재 이미지 인덱스
-    const images = [
-        "{{ url_for('static', filename='images/mcyou.jpg') }}",
-        "{{ url_for('static', filename='images/mcgang.jpg') }}",
-        "{{ url_for('static', filename='images/mcsin.jpg') }}",
-    ];
+   // Carousel (슬라이드) 기능
+   const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const carouselContent = document.querySelector('.carousel-content');
+        let currentIndex = 0;
+        const images = [
+            "{{ url_for('static', filename='images/mcyou.jpg') }}", 
+            "{{ url_for('static', filename='images/mcgang.jpg') }}", 
+            "{{ url_for('static', filename='images/mcsin.jpg') }}"
+        ];
 
-    const prevButton = document.querySelector('.carousel-prev');
-    const nextButton = document.querySelector('.carousel-next');
-    const carouselImage = document.querySelector('.carousel-item img');
+        // 이전 이미지
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            carouselContent.innerHTML = `<img src="${images[currentIndex]}" alt="Artist Image">`;
+        });
 
-    function updateImage() {
-        carouselImage.src = images[currentIndex];
-    }
-
-    prevButton.addEventListener('click', function() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length; // 이전 이미지로 이동
-        updateImage();
-    });
-
-    nextButton.addEventListener('click', function() {
-        currentIndex = (currentIndex + 1) % images.length; // 다음 이미지로 이동
-        updateImage();
-    });
+        // 다음 이미지
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            carouselContent.innerHTML = `<img src="${images[currentIndex]}" alt="Artist Image">`;
+        });
 
     updateImage(); // 처음에 이미지를 설정
 </script>
