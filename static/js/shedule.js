@@ -32,8 +32,8 @@ window.onload = function () {
     
         // 1day 일정 (2025년 5월 28일)
         const itemsDay1 = [
-            { start: new Date("2025-04-17 10:00"), end: new Date("2025-04-17 23:59"), id: "item-1" },
-            { start: new Date("2025-04-17 22:00"), end: new Date("2025-04-17 23:59"), id: "item-2" },
+            { start: new Date("2025-05-28 10:00"), end: new Date("2025-05-28 19:00"), id: "item-1" },
+            { start: new Date("2025-05-28 16:00"), end: new Date("2025-05-28 17:00"), id: "item-2" },
             { start: new Date("2025-05-28 18:00"), end: new Date("2025-05-28 19:00"), id: "item-3" },
             { start: new Date("2025-05-28 19:00"), end: new Date("2025-05-28 19:30"), id: "item-4" },
             { start: new Date("2025-05-28 19:30"), end: new Date("2025-05-28 20:30"), id: "item-5" },
