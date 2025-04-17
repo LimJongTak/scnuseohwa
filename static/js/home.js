@@ -1,9 +1,5 @@
 // 페이지 로드 시 초기화
 window.addEventListener('load', function() {
-    // 카카오 지도 API 로드 후 실행
-    loadKakaoMapApi(function() {
-        initializeMap();  // 지도 초기화
-    });
 
     // 캐러셀 이미지 전환
     const carouselPrev = document.querySelector('.carousel-prev');
