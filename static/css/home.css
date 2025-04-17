@@ -127,13 +127,13 @@
 #map-section h2 {
     font-size: 28px;
     font-weight: bold;
-    color: white;  /* 제목 색상 */
+    color: grey;  /* 제목 색상 */
     margin-bottom: 20px;  /* 제목과 지도 간 간격 */
 }
 #map-section h3 {
     font-size: 20px;
     font-weight: bold;
-    color: white;  /* 제목 색상 */
+    color: grey;  /* 제목 색상 */
     margin-bottom: 20px;  /* 제목과 지도 간 간격 */
 }
 
