@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- 카카오 지도 API 스크립트 (비동기 로딩) -->
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=0cddc61d238179b69f60a5e5fc79699c&autoload=false"></script>
+
 <div class="home-container">
     <div class="link-item">
         <a href="/notice">
@@ -51,9 +54,6 @@
         <div id="map" style="width: 100%; height: 500px;"></div> <!-- 지도 표시 -->
     </section>
 </div>
-
-<!-- 카카오 지도 API 스크립트 -->
-<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0cddc61d238179b69f60a5e5fc79699c"></script>
 
 <!-- home.js 파일 불러오기 -->
 <script src="{{ url_for('static', filename='js/home.js') }}"></script>

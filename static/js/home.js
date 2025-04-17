@@ -1,6 +1,5 @@
 // 카카오 지도 API 초기화
 function initializeMap() {
-    // 카카오 지도 API가 로드된 후에만 실행되도록 보장
     if (typeof kakao === 'undefined') {
         console.error('카카오 지도 API가 로드되지 않았습니다.');
         return;
@@ -40,8 +39,22 @@ function initializeCarousel() {
     });
 }
 
+// 카카오 지도 API 로딩 확인 후 실행
+function loadKakaoMapApi(callback) {
+    const script = document.createElement('script');
+    script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=0cddc61d238179b69f60a5e5fc79699c';
+    script.onload = callback;
+    script.onerror = function() {
+        console.error("카카오 지도 API 로드 실패");
+    };
+    document.head.appendChild(script);
+}
+
 // 페이지 로드 시 초기화
 window.addEventListener('load', function() {
-    initializeMap();
-    initializeCarousel();
+    // 카카오 지도 API 로드 후 실행
+    loadKakaoMapApi(function() {
+        initializeMap();  // 지도 초기화
+        initializeCarousel();  // 캐러셀 초기화
+    });
 });
