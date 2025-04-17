@@ -1,0 +1,57 @@
+/* 푸터 스타일을 고정 위치로 설정 */
+.footer-container {
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    position: relative;  /* 페이지가 길어져도 항상 하단에 고정되도록 설정 */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* 푸터 텍스트 스타일 */
+.footer-text {
+    margin-top: 50px; /* 윗 부분에 50px의 여백 추가 */
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: white;
+}
+
+/* 사이트 제작자 버튼 스타일 */
+.footer-button-inline {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* 호버 시 흰색 밑줄 효과 */
+.footer-button-inline::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.footer-button-inline:hover::after {
+    transform: scaleX(1);
+}
+
+/* 기존 .footer-button 클래스는 필요시 사용 */
+.footer-button {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-button:hover {
+    color: transparent;
+}
