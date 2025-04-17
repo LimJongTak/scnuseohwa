@@ -144,3 +144,8 @@
     border: 2px solid #ccc; /* 지도에 경계선 추가 */
     box-sizing: border-box; /* padding, border를 포함한 크기 계산 */
 }
+
+/* 주변 버스 정보 숨기기 */
+#daumRoughmapContainer1744892320531 .root_daum_roughmap .map_marker {
+    display: none;
+}
