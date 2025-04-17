@@ -54,33 +54,7 @@
 
 <!-- 카카오 지도 API 스크립트 -->
 <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0cddc61d238179b69f60a5e5fc79699c"></script>
-<script>
-    // 카카오 지도 초기화
-    var mapContainer = document.getElementById('map'); // 지도를 표시할 div
-    var mapOption = {
-        center: new kakao.maps.LatLng(34.9694, 127.4808), // 지도의 중심좌표
-        level: 3 // 확대 레벨
-    };
-    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
-    var markerPosition = new kakao.maps.LatLng(34.9694, 127.4808); // 마커 위치 설정
-    var marker = new kakao.maps.Marker({ position: markerPosition }); // 마커 생성
-    marker.setMap(map); // 마커를 지도에 표시
 
-    // 캐러셀 기능 구현
-    var carouselIndex = 0;
-    var track = document.querySelector('.carousel-track');
-    var items = document.querySelectorAll('.carousel-item');
-    var totalItems = items.length;
-    var prevBtn = document.querySelector('.carousel-prev');
-    var nextBtn = document.querySelector('.carousel-next');
-
-    nextBtn.addEventListener('click', function() {
-        carouselIndex = (carouselIndex + 1) % totalItems;
-        track.style.transform = 'translateX(' + (-carouselIndex * 100) + '%)';
-    });
-    prevBtn.addEventListener('click', function() {
-        carouselIndex = (carouselIndex - 1 + totalItems) % totalItems;
-        track.style.transform = 'translateX(' + (-carouselIndex * 100) + '%)';
-    });
-</script>
+<!-- home.js 파일 불러오기 -->
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
 {% endblock %}
