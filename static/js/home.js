@@ -7,6 +7,8 @@ window.addEventListener('load', function() {
     const carouselTrack = document.querySelector('.carousel-track');
     const carouselItems = document.querySelectorAll('.carousel-item');
     let currentIndex = 0;
+    const itemWidth = carouselItems[0].offsetWidth;
+    const totalItems = carouselItems.length;
 
     // 모든 이미지가 수평으로 배치되도록 처리
     carouselTrack.style.display = 'flex';
@@ -16,19 +18,19 @@ window.addEventListener('load', function() {
     carouselItems.forEach(item => item.style.flex = '0 0 100%');
     carouselItems[currentIndex].style.display = 'block';
 
+    function updateCarousel() {
+        carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    }
+
     // 이전 버튼 클릭 시 이미지 전환
     carouselPrev.addEventListener('click', function() {
-        // 인덱스 변경 (첫 번째 이미지로 돌아가면 마지막 이미지로 변경)
-        currentIndex = (currentIndex === 0) ? carouselItems.length - 1 : currentIndex - 1;
-        // 이미지 위치 변경
-        carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
     });
 
     // 다음 버튼 클릭 시 이미지 전환
     carouselNext.addEventListener('click', function() {
-        // 인덱스 변경 (마지막 이미지에서 돌아가면 첫 번째 이미지로 변경)
-        currentIndex = (currentIndex === carouselItems.length - 1) ? 0 : currentIndex + 1;
-        // 이미지 위치 변경
-        carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
     });
 });
