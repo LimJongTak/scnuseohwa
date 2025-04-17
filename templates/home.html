@@ -47,6 +47,15 @@
     <section id="lineup">
         <h2>라인업</h2>
         <div class="section-line"></div>
+        <div class="carousel">
+            <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+            <div class="carousel-track">
+                <div class="carousel-item"><img src="{{ url_for('static', filename='images/mcyou.jpg') }}" alt="Lineup Image 1"></div>
+                <div class="carousel-item"><img src="{{ url_for('static', filename='images/mcgang.jpg') }}" alt="Lineup Image 2"></div>
+                <div class="carousel-item"><img src="{{ url_for('static', filename='images/mcsin.jpg') }}" alt="Lineup Image 3"></div>
+            </div>
+            <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+        </div>
         <div class="section-line"></div>
     </section>
 

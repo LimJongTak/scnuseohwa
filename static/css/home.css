@@ -45,6 +45,58 @@
     margin: 10px auto;
 }
 
+/* 캐러셀 스타일 */
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-item {
+    width: 100%;
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-item img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: grey;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
 /* 지도 섹션 */
 #map-section {
     width: auto;
