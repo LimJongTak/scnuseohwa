@@ -21,7 +21,7 @@ function initializeMap() {
 function loadKakaoMapApi(callback) {
     const script = document.createElement('script');
     // 카카오 지도 API URL에 실제 'appkey' 값 넣기
-    script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=0cddc61d238179b69f60a5e5fc79699c';
+    script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=54e16725efe48b96242beb40a16fad3f';
     script.onload = callback;  // 스크립트 로드 후 callback 실행
     script.onerror = function() {
         console.error("카카오 지도 API 로드 실패");
