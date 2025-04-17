@@ -48,19 +48,38 @@
     <section id="map-section" class="map-section">
         <h2>찾아오시는 길</h2>
         <div class="section-line"></div>
-        
-        <!-- 카카오 지도 퍼가기 코드 -->
-        <div id="daumRoughmapContainer1744892320531" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
-        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-        <script charset="UTF-8">
-            new daum.roughmap.Lander({
-                "timestamp" : "1744892320531",
-                "key" : "2nqya",  
-                "mapWidth" : "350",  
-                "mapHeight" : "350"  
-            }).render();
-        </script>
+        <!-- 수정된 카카오 지도 코드 -->
+        <div style="font:normal normal 400 12px/normal dotum, sans-serif; width:350px; height:382px; color:#333; position:relative">
+            <div style="height: 350px;">
+                <a href="https://map.kakao.com/?urlX=609485.999999998&amp;urlY=409596.99999999837&amp;itemId=9162750&amp;q=%EA%B5%AD%EB%A6%BD%EC%88%9C%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90&amp;srcid=9162750&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank">
+                    <img class="map" src="http://t1.daumcdn.net/roughmap/imgmap/96a9c07431a1c0c3f3c809b5a3dbffb886a1619c8afe478cf543e41059ef350e" width="348px" height="348px" style="border:1px solid #ccc;">
+                </a>
+            </div>
+            <div style="overflow: hidden; padding: 7px 11px; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 0px 0px 2px 2px; background-color: rgb(249, 249, 249);">
+                <a href="https://map.kakao.com" target="_blank" style="float: left;">
+                    <img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵" style="display:block;width:72px;height:16px">
+                </a>
+                <div style="float: right; position: relative; top: 1px; font-size: 11px;">
+                    <a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;srcid=9162750&amp;confirmid=9162750&amp;q=%EA%B5%AD%EB%A6%BD%EC%88%9C%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90&amp;rv=on" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">로드뷰</a>
+                    <span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span>
+                    <a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;eName=%EA%B5%AD%EB%A6%BD%EC%88%9C%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90&amp;eX=609485.999999998&amp;eY=409596.99999999837" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">길찾기</a>
+                    <span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span>
+                    <a target="_blank" href="https://map.kakao.com?map_type=TYPE_MAP&amp;from=roughmap&amp;srcid=9162750&amp;itemId=9162750&amp;q=%EA%B5%AD%EB%A6%BD%EC%88%9C%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90&amp;urlX=609485.999999998&amp;urlY=409596.99999999837" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">지도 크게 보기</a>
+                </div>
+            </div>
+            <div>
+                <span style="font-weight:700;position:absolute;left:-25px;top:-136px">주변 정류장</span>
+                <span style="position:absolute;left:-25px;top:-136px"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_bus01.png"></span>
+                <a href="https://map.kakao.com/?from=roughmap&amp;busStopId=BS329638" target="_blank" style="text-decoration: none;color: #333;position:absolute;left:-25px;top:-136px;width:0px;height:0px">가곡대주A</a>
+                <span style="position:absolute;left:-25px;top:-136px"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_bus02.png"></span>
+                <a href="https://map.kakao.com/?from=roughmap&amp;busStopId=BS329637" target="_blank" style="text-decoration: none;color: #333;position:absolute;left:-25px;top:-136px;width:0px;height:0px">원석현</a>
+                <span style="position:absolute;left:-25px;top:-136px"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_bus03.png"></span>
+                <a href="https://map.kakao.com/?from=roughmap&amp;busStopId=BS329643" target="_blank" style="text-decoration: none;color: #333;position:absolute;left:-25px;top:-136px;width:0px;height:0px">원석현</a>
+                <span style="position:absolute;left:-25px;top:-136px"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/map/marker_bus04.png"></span>
+                <a href="https://map.kakao.com/?from=roughmap&amp;busStopId=BS329642" target="_blank" style="text-decoration: none;color: #333;position:absolute;left:-25px;top:-136px;width:0px;height:0px">가곡대주A</a>
+            </div>
+        </div>
     </section>
 </div>
 {% endblock %}
