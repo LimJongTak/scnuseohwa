@@ -51,25 +51,3 @@
     padding-left: 50px;  /* 왼쪽 여백 50px 추가 */
     padding-right: 50px; /* 오른쪽 여백 50px 추가 */
 }
-
-/* 왼쪽 상단에 위치한 '개발자', '디자인' 스타일 */
-.role-title {
-    font-weight: bold;
-    font-size: 18px;
-    position: absolute;
-    top: -10px;  /* 왼쪽 상단에 배치 */
-    left: -10px;
-    color: #8E7DBE;
-}
-
-/* 이름 스타일 */
-.name-title {
-    font-weight: bold;
-    margin-left: 50px; /* 왼쪽 여백 추가 */
-}
-
-/* 화살표 아이콘 */
-.dropdown-icon {
-    margin-left: 10px;
-    font-size: 18px;
-}
