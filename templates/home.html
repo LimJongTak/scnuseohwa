@@ -99,6 +99,11 @@
     const carouselTrack = document.querySelector('.carousel-track');
     const carouselItems = document.querySelectorAll('.carousel-item');
     let currentIndex = 0;
+    const images = [
+            "{{ url_for('static', filename='images/mcyou.jpg') }}", 
+            "{{ url_for('static', filename='images/mcgang.jpg') }}", 
+            "{{ url_for('static', filename='images/mcsin.jpg') }}"
+        ];
     const totalItems = carouselItems.length;
 
     // 슬라이드 이동 함수
