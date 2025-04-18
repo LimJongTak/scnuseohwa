@@ -34,16 +34,16 @@
 
 #map {
     margin: 20px auto;
-    width: 100%; /* Ensure map takes full width of parent */
-    max-width: 600px;
+    width: 300px; /* Ensure map takes full width of parent */
+    max-width: 300px;
     border-radius: 10px;
     border: 4px solid white;
     overflow: hidden;
 }
 
 #map img {
-    width: 100%; /* Ensures image fits the width of the container */
-    height: auto; /* Keeps the aspect ratio intact */
+    width: 300px; /* Ensures image fits the width of the container */
+    height: 300px; /* Keeps the aspect ratio intact */
 }
 
 .booth-cards {
