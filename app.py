@@ -151,7 +151,7 @@ def booth_info(booth_id):
         return abort(404)
 
 # Blueprint 등록
-app.register_blueprint(booth_blueprint)
+app.register_blueprint(booth_blueprint, url_prefix='/booth')
 
 # 서버 실행
 if __name__ == '__main__':
