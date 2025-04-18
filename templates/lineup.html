@@ -17,17 +17,11 @@
             <!-- Day 1 콘텐츠 -->
             <div id="day1-content" class="day-content active">
                 <div class="day1-buttons">
-                    <button class="day1-button active" id="day1-1">개</button>
-                    <button class="day1-button" id="day1-2">애</button>
-                    <button class="day1-button" id="day1-3">패</button>
+                    <button class="day1-1-button">개</button>
+                    <button class="day1-2-button">애</button>
+                    <button class="day1-3-button">패</button>
                 </div>
-
-                <div id="day1-1-content" class="day-section active">
-                    <div class="carousel">
-                        <div class="carousel-content">
-                            <img src="{{ url_for('static', filename='images/mcyou.jpg') }}" alt="Artist Image" class="artist-image">
-                        </div>
-                    </div>
+                <div id="day1-1-section" class="day-section">
                     <div class="artist-intro">
                         <h2>유재석</h2>
                         <p>국민MC</p>
@@ -44,17 +38,45 @@
                                     <p>유재석</p>
                                 </div>
                             </li>
-                            <!-- Add more songs here -->
+                            <li>
+                                <div class="album">
+                                    <img src="{{ url_for('static', filename='images/runningman.jpg') }}" alt="Album Image" class="album-image">
+                                </div>
+                                <div class="song-details">
+                                    <p>런닝맨</p>
+                                    <p>유재석</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="album">
+                                    <img src="{{ url_for('static', filename='images/uquiz.jpg') }}" alt="Album Image" class="album-image">
+                                </div>
+                                <div class="song-details">
+                                    <p>유퀴즈</p>
+                                    <p>유재석</p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
+                <div id="day1-2-section" class="day-section">
+                    <!-- "애" 버튼을 눌렀을 때 나오는 섹션 -->
+                    <p>애 섹션</p>
+                </div>
+                <div id="day1-3-section" class="day-section">
+                    <!-- "패" 버튼을 눌렀을 때 나오는 섹션 -->
+                    <p>패 섹션</p>
+                </div>
+            </div>
 
-                <div id="day1-2-content" class="day-section">
-                    <div class="carousel">
-                        <div class="carousel-content">
-                            <img src="{{ url_for('static', filename='images/runningman.jpg') }}" alt="Artist Image" class="artist-image">
-                        </div>
-                    </div>
+            <!-- Day 2 콘텐츠 -->
+            <div id="day2-content" class="day-content">
+                <div class="day2-buttons">
+                    <button class="day2-1-button">개</button>
+                    <button class="day2-2-button">애</button>
+                    <button class="day2-3-button">패</button>
+                </div>
+                <div id="day2-1-section" class="day-section">
                     <div class="artist-intro">
                         <h2>강호동</h2>
                         <p>천하장사</p>
@@ -71,57 +93,34 @@
                                     <p>강호동</p>
                                 </div>
                             </li>
-                            <!-- Add more songs here -->
-                        </ul>
-                    </div>
-                </div>
-
-                <div id="day1-3-content" class="day-section">
-                    <!-- Add content for 패 -->
-                </div>
-            </div>
-
-            <!-- Day 2 콘텐츠 (similar structure as Day 1) -->
-            <div id="day2-content" class="day-content">
-                <div class="day2-buttons">
-                    <button class="day2-button active" id="day2-1">개</button>
-                    <button class="day2-button" id="day2-2">애</button>
-                    <button class="day2-button" id="day2-3">패</button>
-                </div>
-
-                <div id="day2-1-content" class="day-section active">
-                    <div class="carousel">
-                        <div class="carousel-content">
-                            <img src="{{ url_for('static', filename='images/mcgang.jpg') }}" alt="Artist Image" class="artist-image">
-                        </div>
-                    </div>
-                    <div class="artist-intro">
-                        <h2>이효리</h2>
-                        <p>패셔니스타</p>
-                    </div>
-                    <div class="popular-songs">
-                        <h3>주요 인기곡</h3>
-                        <ul>
                             <li>
                                 <div class="album">
-                                    <img src="{{ url_for('static', filename='images/ehyo.jpg') }}" alt="Album Image" class="album-image">
+                                    <img src="{{ url_for('static', filename='images/ahyung.jpg') }}" alt="Album Image" class="album-image">
                                 </div>
                                 <div class="song-details">
-                                    <p>Bad Girls</p>
-                                    <p>이효리</p>
+                                    <p>아는형님</p>
+                                    <p>강호동</p>
                                 </div>
                             </li>
-                            <!-- Add more songs here -->
+                            <li>
+                                <div class="album">
+                                    <img src="{{ url_for('static', filename='images/strongheart.jpg') }}" alt="Album Image" class="album-image">
+                                </div>
+                                <div class="song-details">
+                                    <p>강심장</p>
+                                    <p>강호동</p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
-
-                <div id="day2-2-content" class="day-section">
-                    <!-- Add content for 애 -->
+                <div id="day2-2-section" class="day-section">
+                    <!-- "애" 버튼을 눌렀을 때 나오는 섹션 -->
+                    <p>애 섹션</p>
                 </div>
-
-                <div id="day2-3-content" class="day-section">
-                    <!-- Add content for 패 -->
+                <div id="day2-3-section" class="day-section">
+                    <!-- "패" 버튼을 눌렀을 때 나오는 섹션 -->
+                    <p>패 섹션</p>
                 </div>
             </div>
 
@@ -155,6 +154,7 @@
         const day2Content = document.getElementById('day2-content');
         const revealContent = document.getElementById('reveal-content');
 
+        // Day 1 클릭 시
         day1Tab.addEventListener('click', () => {
             day1Tab.classList.add('active');
             day2Tab.classList.remove('active');
@@ -164,6 +164,7 @@
             revealContent.classList.remove('active');
         });
 
+        // Day 2 클릭 시
         day2Tab.addEventListener('click', () => {
             day2Tab.classList.add('active');
             day1Tab.classList.remove('active');
@@ -173,6 +174,7 @@
             revealContent.classList.remove('active');
         });
 
+        // 라인업 공개 클릭 시
         revealTab.addEventListener('click', () => {
             revealTab.classList.add('active');
             day1Tab.classList.remove('active');
@@ -182,42 +184,58 @@
             day2Content.classList.remove('active');
         });
 
-        // Day1 버튼 클릭 시
-        document.getElementById('day1-1').addEventListener('click', () => {
-            document.getElementById('day1-1-content').classList.add('active');
-            document.getElementById('day1-2-content').classList.remove('active');
-            document.getElementById('day1-3-content').classList.remove('active');
+        // Day 1 개, 애, 패 버튼 클릭 시 섹션 표시
+        const day1Button1 = document.querySelector('.day1-1-button');
+        const day1Button2 = document.querySelector('.day1-2-button');
+        const day1Button3 = document.querySelector('.day1-3-button');
+
+        const day1Section1 = document.getElementById('day1-1-section');
+        const day1Section2 = document.getElementById('day1-2-section');
+        const day1Section3 = document.getElementById('day1-3-section');
+
+        day1Button1.addEventListener('click', () => {
+            day1Section1.classList.add('active');
+            day1Section2.classList.remove('active');
+            day1Section3.classList.remove('active');
         });
 
-        document.getElementById('day1-2').addEventListener('click', () => {
-            document.getElementById('day1-2-content').classList.add('active');
-            document.getElementById('day1-1-content').classList.remove('active');
-            document.getElementById('day1-3-content').classList.remove('active');
+        day1Button2.addEventListener('click', () => {
+            day1Section2.classList.add('active');
+            day1Section1.classList.remove('active');
+            day1Section3.classList.remove('active');
         });
 
-        document.getElementById('day1-3').addEventListener('click', () => {
-            document.getElementById('day1-3-content').classList.add('active');
-            document.getElementById('day1-1-content').classList.remove('active');
-            document.getElementById('day1-2-content').classList.remove('active');
+        day1Button3.addEventListener('click', () => {
+            day1Section3.classList.add('active');
+            day1Section1.classList.remove('active');
+            day1Section2.classList.remove('active');
         });
 
-        // Day2 버튼 클릭 시
-        document.getElementById('day2-1').addEventListener('click', () => {
-            document.getElementById('day2-1-content').classList.add('active');
-            document.getElementById('day2-2-content').classList.remove('active');
-            document.getElementById('day2-3-content').classList.remove('active');
+        // Day 2 개, 애, 패 버튼 클릭 시 섹션 표시
+        const day2Button1 = document.querySelector('.day2-1-button');
+        const day2Button2 = document.querySelector('.day2-2-button');
+        const day2Button3 = document.querySelector('.day2-3-button');
+
+        const day2Section1 = document.getElementById('day2-1-section');
+        const day2Section2 = document.getElementById('day2-2-section');
+        const day2Section3 = document.getElementById('day2-3-section');
+
+        day2Button1.addEventListener('click', () => {
+            day2Section1.classList.add('active');
+            day2Section2.classList.remove('active');
+            day2Section3.classList.remove('active');
         });
 
-        document.getElementById('day2-2').addEventListener('click', () => {
-            document.getElementById('day2-2-content').classList.add('active');
-            document.getElementById('day2-1-content').classList.remove('active');
-            document.getElementById('day2-3-content').classList.remove('active');
+        day2Button2.addEventListener('click', () => {
+            day2Section2.classList.add('active');
+            day2Section1.classList.remove('active');
+            day2Section3.classList.remove('active');
         });
 
-        document.getElementById('day2-3').addEventListener('click', () => {
-            document.getElementById('day2-3-content').classList.add('active');
-            document.getElementById('day2-1-content').classList.remove('active');
-            document.getElementById('day2-2-content').classList.remove('active');
+        day2Button3.addEventListener('click', () => {
+            day2Section3.classList.add('active');
+            day2Section1.classList.remove('active');
+            day2Section2.classList.remove('active');
         });
     </script>
 {% endblock %}
