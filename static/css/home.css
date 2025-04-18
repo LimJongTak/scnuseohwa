@@ -96,6 +96,19 @@
 .carousel-next {
     right: 10px;
 }
+@media (max-width: 768px) {
+    .carousel-prev, .carousel-next {
+        left: 5px; /* 작은 화면에서는 버튼 간격을 더 좁힘 */
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-prev, .carousel-next {
+        left: 5px; /* 더 작은 화면에서는 버튼 간격을 더 좁힘 */
+        right: 5px;
+    }
+}
 
 /* 지도 섹션 */
 #map-section {
