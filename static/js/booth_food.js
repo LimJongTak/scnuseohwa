@@ -43,6 +43,34 @@ function navigateToBoothDetail(id) {
     });
   }
   
+  function toggleButtons(type) {
+    const daeunButtons = document.getElementById('daeun-buttons');
+    const foodtruckButtons = document.getElementById('foodtruck-buttons');
+  
+    const tabs = document.querySelectorAll('.tab-button');
+    tabs.forEach(tab => tab.classList.remove('active'));
+  
+    if (type === 'daeun') {
+      daeunButtons.style.display = 'block';
+      foodtruckButtons.style.display = 'none';
+      document.getElementById('daeun-tab').classList.add('active');
+      showBoothCards('blue');
+    } else if (type === 'foodtruck') {
+      foodtruckButtons.style.display = 'block';
+      daeunButtons.style.display = 'none';
+      document.getElementById('foodtruck-tab').classList.add('active');
+      showBoothCards('foodtruck1');
+    }
+  }
+  
+  function showBoothInfo(color) {
+    showBoothCards(color);
+  }
+  
+  function showFoodtruckInfo(zone) {
+    showBoothCards('foodtruck' + zone);
+  }
+  
   document.addEventListener('DOMContentLoaded', () => {
-    showBoothCards('blue'); // 기본 탭
+    showBoothCards('blue');
   });
