@@ -2,188 +2,28 @@
 
 {% block content %}
 <div class="booth-container">
-    <h2 class="booth-title">부스 & 푸드트럭</h2>
-    
-    <!-- 대운동장 및 푸드트럭존 버튼 -->
-    <div class="menu-tabs">
-        <button id="daeun-tab" class="tab-button active" onclick="toggleButtons('daeun')">대운동장</button>
-        <button id="foodtruck-tab" class="tab-button" onclick="toggleButtons('foodtruck')">푸드트럭존</button>
-    </div>
+  <h2 class="booth-title">부스 & 푸드트럭</h2>
+  <div class="menu-tabs">
+    <button id="daeun-tab" class="tab-button active" onclick="toggleButtons('daeun')">대운동장</button>
+    <button id="foodtruck-tab" class="tab-button" onclick="toggleButtons('foodtruck')">푸드트럭존</button>
+  </div>
 
-    <!-- 대운동장 버튼 클릭 시 -->
-    <div id="daeun-buttons" class="button-group" style="display: block;">
-        <button id="booth-blue" class="booth-section-button active" onclick="showBoothInfo('blue')">부스(파랑)</button>
-        <button id="booth-green" class="booth-section-button" onclick="showBoothInfo('green')">부스(초록)</button>
-        <button id="booth-orange" class="booth-section-button" onclick="showBoothInfo('orange')">부스(주황)</button>
-    </div>
+  <div id="daeun-buttons" class="button-group" style="display: block;">
+    <button id="booth-blue" class="booth-section-button active" onclick="showBoothCards('blue')">부스(파랑)</button>
+    <button id="booth-green" class="booth-section-button" onclick="showBoothCards('green')">부스(초록)</button>
+    <button id="booth-orange" class="booth-section-button" onclick="showBoothCards('orange')">부스(주황)</button>
+  </div>
 
-    <!-- 푸드트럭존 버튼 클릭 시 -->
-    <div id="foodtruck-buttons" class="button-group" style="display: none;">
-        <button id="foodtruck-1" class="booth-section-button active" onclick="showFoodtruckInfo('1')">푸드트럭(1존)</button>
-        <button id="foodtruck-2" class="booth-section-button" onclick="showFoodtruckInfo('2')">푸드트럭(2존)</button>
-    </div>
+  <div id="foodtruck-buttons" class="button-group" style="display: none;">
+    <button id="foodtruck-1" class="booth-section-button active" onclick="showBoothCards('foodtruck1')">푸드트럭(1존)</button>
+    <button id="foodtruck-2" class="booth-section-button" onclick="showBoothCards('foodtruck2')">푸드트럭(2존)</button>
+  </div>
 
-    <!-- 지도와 부스/푸드트럭 정보 표시 -->
-    <div id="map" style="display: none;">
-        <img src="{{ url_for('static', filename='images/map.png') }}" alt="부스 지도" style="width: 100%; max-width: 600px;">
-    </div>
+  <div id="map" style="display: block;">
+    <img src="{{ url_for('static', filename='images/map.png') }}" alt="부스 지도" style="width: 100%; max-width: 600px;" />
+  </div>
 
-    <div id="booth-info" class="info-list" style="display: none;">
-        <!-- 동적으로 부스 정보가 표시될 자리 -->
-    </div>
+  <div id="booth-cards" class="booth-cards-container"></div>
 </div>
-
-<script>
-    // 메뉴 버튼을 클릭했을 때, 해당 버튼에 active 클래스를 추가하고 다른 버튼에서 제거
-    function toggleButtons(type) {
-        const daeunButtons = document.getElementById('daeun-buttons');
-        const foodtruckButtons = document.getElementById('foodtruck-buttons');
-        
-        // 모든 버튼에서 active 클래스를 제거
-        const tabs = document.querySelectorAll('.tab-button');
-        tabs.forEach(tab => {
-            tab.classList.remove('active');
-        });
-
-        if (type === 'daeun') {
-            daeunButtons.style.display = 'block';
-            foodtruckButtons.style.display = 'none';
-            document.getElementById('daeun-tab').classList.add('active');
-            document.getElementById('foodtruck-tab').classList.remove('active');
-            showBoothInfo('blue'); // 부스(파랑) 기본으로 활성화
-        } else if (type === 'foodtruck') {
-            foodtruckButtons.style.display = 'block';
-            daeunButtons.style.display = 'none';
-            document.getElementById('foodtruck-tab').classList.add('active');
-            document.getElementById('daeun-tab').classList.remove('active');
-            showFoodtruckInfo('1'); // 푸드트럭(1존) 기본으로 활성화
-        }
-    }
-
-    // 부스 버튼을 클릭했을 때, 해당 부스의 정보를 보여줌
-    function showBoothInfo(color) {
-        const boothInfo = document.getElementById('booth-info');
-        const map = document.getElementById('map');
-        boothInfo.style.display = 'block';
-        map.style.display = 'block';  // 지도 활성화
-
-        // 모든 부스 버튼에서 active 클래스를 제거
-        const boothButtons = document.querySelectorAll('.booth-section-button');
-        boothButtons.forEach(button => {
-            button.classList.remove('active');
-        });
-
-        // 클릭된 부스 버튼에 active 클래스를 추가
-        const button = document.querySelector(`#booth-${color}`);
-        button.classList.add('active');
-
-        let info = '';
-        if (color === 'blue') {
-            info = `
-                <div class="booth-section">
-                    <img src="{{ url_for('static', filename='images/booth_blue.jpg') }}" alt="부스(파랑)" />
-                    <div class="booth-text">
-                        <h3>부스(파랑)</h3>
-                        <p>재미있는 체험이 가득한 부스입니다.</p>
-                        <p><strong>부스 번호:</strong> 1-4</p>
-                        <p>이 부스에서는 다양한 체험 활동이 준비되어 있습니다. 아이부터 어른까지 모두 참여할 수 있습니다.</p>
-                        <p><a href="#" class="booth-info-link">자세히 보기</a></p>
-                    </div>
-                    <div class="booth-degree">
-                        <img src="{{ url_for('static', filename='images/degree-icon.png') }}" alt="부스 정도" />
-                    </div>
-                </div>
-            `;
-        } else if (color === 'green') {
-            info = `
-                <div class="booth-section">
-                    <img src="{{ url_for('static', filename='images/booth_green.jpg') }}" alt="부스(초록)" />
-                    <div class="booth-text">
-                        <h3>부스(초록)</h3>
-                        <p>체험형 놀이 부스입니다.</p>
-                        <p><strong>부스 번호:</strong> 2-2</p>
-                        <p>어린이를 위한 체험 부스로, 다양한 놀이 기구와 체험이 마련되어 있습니다.</p>
-                        <p><a href="#" class="booth-info-link">자세히 보기</a></p>
-                    </div>
-                    <div class="booth-degree">
-                        <img src="{{ url_for('static', filename='images/degree-icon.png') }}" alt="부스 정도" />
-                    </div>
-                </div>
-            `;
-        } else if (color === 'orange') {
-            info = `
-                <div class="booth-section">
-                    <img src="{{ url_for('static', filename='images/booth_orange.jpg') }}" alt="부스(주황)" />
-                    <div class="booth-text">
-                        <h3>부스(주황)</h3>
-                        <p>다양한 음식을 제공하는 부스입니다.</p>
-                        <p><strong>부스 번호:</strong> 3-1</p>
-                        <p>다양한 종류의 음식을 제공하며, 많은 사람들에게 인기 있는 부스입니다.</p>
-                        <p><a href="#" class="booth-info-link">자세히 보기</a></p>
-                    </div>
-                    <div class="booth-degree">
-                        <img src="{{ url_for('static', filename='images/degree-icon.png') }}" alt="부스 정도" />
-                    </div>
-                </div>
-            `;
-        }
-
-        boothInfo.innerHTML = info;
-    }
-
-    // 푸드트럭 버튼을 클릭했을 때, 해당 푸드트럭 정보를 보여줌
-    function showFoodtruckInfo(zone) {
-        const boothInfo = document.getElementById('booth-info');
-        const map = document.getElementById('map');
-        boothInfo.style.display = 'block';
-        map.style.display = 'block';  // 지도 활성화
-
-        // 모든 푸드트럭 버튼에서 active 클래스를 제거
-        const foodtruckButtons = document.querySelectorAll('.booth-section-button');
-        foodtruckButtons.forEach(button => {
-            button.classList.remove('active');
-        });
-
-        // 클릭된 푸드트럭 버튼에 active 클래스를 추가
-        const button = document.querySelector(`#foodtruck-${zone}`);
-        button.classList.add('active');
-
-        let info = '';
-        if (zone === '1') {
-            info = `
-                <div class="booth-section">
-                    <img src="{{ url_for('static', filename='images/foodtruck_1.jpg') }}" alt="푸드트럭(1존)" />
-                    <div class="booth-text">
-                        <h3>푸드트럭(1존)</h3>
-                        <p>다양한 음식을 제공하는 푸드트럭입니다.</p>
-                        <p><strong>푸드트럭 번호:</strong> 1-1</p>
-                        <p>핫도그, 핫윙, 햄버거 등 다양한 먹거리가 준비되어 있습니다.</p>
-                        <p><a href="#" class="booth-info-link">자세히 보기</a></p>
-                    </div>
-                    <div class="booth-degree">
-                        <img src="{{ url_for('static', filename='images/degree-icon.png') }}" alt="푸드트럭 정도" />
-                    </div>
-                </div>
-            `;
-        } else if (zone === '2') {
-            info = `
-                <div class="booth-section">
-                    <img src="{{ url_for('static', filename='images/foodtruck_2.jpg') }}" alt="푸드트럭(2존)" />
-                    <div class="booth-text">
-                        <h3>푸드트럭(2존)</h3>
-                        <p>디저트 전문 푸드트럭입니다.</p>
-                        <p><strong>푸드트럭 번호:</strong> 2-2</p>
-                        <p>마카롱, 아이스크림, 디저트가 다양하게 준비되어 있습니다.</p>
-                        <p><a href="#" class="booth-info-link">자세히 보기</a></p>
-                    </div>
-                    <div class="booth-degree">
-                        <img src="{{ url_for('static', filename='images/degree-icon.png') }}" alt="푸드트럭 정도" />
-                    </div>
-                </div>
-            `;
-        }
-
-        boothInfo.innerHTML = info;
-    }
-</script>
+<script src="{{ url_for('static', filename='js/booth_food.js') }}"></script>
 {% endblock %}

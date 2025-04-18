@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="booth-detail-container">
+    <h2>{{ booth.name }}</h2>
+    <div class="booth-detail">
+        <img src="{{ url_for('static', filename='images/' + booth.image) }}" alt="{{ booth.name }}" class="booth-detail-img">
+        <p class="booth-desc">{{ booth.desc }}</p>
+    </div>
+</div>
+{% endblock %}
