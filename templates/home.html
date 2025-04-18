@@ -14,7 +14,11 @@
     <meta property="og:image" content="{{ meta_info['og_image'] }}" />
     <meta property="og:url" content="{{ meta_info['og_url'] }}" />
     <meta property="og:type" content="{{ meta_info['og_type'] }}" />
+
+    <!-- 외부 JS 파일 추가 -->
+    <script src="{{ url_for('static', filename='js/home.js') }}" defer></script>
 </head>
+
 {% block content %}
 <div class="home-container">
     <div class="link-item">
@@ -89,34 +93,4 @@
         </div> 
     </section>
 </div>
-{% endblock %}
-
-{% block scripts %}
-<script>
-   // Carousel (슬라이드) 기능
-   const prevBtn = document.querySelector('.carousel-prev');
-        const nextBtn = document.querySelector('.carousel-next');
-        const carouselContent = document.querySelector('.carousel-item img');
-        let currentIndex = 0;
-        const images = [
-            "{{ url_for('static', filename='images/mcyou.jpg') }}", 
-            "{{ url_for('static', filename='images/mcgang.jpg') }}", 
-            "{{ url_for('static', filename='images/mcsin.jpg') }}"
-        ];
-
-        // 이전 이미지
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-            carouselContent.innerHTML = `<img src="${images[currentIndex]}" alt="Artist Image">`;
-        });
-
-        // 다음 이미지
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-            carouselContent.innerHTML = `<img src="${images[currentIndex]}" alt="Artist Image">`;
-        });
-
-    updateImage(); // 처음에 이미지를 설정
-</script>
-
 {% endblock %}
