@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const carouselTrack = document.querySelector('.carousel-track');
-    const items = document.querySelectorAll('.carousel-item');
     const prevButton = document.querySelector('.carousel-prev');
     const nextButton = document.querySelector('.carousel-next');
+    const items = document.querySelectorAll('.carousel-item');
     let currentIndex = 0;
     const totalItems = items.length;
 
