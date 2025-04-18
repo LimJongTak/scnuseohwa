@@ -29,7 +29,27 @@ def booth_food():
 # 라인업페이지
 @app.route('/lineup')
 def lineup():
-    return render_template("lineup.html", page_title="라인업", show_header_info=False)
+    artist_data = [
+        {
+            'name': '유재석',
+            'job': '국민MC',
+            'songs': [
+                {'album': '무한도전', 'artist': '유재석', 'image': 'mudo.jpg'},
+                {'album': '런닝맨', 'artist': '유재석', 'image': 'runningman.jpg'},
+                {'album': '유퀴즈', 'artist': '유재석', 'image': 'uquiz.jpg'}
+            ]
+        },
+        {
+            'name': '강호동',
+            'job': '천하장사',
+            'songs': [
+                {'album': '1박2일', 'artist': '강호동', 'image': 'day.jpg'},
+                {'album': '아는형님', 'artist': '강호동', 'image': 'ahyung.jpg'},
+                {'album': '강심장', 'artist': '강호동', 'image': 'strongheart.jpg'}
+            ]
+        }
+    ]
+    return render_template("lineup.html", page_title="라인업", show_header_info=False, artists=artist_data)
 
 # 축제 일정 페이지
 @app.route('/schedule')
