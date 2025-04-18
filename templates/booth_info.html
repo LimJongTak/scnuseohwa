@@ -3,9 +3,27 @@
 {% block content %}
   <div class="booth-detail-container">
     <div class="booth-detail">
+      <!-- 부스 이름 -->
       <h2 class="booth-name">{{ booth.name }}</h2>
+      
+      <!-- 부스 이미지 -->
       <img src="{{ booth.image_url }}" alt="{{ booth.name }}" class="booth-detail-img">
+      
+      <!-- 부스 설명 -->
       <div class="booth-desc">{{ booth.description }}</div>
+      
+      <!-- 부스 번호 추가 (옵션) -->
+      {% if booth.number %}
+        <p class="booth-number">부스 번호: {{ booth.number }}</p>
+      {% endif %}
+      
+      <!-- 부스 세부사항 추가 (옵션) -->
+      {% if booth.details %}
+        <div class="booth-details">
+          <h4>세부 사항:</h4>
+          <p>{{ booth.details }}</p>
+        </div>
+      {% endif %}
     </div>
   </div>
 {% endblock %}

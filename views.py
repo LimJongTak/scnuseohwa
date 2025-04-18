@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from flask import render_template  # 이 부분을 추가해 주세요
 
 # 부스 데이터 예시
 booth_data = {
@@ -11,6 +11,6 @@ booth_data = {
 def booth_detail(request, booth_id):
     booth = booth_data.get(booth_id)
     if booth:
-        return render(request, 'booth_info.html', {'booth': booth})
+        return render_template('booth_info.html', booth=booth)
     else:
-        return render(request, '404.html', status=404)  # 부스를 찾을 수 없는 경우
+        return render_template('404.html', status=404)  # 부스를 찾을 수 없는 경우

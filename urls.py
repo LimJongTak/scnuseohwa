@@ -1,4 +1,5 @@
-from django.urls import path
+
+from flask import render_template
 from . import views
 
 urlpatterns = [

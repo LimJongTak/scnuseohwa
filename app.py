@@ -27,6 +27,9 @@ def notice():
 def booth_food():
     return render_template("booth_food.html", page_title="부스 & 푸드트럭", show_header_info=False)
 
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('404.html'), 404
 # 라인업페이지
 @app.route('/lineup')
 def lineup():
