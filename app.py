@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
 import os
 
 app = Flask(__name__)
@@ -67,20 +67,52 @@ def qna():
 def creator():
     return render_template("creator.html", page_title="사이트 제작자", show_header_info=False)
 
+# 아티스트 데이터 딕셔너리
+artist_data = {
+    "apink": {
+        "name": "에이핑크",
+        "image": "apink_festa_insta.jpg",
+        "description": "에이핑크는 2011년 데뷔한 대한민국의 걸그룹으로, 청순한 콘셉트로 많은 사랑을 받고 있습니다."
+    },
+    "roy": {
+        "name": "로이킴",
+        "image": "roy_festa_insta.jpg",
+        "description": "로이킴은 감성적인 음색으로 많은 히트곡을 낸 싱어송라이터입니다."
+    },
+    "gummy": {
+        "name": "거미",
+        "image": "gummy_festa_insta.jpg",
+        "description": "거미는 폭발적인 가창력으로 사랑받는 보컬리스트입니다."
+    },
+    "kwon-eunbi": {
+        "name": "권은비",
+        "image": "kwon_eunbi_festa_insta.jpg",
+        "description": "권은비는 솔로 가수이자 댄서로 다채로운 퍼포먼스를 선보입니다."
+    },
+    "glen-chenck": {
+        "name": "글렌체크",
+        "image": "glen_cenck_festa_insta.jpg",
+        "description": "글렌체크는 전자 음악 기반의 밴드로 개성 있는 음악을 만듭니다."
+    },
+    "choi-yu-ree": {
+        "name": "최유리",
+        "image": "choi_yu_ree_festa_insta.jpg",
+        "description": "최유리는 서정적인 감성의 싱어송라이터입니다."
+    },
+    "creespy": {
+        "name": "크리스피",
+        "image": "creespy_festa_insta.jpg",
+        "description": "크리스피는 재기발랄한 음악 스타일로 젊은 층에게 인기가 많습니다."
+    }
+}
+
 @app.route('/artist/<name>')
 def artist_detail(name):
-    """
-    /artist/<name> 경로로 접근 시
-    templates/artist/<name>.html 파일을 찾아 렌더링합니다.
-    파일이 없으면 404 에러를 반환합니다.
-    """
-    filename = f"artist/{name}.html"
-    full_path = os.path.join(app.template_folder, filename)
-
-    if os.path.exists(full_path):
-        return render_template(filename)
+    artist = artist_data.get(name)
+    if artist:
+        return render_template("artist_detail.html", artist=artist)
     else:
-        return abort(404)
+        return render_template("404.html"), 404
     
 booths = {
     1: {"name": "부스(파랑)", "description": "재미있는 체험이 가득한 부스입니다.", "number": "1-4", "details": "이 부스에서는 다양한 체험 활동이 준비되어 있습니다. 아이부터 어른까지 모두 참여할 수 있습니다."},
