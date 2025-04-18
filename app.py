@@ -26,7 +26,7 @@ def notice():
 def booth_food():
     return render_template("booth_food.html", page_title="부스 & 푸드트럭", show_header_info=False)
 
-# 라인업페이지지
+# 라인업페이지
 @app.route('/lineup')
 def lineup():
     return render_template("lineup.html", page_title="라인업", show_header_info=False)

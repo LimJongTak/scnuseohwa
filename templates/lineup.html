@@ -25,39 +25,23 @@
             </div>
             <div class="line"></div>
             <div class="artist-intro">
-                <h2>유재석</h2>
-                <p>국민MC</p>
+                <h2>{{ artists[0].name }}</h2>
+                <p>{{ artists[0].job }}</p>
             </div>
             <div class="popular-songs">
                 <h3>주요 인기곡</h3>
                 <ul>
-                    <li>
-                        <div class="album">
-                            <img src="{{ url_for('static', filename='images/mudo.jpg') }}" alt="Album Image" class="album-image">
-                        </div>
-                        <div class="song-details">
-                            <p>무한도전</p>
-                            <p>유재석</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="album">
-                            <img src="{{ url_for('static', filename='images/runningman.jpg') }}" alt="Album Image" class="album-image">
-                        </div>
-                        <div class="song-details">
-                            <p>런닝맨</p>
-                            <p>유재석</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="album">
-                            <img src="{{ url_for('static', filename='images/uquiz.jpg') }}" alt="Album Image" class="album-image">
-                        </div>
-                        <div class="song-details">
-                            <p>유퀴즈</p>
-                            <p>유재석</p>
-                        </div>
-                    </li>
+                    {% for song in artists[0].songs %}
+                        <li>
+                            <div class="album">
+                                <img src="{{ url_for('static', filename='images/' + song.image) }}" alt="Album Image" class="album-image">
+                            </div>
+                            <div class="song-details">
+                                <p>{{ song.album }}</p>
+                                <p>{{ song.artist }}</p>
+                            </div>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -73,39 +57,23 @@
             </div>
             <div class="line"></div>
             <div class="artist-intro">
-                <h2>강호동</h2>
-                <p>천하장사</p>
+                <h2>{{ artists[1].name }}</h2>
+                <p>{{ artists[1].job }}</p>
             </div>
             <div class="popular-songs">
                 <h3>주요 인기곡</h3>
                 <ul>
-                    <li>
-                        <div class="album">
-                            <img src="{{ url_for('static', filename='images/day.jpg') }}" alt="Album Image" class="album-image">
-                        </div>
-                        <div class="song-details">
-                            <p>1박2일</p>
-                            <p>강호동</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="album">
-                            <img src="{{ url_for('static', filename='images/ahyung.jpg') }}" alt="Album Image" class="album-image">
-                        </div>
-                        <div class="song-details">
-                            <p>아는형님</p>
-                            <p>강호동</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="album">
-                            <img src="{{ url_for('static', filename='images/strongheart.jpg') }}" alt="Album Image" class="album-image">
-                        </div>
-                        <div class="song-details">
-                            <p>강심장</p>
-                            <p>강호동</p>
-                        </div>
-                    </li>
+                    {% for song in artists[1].songs %}
+                        <li>
+                            <div class="album">
+                                <img src="{{ url_for('static', filename='images/' + song.image) }}" alt="Album Image" class="album-image">
+                            </div>
+                            <div class="song-details">
+                                <p>{{ song.album }}</p>
+                                <p>{{ song.artist }}</p>
+                            </div>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
