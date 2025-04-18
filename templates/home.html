@@ -103,21 +103,21 @@
 
     // 슬라이드 이동 함수
     function updateCarousel() {
-        const itemWidth = carouselItems[0].offsetWidth;
-        carouselTrack.style.transition = 'transform 0.3s ease';
-        carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        const itemWidth = carouselItems[0].offsetWidth;  // 각 이미지의 너비를 계산
+        carouselTrack.style.transition = 'transform 0.3s ease';  // 부드러운 전환 효과
+        carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;  // 슬라이드 이동
     }
 
     // 이전 이미지
     prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;
-        updateCarousel();
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;  // 이전 인덱스로 이동, 첫 번째 이미지에서 돌아감
+        updateCarousel();  // 슬라이드 이동
     });
 
     // 다음 이미지
     nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
-        updateCarousel();
+        currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;  // 다음 인덱스로 이동, 마지막 이미지에서 돌아감
+        updateCarousel();  // 슬라이드 이동
     });
 </script>
 
