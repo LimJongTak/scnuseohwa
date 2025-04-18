@@ -26,4 +26,28 @@
   <div id="booth-cards" class="booth-cards-container"></div>
 </div>
 <script src="{{ url_for('static', filename='js/booth_food.js') }}"></script>
+
+<script>
+  function toggleButtons(target) {
+    const daeun = document.getElementById("daeun-buttons");
+    const foodtruck = document.getElementById("foodtruck-buttons");
+
+    document.getElementById("daeun-tab").classList.remove("active");
+    document.getElementById("foodtruck-tab").classList.remove("active");
+
+    if (target === "daeun") {
+      daeun.style.display = "block";
+      foodtruck.style.display = "none";
+      document.getElementById("daeun-tab").classList.add("active");
+    } else {
+      daeun.style.display = "none";
+      foodtruck.style.display = "block";
+      document.getElementById("foodtruck-tab").classList.add("active");
+    }
+  }
+
+  function navigateToBoothDetail(id) {
+    window.location.href = `/booth/${id}`;
+  }
+</script>
 {% endblock %}
