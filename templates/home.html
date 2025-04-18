@@ -15,10 +15,23 @@
     <meta property="og:image" content="{{ meta_info['og_image'] }}" />
     <meta property="og:url" content="{{ meta_info['og_url'] }}" />
     <meta property="og:type" content="{{ meta_info['og_type'] }}" />
+
+    <!-- 스크롤 부드럽게 -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 {% block content %}
 <div class="home-container">
+    <!-- 네비게이션 링크들 -->
+    <div class="link-item">
+        <a href="#lineup">  <!-- #lineup으로 이동 -->
+            <p>라인업 →</p>
+        </a>
+    </div>
     <div class="link-item">
         <a href="/notice">
             <p>공지사항 →</p>
@@ -27,11 +40,6 @@
     <div class="link-item">
         <a href="/booth-food">
             <p>부스 & 푸드트럭 →</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="/lineup">
-            <p>라인업 →</p>
         </a>
     </div>
     <div class="link-item">
@@ -46,7 +54,7 @@
     </div>
 
     <!-- 라인업 섹션 -->
-    <section id="lineup">
+    <section id="lineup">  <!-- 섹션에 id="lineup" 설정 -->
         <h2>라인업</h2>
         <div class="section-line"></div>
         <div class="carousel">

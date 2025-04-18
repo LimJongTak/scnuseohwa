@@ -131,3 +131,7 @@
     border: 2px solid white; /* 지도에 경계선 추가 */
     box-sizing: border-box; /* padding, border를 포함한 크기 계산 */
 }
+
+html {
+    scroll-behavior: smooth;
+}
