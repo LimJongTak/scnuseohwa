@@ -51,3 +51,8 @@
     padding-left: 50px;  /* 왼쪽 여백 50px 추가 */
     padding-right: 50px; /* 오른쪽 여백 50px 추가 */
 }
+
+h2 {
+    color: white;
+    text-align: left;
+}
