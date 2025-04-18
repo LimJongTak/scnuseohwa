@@ -27,6 +27,7 @@ def booth_food():
     return render_template("booth_food.html", page_title="부스 & 푸드트럭", show_header_info=False)
 
 # 라인업페이지
+# Flask 뷰 함수 예시
 @app.route('/lineup')
 def lineup():
     artist_data = [
@@ -49,7 +50,8 @@ def lineup():
             ]
         }
     ]
-    return render_template("lineup.html", page_title="라인업", show_header_info=False, artists=artist_data)
+    return render_template("lineup.html", page_title="라인업", artists=artist_data)
+
 
 # 축제 일정 페이지
 @app.route('/schedule')

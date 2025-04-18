@@ -173,9 +173,9 @@
 
     // 이미지 변경 함수
     function updateCarousel() {
-        const itemWidth = carouselItems[0].offsetWidth;  // 각 이미지의 너비를 계산
-        carouselTrack.style.transition = 'transform 0.3s ease';  // 부드러운 전환 효과
-        carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;  // 슬라이드 이동
+        const itemWidth = carouselContent.offsetWidth;  // 각 이미지의 너비를 계산
+        carouselContent.style.transition = 'transform 0.3s ease';  // 부드러운 전환 효과
+        carouselContent.style.transform = `translateX(-${currentIndex * itemWidth}px)`;  // 슬라이드 이동
 
         // 아티스트 정보 업데이트
         const artist = artistInfo[currentIndex];
