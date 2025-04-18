@@ -4,25 +4,24 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    gap: 1px; /* 간격을 더 줄여서 항목들 간의 간격을 좁힘 */
+    gap: 1px;
 }
 
 /* 링크 항목 스타일 */
 .link-item a {
-    text-decoration: none; /* 밑줄 제거 */
-    color: white; /* 텍스트 색상 설정 */
+    text-decoration: none;
+    color: white;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     display: inline-block;
-    margin-bottom: 1px; /* 간격을 더 좁힘 */
+    margin-bottom: 1px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* hover 스타일 */
 .link-item a:hover {
-    color: rgb(196, 196, 196); /* hover 시 텍스트 색상 변화 */
-    transform: scale(1.05); /* hover 시 텍스트 확대 */
+    color: rgb(196, 196, 196);
+    transform: scale(1.05);
 }
 
 /* 라인업 섹션 */
@@ -45,27 +44,32 @@
     margin: 10px auto;
 }
 
-/* 캐러셀 스타일 */
+/* 캐러셀 전체 스타일 */
 .carousel {
     position: relative;
     max-width: 600px;
     margin: 20px auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 슬라이드 트랙 */
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+/* 개별 슬라이드 */
+.carousel-item {
+    min-width: 100%;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.carousel-track {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-item {
-    width: 100%;
-    flex: 0 0 100%;
-    display: flex;
-    justify-content: center;
+    padding: 10px 0;
 }
 
 .carousel-item img {
@@ -75,18 +79,19 @@
     border-radius: 10px;
 }
 
+/* 캐러셀 버튼 */
 .carousel-prev, .carousel-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     color: grey;
-    font-size: 10px;
-    padding: 10px;
+    font-size: 24px;
+    padding: 8px 12px;
     border: 1px solid grey;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
 }
 
 .carousel-prev {
@@ -97,41 +102,83 @@
     right: 10px;
 }
 
-
 /* 지도 섹션 */
 #map-section {
     width: auto;
     height: auto;
     margin-top: 50px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.7);  /* 흰색 배경, 70% 투명도 */
-    border-radius: 10px;  /* 모서리 둥글게 */
-    padding: 20px;  /* 내부 여백 추가 */
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 20px;
 }
 
 #map-section h2 {
     font-size: 28px;
     font-weight: bold;
-    color: grey;  /* 제목 색상 */
-    margin-bottom: 20px;  /* 제목과 지도 간 간격 */
+    color: grey;
+    margin-bottom: 20px;
 }
 
 #map-section .section-line {
     width: 50%;
     height: 2px;
-    background-color: white;  /* 구분선 색상 */
-    margin: 10px auto;  /* 구분선 중앙 정렬 */
+    background-color: white;
+    margin: 10px auto;
 }
 
 #map {
     width: 100%;
-    height: 500px; /* 지도 크기 설정 */
+    height: 500px;
     margin-top: 20px;
     border-radius: 10px;
-    border: 2px solid white; /* 지도에 경계선 추가 */
-    box-sizing: border-box; /* padding, border를 포함한 크기 계산 */
+    border: 2px solid white;
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 90%;
+    }
+
+    .carousel-item img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        font-size: 20px;
+        padding: 6px 10px;
+    }
+
+    #lineup h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        font-size: 18px;
+        padding: 5px 8px;
+    }
+
+    .link-item a {
+        font-size: 18px;
+    }
+
+    #lineup h2,
+    #map-section h2 {
+        font-size: 20px;
+    }
 }

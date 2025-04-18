@@ -67,6 +67,21 @@ def qna():
 def creator():
     return render_template("creator.html", page_title="사이트 제작자", show_header_info=False)
 
+@app.route('/artist/<name>')
+def artist_detail(name):
+    """
+    /artist/<name> 경로로 접근 시
+    templates/artist/<name>.html 파일을 찾아 렌더링합니다.
+    파일이 없으면 404 에러를 반환합니다.
+    """
+    filename = f"artist/{name}.html"
+    full_path = os.path.join(app.template_folder, filename)
+
+    if os.path.exists(full_path):
+        return render_template(filename)
+    else:
+        return abort(404)
+    
 booths = {
     1: {"name": "부스(파랑)", "description": "재미있는 체험이 가득한 부스입니다.", "number": "1-4", "details": "이 부스에서는 다양한 체험 활동이 준비되어 있습니다. 아이부터 어른까지 모두 참여할 수 있습니다."},
     2: {"name": "부스(주황)", "description": "다양한 음식을 제공하는 부스입니다.", "number": "2-1", "details": "주황색 부스에서는 특선 메뉴와 함께 다양한 음식을 즐길 수 있습니다."},
