@@ -9,19 +9,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // 각 이미지의 너비 계산
     const itemWidth = items[0].offsetWidth;
 
+    // 슬라이드 업데이트 함수
     function updateCarousel() {
-        // 슬라이드를 이동시키기 위해 carousel-track을 이동
         carouselTrack.style.transition = 'transform 0.3s ease';
         carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
     }
 
-    // 이전 이미지로 이동
+    // 이전 버튼 클릭 시
     prevButton.addEventListener('click', function () {
         currentIndex = (currentIndex - 1 + totalItems) % totalItems;  // 인덱스 범위 조정
         updateCarousel();
     });
 
-    // 다음 이미지로 이동
+    // 다음 버튼 클릭 시
     nextButton.addEventListener('click', function () {
         currentIndex = (currentIndex + 1) % totalItems;  // 인덱스 범위 조정
         updateCarousel();
