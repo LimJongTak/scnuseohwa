@@ -1,41 +1,33 @@
-/* 전체 컨테이너 */
+/* lineup.css */
+
 .lineup-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     width: 100%;
-    max-width: 800px; /* 중앙 정렬을 위한 최대 너비 설정 */
+    max-width: 900px;
     margin: 0 auto;
 }
 
-/* 헤더 영역 */
 .lineup-header {
-    width: 100%;
-    display: flex;
-    flex-direction: column; /* 두 줄로 정렬을 위해 flex-direction을 column으로 설정 */
-    justify-content: center;
-    align-items: center;
-    background: transparent;
+    text-align: center;
     color: white;
-    padding: 15px;
+    margin-bottom: 20px;
 }
 
-/* 제목 스타일 */
 .lineup-title h1 {
-    margin: 0;
     font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-/* 탭 버튼 영역 */
 .tab-buttons {
     display: flex;
-    justify-content: center; /* 탭 버튼들을 가운데 정렬 */
-    gap: 20px;
-    margin-top: 10px; /* 탭 버튼과 제목 사이 간격 추가 */
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-/* 탭 버튼 스타일 */
 .tab-button {
     padding: 10px 20px;
     background-color: #B0A0D7;
@@ -43,201 +35,114 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-/* 탭 버튼 호버 스타일 */
+.tab-button.active,
 .tab-button:hover {
     background-color: #5A3F7D;
 }
 
-/* 활성화된 탭 버튼 */
-.tab-button.active {
-    background-color: #5A3F7D;
-}
-
-/* 라인업 콘텐츠 */
 .lineup-content {
-    width: 350px; /* 가로 크기 350px로 설정 */
-    height: auto; /* 세로 크기 자동 조정 */
-    padding: 20px;
-    background: transparent; 
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    overflow-y: hidden; /* 스크롤을 숨김 */
+    width: 100%;
 }
 
-/* Day 콘텐츠 */
-.day-content {
+.day-content,
+.reveal-content {
     display: none;
 }
 
-.day-content.active {
+.day-content.active,
+.reveal-content.active {
     display: block;
 }
 
-/* 각 Day 버튼에 대한 스타일 */
-.day1-buttons,
-.day2-buttons {
+.carousel {
+    position: relative;
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
-.day1-button,
-.day2-button {
-    padding: 10px 20px;
-    background-color: #8E7DBE;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.day1-button:hover,
-.day2-button:hover {
-    background-color: #5A3F7D;
-}
-
-/* 각 Day 버튼 활성화 스타일 */
-.day1-button.active,
-.day2-button.active {
-    background-color: #5A3F7D;
-}
-
-/* 개, 애, 패 버튼 영역 */
-.day1-1-buttons,
-.day1-2-buttons,
-.day1-3-buttons,
-.day2-1-buttons,
-.day2-2-buttons,
-.day2-3-buttons {
+.carousel-track {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
-/* 개, 애, 패 버튼 */
-.day1-1-button,
-.day1-2-button,
-.day1-3-button,
-.day2-1-button,
-.day2-2-button,
-.day2-3-button {
-    padding: 10px 20px;
-    background-color: #8E7DBE;
+.carousel-item {
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
     color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.artist-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/* 개, 애, 패 버튼 호버 스타일 */
-.day1-1-button:hover,
-.day1-2-button:hover,
-.day1-3-button:hover,
-.day2-1-button:hover,
-.day2-2-button:hover,
-.day2-3-button:hover {
-    background-color: #5A3F7D;
-}
-
-/* 아티스트 소개 */
-.artist-intro {
-    margin-bottom: 20px;
-}
-
-.artist-intro h2 {
+    border-radius: 50%;
     font-size: 24px;
-    margin-bottom: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 1;
 }
 
-/* 인기곡 리스트 */
-.popular-songs h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.popular-songs ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.popular-songs li {
-    font-size: 16px;
-    margin: 5px 0;
-    display: flex;
-    align-items: center;
-}
-
-/* 앨범 이미지 */
-.album-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-/* 노래 제목 및 아티스트 이름 */
-.song-details {
-    display: flex;
-    flex-direction: column;
-}
-
-/* 라인 추가 */
-.line {
-    width: 100%;
-    height: 1px;
-    background-color: #fff;
-    margin: 20px 0;
-}
-
-/* 라인업 공개 섹션 */
-.reveal-content {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.reveal-content.active {
-    display: flex;
-}
+.carousel-prev { left: 0; }
+.carousel-next { right: 0; }
 
 .reveal-section {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    width: calc(100% - 40px);
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
     text-align: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .reveal-section h2 {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.reveal-section p {
-    font-size: 16px;
-    color: white;
-}
-
-/* 콘텐츠 버튼 스타일 */
-.reveal-section button {
-    background-color: #B0A0D7;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.reveal-section button:hover {
-    background-color: #5A3F7D;
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .carousel-item {
+        min-width: 250px;
+        max-width: 250px;
+    }
+    .artist-image {
+        width: 180px;
+        height: 180px;
+    }
+    .tab-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
