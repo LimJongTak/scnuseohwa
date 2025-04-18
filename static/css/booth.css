@@ -32,11 +32,10 @@
     background-color: #5A3F7D;
 }
 
-/* 지도 스타일 수정 */
 #map {
     margin: 20px auto;
     width: 100%; /* Ensure map takes full width of parent */
-    max-width: 100%; /* Full width on mobile */
+    max-width: 600px;
     border-radius: 10px;
     border: 4px solid white;
     overflow: hidden;
@@ -50,8 +49,8 @@
 .booth-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;  /* Center align cards */
-    align-items: center;      /* Center align items vertically */
+    justify-content: center; /* Horizontal center alignment */
+    align-items: center; /* Vertical center alignment */
     gap: 20px;
     margin-top: 20px;
 }
@@ -113,7 +112,6 @@
     background-color: rgba(255, 255, 255, 0.2);
     padding: 10px;
     border-radius: 10px;
-
 }
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -121,7 +119,6 @@
         max-width: 100%; /* Full width on mobile */
         margin: 20px 0;
     }
-
     .booth-card {
         width: 90%; /* Make booth cards take more space on small screens */
         margin-bottom: 15px;
