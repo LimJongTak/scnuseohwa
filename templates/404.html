@@ -4,6 +4,43 @@
   <div class="error-page">
     <h2>페이지를 찾을 수 없습니다!</h2>
     <p>요청하신 페이지는 존재하지 않거나, 잘못된 경로입니다.</p>
-    <a href="{{ url_for('home') }}" class="back-home">홈으로 돌아가기</a>
+    <a href="{{ url_for('home') }}" class="back-home-btn">홈으로 돌아가기</a>
   </div>
+
+  <style>
+    .error-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* 화면 전체 높이를 차지 */
+      text-align: center;
+      color: #333;
+    }
+
+    .error-page h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .error-page p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .back-home-btn {
+      padding: 10px 20px;
+      background-color: #8E7DBE;
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home-btn:hover {
+      background-color: #5A3F7D;
+    }
+  </style>
 {% endblock %}
