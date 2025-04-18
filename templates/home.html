@@ -110,13 +110,13 @@
 
     // 이전 이미지
     prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;  // 이전 인덱스로 이동, 첫 번째 이미지에서 돌아감
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;  // 첫 번째 이미지에서 돌아가도록 설정
         updateCarousel();  // 슬라이드 이동
     });
 
     // 다음 이미지
     nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;  // 다음 인덱스로 이동, 마지막 이미지에서 돌아감
+        currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;  // 마지막 이미지에서 돌아가도록 설정
         updateCarousel();  // 슬라이드 이동
     });
 </script>
