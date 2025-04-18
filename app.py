@@ -1,4 +1,5 @@
 from flask import Flask, render_template, abort
+from views import booth_blueprint  # views.py에서 Blueprint 가져오기
 import os
 
 app = Flask(__name__)
@@ -27,7 +28,6 @@ def booth_food():
     return render_template("booth_food.html", page_title="부스 & 푸드트럭", show_header_info=False)
 
 # 라인업페이지
-# Flask 뷰 함수 예시
 @app.route('/lineup')
 def lineup():
     artist_data = [
@@ -113,7 +113,8 @@ def artist_detail(name):
         return render_template("artist_detail.html", artist=artist)
     else:
         return render_template("404.html"), 404
-    
+
+# 부스 정보
 booths = {
     1: {"name": "부스(파랑)", "description": "재미있는 체험이 가득한 부스입니다.", "number": "1-4", "details": "이 부스에서는 다양한 체험 활동이 준비되어 있습니다. 아이부터 어른까지 모두 참여할 수 있습니다."},
     2: {"name": "부스(주황)", "description": "다양한 음식을 제공하는 부스입니다.", "number": "2-1", "details": "주황색 부스에서는 특선 메뉴와 함께 다양한 음식을 즐길 수 있습니다."},
@@ -130,6 +131,13 @@ def booth_info(booth_id):
             "details": "아이부터 어른까지 모두 참여할 수 있는 다채로운 체험 활동 제공",
             "image": "booth_blue.jpg"
         },
+        "orange_2": {
+            "name": "부스(주황)",
+            "number": "2-1",
+            "description": "다양한 음식을 제공하는 부스입니다.",
+            "details": "주황색 부스에서는 특선 메뉴와 함께 다양한 음식을 즐길 수 있습니다.",
+            "image": "booth_orange.jpg"
+        },
         # 나머지 부스들도 이 딕셔너리에 추가 가능
     }
 
@@ -138,8 +146,11 @@ def booth_info(booth_id):
         return render_template("booth_info.html", booth=booth)
     else:
         return abort(404)
+
+# Blueprint 등록
+app.register_blueprint(booth_blueprint)
+
 # 서버 실행
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=False)
-
