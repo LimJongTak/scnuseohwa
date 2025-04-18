@@ -1,84 +1,92 @@
-/* 전체 컨테이너 */
+/* 전체 스타일 */
 .home-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 1px; /* 간격을 더 줄여서 항목들 간의 간격을 좁힘 */
 }
 
-/* 링크 아이템 */
-.link-item {
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
+/* 링크 항목 스타일 */
 .link-item a {
-    color: #333;
-    text-decoration: none;
+    text-decoration: none; /* 밑줄 제거 */
+    color: white; /* 텍스트 색상 설정 */
+    font-size: 24px;
     font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 1px; /* 간격을 더 좁힘 */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* 링크 아이템 호버 효과 */
+/* hover 스타일 */
 .link-item a:hover {
-    color: #5a3f7d;
+    color: rgb(196, 196, 196); /* hover 시 텍스트 색상 변화 */
+    transform: scale(1.05); /* hover 시 텍스트 확대 */
 }
 
 /* 라인업 섹션 */
 #lineup {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
+    width: 100%;
 }
 
-/* 제목 스타일 */
 #lineup h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
 }
 
-/* 구분선 */
-.section-line {
+#lineup .section-line {
     width: 50%;
     height: 2px;
-    background-color: #5a3f7d;
-    margin: 0 auto 20px;
+    background-color: white;
+    margin: 10px auto;
 }
 
-/* 캐러셀 섹션 */
+/* 캐러셀 스타일 */
 .carousel {
     position: relative;
-    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    width: 100%;
 }
 
 .carousel-item {
     width: 100%;
     flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .carousel-item img {
-    width: 100%;
-    height: auto;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.carousel-prev,
-.carousel-next {
+.carousel-prev, .carousel-next {
     position: absolute;
     top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
     transform: translateY(-50%);
+    background-color: white;
+    color: grey;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .carousel-prev {
@@ -89,113 +97,36 @@
     right: 10px;
 }
 
-/* 탭 버튼 스타일 */
-.tab-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.tab-button {
-    padding: 10px 20px;
-    background-color: #B0A0D7;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 0 10px;
-}
-
-/* 탭 버튼 호버 스타일 */
-.tab-button:hover {
-    background-color: #5A3F7D;
-}
-
-/* 활성화된 탭 버튼 */
-.tab-button.active {
-    background-color: #5A3F7D;
-}
-
-/* 아티스트 소개 */
-.artist-intro {
-    margin-bottom: 20px;
-}
-
-.artist-intro h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-/* 인기곡 리스트 */
-.popular-songs h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.popular-songs ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.popular-songs li {
-    font-size: 16px;
-    margin: 5px 0;
-    display: flex;
-    align-items: center;
-}
-
-/* 앨범 이미지 */
-.album-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-/* 노래 제목 및 아티스트 이름 */
-.song-details {
-    display: flex;
-    flex-direction: column;
-}
-
-/* 라인 추가 */
-.line {
-    width: 100%;
-    height: 1px;
-    background-color: #fff;
-    margin: 20px 0;
-}
-
-/* 라인업 공개 섹션 */
-.reveal-content {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.reveal-content.active {
-    display: flex;
-}
-
-.reveal-section {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    width: calc(100% - 40px);
-    padding: 20px;
-    margin-bottom: 20px;
+/* 지도 섹션 */
+#map-section {
+    width: auto;
+    height: auto;
+    margin-top: 50px;
     text-align: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.7);  /* 흰색 배경, 70% 투명도 */
+    border-radius: 10px;  /* 모서리 둥글게 */
+    padding: 20px;  /* 내부 여백 추가 */
 }
 
-.reveal-section h2 {
-    font-size: 24px;
+#map-section h2 {
+    font-size: 28px;
     font-weight: bold;
-    margin-bottom: 10px;
+    color: grey;  /* 제목 색상 */
+    margin-bottom: 20px;  /* 제목과 지도 간 간격 */
 }
 
-.reveal-section p {
-    font-size: 16px;
-    color: white;
+#map-section .section-line {
+    width: 50%;
+    height: 2px;
+    background-color: white;  /* 구분선 색상 */
+    margin: 10px auto;  /* 구분선 중앙 정렬 */
+}
+
+#map {
+    width: 100%;
+    height: 500px; /* 지도 크기 설정 */
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid white; /* 지도에 경계선 추가 */
+    box-sizing: border-box; /* padding, border를 포함한 크기 계산 */
 }
