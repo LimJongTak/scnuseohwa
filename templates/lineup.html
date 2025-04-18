@@ -1,215 +1,196 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="lineup-container">
-    <header class="lineup-header">
-        <div class="lineup-title">
-            <h1>라인업</h1>
-        </div>
-        <div class="tab-buttons">
-            <button class="tab-button active" id="day1-tab">1 Day</button>
-            <button class="tab-button" id="day2-tab">2 DAY</button>
-            <button class="tab-button" id="reveal-tab">라인업 공개</button>
-        </div>
-    </header>
+    <div class="lineup-container">
+        <header class="lineup-header">
+            <div class="lineup-title">
+                <h1>라인업</h1>
+            </div>
+            <div class="tab-buttons">
+                <button class="tab-button active" id="day1-tab">1 Day</button>
+                <button class="tab-button" id="day2-tab">2 DAY</button>
+                <button class="tab-button" id="reveal-tab">라인업 공개</button> <!-- 새로운 버튼 추가 -->
+            </div>
+        </header>
 
-    <div class="lineup-content">
-        <!-- Day 1 콘텐츠 -->
-        <div id="day1-content" class="day-content active">
-            <div class="carousel">
-                <button class="prev-btn">&#10094;</button>
-                <div class="carousel-content">
-                    <img src="{{ url_for('static', filename='images/mcyou.jpg') }}" alt="Artist Image" class="artist-image">
+        <div class="lineup-content">
+            <!-- Day 1 콘텐츠 -->
+            <div id="day1-content" class="day-content active">
+                <div class="carousel">
+                    <button class="prev-btn">&#10094;</button>
+                    <div class="carousel-content">
+                        <img src="{{ url_for('static', filename='images/mcyou.jpg') }}" alt="Artist Image" class="artist-image">
+                    </div>
+                    <button class="next-btn">&#10095;</button>
                 </div>
-                <button class="next-btn">&#10095;</button>
-            </div>
-            <div class="line"></div>
-            <div class="artist-intro">
-                <h2>{{ artists[0].name }}</h2>
-                <p>{{ artists[0].job }}</p>
-            </div>
-            <div class="popular-songs">
-                <h3>주요 인기곡</h3>
-                <ul>
-                    {% for song in artists[0].songs %}
+                <div class="line"></div> <!-- 라인 추가 -->
+                <div class="artist-intro">
+                    <h2>유재석</h2>
+                    <p>국민MC</p>
+                </div>
+                <div class="popular-songs">
+                    <h3>주요 인기곡</h3>
+                    <ul>
                         <li>
                             <div class="album">
-                                <img src="{{ url_for('static', filename='images/' + song.image) }}" alt="Album Image" class="album-image">
+                                <img src="{{ url_for('static', filename='images/mudo.jpg') }}" alt="Album Image" class="album-image">
                             </div>
                             <div class="song-details">
-                                <p>{{ song.album }}</p>
-                                <p>{{ song.artist }}</p>
+                                <p>무한도전</p>
+                                <p>유재석</p>
                             </div>
                         </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-
-        <!-- Day 2 콘텐츠 -->
-        <div id="day2-content" class="day-content">
-            <div class="carousel">
-                <button class="prev-btn">&#10094;</button>
-                <div class="carousel-content">
-                    <img src="{{ url_for('static', filename='images/mcgang.jpg') }}" alt="Artist Image" class="artist-image">
-                </div>
-                <button class="next-btn">&#10095;</button>
-            </div>
-            <div class="line"></div>
-            <div class="artist-intro">
-                <h2>{{ artists[1].name }}</h2>
-                <p>{{ artists[1].job }}</p>
-            </div>
-            <div class="popular-songs">
-                <h3>주요 인기곡</h3>
-                <ul>
-                    {% for song in artists[1].songs %}
                         <li>
                             <div class="album">
-                                <img src="{{ url_for('static', filename='images/' + song.image) }}" alt="Album Image" class="album-image">
+                                <img src="{{ url_for('static', filename='images/runningman.jpg') }}" alt="Album Image" class="album-image">
                             </div>
                             <div class="song-details">
-                                <p>{{ song.album }}</p>
-                                <p>{{ song.artist }}</p>
+                                <p>런닝맨</p>
+                                <p>유재석</p>
                             </div>
                         </li>
-                    {% endfor %}
-                </ul>
+                        <li>
+                            <div class="album">
+                                <img src="{{ url_for('static', filename='images/uquiz.jpg') }}" alt="Album Image" class="album-image">
+                            </div>
+                            <div class="song-details">
+                                <p>유퀴즈</p>
+                                <p>유재석</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <!-- 라인업 공개 콘텐츠 -->
-        <div id="reveal-content" class="reveal-content">
-            <div id="reveal-section1" class="reveal-section">
-                <h2>1차 공개</h2>
-                <p>COMING SOON</p>
-                <p>2025. 04. 28.(월) 공개 예정</p> 
+            <!-- Day 2 콘텐츠 -->
+            <div id="day2-content" class="day-content">
+                <div class="carousel">
+                    <button class="prev-btn">&#10094;</button>
+                    <div class="carousel-content">
+                        <img src="{{ url_for('static', filename='images/mcgang.jpg') }}" alt="Artist Image" class="artist-image">
+                    </div>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+                <div class="line"></div> <!-- 라인 추가 -->
+                <div class="artist-intro">
+                    <h2>강호동</h2>
+                    <p>천하장사</p>
+                </div>
+                <div class="popular-songs">
+                    <h3>주요 인기곡</h3>
+                    <ul>
+                        <li>
+                            <div class="album">
+                                <img src="{{ url_for('static', filename='images/day.jpg') }}" alt="Album Image" class="album-image">
+                            </div>
+                            <div class="song-details">
+                                <p>1박2일</p>
+                                <p>강호동</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="album">
+                                <img src="{{ url_for('static', filename='images/ahyung.jpg') }}" alt="Album Image" class="album-image">
+                            </div>
+                            <div class="song-details">
+                                <p>아는형님</p>
+                                <p>강호동</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="album">
+                                <img src="{{ url_for('static', filename='images/strongheart.jpg') }}" alt="Album Image" class="album-image">
+                            </div>
+                            <div class="song-details">
+                                <p>강심장</p>
+                                <p>강호동</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div id="reveal-section2" class="reveal-section">
-                <h2>2차 공개</h2>
-                <p>COMING SOON</p>
-                <p>2025. 05. 05.(월) 공개 예정</p> 
-            </div>
-            <div id="reveal-section3" class="reveal-section">
-                <h2>3차 공개</h2>
-                <p>COMING SOON</p>
-                <p>2025. 05. 12.(월) 공개 예정</p> 
+
+            <!-- 라인업 공개 콘텐츠 -->
+            <div id="reveal-content" class="reveal-content">
+                <div id="reveal-section1" class="reveal-section">
+                    <h2>1차 공개</h2>
+                    <p>COMING SOON</p>
+                    <p>2025. 04. 28.(월) 공개 예정</p> 
+                </div>
+                <div id="reveal-section2" class="reveal-section">
+                    <h2>2차 공개</h2>
+                    <p>COMING SOON</p>
+                    <p>2025. 05. 05.(월) 공개 예정</p> 
+                </div>
+                <div id="reveal-section3" class="reveal-section">
+                    <h2>3차 공개</h2>
+                    <p>COMING SOON</p>
+                    <p>2025. 05. 12.(월) 공개 예정</p> 
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<script>
-    // Tab Switching 기능
-    const day1Tab = document.getElementById('day1-tab');
-    const day2Tab = document.getElementById('day2-tab');
-    const revealTab = document.getElementById('reveal-tab');
-    const day1Content = document.getElementById('day1-content');
-    const day2Content = document.getElementById('day2-content');
-    const revealContent = document.getElementById('reveal-content');
+    <script>
+        // Tab Switching 기능
+        const day1Tab = document.getElementById('day1-tab');
+        const day2Tab = document.getElementById('day2-tab');
+        const revealTab = document.getElementById('reveal-tab');
+        const day1Content = document.getElementById('day1-content');
+        const day2Content = document.getElementById('day2-content');
+        const revealContent = document.getElementById('reveal-content');
 
-    // Day 1 클릭 시
-    day1Tab.addEventListener('click', () => {
-        day1Tab.classList.add('active');
-        day2Tab.classList.remove('active');
-        revealTab.classList.remove('active');
-        day1Content.classList.add('active');
-        day2Content.classList.remove('active');
-        revealContent.classList.remove('active');
-    });
-
-    // Day 2 클릭 시
-    day2Tab.addEventListener('click', () => {
-        day2Tab.classList.add('active');
-        day1Tab.classList.remove('active');
-        revealTab.classList.remove('active');
-        day2Content.classList.add('active');
-        day1Content.classList.remove('active');
-        revealContent.classList.remove('active');
-    });
-
-    // 라인업 공개 클릭 시
-    revealTab.addEventListener('click', () => {
-        revealTab.classList.add('active');
-        day1Tab.classList.remove('active');
-        day2Tab.classList.remove('active');
-        revealContent.classList.add('active');
-        day1Content.classList.remove('active');
-        day2Content.classList.remove('active');
-    });
-
-    // Carousel (슬라이드) 기능
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const carouselContent = document.querySelector('.carousel-content');
-    let currentIndex = 0;
-    const images = [
-        "{{ url_for('static', filename='images/mcyou.jpg') }}", 
-        "{{ url_for('static', filename='images/mcgang.jpg') }}", 
-        "{{ url_for('static', filename='images/mcsin.jpg') }}"
-    ];
-
-    // 아티스트 정보 객체 (이름, 직업, 인기곡)
-    const artistInfo = [
-        {
-            name: '유재석',
-            job: '국민MC',
-            songs: [
-                { album: '무한도전', artist: '유재석', image: 'mudo.jpg' },
-                { album: '런닝맨', artist: '유재석', image: 'runningman.jpg' },
-                { album: '유퀴즈', artist: '유재석', image: 'uquiz.jpg' }
-            ]
-        },
-        {
-            name: '강호동',
-            job: '천하장사',
-            songs: [
-                { album: '1박2일', artist: '강호동', image: 'day.jpg' },
-                { album: '아는형님', artist: '강호동', image: 'ahyung.jpg' },
-                { album: '강심장', artist: '강호동', image: 'strongheart.jpg' }
-            ]
-        }
-    ];
-
-    // 이미지 변경 함수
-    function updateCarousel() {
-        const itemWidth = carouselContent.offsetWidth;  // 각 이미지의 너비를 계산
-        carouselContent.style.transition = 'transform 0.3s ease';  // 부드러운 전환 효과
-        carouselContent.style.transform = `translateX(-${currentIndex * itemWidth}px)`;  // 슬라이드 이동
-
-        // 아티스트 정보 업데이트
-        const artist = artistInfo[currentIndex];
-        document.querySelector('.artist-intro h2').textContent = artist.name;
-        document.querySelector('.artist-intro p').textContent = artist.job;
-
-        const songsList = document.querySelector('.popular-songs ul');
-        songsList.innerHTML = '';
-        artist.songs.forEach(song => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-                <div class="album">
-                    <img src="{{ url_for('static', filename='images/' + song.image) }}" alt="Album Image" class="album-image">
-                </div>
-                <div class="song-details">
-                    <p>${song.album}</p>
-                    <p>${song.artist}</p>
-                </div>
-            `;
-            songsList.appendChild(li);
+        // Day 1 클릭 시
+        day1Tab.addEventListener('click', () => {
+            day1Tab.classList.add('active');
+            day2Tab.classList.remove('active');
+            revealTab.classList.remove('active');
+            day1Content.classList.add('active');
+            day2Content.classList.remove('active');
+            revealContent.classList.remove('active');
         });
-    }
 
-    // 이전 이미지
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-        updateCarousel();  // 슬라이드 이동 및 아티스트 정보 업데이트
-    });
+        // Day 2 클릭 시
+        day2Tab.addEventListener('click', () => {
+            day2Tab.classList.add('active');
+            day1Tab.classList.remove('active');
+            revealTab.classList.remove('active');
+            day2Content.classList.add('active');
+            day1Content.classList.remove('active');
+            revealContent.classList.remove('active');
+        });
 
-    // 다음 이미지
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-        updateCarousel();  // 슬라이드 이동 및 아티스트 정보 업데이트
-    });
-</script>
+        // 라인업 공개 클릭 시
+        revealTab.addEventListener('click', () => {
+            revealTab.classList.add('active');
+            day1Tab.classList.remove('active');
+            day2Tab.classList.remove('active');
+            revealContent.classList.add('active');
+            day1Content.classList.remove('active');
+            day2Content.classList.remove('active');
+        });
 
+        // Carousel (슬라이드) 기능
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const carouselContent = document.querySelector('.carousel-content');
+        let currentIndex = 0;
+        const images = [
+            "{{ url_for('static', filename='images/mcyou.jpg') }}", 
+            "{{ url_for('static', filename='images/mcgang.jpg') }}", 
+            "{{ url_for('static', filename='images/mcsin.jpg') }}"
+        ];
+
+        // 이전 이미지
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            carouselContent.innerHTML = `<img src="${images[currentIndex]}" alt="Artist Image">`;
+        });
+
+        // 다음 이미지
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            carouselContent.innerHTML = `<img src="${images[currentIndex]}" alt="Artist Image">`;
+        });
+    </script>
 {% endblock %}
