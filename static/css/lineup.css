@@ -107,14 +107,42 @@
     background-color: #5A3F7D;
 }
 
-/* Day 섹션 콘텐츠 스타일 */
-.day-section {
-    display: none;
-    margin-top: 20px;
+/* 개, 애, 패 버튼 영역 */
+.day1-1-buttons,
+.day1-2-buttons,
+.day1-3-buttons,
+.day2-1-buttons,
+.day2-2-buttons,
+.day2-3-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 
-.day-section.active {
-    display: block;
+/* 개, 애, 패 버튼 */
+.day1-1-button,
+.day1-2-button,
+.day1-3-button,
+.day2-1-button,
+.day2-2-button,
+.day2-3-button {
+    padding: 10px 20px;
+    background-color: #8E7DBE;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 개, 애, 패 버튼 호버 스타일 */
+.day1-1-button:hover,
+.day1-2-button:hover,
+.day1-3-button:hover,
+.day2-1-button:hover,
+.day2-2-button:hover,
+.day2-3-button:hover {
+    background-color: #5A3F7D;
 }
 
 /* 아티스트 소개 */
