@@ -120,23 +120,6 @@ booths = {
     3: {"name": "부스(초록)", "description": "체험형 놀이 부스입니다.", "number": "3-3", "details": "초록색 부스에서는 다양한 체험 활동이 제공됩니다. 가족 단위로 즐길 수 있습니다."}
 }
 
-@app.route('/booth/<booth_id>')
-def booth_detail(booth_id):
-    booth_data = {
-        'b1': {'name': '파랑부스1', 'desc': '체험과 이벤트가 있는 부스입니다.', 'image': 'booth_blue.jpg'},
-        'b2': {'name': '파랑부스2', 'desc': '게임을 즐길 수 있는 공간입니다.', 'image': 'booth_blue.jpg'},
-        'g1': {'name': '초록부스1', 'desc': '환경을 생각한 친환경 부스입니다.', 'image': 'booth_green.jpg'},
-        'o1': {'name': '주황부스1', 'desc': '푸드와 음료가 있는 부스입니다.', 'image': 'booth_orange.jpg'},
-        'f1': {'name': '푸드트럭1', 'desc': '핫도그와 음료를 판매합니다.', 'image': 'foodtruck_1.jpg'},
-        'f2': {'name': '푸드트럭2', 'desc': '디저트 전문 푸드트럭입니다.', 'image': 'foodtruck_2.jpg'},
-    }
-
-    booth = booth_data.get(booth_id)
-    if booth:
-        return render_template('booth_info.html', booth=booth)
-    else:
-        return abort(404)
-
 @app.route("/booth_info/<booth_id>")
 def booth_info(booth_id):
     booths = {

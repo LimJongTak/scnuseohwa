@@ -1,4 +1,4 @@
-% extends "base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 <div class="booth-container">
@@ -26,10 +26,4 @@
   <div id="booth-cards" class="booth-cards-container"></div>
 </div>
 <script src="{{ url_for('static', filename='js/booth_food.js') }}"></script>
-
-<script>
-  function navigateToBoothDetail(id) {
-    window.location.href = `/booth/${id}`;
-  }
-</script>
 {% endblock %}

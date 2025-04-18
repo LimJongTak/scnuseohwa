@@ -1,76 +1,51 @@
-function navigateToBoothDetail(id) {
-    window.location.href = `/booth/${id}`;
-  }
+document.addEventListener("DOMContentLoaded", function () {
+    const boothData = {
+      blue: [
+        { id: "blue1", name: "게임부스", description: "재미있는 게임을 즐길 수 있는 부스입니다." },
+        { id: "blue2", name: "체험존", description: "다양한 체험을 할 수 있어요." }
+      ],
+      green: [
+        { id: "green1", name: "친환경 부스", description: "지속 가능한 활동을 소개합니다." }
+      ],
+      orange: [
+        { id: "orange1", name: "푸드존", description: "맛있는 먹거리가 가득한 부스입니다." }
+      ],
+      1: [
+        { id: "food1", name: "핫도그 푸드트럭", description: "따끈한 핫도그가 기다리고 있어요." }
+      ],
+      2: [
+        { id: "food2", name: "디저트 트럭", description: "달콤한 디저트가 가득해요." }
+      ]
+    };
   
-  const boothData = {
-    blue: [
-      { id: 'b1', name: '파랑부스1', desc: '체험과 이벤트가 있는 부스입니다.', image: '/static/images/booth_blue.jpg' },
-      { id: 'b2', name: '파랑부스2', desc: '게임을 즐길 수 있는 공간입니다.', image: '/static/images/booth_blue.jpg' }
-    ],
-    green: [
-      { id: 'g1', name: '초록부스1', desc: '환경을 생각한 친환경 부스입니다.', image: '/static/images/booth_green.jpg' }
-    ],
-    orange: [
-      { id: 'o1', name: '주황부스1', desc: '푸드와 음료가 있는 부스입니다.', image: '/static/images/booth_orange.jpg' }
-    ],
-    foodtruck1: [
-      { id: 'f1', name: '푸드트럭1', desc: '핫도그와 음료를 판매합니다.', image: '/static/images/foodtruck_1.jpg' }
-    ],
-    foodtruck2: [
-      { id: 'f2', name: '푸드트럭2', desc: '디저트 전문 푸드트럭입니다.', image: '/static/images/foodtruck_2.jpg' }
-    ]
-  };
-  
-  function showBoothCards(type) {
-    const container = document.getElementById('booth-cards');
-    container.innerHTML = '';
-  
-    const cards = boothData[type];
-    if (!cards) return;
-  
-    cards.forEach(booth => {
-      const card = document.createElement('div');
-      card.className = 'booth-card';
-      card.onclick = () => navigateToBoothDetail(booth.id);
-      card.innerHTML = `
-        <img src="${booth.image}" alt="${booth.name}" class="booth-image" />
-        <div class="booth-info">
+    window.showBoothCards = function (key) {
+      const container = document.getElementById("booth-cards");
+      container.innerHTML = "";
+      boothData[key].forEach((booth) => {
+        const card = document.createElement("div");
+        card.className = "booth-card";
+        card.setAttribute("data-booth-id", booth.id);
+        card.innerHTML = `
           <h3>${booth.name}</h3>
-          <p>${booth.desc}</p>
-        </div>
-      `;
-      container.appendChild(card);
-    });
-  }
+          <p>${booth.description}</p>
+        `;
+        card.addEventListener("click", () => {
+          window.location.href = `/booth/${booth.id}`;
+        });
+        container.appendChild(card);
+      });
+    };
   
-  function toggleButtons(type) {
-    const daeunButtons = document.getElementById('daeun-buttons');
-    const foodtruckButtons = document.getElementById('foodtruck-buttons');
+    window.toggleButtons = function (type) {
+      const daeun = document.getElementById("daeun-buttons");
+      const food = document.getElementById("foodtruck-buttons");
+      document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+      document.getElementById(`${type}-tab`).classList.add("active");
+      daeun.style.display = type === "daeun" ? "block" : "none";
+      food.style.display = type === "foodtruck" ? "block" : "none";
+      showBoothCards(type === "daeun" ? "blue" : "1");
+    };
   
-    const tabs = document.querySelectorAll('.tab-button');
-    tabs.forEach(tab => tab.classList.remove('active'));
-  
-    if (type === 'daeun') {
-      daeunButtons.style.display = 'block';
-      foodtruckButtons.style.display = 'none';
-      document.getElementById('daeun-tab').classList.add('active');
-      showBoothCards('blue');
-    } else if (type === 'foodtruck') {
-      foodtruckButtons.style.display = 'block';
-      daeunButtons.style.display = 'none';
-      document.getElementById('foodtruck-tab').classList.add('active');
-      showBoothCards('foodtruck1');
-    }
-  }
-  
-  function showBoothInfo(color) {
-    showBoothCards(color);
-  }
-  
-  function showFoodtruckInfo(zone) {
-    showBoothCards('foodtruck' + zone);
-  }
-  
-  document.addEventListener('DOMContentLoaded', () => {
-    showBoothCards('blue');
+    // 초기 표시
+    showBoothCards("blue");
   });
