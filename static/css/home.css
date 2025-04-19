@@ -52,7 +52,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center; /* 중앙에 정렬 */
+    justify-content: center; /* 추가: 슬라이드가 항상 중앙에 오도록 설정 */
 }
 
 /* 슬라이드 트랙 */
@@ -60,6 +60,7 @@
     display: flex;
     transition: transform 0.3s ease;
     width: 100%;
+    justify-content: center; /* 수정: 트랙 내 이미지들이 중앙에 정렬되도록 설정 */
 }
 
 /* 개별 슬라이드 */
