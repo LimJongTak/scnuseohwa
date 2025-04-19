@@ -47,13 +47,12 @@
 /* 캐러셀 전체 스타일 */
 .carousel {
     position: relative;
-    max-width: 100%; /* 화면에 맞게 확장 */
+    max-width: 600px;
     margin: 20px auto;
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center; /* 이미지들이 중앙에 오도록 설정 */
-    padding: 0 10px; /* 양쪽에 여백 추가 */
+    justify-content: center;
 }
 
 /* 슬라이드 트랙 */
@@ -61,7 +60,6 @@
     display: flex;
     transition: transform 0.3s ease;
     width: 100%;
-    justify-content: center; /* 슬라이드 중앙 정렬 */
 }
 
 /* 개별 슬라이드 */
@@ -79,7 +77,6 @@
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
-    margin: 0 15px; /* 이미지 사이 간격 */
 }
 
 /* 캐러셀 버튼 */
