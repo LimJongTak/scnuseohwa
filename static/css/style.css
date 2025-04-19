@@ -1,4 +1,9 @@
 /* 기본 배경 이미지 설정 (PC) */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* 가로 스크롤 숨기기 */
+}
+
 body {
     background-image: url("../images/bg.png"); /* PC용 배경 */
     background-repeat: no-repeat;
