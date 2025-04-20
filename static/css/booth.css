@@ -54,14 +54,14 @@
     align-items: center; /* 수직 중앙 정렬 */
     gap: 20px;
     margin-top: 20px;
-    width: 100%; /* 부모 요소가 전체 너비를 차지하도록 설정 */
+    width: 95%; /* 부모 요소가 전체 너비를 차지하도록 설정 */
     max-width: 1200px; /* 최대 너비 설정 (필요시 조정) */
     margin-left: auto;
     margin-right: auto;
 }
 
 .booth-card {
-    width: 100%; /* 부스 카드 너비 */
+    width: 95%; /* 부스 카드 너비 */
     background: rgba(255, 255, 255, 0.8);
     padding: 15px;
     border-radius: 12px;
