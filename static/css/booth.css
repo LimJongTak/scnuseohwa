@@ -54,14 +54,18 @@
     align-items: center; /* Vertical center alignment */
     gap: 20px;
     margin-top: 20px;
+    width: calc(100% - 40px); /* 화면에 맞게 크기 조정하고, 20px씩 양쪽 여백을 둡니다 */
+    margin-left: 20px; /* 왼쪽 여백 */
+    margin-right: 20px; /* 오른쪽 여백 */
 }
 
 .booth-card {
-    width: 250px;
-    background: rgba(255,255,255,0.8);
+    width: 100%; /* 부스 카드가 부모 요소에 맞게 크기 조정됨 */
+    max-width: 250px; /* 부스 카드의 최대 너비 제한 */
+    background: rgba(255, 255, 255, 0.8);
     padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.2s;
     color: black;
