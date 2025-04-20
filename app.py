@@ -1,7 +1,11 @@
 from flask import Flask, render_template, abort
 import os
+from views import booth_blueprint  # views.py에서 Blueprint 가져오기
 
 app = Flask(__name__)
+
+# Blueprint 등록
+app.register_blueprint(booth_blueprint, url_prefix='/booth')
 
 # 부스 정보 설정
 booths = {

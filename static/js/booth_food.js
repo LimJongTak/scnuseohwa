@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 card.addEventListener("click", () => {
                     // 부스 카드 클릭 시, 부스 상세 정보 페이지로 이동
-                    window.location.href = `/booth_info/${booth.id}`; // 부스의 고유 ID를 포함한 URL로 이동
+                    window.location.href = `/booth/${booth.id}`; // 부스의 고유 ID를 포함한 URL로 이동
                 });
                 
                 container.appendChild(card);
