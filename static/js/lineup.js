@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 1일 뒤 이미지 변경 날짜 설정
     const revealChangeDates = {
-        "reveal1": new Date("2025-04-22T00:43:00"),
+        "reveal1": new Date("2025-04-21T00:52:00"),
         "reveal2": new Date("2025-05-06T10:00:00"),
         "reveal3": new Date("2025-05-13T10:00:00")
     };
