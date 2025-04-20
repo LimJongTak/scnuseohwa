@@ -45,52 +45,61 @@
 }
 
 /* 캐러셀 전체 스타일 */
-.kind_wrap {
-    border: 2px solid black;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+.carousel {
     position: relative;
-}
-
-.kind_wrap > .kind_slider {
+    max-width: 600px;
+    margin: 20px auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.kind_wrap > .kind_slider .slider {
-    position: relative;
-    transition: 0.5s;
-}
-
-.kind_wrap > .kind_slider .slider li {
-    display: inline-block;
-}
-
-.kind_wrap > .kind_slider img {
+/* 슬라이드 트랙 */
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease;
     width: 100%;
-    height: auto;
-    vertical-align: top;
+}
+
+/* 개별 슬라이드 */
+.carousel-item {
+    min-width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.carousel-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* 캐러셀 버튼 */
-.kind_wrap .arrow > a.prev {
+.carousel-prev, .carousel-next {
     position: absolute;
-    left: -50px;
-    top: 100px;
-    color: black;
-    font-size: 18px;
-    background: white;
-    padding: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: grey;
+    font-size: 24px;
+    padding: 8px 12px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
 }
 
-.kind_wrap .arrow > a.next {
-    position: absolute;
-    right: -50px;
-    top: 100px;
-    color: black;
-    font-size: 18px;
-    background: white;
-    padding: 10px;
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
 }
 
 /* 지도 섹션 */
@@ -131,7 +140,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 반응형 디자인 */
 @media (max-width: 768px) {
     .carousel {
         max-width: 90%;
