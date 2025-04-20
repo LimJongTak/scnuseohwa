@@ -129,6 +129,8 @@
     text-align: center;
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%; /* width 100%로 부모 요소에 맞추기 */
+    box-sizing: border-box; /* padding 포함 */
 }
 
 .reveal-section h2 {
@@ -140,6 +142,12 @@
 @media (max-width: 768px) {
     .lineup-container {
         padding: 10px; /* 작은 화면에서 여백 조정 */
+        margin: 0 auto; /* 부모 요소가 중앙에 오도록 설정 */
+    }
+    .lineup-content {
+        width: 100%;
+        max-width: 900px; /* 최대 너비 설정 */
+        margin: 0 auto; /* 가운데 정렬 */
     }
 
     .carousel-item {
@@ -159,7 +167,9 @@
         gap: 8px;
     }
     .reveal-section {
-        margin: 10px 10px; /* 양쪽 여백 10px */
+        margin: 10px auto; /* 양쪽 여백 10px, 자동으로 중앙 정렬 */
         padding: 20px; /* 여백 설정 유지 */
+        max-width: 100%; /* 최대 너비 100% */
+        width: calc(100% - 20px); /* padding을 고려한 너비 */
     }
 }
