@@ -87,10 +87,12 @@
     z-index: 2;
 }
 
+/* prev 버튼 왼쪽 10px 여백 */
 .carousel-prev {
     left: 10px;
 }
 
+/* next 버튼 오른쪽 10px 여백 */
 .carousel-next {
     right: 10px;
 }
