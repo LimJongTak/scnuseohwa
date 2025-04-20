@@ -58,15 +58,16 @@
 }
 
 .carousel-item {
-    min-width: 100%;
+    width: 648px;
+    height: 648px;
     object-fit: cover;
     border-radius: 10px;
 }
 
 /* 개별 슬라이드 이미지 */
 .carousel-item-img {
-    width: 100%;
-    height: auto;
+    width: 648px;
+    height: 648px;
     object-fit: cover;
     border-radius: 10px;
 }
