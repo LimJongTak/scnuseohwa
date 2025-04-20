@@ -47,7 +47,7 @@
 /* 캐러셀 전체 스타일 */
 .carousel-container {
     position: relative;
-    max-width: 600px;
+    max-width: auto;
     margin: 20px auto;
     overflow: hidden;
 }
@@ -58,16 +58,16 @@
 }
 
 .carousel-item {
-    width: 648px;
-    height: 648px;
+    width: auto;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
 }
 
 /* 개별 슬라이드 이미지 */
 .carousel-item-img {
-    width: 648px;
-    height: 648px;
+    width: auto;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
 }
