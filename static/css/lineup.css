@@ -1,13 +1,12 @@
 /* lineup.css */
-
 .lineup-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 100%; /* 부모 컨테이너가 화면의 100%를 차지하도록 */
-    max-width: 900px; /* 최대 너비 설정 (필요시 조정) */
-    margin: 0 auto; /* 좌우 마진을 자동으로 설정하여 가운데 정렬 */
+    width: 100%;
+    max-width: 900px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
 }
 
 .lineup-header {
