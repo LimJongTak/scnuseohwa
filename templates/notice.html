@@ -25,5 +25,16 @@
             <p>3차 공개 : 2025. 05. 12.(월)</p>
         </div>
     </div>
+
+    <!-- 페이지네이션 추가 -->
+    <div class="pagination">
+        <button class="page-btn" onclick="changePage(1)">1</button>
+        <button class="page-btn" onclick="changePage(2)">2</button>
+        <button class="page-btn" onclick="changePage(3)">3</button>
+    </div>
 </div>
+
+
+
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
 {% endblock %}
