@@ -55,6 +55,8 @@
     gap: 20px;
     margin-top: 20px;
     min-height: 100vh; /* 화면 높이를 100%로 설정하여 수직 중앙 정렬 */
+    flex-direction: column; /* 부스 카드를 수직으로 정렬 */
+    text-align: center; /* 텍스트와 부스 이름을 중앙 정렬 */
 }
 
 .booth-card {
