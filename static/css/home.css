@@ -47,18 +47,20 @@
 /* 캐러셀 전체 스타일 */
 .carousel-container {
     position: relative;
-    max-width: auto;
-    margin: 20px auto;
-    overflow: hidden;
+    max-width: 600px;  /* 최대 너비 */
+    width: 100%;  /* 100% 너비로 설정 */
+    margin: 20px auto;  /* 중앙 정렬 */
+    overflow: hidden;  /* 캐러셀 내에서 이미지 넘침을 숨김 */
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.3s ease;
+    width: 100%;
 }
 
 .carousel-item {
-    width: auto;
+    width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
@@ -66,7 +68,7 @@
 
 /* 개별 슬라이드 이미지 */
 .carousel-item-img {
-    width: auto;
+    width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
@@ -85,16 +87,15 @@
     border-radius: 50%;
     cursor: pointer;
     z-index: 2;
+    /* 버튼을 이미지 밖으로 배치 */
 }
 
-/* prev 버튼 왼쪽 10px 여백 */
 .carousel-prev {
-    left: 10px;
+    left: -10px;  /* 이미지의 왼쪽 밖으로 10px */
 }
 
-/* next 버튼 오른쪽 10px 여백 */
 .carousel-next {
-    right: 10px;
+    right: -10px;  /* 이미지의 오른쪽 밖으로 10px */
 }
 
 /* 지도 섹션 */
