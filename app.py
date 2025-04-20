@@ -44,8 +44,7 @@ def home():
 # 부스 상세 페이지 라우트
 @app.route("/booth_info/<booth_id>")
 def booth_info(booth_id):
-    # 부스 정보 가져오기
-    booth = booths.get(booth_id)
+    booth = booths.get(booth_id)  # 부스 ID에 맞는 부스 정보 가져오기
     if booth:
         return render_template("booth_info.html", booth=booth)
     else:

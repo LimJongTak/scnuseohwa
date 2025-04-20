@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const container = document.getElementById("booth-cards");
         container.innerHTML = ""; // 기존 내용 초기화
 
-        // key가 boothData에 존재하는지 확인
         if (boothData[key]) {
             boothData[key].forEach((booth) => {
                 const card = document.createElement("div");
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 card.addEventListener("click", () => {
                     // 부스 카드 클릭 시, 부스 상세 정보 페이지로 이동
-                    window.location.href = `/booth/${booth.id}`; // 부스의 고유 ID를 포함한 URL로 이동
+                    window.location.href = `/booth_info/${booth.id}`; // 부스의 고유 ID를 포함한 URL로 이동
                 });
                 
                 container.appendChild(card);
