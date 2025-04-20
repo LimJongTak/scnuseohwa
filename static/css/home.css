@@ -52,7 +52,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;  /* 캐러셀 트랙을 중앙에 정렬 */
 }
 
 /* 슬라이드 트랙 */
@@ -60,6 +60,8 @@
     display: flex;
     transition: transform 0.3s ease;
     width: 100%;
+    justify-content: center;  /* 모든 이미지가 중앙에 오도록 설정 */
+    align-items: center;      /* 세로 중앙 정렬 */
 }
 
 /* 개별 슬라이드 */
@@ -67,15 +69,16 @@
     min-width: 100%;
     flex-shrink: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;  /* 이미지가 중앙에 오도록 설정 */
+    align-items: center;      /* 이미지가 세로로 중앙에 오도록 설정 */
     padding: 10px 0;
 }
 
+/* 이미지 크기 조정 */
 .carousel-item img {
-    width: 300px;
+    width: 300px;             /* 이미지의 크기를 부모 요소에 맞게 조정 */
     height: 300px;
-    object-fit: cover;
+    object-fit: cover;        /* 이미지 비율 유지 */
     border-radius: 10px;
 }
 
