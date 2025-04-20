@@ -7,10 +7,7 @@ html, body {
     margin: 0;
     padding: 0;
 }
-@font-face {
-    font-family: 'SCDream8';
-    src: url('fonts/SCDream8.otf') format('opentype');
-}
+
 body {
     background-image: url("../images/bg.png"); /* PC용 배경 */
     background-repeat: no-repeat;
@@ -22,7 +19,7 @@ body {
     min-height: 100vh; /* 페이지가 화면을 꽉 채우도록 설정 */
     margin: 0;
     padding: 0;
-    font-family: 'SCDream8', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     color: #ffffff;
 }
 .link-item p {
