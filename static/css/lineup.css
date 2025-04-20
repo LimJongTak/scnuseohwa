@@ -138,6 +138,16 @@
     margin-bottom: 10px;
 }
 
+.reveal-section .coming-soon {
+    font-size: 1.2rem;
+    color: yellow; /* COMING SOON 텍스트 색상 */
+}
+
+.reveal-section .revealed {
+    font-size: 1.2rem;
+    color: green; /* 공개된 텍스트 색상 */
+}
+
 /* 반응형 스타일 */
 @media (max-width: 768px) {
     .lineup-container {
@@ -167,6 +177,7 @@
         justify-content: center;
         gap: 8px;
     }
+
     .reveal-section {
         margin: 0; /* 여백 제거 */
         padding: 20px; /* 패딩은 유지 */
