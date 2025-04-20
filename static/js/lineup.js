@@ -68,14 +68,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 공개 날짜 설정 (예시: 1차 공개 2025-04-28, 2차 공개 2025-05-05, 3차 공개 2025-05-12)
     const revealDates = {
-        "reveal1": new Date("2025-04-21T00:43:00"),
+        "reveal1": new Date("2025-04-21T00:54:00"),
         "reveal2": new Date("2025-05-05T10:00:00"),
         "reveal3": new Date("2025-05-12T10:00:00")
     };
 
     // 1일 뒤 이미지 변경 날짜 설정
     const revealChangeDates = {
-        "reveal1": new Date("2025-04-21T00:52:00"),
+        "reveal1": new Date("2025-04-21T00:55:00"),
         "reveal2": new Date("2025-05-06T10:00:00"),
         "reveal3": new Date("2025-05-13T10:00:00")
     };
