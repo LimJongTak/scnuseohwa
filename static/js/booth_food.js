@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     const boothData = {
         blue: [
-            { id: "blue1", name: "게임부스", description: "재미있는 게임을 즐길 수 있는 부스입니다." },
-            { id: "blue2", name: "체험존", description: "다양한 체험을 할 수 있어요." }
+            { id: "blue_1", name: "게임부스", description: "재미있는 게임을 즐길 수 있는 부스입니다." },
+            { id: "blue_2", name: "체험존", description: "다양한 체험을 할 수 있어요." }
         ],
         green: [
-            { id: "green1", name: "친환경 부스", description: "지속 가능한 활동을 소개합니다." }
+            { id: "green_1", name: "친환경 부스", description: "지속 가능한 활동을 소개합니다." }
         ],
         orange: [
-            { id: "orange1", name: "푸드존", description: "맛있는 먹거리가 가득한 부스입니다." }
+            { id: "orange_1", name: "푸드존", description: "맛있는 먹거리가 가득한 부스입니다." }
         ],
         foodtruck1: [
-            { id: "food1", name: "핫도그 푸드트럭", description: "따끈한 핫도그가 기다리고 있어요." }
+            { id: "food_1", name: "핫도그 푸드트럭", description: "따끈한 핫도그가 기다리고 있어요." }
         ],
         foodtruck2: [
-            { id: "food2", name: "디저트 트럭", description: "달콤한 디저트가 가득해요." }
+            { id: "food_2", name: "디저트 트럭", description: "달콤한 디저트가 가득해요." }
         ]
     };
 
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 card.addEventListener("click", () => {
                     // 부스 카드 클릭 시, 부스 상세 정보 페이지로 이동
-                    window.location.href = `/booth/${booth.id}`; // 부스의 고유 ID를 포함한 URL로 이동
+                    window.location.href = `/booth_info/${booth.id}`; // 부스의 고유 ID를 포함한 URL로 이동
                 });
                 
                 container.appendChild(card);
