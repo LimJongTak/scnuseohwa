@@ -124,13 +124,12 @@
 .reveal-section {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 20px;
-    margin: 10px auto;  /* 자동으로 좌우 여백을 추가하여 중앙 정렬 */
+    margin: 0;  /* 여백 제거 */
     border-radius: 10px;
     text-align: center;
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    width: 100%; /* 부모 요소에 맞춰 좌우 여백을 고려한 너비 설정 */
-    max-width: 100%; /* 최대 너비를 100%로 설정 */
+    width: 100%; /* 전체 너비 사용 */
     box-sizing: border-box; /* padding을 포함하여 계산 */
 }
 
@@ -169,8 +168,8 @@
         gap: 8px;
     }
     .reveal-section {
-        margin: 10px auto; /* 좌우 여백을 자동으로 설정하여 중앙 정렬 */
-        padding: 20px; /* 여백 설정 유지 */
+        margin: 0; /* 여백 제거 */
+        padding: 20px; /* 패딩은 유지 */
         width: 100%; /* 전체 너비를 채우도록 설정 */
         max-width: 100%; /* 최대 너비를 100%로 설정 */
     }
