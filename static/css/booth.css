@@ -60,7 +60,7 @@
 }
 
 .booth-card {
-    width: 250px; /* 부스 카드 너비 */
+    width: auto; /* 부스 카드 너비 */
     background: rgba(255, 255, 255, 0.8);
     padding: 15px;
     border-radius: 12px;
