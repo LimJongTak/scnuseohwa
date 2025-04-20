@@ -1,8 +1,32 @@
 from flask import Flask, render_template, abort
-from views import booth_blueprint  # views.py에서 Blueprint 가져오기
 import os
 
 app = Flask(__name__)
+
+# 부스 정보 설정
+booths = {
+    "blue_1": {
+        "name": "부스(파랑)",
+        "number": "1-4",
+        "description": "재미있는 체험이 가득한 부스입니다.",
+        "details": "아이부터 어른까지 모두 참여할 수 있는 다채로운 체험 활동 제공",
+        "image": "booth_blue.jpg"
+    },
+    "orange_2": {
+        "name": "부스(주황)",
+        "number": "2-1",
+        "description": "다양한 음식을 제공하는 부스입니다.",
+        "details": "주황색 부스에서는 특선 메뉴와 함께 다양한 음식을 즐길 수 있습니다.",
+        "image": "booth_orange.jpg"
+    },
+    "green_3": {
+        "name": "부스(초록)",
+        "number": "3-3",
+        "description": "체험형 놀이 부스입니다.",
+        "details": "초록색 부스에서는 다양한 체험 활동이 제공됩니다. 가족 단위로 즐길 수 있습니다.",
+        "image": "booth_green.jpg"
+    }
+}
 
 # 메인 페이지 (로고 및 날짜 포함)
 @app.route('/')
@@ -17,6 +41,16 @@ def home():
     }
     return render_template("home.html", page_title="서화 총학생회", show_header_info=True, meta_info=meta_info)
 
+# 부스 상세 페이지 라우트
+@app.route("/booth_info/<booth_id>")
+def booth_info(booth_id):
+    # 부스 정보 가져오기
+    booth = booths.get(booth_id)
+    if booth:
+        return render_template("booth_info.html", booth=booth)
+    else:
+        return abort(404)  # 부스 정보가 없으면 404 에러 반환
+
 # 공지사항 페이지
 @app.route('/notice')
 def notice():
@@ -27,10 +61,12 @@ def notice():
 def booth_food():
     return render_template("booth_food.html", page_title="부스 & 푸드트럭", show_header_info=False)
 
+# 404 에러 페이지 처리
 @app.errorhandler(404)
 def not_found_error(error):
     return render_template('404.html'), 404
-# 라인업페이지
+
+# 라인업 페이지
 @app.route('/lineup')
 def lineup():
     artist_data = [
@@ -55,7 +91,6 @@ def lineup():
     ]
     return render_template("lineup.html", page_title="라인업", artists=artist_data)
 
-
 # 축제 일정 페이지
 @app.route('/schedule')
 def schedule():
@@ -66,6 +101,7 @@ def schedule():
 def qna():
     return render_template("qna.html", page_title="자주 묻는 질문", show_header_info=False)
 
+# 사이트 제작자 페이지
 @app.route('/creator')
 def creator():
     return render_template("creator.html", page_title="사이트 제작자", show_header_info=False)
@@ -116,42 +152,6 @@ def artist_detail(name):
         return render_template("artist_detail.html", artist=artist)
     else:
         return render_template("404.html"), 404
-
-# 부스 정보
-booths = {
-    1: {"name": "부스(파랑)", "description": "재미있는 체험이 가득한 부스입니다.", "number": "1-4", "details": "이 부스에서는 다양한 체험 활동이 준비되어 있습니다. 아이부터 어른까지 모두 참여할 수 있습니다."},
-    2: {"name": "부스(주황)", "description": "다양한 음식을 제공하는 부스입니다.", "number": "2-1", "details": "주황색 부스에서는 특선 메뉴와 함께 다양한 음식을 즐길 수 있습니다."},
-    3: {"name": "부스(초록)", "description": "체험형 놀이 부스입니다.", "number": "3-3", "details": "초록색 부스에서는 다양한 체험 활동이 제공됩니다. 가족 단위로 즐길 수 있습니다."}
-}
-
-@app.route("/booth_info/<booth_id>")
-def booth_info(booth_id):
-    booths = {
-        "blue_1": {
-            "name": "부스(파랑)",
-            "number": "1-4",
-            "description": "재미있는 체험이 가득한 부스입니다.",
-            "details": "아이부터 어른까지 모두 참여할 수 있는 다채로운 체험 활동 제공",
-            "image": "booth_blue.jpg"
-        },
-        "orange_2": {
-            "name": "부스(주황)",
-            "number": "2-1",
-            "description": "다양한 음식을 제공하는 부스입니다.",
-            "details": "주황색 부스에서는 특선 메뉴와 함께 다양한 음식을 즐길 수 있습니다.",
-            "image": "booth_orange.jpg"
-        },
-        # 나머지 부스들도 이 딕셔너리에 추가 가능
-    }
-
-    booth = booths.get(booth_id)
-    if booth:
-        return render_template("booth_info.html", booth=booth)
-    else:
-        return abort(404)
-
-# Blueprint 등록
-app.register_blueprint(booth_blueprint, url_prefix='/booth')
 
 # 서버 실행
 if __name__ == '__main__':

@@ -28,13 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 const card = document.createElement("div");
                 card.className = "booth-card";
                 card.setAttribute("data-booth-id", booth.id);
+                
+                // 부스 클릭 시 해당 부스 정보 페이지로 이동하도록 링크 추가
                 card.innerHTML = `
                     <h3>${booth.name}</h3>
                     <p>${booth.description}</p>
                 `;
+                
                 card.addEventListener("click", () => {
-                    window.location.href = `/booth/${booth.id}`;
+                    // 부스 카드 클릭 시, 부스 상세 정보 페이지로 이동
+                    window.location.href = `/booth/${booth.id}`; // 부스의 고유 ID를 포함한 URL로 이동
                 });
+                
                 container.appendChild(card);
             });
         } else {
