@@ -158,4 +158,8 @@
         justify-content: center;
         gap: 8px;
     }
+    .reveal-section {
+        margin: 10px 10px; /* 양쪽 여백 10px */
+        padding: 20px; /* 여백 설정 유지 */
+    }
 }
