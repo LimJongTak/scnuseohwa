@@ -54,9 +54,6 @@
     align-items: center; /* Vertical center alignment */
     gap: 20px;
     margin-top: 20px;
-    width: calc(100% - 40px); /* 화면에 맞게 크기 조정하고, 양쪽에 여백 20px */
-    margin-left: 20px; /* 왼쪽 여백 */
-    margin-right: 20px; /* 오른쪽 여백 */
 }
 
 .booth-card {
@@ -117,45 +114,14 @@
     padding: 10px;
     border-radius: 10px;
 }
-
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     #map {
-        width: 100%; /* 지도 너비를 100%로 확장 */
-        height: 200px; /* 지도 높이를 줄여서 모바일에서 적당하게 표시 */
+        max-width: 100%; /* Full width on mobile */
         margin: 20px 0;
     }
-
     .booth-card {
-        width: 90%; /* 모바일에서 부스 카드 너비를 90%로 확장 */
+        width: 90%; /* Make booth cards take more space on small screens */
         margin-bottom: 15px;
-    }
-
-    .booth-title {
-        font-size: 28px; /* 모바일에서 제목 폰트 크기를 작게 조정 */
-    }
-
-    .menu-tabs, .button-group {
-        flex-direction: column; /* 모바일에서 버튼들을 세로로 정렬 */
-    }
-
-    .tab-button, .booth-section-button {
-        padding: 8px 16px; /* 모바일에서 버튼의 크기를 줄임 */
-    }
-
-    .booth-cards {
-        width: 100%; /* 모바일에서 부스 카드 컨테이너의 너비를 100%로 설정 */
-        margin-left: 0; /* 왼쪽 여백 제거 */
-        margin-right: 0; /* 오른쪽 여백 제거 */
-    }
-
-    .booth-card {
-        width: 100%; /* 모바일에서 부스 카드가 부모 요소에 맞게 크기를 차지하도록 설정 */
-        margin-bottom: 15px; /* 카드 사이의 간격 */
-    }
-
-    .booth-detail-img {
-        width: 100%; /* 이미지가 모바일 화면에 맞게 확장 */
-        max-width: 300px; /* 이미지 크기를 제한 */
     }
 }
