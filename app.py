@@ -36,6 +36,20 @@ booths = {
         "description": "체험형 놀이 부스입니다.",
         "details": "초록색 부스에서는 다양한 체험 활동이 제공됩니다. 가족 단위로 즐길 수 있습니다.",
         "image": "booth_green.jpg"
+    },
+    "food_1": {
+        "name": "핫도그 푸드트럭",
+        "number": "5",
+        "description": "핫도그 푸드트럭입니다.",
+        "details": "핫도그 푸드트럭에서 다양한 메뉴를 만나보세요.",
+        "image": "hotdog.jpg"
+    },
+    "food_2": {
+        "name": "디저트 트럭",
+        "number": "6",
+        "description": "디저트 트럭입니다.",
+        "details": "디저트 트럭에서 다양한 메뉴를 만나보세요.",
+        "image": "desert.jpg"
     }
 }
 
