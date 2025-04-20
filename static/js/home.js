@@ -8,7 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = [
         document.querySelector("#reveal1").src,
         document.querySelector("#reveal2").src,
-        document.querySelector("#reveal3").src
+        document.querySelector("#reveal3").src,
+        document.querySelector("#reveal4").src,
+        document.querySelector("#reveal5").src,
+        document.querySelector("#reveal6").src
     ];
     
     let autoSlideInterval;
