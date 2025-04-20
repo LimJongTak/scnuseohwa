@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 공개 날짜 설정 (예시: 1차 공개 2025-04-28, 2차 공개 2025-05-05, 3차 공개 2025-05-12)
     const revealDates = {
-        "reveal1": new Date("2025-04-21T00:03:00"),
+        "reveal1": new Date("2025-04-21T00:05:00"),
         "reveal2": new Date("2025-05-05T12:00:00"),
         "reveal3": new Date("2025-05-12T12:00:00")
     };
