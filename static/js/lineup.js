@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // 공개 날짜 설정 (각 공개 섹션 날짜)
-    const revealDate1 = new Date('2025-04-28T12:00:00');  // 1차 공개
+    const revealDate1 = new Date('2025-04-20T23:35:00');  // 1차 공개
     const revealDate2 = new Date('2025-05-05T12:00:00');  // 2차 공개
     const revealDate3 = new Date('2025-05-12T12:00:00'); // 3차 공개
 
