@@ -54,11 +54,9 @@
     align-items: center; /* Vertical center alignment */
     gap: 20px;
     margin-top: 20px;
-    width: 90%;
 }
 
 .booth-card {
-    width: 90%;
     width: 250px;
     background: rgba(255,255,255,0.8);
     padding: 15px;
