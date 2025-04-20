@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     const boothData = {
         blue: [
-            { id: "blue_1", name: "게임부스", description: "재미있는 게임을 즐길 수 있는 부스입니다." },
-            { id: "blue_2", name: "체험존", description: "다양한 체험을 할 수 있어요." }
+            { id: "blue_1", name: "게임부스", number: "1번", description: "재미있는 게임을 즐길 수 있는 부스입니다." },
+            { id: "blue_2", name: "체험존", number: "2번", description: "다양한 체험을 할 수 있어요." }
         ],
         green: [
-            { id: "green_3", name: "친환경 부스", description: "지속 가능한 활동을 소개합니다." }
+            { id: "green_3", name: "친환경 부스", number: "3번", description: "지속 가능한 활동을 소개합니다." }
         ],
         orange: [
-            { id: "orange_2", name: "푸드존", description: "맛있는 먹거리가 가득한 부스입니다." }
+            { id: "orange_2", name: "푸드존", number: "4번", description: "맛있는 먹거리가 가득한 부스입니다." }
         ],
         foodtruck1: [
-            { id: "food_1", name: "핫도그 푸드트럭", description: "따끈한 핫도그가 기다리고 있어요." }
+            { id: "food_1", name: "핫도그 푸드트럭", number: "5번", description: "따끈한 핫도그가 기다리고 있어요." }
         ],
         foodtruck2: [
-            { id: "food_2", name: "디저트 트럭", description: "달콤한 디저트가 가득해요." }
+            { id: "food_2", name: "디저트 트럭", number: "6번", description: "달콤한 디저트가 가득해요." }
         ]
     };
 
@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 const card = document.createElement("div");
                 card.className = "booth-card";
                 card.setAttribute("data-booth-id", booth.id);
-                
+
                 // 부스 클릭 시 해당 부스 정보 페이지로 이동하도록 링크 추가
                 card.innerHTML = `
-                    <h3>${booth.name}</h3>
+                    <h3>${booth.name} (${booth.number})</h3> <!-- 부스 번호 추가 -->
                     <p>${booth.description}</p>
                 `;
                 
