@@ -5,18 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ page_title }}</title>
-
-    <!-- 파비콘 -->
     <link rel="icon" href="{{ url_for('static', filename=meta_info['favicon']) }}" type="image/x-icon">
-
-    <!-- Open Graph 메타 태그 -->
     <meta property="og:title" content="{{ meta_info['og_title'] }}" />
     <meta property="og:description" content="{{ meta_info['og_description'] }}" />
     <meta property="og:image" content="{{ meta_info['og_image'] }}" />
     <meta property="og:url" content="{{ meta_info['og_url'] }}" />
     <meta property="og:type" content="{{ meta_info['og_type'] }}" />
-
-    <!-- 스크롤 부드럽게 -->
     <style>
         html {
             scroll-behavior: smooth;
@@ -34,47 +28,16 @@
     <div class="link-item"><a href="/schedule"><p>축제 일정 →</p></a></div>
     <div class="link-item"><a href="/qna"><p>자주 하는 질문 →</p></a></div>
 
-    <!-- 라인업 섹션 -->
-    <section id="lineup">
+    <!-- 캐러셀 섹션 -->
+    <section id="carousel-section">
         <h2>라인업</h2>
-        <div class="section-line"></div>
-        <div class="carousel">
+        <div class="carousel-container">
             <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
             <div class="carousel-track">
-                <div class="carousel-item">
-                    <a href="/lineup">
-                        <img src="{{ url_for('static', filename='images/reveal1.jpg') }}" alt="1" class="artist-image">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="/lineup">
-                        <img src="{{ url_for('static', filename='images/reveal2.jpg') }}" alt="2" class="artist-image">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="/lineup">
-                        <img src="{{ url_for('static', filename='images/reveal3.jpg') }}" alt="3" class="artist-image">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="/lineup">
-                        <img src="{{ url_for('static', filename='images/reveal1.jpg') }}" alt="4" class="artist-image">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="/lineup">
-                        <img src="{{ url_for('static', filename='images/reveal2.jpg') }}" alt="5" class="artist-image">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="/lineup">
-                        <img src="{{ url_for('static', filename='images/reveal3.jpg') }}" alt="6" class="artist-image">
-                    </a>
-                </div>
+                <!-- 이미지는 JS에서 동적으로 삽입됩니다 -->
             </div>
             <button class="carousel-next" aria-label="Next slide">&#10095;</button>
         </div>
-        <div class="section-line"></div>
     </section>
 
     <!-- 지도 섹션 -->
