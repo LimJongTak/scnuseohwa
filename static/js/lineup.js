@@ -84,9 +84,11 @@ document.addEventListener("DOMContentLoaded", function () {
             if (currentDate >= revealDate) {
                 revealSection.querySelector(".coming-soon").style.display = 'none';  // COMING SOON 숨기기
                 revealSection.querySelector(".revealed").style.display = 'block';  // 공개 텍스트 표시
+                revealSection.querySelector("img").style.display = 'block';  // 공개 이미지 표시
             } else {
                 revealSection.querySelector(".coming-soon").style.display = 'block';  // COMING SOON 표시
                 revealSection.querySelector(".revealed").style.display = 'none';  // 공개 텍스트 숨기기
+                revealSection.querySelector("img").style.display = 'none';  // 이미지 숨기기
             }
         }
     }

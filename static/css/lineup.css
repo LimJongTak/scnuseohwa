@@ -124,7 +124,7 @@
 .reveal-section {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 20px;
-    margin: 0;  /* 여백 제거 */
+    margin: 10px 0;
     border-radius: 10px;
     text-align: center;
     color: white;
@@ -138,27 +138,26 @@
     margin-bottom: 10px;
 }
 
+.reveal-section img {
+    display: none; /* 기본적으로 이미지 숨김 */
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+}
+
 .reveal-section .coming-soon {
     font-size: 1.2rem;
-    color: yellow; /* COMING SOON 텍스트 색상 */
 }
 
 .reveal-section .revealed {
+    display: none;
     font-size: 1.2rem;
-    color: green; /* 공개된 텍스트 색상 */
 }
 
 /* 반응형 스타일 */
 @media (max-width: 768px) {
     .lineup-container {
-        padding: 10px; /* 작은 화면에서 여백 조정 */
-        margin: 0 auto; /* 부모 요소가 중앙에 오도록 설정 */
-    }
-
-    .lineup-content {
-        width: 100%;
-        max-width: 900px; /* 최대 너비 설정 */
-        margin: 0 auto; /* 가운데 정렬 */
+        padding: 10px;
     }
 
     .carousel-item {
@@ -179,9 +178,8 @@
     }
 
     .reveal-section {
-        margin: 0; /* 여백 제거 */
-        padding: 20px; /* 패딩은 유지 */
-        width: 100%; /* 전체 너비를 채우도록 설정 */
-        max-width: 100%; /* 최대 너비를 100%로 설정 */
+        margin: 0 10px; /* 양쪽 여백 10px */
+        padding: 20px;
+        width: 100%;
     }
 }
