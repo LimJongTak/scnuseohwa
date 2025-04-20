@@ -45,29 +45,36 @@
 }
 
 /* 캐러셀 전체 스타일 */
-.carousel-container {
+.carousel {
     position: relative;
-    max-width: 648px;  /* 이미지 너비에 맞추기 */
+    max-width: 600px;
     margin: 20px auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* 슬라이드 트랙 */
 .carousel-track {
     display: flex;
     transition: transform 0.3s ease;
-}
-
-.carousel-item {
-    width: 648px;
-    height: 648px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* 개별 슬라이드 이미지 */
-.carousel-item-img {
     width: 100%;
-    height: 100%;
+}
+
+/* 개별 슬라이드 */
+.carousel-item {
+    min-width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.carousel-item img {
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -80,21 +87,19 @@
     background-color: rgba(255, 255, 255, 0.9);
     color: grey;
     font-size: 24px;
-    padding: 10px 16px;  /* 버튼 크기 조정 */
+    padding: 8px 12px;
     border: 1px solid grey;
     border-radius: 50%;
     cursor: pointer;
     z-index: 2;
 }
 
-/* prev 버튼 왼쪽 10px 여백 */
 .carousel-prev {
-    left: -40px;  /* 이미지의 왼쪽 밖으로 40px */
+    left: 10px;
 }
 
-/* next 버튼 오른쪽 10px 여백 */
 .carousel-next {
-    right: -40px;  /* 이미지의 오른쪽 밖으로 40px */
+    right: 10px;
 }
 
 /* 지도 섹션 */
@@ -135,13 +140,12 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 반응형 디자인 */
 @media (max-width: 768px) {
-    .carousel-container {
+    .carousel {
         max-width: 90%;
     }
 
-    .carousel-item-img {
+    .carousel-item img {
         width: 240px;
         height: 240px;
     }
@@ -149,7 +153,7 @@ html {
     .carousel-prev,
     .carousel-next {
         font-size: 20px;
-        padding: 8px 12px;
+        padding: 6px 10px;
     }
 
     #lineup h2 {
@@ -158,7 +162,7 @@ html {
 }
 
 @media (max-width: 480px) {
-    .carousel-item-img {
+    .carousel-item img {
         width: 180px;
         height: 180px;
     }
