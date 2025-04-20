@@ -5,10 +5,10 @@
     align-items: center; /* 수평 중앙 정렬 */
     justify-content: center; /* 수직 중앙 정렬 */
     padding: 20px;
-    width: 100%;
+    width: 100%; /* 부모 요소가 전체 너비를 차지하도록 설정 */
     max-width: 900px; /* 최대 너비 설정 */
-    margin: 0 auto; /* 수평 중앙 정렬 */
-    text-align: center; /* 내용도 중앙 정렬 */
+    margin: 0 auto; /* 가로로 중앙 정렬 */
+    text-align: center; /* 텍스트와 부스 이름을 중앙 정렬 */
 }
 
 .lineup-header {
@@ -138,14 +138,20 @@
 
 /* 반응형 스타일 */
 @media (max-width: 768px) {
+    .lineup-container {
+        padding: 10px; /* 작은 화면에서 여백 조정 */
+    }
+
     .carousel-item {
         min-width: 250px;
         max-width: 250px;
     }
+
     .artist-image {
         width: 180px;
         height: 180px;
     }
+
     .tab-buttons {
         flex-direction: row;
         flex-wrap: wrap;
