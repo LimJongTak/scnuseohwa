@@ -71,6 +71,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
+    // 부스(파랑), 부스(초록), 부스(주황), 푸드트럭(1존), 푸드트럭(2존) 버튼 클릭 시 active 클래스 관리
+    document.querySelectorAll(".booth-section-button").forEach(button => {
+        button.addEventListener("click", function () {
+            // 모든 버튼에서 active 클래스를 제거
+            document.querySelectorAll(".booth-section-button").forEach(btn => btn.classList.remove("active"));
+
+            // 클릭된 버튼에 active 클래스를 추가
+            this.classList.add("active");
+        });
+    });
+
     // 초기 표시
     showBoothCards("blue"); // 기본적으로 "blue" 부스를 표시
     document.getElementById("daeun-tab").classList.add("active"); // 대운동장 탭 활성화
