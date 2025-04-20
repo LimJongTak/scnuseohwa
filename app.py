@@ -12,8 +12,8 @@ booths = {
     "blue_1": {
         "name": "게임부스",
         "number": "1",
-        "description": "재미있는 체험이 가득한 부스입니다.",
-        "details": "아이부터 어른까지 모두 참여할 수 있는 다채로운 체험 활동 제공",
+        "description": "재미있는 게임이 가득한 부스입니다.",
+        "details": "아이부터 어른까지 모두 참여할 수 있는 다채로운 게임 활동",
         "image": "booth_blue.jpg"
     },
     "blue_2": {
