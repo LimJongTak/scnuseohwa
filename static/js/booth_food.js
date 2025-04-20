@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // 탭 버튼 활성화
         document.getElementById(`${type}-tab`).classList.add("active");
 
+        // 각 탭 버튼 클릭 시, 해당 부스 종류를 보이게 함
         if (type === "daeun") {
             daeun.style.display = "block";
             food.style.display = "none";
