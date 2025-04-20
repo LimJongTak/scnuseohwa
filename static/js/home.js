@@ -1,77 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const prevBtn = document.querySelector('.carousel-prev');
-    const nextBtn = document.querySelector('.carousel-next');
-    const carouselTrack = document.querySelector('.carousel-track');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    let currentIndex = 0;
-    let autoSlideInterval;
+window.onload = function() {
+    const kindWrap = document.querySelector('.kind_wrap');
+    const slider = kindWrap.querySelector('.slider');
+    const slideLis = slider.querySelectorAll('li');
+    const moveButton = kindWrap.querySelector('.arrow');
 
-    if (!prevBtn || !nextBtn || !carouselTrack || carouselItems.length === 0) {
-        console.warn("캐러셀 요소가 없습니다. home.js 실행 중단");
-        return;
-    }
+    /* ul 넓이 계산해 주기 */
+    const liWidth = slideLis[0].clientWidth;
+    const sliderWidth = liWidth * slideLis.length;
+    slider.style.width = `${sliderWidth}px`;
 
-    function updateCarousel() {
-        const itemWidth = carouselItems[0].offsetWidth;
-        carouselTrack.style.transition = 'transform 0.3s ease';
-        carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-    }
+    /* 리스너 설치하기 */
+    let currentIdx = 0; // 슬라이드 현재 번호
+    let translate = 0; // 슬라이드 위치 값
+    moveButton.addEventListener('click', moveSlide);
 
-    function showNextSlide() {
-        currentIndex = (currentIndex + 1) % carouselItems.length;
-        updateCarousel();
-    }
-
-    function showPrevSlide() {
-        currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-        updateCarousel();
-    }
-
-    prevBtn.addEventListener('click', showPrevSlide);
-    nextBtn.addEventListener('click', showNextSlide);
-
-    window.addEventListener('resize', updateCarousel);
-
-    // ✅ 자동 슬라이드 기능
-    function startAutoSlide() {
-        autoSlideInterval = setInterval(showNextSlide, 4000); // 4초마다 자동 이동
-    }
-
-    function stopAutoSlide() {
-        clearInterval(autoSlideInterval);
-    }
-
-    // 마우스 올리면 정지 / 벗어나면 재시작
-    carouselTrack.addEventListener("mouseenter", stopAutoSlide);
-    carouselTrack.addEventListener("mouseleave", startAutoSlide);
-
-    // ✅ 터치(모바일 스와이프) 기능
-    let startX = 0;
-    let isDragging = false;
-
-    carouselTrack.addEventListener("touchstart", function (e) {
-        startX = e.touches[0].clientX;
-        isDragging = true;
-        stopAutoSlide();
-    });
-
-    carouselTrack.addEventListener("touchend", function (e) {
-        if (!isDragging) return;
-        const endX = e.changedTouches[0].clientX;
-        const diffX = startX - endX;
-
-        if (Math.abs(diffX) > 50) { // 드래그 거리 조건
-            if (diffX > 0) {
-                showNextSlide(); // 왼쪽 → 다음
-            } else {
-                showPrevSlide(); // 오른쪽 → 이전
+    function moveSlide(event) {
+        event.preventDefault();
+        if (event.target.className === 'next') {
+            if (currentIdx !== slideLis.length -1) {
+                translate -= liWidth;
+                slider.style.transform = `translateX(${translate}px)`;
+                currentIdx += 1;
+            }
+        } else if (event.target.className === 'prev') {
+            if (currentIdx !== 0) {
+                translate += liWidth;
+                slider.style.transform = `translateX(${translate}px)`;
+                currentIdx -= 1;
             }
         }
-
-        isDragging = false;
-        startAutoSlide();
-    });
-
-    updateCarousel();
-    startAutoSlide(); // 시작 시 자동 슬라이드 작동
-});
+    }
+}
