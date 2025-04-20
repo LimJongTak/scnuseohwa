@@ -1,11 +1,73 @@
 /* lineup.css */
+.lineup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 수평 중앙 정렬 */
+    justify-content: center; /* 수직 중앙 정렬 */
+    padding: 20px;
+    width: 100%; /* 부모 요소가 전체 너비를 차지하도록 설정 */
+    max-width: 900px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 가로로 중앙 정렬 */
+    text-align: center; /* 텍스트와 부스 이름을 중앙 정렬 */
+}
 
-/* Carousel */
+.lineup-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.lineup-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background-color: #B0A0D7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background-color: #5A3F7D;
+}
+
+.lineup-content {
+    width: 100%;
+    text-align: center;
+}
+
+.day-content,
+.reveal-content {
+    display: none;
+}
+
+.day-content.active,
+.reveal-content.active {
+    display: block;
+}
+
 .carousel {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* 버튼과 슬라이드 내용이 좌우로 정렬되게 */
+    justify-content: center;
     max-width: 100%;
     overflow: hidden;
     margin: 0 auto;
@@ -25,7 +87,6 @@
     align-items: center;
 }
 
-/* Artist Card */
 .artist-card {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -43,7 +104,6 @@
     margin-bottom: 10px;
 }
 
-/* Prev and Next buttons */
 .carousel-prev,
 .carousel-next {
     position: absolute;
@@ -56,20 +116,11 @@
     padding: 5px 10px;
     cursor: pointer;
     z-index: 1;
-    width: 40px; /* 버튼 크기 조정 */
-    height: 40px; /* 버튼 크기 조정 */
 }
 
-/* Position buttons on left and right */
-.carousel-prev { 
-    left: 10px; /* 왼쪽에 일정한 간격 */
-}
+.carousel-prev { left: 0; }
+.carousel-next { right: 0; }
 
-.carousel-next { 
-    right: 10px; /* 오른쪽에 일정한 간격 */
-}
-
-/* Reveal Section */
 .reveal-section {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 20px;
@@ -87,6 +138,10 @@
 
 /* 반응형 스타일 */
 @media (max-width: 768px) {
+    .lineup-container {
+        padding: 10px; /* 작은 화면에서 여백 조정 */
+    }
+
     .carousel-item {
         min-width: 250px;
         max-width: 250px;
@@ -102,12 +157,5 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
-    }
-
-    /* Ensure buttons remain in place */
-    .carousel-prev,
-    .carousel-next {
-        width: 35px; /* 모바일에서 버튼 크기 조금 더 줄이기 */
-        height: 35px; /* 모바일에서 버튼 크기 조금 더 줄이기 */
     }
 }
