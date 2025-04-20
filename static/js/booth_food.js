@@ -47,8 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const food = document.getElementById("foodtruck-buttons");
 
         // 버튼 활성화 상태 관리
-        document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
-        document.querySelectorAll(".booth-section-button").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll(".tab-button").forEach(btn => {
+            btn.classList.remove("active"); // 모든 탭 버튼에서 active 제거
+        });
+        document.querySelectorAll(".booth-section-button").forEach(btn => {
+            btn.classList.remove("active"); // 모든 부스 버튼에서 active 제거
+        });
 
         // 탭 버튼 활성화
         document.getElementById(`${type}-tab`).classList.add("active");
