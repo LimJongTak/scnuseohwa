@@ -60,25 +60,24 @@
     display: flex;
     transition: transform 0.3s ease;
     width: 100%;
-    justify-content: center;  /* 모든 이미지가 중앙에 오도록 설정 */
-    align-items: center;      /* 세로 중앙 정렬 */
+    justify-content: flex-start;  /* 트랙 시작 위치에서 정렬 */
+    align-items: center;          /* 세로 중앙 정렬 */
 }
 
 /* 개별 슬라이드 */
 .carousel-item {
-    min-width: 100%;
-    flex-shrink: 0;
+    flex: 0 0 auto;            /* 슬라이드가 항상 같은 크기를 유지하도록 설정 */
     display: flex;
-    justify-content: center;  /* 이미지가 중앙에 오도록 설정 */
-    align-items: center;      /* 이미지가 세로로 중앙에 오도록 설정 */
+    justify-content: center;    /* 이미지가 중앙에 오도록 설정 */
+    align-items: center;        /* 이미지가 세로로 중앙에 오도록 설정 */
     padding: 10px 0;
 }
 
 /* 이미지 크기 조정 */
 .carousel-item img {
-    width: 100%;              /* 이미지의 크기를 부모 요소에 맞게 조정 */
-    height: auto;             /* 이미지의 비율을 유지하면서 크기 조정 */
-    object-fit: cover;        /* 이미지 비율 유지 */
+    width: 100%;                /* 이미지의 크기를 부모 요소에 맞게 조정 */
+    height: auto;               /* 이미지의 비율을 유지하면서 크기 조정 */
+    object-fit: cover;          /* 이미지 비율 유지 */
     border-radius: 10px;
 }
 
