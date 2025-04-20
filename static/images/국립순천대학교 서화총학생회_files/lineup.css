@@ -1,0 +1,153 @@
+/* lineup.css */
+
+.lineup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.lineup-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.lineup-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background-color: #B0A0D7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background-color: #5A3F7D;
+}
+
+.lineup-content {
+    width: 100%;
+}
+
+.day-content,
+.reveal-content {
+    display: none;
+}
+
+.day-content.active,
+.reveal-content.active {
+    display: block;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item {
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.artist-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-prev { left: 0; }
+.carousel-next { right: 0; }
+
+.reveal-section {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.reveal-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .carousel-item {
+        min-width: 250px;
+        max-width: 250px;
+    }
+    .artist-image {
+        width: 180px;
+        height: 180px;
+    }
+    .tab-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+}

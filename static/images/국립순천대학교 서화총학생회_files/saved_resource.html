@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://stark-crag-84064-e7d59cf2360e.herokuapp.com/ -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서화 총학생회</title>
+
+<link rel="icon" href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/static/images/favicon.ico" type="image/x-icon">
+    <!-- Open Graph 메타 태그 추가 -->
+    <meta property="og:title" content="서화 총학생회">
+    <meta property="og:description" content="90년의 동화를, 100년의 서약으로">
+    <meta property="og:image" content="https://scnuseohwa.site/images/thumbnail2.png">
+    <meta property="og:url" content="https://scnuseohwa.site">
+    <meta property="og:type" content="website">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./footer.css">  <!-- Updated link for footer styles -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./notice.css">
+    <link rel="stylesheet" href="./qna.css">
+    <link rel="stylesheet" href="./lineup.css">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./booth.css">
+    <link rel="stylesheet" href="./creator.css">
+    <link rel="stylesheet" href="./schedule.css">
+    <link rel="stylesheet" href="./booth_info.css">
+
+    <style>
+        /* 로딩 GIF 중앙 배치 */
+        #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+        #loading img {
+            width: 100px; /* 원하는 크기로 조절 */
+            height: auto;
+        }
+
+        /* 페이지 로딩 후 로딩 이미지 숨기기 */
+        body.loaded #loading {
+            display: none;
+        }
+
+        canvas#bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+
+    <script>
+        // 페이지 로딩 후 로딩 이미지 숨기기
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        // 메뉴 토글
+        function toggleMenu() {
+            const menu = document.getElementById('hamburger-menu');
+            const menuBar = document.getElementById('menu-bar');
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+                menuBar.classList.remove("open");
+            } else {
+                menu.style.display = "flex";
+                menuBar.classList.add("open");
+            }
+        }
+
+        // 콘텐츠 토글 (공지사항/QnA 공통)
+        function toggleContent(el) {
+            const allItems = document.querySelectorAll('.notice-item, .qna-item');
+            const allContents = document.querySelectorAll('.notice-content, .qna-content');
+
+            allItems.forEach(item => {
+                if (item !== el) item.classList.remove('active');
+            });
+            allContents.forEach(content => {
+                if (el.nextElementSibling !== content) content.style.display = 'none';
+            });
+
+            el.classList.toggle('active');
+            const content = el.nextElementSibling;
+            content.style.display = (content.style.display === "block") ? "none" : "block";
+        }
+
+        // 별빛 배경
+        window.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('bg-canvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            function initParticles() {
+                const total = 80;
+                particles = [];
+                for (let i = 0; i < total; i++) {
+                    particles.push({
+                        x: Math.random() * window.innerWidth,
+                        y: Math.random() * window.innerHeight,
+                        radius: Math.random() * 2 + 1,
+                        speedX: (Math.random() - 0.5) * 0.5,
+                        speedY: (Math.random() - 0.5) * 0.5,
+                        alpha: Math.random()
+                    });
+                }
+            }
+
+            function drawParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha})`;
+                    ctx.fill();
+                    p.x += p.speedX;
+                    p.y += p.speedY;
+
+                    if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+                });
+                requestAnimationFrame(drawParticles);
+            }
+
+            resizeCanvas();
+            initParticles();
+            drawParticles();
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                initParticles();
+            });
+        });
+    </script>
+</head>
+<body class="loaded vsc-initialized">
+    <div id="loading">
+        <img src="./loading.gif" alt="Loading...">
+    </div>
+    <canvas id="bg-canvas" width="430" height="911"></canvas>
+
+    <div class="container">
+        <header class="header">
+            
+            <div class="logo">
+                <img src="./logo.svg" width="350" height="350">
+            </div>
+            <div>
+                <h2>국립순천대학교 대동제</h2>
+                <h2>2025. 05. 28. (수) ~ 05. 29.(목)</h2>
+            </div>
+            
+
+            <div id="menu-bar" class="menu-bar" onclick="toggleMenu()">☰</div>
+            <nav id="hamburger-menu" class="menu-open" style="z-index: 9999;">
+                <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/">메인</a>
+                <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/notice">공지사항</a>
+                <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/booth-food">부스&amp;푸드트럭</a>
+                <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/lineup">라인업</a>
+                <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/schedule">축제 일정</a>
+                <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/qna">자주 하는 질문</a>
+                <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/creator">사이트 제작자</a>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            
+<div class="home-container">
+    <!-- 네비게이션 링크들 -->
+    <div class="link-item"><a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/#lineup"><p>라인업 →</p></a></div>
+    <div class="link-item"><a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/notice"><p>공지사항 →</p></a></div>
+    <div class="link-item"><a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/booth-food"><p>부스 &amp; 푸드트럭 →</p></a></div>
+    <div class="link-item"><a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/schedule"><p>축제 일정 →</p></a></div>
+    <div class="link-item"><a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/qna"><p>자주 하는 질문 →</p></a></div>
+
+    <!-- 라인업 섹션 -->
+    <section id="lineup">
+        <h2>라인업</h2>
+        <div class="section-line"></div>
+        <div class="carousel">
+            <button class="carousel-prev" aria-label="Previous slide">❮</button>
+            <div class="carousel-track" style="transition: transform 0.3s; transform: translateX(-1424px);">
+                <div class="carousel-item">
+                    <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/artist/apink">
+                        <img src="./apink_festa_insta.jpg" alt="에이핑크" class="artist-image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/artist/roy">
+                        <img src="./roy_festa_insta.jpg" alt="로이킴" class="artist-image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/artist/glen-chenck">
+                        <img src="./glen_cenck_festa_insta.jpg" alt="글렌체크" class="artist-image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/artist/creespy">
+                        <img src="./creespy_festa_insta.jpg" alt="크리스피" class="artist-image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/artist/kwon-eunbi">
+                        <img src="./kwon_eunbi_festa_insta.jpg" alt="권은비" class="artist-image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/artist/choi-yu-ree">
+                        <img src="./choi_yu_ree_festa_insta.jpg" alt="최유리" class="artist-image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/artist/gummy">
+                        <img src="./gummy_festa_insta.jpg" alt="거미" class="artist-image">
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-next" aria-label="Next slide">❯</button>
+        </div>
+        <div class="section-line"></div>
+    </section>
+
+    <!-- 지도 섹션 -->
+    <section id="map-section" class="map-section">
+        <h2>찾아오시는 길</h2>
+        <div style="font:normal normal 400 12px/normal dotum, sans-serif; width:350px; height:382px; color:#333; position:relative">
+            <div style="height: 350px;">
+                <a href="https://map.kakao.com/?urlX=610117.0000000014&amp;urlY=409053.00000000047&amp;itemId=17569957&amp;q=%EA%B5%AD%EB%A6%BD%EC%88%9C%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90%20%EC%9A%B4%EB%8F%99%EC%9E%A5&amp;srcid=17569957&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank">
+                    <img class="map" src="./68cab9f228257c7fed8291db7958a3e8db46be16ae71258357e3ec15e7574b3c" width="348px" height="348px" style="border:1px solid #ccc;">
+                </a>
+            </div>
+            <div style="overflow: hidden; padding: 7px 11px; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 0 0 2px 2px; background-color: #f9f9f9;">
+                <a href="https://map.kakao.com/" target="_blank" style="float: left;">
+                    <img src="./logo_kakaomap.png" width="72" height="16" alt="카카오맵" style="display:block;width:72px;height:16px">
+                </a>
+                <div style="float: right; font-size: 11px;">
+                    <a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;srcid=17569957&amp;confirmid=17569957&amp;q=%EA%B5%AD%EB%A6%BD%EC%88%9C%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90%20%EC%9A%B4%EB%8F%99%EC%9E%A5&amp;rv=on" style="margin-right: 8px; text-decoration: none;">로드뷰</a>
+                    <a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;eName=%EA%B5%AD%EB%A6%BD%EC%88%9C%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90%20%EC%9A%B4%EB%8F%99%EC%9E%A5&amp;eX=610117.0000000014&amp;eY=409053.00000000047" style="margin-right: 8px; text-decoration: none;">길찾기</a>
+                    <a target="_blank" href="https://map.kakao.com/?map_type=TYPE_MAP&amp;from=roughmap&amp;srcid=17569957&amp;itemId=17569957&amp;q=%EA%B5%AD%EB%A6%BD%EC%88%9C%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90%20%EC%9A%B4%EB%8F%99%EC%9E%A5&amp;urlX=610117.0000000014&amp;urlY=409053.00000000047" style="text-decoration: none;">지도 크게 보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="./home.js.다운로드"></script>
+
+        </div>
+
+        <div class="footer-container">
+            <div class="footer-row">
+                <p class="footer-text">COPYRIGHT Ⓒ 2025 국립순천대학교 서화총학생회</p>
+            </div>
+            <div class="footer-row">
+                <a href="https://stark-crag-84064-e7d59cf2360e.herokuapp.com/creator" class="footer-button-inline">사이트 제작자</a>
+            </div>
+        </div>
+    </div>
+
+</body></html>
