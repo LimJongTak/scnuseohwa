@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextBtn = document.querySelector('.carousel-next');
     const carouselTrack = document.querySelector('.carousel-track');
     let currentIndex = 0;
+    
+    // 이미지 경로는 HTML 템플릿에서 이미 동적으로 삽입된 상태로 처리합니다.
     const images = [
-        "{{ url_for('static', filename='images/reveal1.jpg') }}",
-        "{{ url_for('static', filename='images/reveal2.jpg') }}",
-        "{{ url_for('static', filename='images/reveal3.jpg') }}",
-        "{{ url_for('static', filename='images/reveal1.jpg') }}",
-        "{{ url_for('static', filename='images/reveal2.jpg') }}",
-        "{{ url_for('static', filename='images/reveal3.jpg') }}"
+        document.querySelector("#reveal1").src,
+        document.querySelector("#reveal2").src,
+        document.querySelector("#reveal3").src
     ];
+    
     let autoSlideInterval;
 
     // 이미지 업데이트 함수
