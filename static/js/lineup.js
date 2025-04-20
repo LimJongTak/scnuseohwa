@@ -68,9 +68,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 공개 날짜 설정 (예시: 1차 공개 2025-04-28, 2차 공개 2025-05-05, 3차 공개 2025-05-12)
     const revealDates = {
-        "reveal1": new Date("2025-04-28T10:00:00"),
+        "reveal1": new Date("2025-04-21T00:43:00"),
         "reveal2": new Date("2025-05-05T10:00:00"),
         "reveal3": new Date("2025-05-12T10:00:00")
+    };
+
+    // 1일 뒤 이미지 변경 날짜 설정
+    const revealChangeDates = {
+        "reveal1": new Date("2025-04-21T00:45:00"),
+        "reveal2": new Date("2025-05-06T10:00:00"),
+        "reveal3": new Date("2025-05-13T10:00:00")
     };
 
     function updateRevealSections() {
@@ -80,11 +87,25 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let key in revealDates) {
             const revealSection = document.getElementById(key);
             const revealDate = revealDates[key];
+            const changeDate = revealChangeDates[key];
+            const image = revealSection.querySelector("img");
 
             if (currentDate >= revealDate) {
                 revealSection.querySelector(".coming-soon").style.display = 'none';  // COMING SOON 숨기기
                 revealSection.querySelector(".revealed").style.display = 'block';  // 공개 텍스트 표시
                 revealSection.querySelector("img").style.display = 'block';  // 공개 이미지 표시
+
+                // 1일 뒤 이미지 변경
+                if (currentDate >= changeDate) {
+                    // 이미지가 1일 뒤에 변경됨
+                    if (key === "reveal1") {
+                        image.src = "{{ url_for('static', filename='images/reveal4.jpg') }}";
+                    } else if (key === "reveal2") {
+                        image.src = "{{ url_for('static', filename='images/reveal5.jpg') }}";
+                    } else if (key === "reveal3") {
+                        image.src = "{{ url_for('static', filename='images/reveal6.jpg') }}";
+                    }
+                }
             } else {
                 revealSection.querySelector(".coming-soon").style.display = 'block';  // COMING SOON 표시
                 revealSection.querySelector(".revealed").style.display = 'none';  // 공개 텍스트 숨기기
