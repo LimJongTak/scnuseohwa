@@ -52,7 +52,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;  /* 중앙 정렬 */
+    justify-content: center;  /* 캐러셀 트랙을 중앙에 정렬 */
 }
 
 /* 슬라이드 트랙 */
@@ -74,6 +74,7 @@
     padding: 10px 0;
 }
 
+/* 이미지 크기 조정 */
 .carousel-item img {
     width: 100%;              /* 이미지의 크기를 부모 요소에 맞게 조정 */
     height: auto;             /* 이미지의 비율을 유지하면서 크기 조정 */
