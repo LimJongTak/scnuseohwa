@@ -129,9 +129,9 @@
     text-align: center;
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    max-width: 100%; /* 부모 요소에 맞는 너비 */
-    width: 100%; /* 너비를 100%로 설정 */
-    box-sizing: border-box; /* padding 포함 */
+    width: 100%; /* 부모 요소에 맞춰 좌우 여백을 고려한 너비 설정 */
+    max-width: 100%; /* 최대 너비를 100%로 설정 */
+    box-sizing: border-box; /* padding을 포함하여 계산 */
 }
 
 .reveal-section h2 {
