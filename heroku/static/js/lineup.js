@@ -34,25 +34,33 @@ document.addEventListener("DOMContentLoaded", function () {
         day2Content.classList.remove("active");
     });
 
-    // 카드 전환 기능 (Day 1, 2 공통)
-    let currentCardIndex = 0; // 현재 보이는 카드의 인덱스
-    const prevButton = document.querySelector('.carousel-prev');
-    const nextButton = document.querySelector('.carousel-next');
-    const cards = document.querySelectorAll('.card'); // 모든 카드 요소들
+    // Reveal 섹션 이미지 슬라이드 기능 (1DAY & 2DAY 공통)
+    function createCarousel(tabContentId) {
+        const content = document.getElementById(tabContentId); // 1DAY 또는 2DAY 콘텐츠
+        const cards = content.querySelectorAll('.card');
+        let currentCardIndex = 0; // 현재 보이는 카드의 인덱스
 
-    // prev 버튼 클릭 시 카드 하나씩 뒤로 이동
-    prevButton.addEventListener('click', () => {
-        cards[currentCardIndex].style.display = 'none'; // 현재 카드 숨기기
-        currentCardIndex = (currentCardIndex - 1 + cards.length) % cards.length; // 인덱스를 1 감소
-        cards[currentCardIndex].style.display = 'block'; // 새 카드 보이기
-    });
+        const prevButton = content.querySelector('.carousel-prev');
+        const nextButton = content.querySelector('.carousel-next');
 
-    // next 버튼 클릭 시 카드 하나씩 앞으로 이동
-    nextButton.addEventListener('click', () => {
-        cards[currentCardIndex].style.display = 'none'; // 현재 카드 숨기기
-        currentCardIndex = (currentCardIndex + 1) % cards.length; // 인덱스를 1 증가
-        cards[currentCardIndex].style.display = 'block'; // 새 카드 보이기
-    });
+        // prev 버튼 클릭 시 카드 하나씩 뒤로 이동
+        prevButton.addEventListener('click', () => {
+            cards[currentCardIndex].style.display = 'none'; // 현재 카드 숨기기
+            currentCardIndex = (currentCardIndex - 1 + cards.length) % cards.length; // 인덱스를 1 감소
+            cards[currentCardIndex].style.display = 'block'; // 새 카드 보이기
+        });
+
+        // next 버튼 클릭 시 카드 하나씩 앞으로 이동
+        nextButton.addEventListener('click', () => {
+            cards[currentCardIndex].style.display = 'none'; // 현재 카드 숨기기
+            currentCardIndex = (currentCardIndex + 1) % cards.length; // 인덱스를 1 증가
+            cards[currentCardIndex].style.display = 'block'; // 새 카드 보이기
+        });
+    }
+
+    // 1DAY, 2DAY 각각에 대해 카드 슬라이드 기능 적용
+    createCarousel('day1-content');
+    createCarousel('day2-content');
 
     // 공개 날짜 처리
     const revealDates = {
