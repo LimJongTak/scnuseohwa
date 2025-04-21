@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const day2Content = document.getElementById("day2-content");
     const revealContent = document.getElementById("reveal-content");
 
+    // Day 1 탭 클릭 시 Day 1 콘텐츠 표시
     day1Tab.addEventListener("click", () => {
         day1Tab.classList.add("active");
         day2Tab.classList.remove("active");
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         revealContent.classList.remove("active");
     });
 
+    // Day 2 탭 클릭 시 Day 2 콘텐츠 표시
     day2Tab.addEventListener("click", () => {
         day2Tab.classList.add("active");
         day1Tab.classList.remove("active");
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         revealContent.classList.remove("active");
     });
 
+    // Reveal 탭 클릭 시 공개된 콘텐츠 표시
     revealTab.addEventListener("click", () => {
         revealTab.classList.add("active");
         day1Tab.classList.remove("active");
@@ -34,34 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         day2Content.classList.remove("active");
     });
 
-    // 캐러셀 기능 (Day 1, 2 공통)
-    const carousels = document.querySelectorAll(".carousel");
-
-    carousels.forEach((carousel) => {
-        const track = carousel.querySelector(".carousel-track");
-        const items = carousel.querySelectorAll(".carousel-item");
-        const prev = carousel.querySelector(".carousel-prev");
-        const next = carousel.querySelector(".carousel-next");
-        let index = 0;
-
-        function updateCarousel() {
-            const width = items[0].offsetWidth;
-            track.style.transform = `translateX(-${index * width}px)`;
-        }
-
-        next.addEventListener("click", () => {
-            index = (index + 1) % items.length;
-            updateCarousel();
-        });
-
-        prev.addEventListener("click", () => {
-            index = (index - 1 + items.length) % items.length;
-            updateCarousel();
-        });
-
-        window.addEventListener("resize", updateCarousel);
-        updateCarousel();
-    });
+    // 캐러셀 기능 제거
 
     // 공개 날짜 처리
     const revealSections = document.querySelectorAll(".reveal-section");
