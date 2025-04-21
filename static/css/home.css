@@ -25,19 +25,19 @@
 }
 
 /* 라인업 섹션 */
-#lineup1 {
+.lineup1 {
     margin-top: 30px;
     text-align: center;
     width: 100%;
 }
 
-#lineup1 h2 {
+.lineup1 h2 {
     font-size: 28px;
     font-weight: bold;
     color: white;
 }
 
-#lineup1 .section-line {
+.lineup1 .section-line {
     width: 50%;
     height: 2px;
     background-color: white;
@@ -141,7 +141,7 @@ html {
         padding: 6px 10px;
     }
 
-    #lineup h2 {
+    .lineup1 h2 {
         font-size: 24px;
     }
 }
@@ -162,7 +162,7 @@ html {
         font-size: 18px;
     }
 
-    #lineup h2,
+    #lineup1 h2,
     #map-section h2 {
         font-size: 20px;
     }
