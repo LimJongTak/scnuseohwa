@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const day2Content = document.getElementById("day2-content");
     const revealContent = document.getElementById("reveal-content");
 
-    // Day 1 탭 클릭 시 Day 1 콘텐츠 표시
     day1Tab.addEventListener("click", () => {
         day1Tab.classList.add("active");
         day2Tab.classList.remove("active");
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         revealContent.classList.remove("active");
     });
 
-    // Day 2 탭 클릭 시 Day 2 콘텐츠 표시
     day2Tab.addEventListener("click", () => {
         day2Tab.classList.add("active");
         day1Tab.classList.remove("active");
@@ -27,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
         revealContent.classList.remove("active");
     });
 
-    // Reveal 탭 클릭 시 공개된 콘텐츠 표시
     revealTab.addEventListener("click", () => {
         revealTab.classList.add("active");
         day1Tab.classList.remove("active");
@@ -37,12 +34,29 @@ document.addEventListener("DOMContentLoaded", function () {
         day2Content.classList.remove("active");
     });
 
-    // 캐러셀 기능 제거
+    // Reveal 섹션 이미지 슬라이드 기능
+    const revealSections = document.querySelectorAll(".reveal-section");
+    let currentIndex = 0; // 현재 보이는 이미지의 인덱스
+
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    const images = document.querySelectorAll('.reveal-section img'); // 모든 이미지 요소들
+
+    // prev 버튼 클릭 시 이미지 하나씩 뒤로 이동
+    prevButton.addEventListener('click', () => {
+        images[currentIndex].style.display = 'none'; // 현재 이미지 숨기기
+        currentIndex = (currentIndex - 1 + images.length) % images.length; // 인덱스를 1 감소
+        images[currentIndex].style.display = 'block'; // 새 이미지 보이기
+    });
+
+    // next 버튼 클릭 시 이미지 하나씩 앞으로 이동
+    nextButton.addEventListener('click', () => {
+        images[currentIndex].style.display = 'none'; // 현재 이미지 숨기기
+        currentIndex = (currentIndex + 1) % images.length; // 인덱스를 1 증가
+        images[currentIndex].style.display = 'block'; // 새 이미지 보이기
+    });
 
     // 공개 날짜 처리
-    const revealSections = document.querySelectorAll(".reveal-section");
-
-    // 공개 날짜 설정 (예시: 1차 공개 2025-04-28, 2차 공개 2025-05-05, 3차 공개 2025-05-12)
     const revealDates = {
         "reveal1": new Date("2025-04-28T10:00:00"),
         "reveal2": new Date("2025-05-05T10:00:00"),
@@ -60,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const currentDate = new Date();
         console.log("Current Date: ", currentDate);  // 콘솔로 현재 시간 확인
 
-        // 공개 날짜에 맞춰 공개 상태를 업데이트
         for (let key in revealDates) {
             const revealSection = document.getElementById(key);
             const revealDate = revealDates[key];
@@ -74,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 revealSection.querySelector(".revealed").style.display = 'block';  // 공개 텍스트 표시
                 image.style.display = 'block';  // 공개 이미지 표시
 
-                // 1일 뒤 이미지 변경
                 if (currentDate >= changeDate) {
                     // 이미지가 1일 뒤에 변경됨
                     if (key === "reveal1") {

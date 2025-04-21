@@ -150,6 +150,7 @@
     display: none;
 }
 
+/* 반응형 스타일 */
 @media (max-width: 768px) {
     .lineup-container {
         padding: 10px;
