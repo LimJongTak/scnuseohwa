@@ -35,46 +35,47 @@
     <div class="link-item"><a href="/qna"><p>자주 하는 질문 →</p></a></div>
 
     <!-- 라인업 섹션 -->
-    <div class="carousel-container">
-        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
-        <div class="carousel-track">
-            <div class="carousel-item">
-                <a href="/lineup">
-                    <img src="{{ url_for('static', filename='images/reveal1.jpg') }}" alt="1" class="artist-image">
-                </a>
+    <section id="lineup">
+        <h2>라인업</h2>
+        <div class="section-line"></div>
+        <div class="carousel">
+            <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+            <div class="carousel-track">
+                <div class="carousel-item">
+                    <a href="/lineup">
+                        <img src="{{ url_for('static', filename='images/reveal1.jpg') }}" alt="1" class="artist-image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/lineup">
+                        <img src="{{ url_for('static', filename='images/reveal2.jpg') }}" alt="2" class="artist-image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/lineup">
+                        <img src="{{ url_for('static', filename='images/reveal3.jpg') }}" alt="3" class="artist-image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/lineup">
+                        <img src="{{ url_for('static', filename='images/reveal1.jpg') }}" alt="4" class="artist-image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/lineup">
+                        <img src="{{ url_for('static', filename='images/reveal2.jpg') }}" alt="5" class="artist-image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/lineup">
+                        <img src="{{ url_for('static', filename='images/reveal3.jpg') }}" alt="6" class="artist-image">
+                    </a>
+                </div>
             </div>
-            <div class="carousel-item">
-                <a href="/lineup">
-                    <img src="{{ url_for('static', filename='images/reveal2.jpg') }}" alt="2" class="artist-image">
-                </a>
-            </div>
-            <div class="carousel-item">
-                <a href="/lineup">
-                    <img src="{{ url_for('static', filename='images/reveal3.jpg') }}" alt="3" class="artist-image">
-                </a>
-            </div>
-            <div class="carousel-item">
-                <a href="/lineup">
-                    <img src="{{ url_for('static', filename='images/reveal1.jpg') }}" alt="4" class="artist-image">
-                </a>
-            </div>
-            <div class="carousel-item">
-                <a href="/lineup">
-                    <img src="{{ url_for('static', filename='images/reveal2.jpg') }}" alt="5" class="artist-image">
-                </a>
-            </div>
-            <div class="carousel-item">
-                <a href="/lineup">
-                    <img src="{{ url_for('static', filename='images/reveal3.jpg') }}" alt="6" class="artist-image">
-                </a>
-            </div>
+            <button class="carousel-next" aria-label="Next slide">&#10095;</button>
         </div>
-        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
-    </div>
-
-    <div class="section-line"></div>
-</section>
-</div>
+        <div class="section-line"></div>
+    </section>
 
     <!-- 지도 섹션 -->
     <section id="map-section" class="map-section">
