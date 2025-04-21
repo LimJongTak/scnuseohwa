@@ -58,7 +58,7 @@
 /* 슬라이드 트랙 */
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* 부드러운 전환 효과 */
+    transition: transform 0.5s ease-in-out;
     width: 100%;
 }
 
@@ -105,7 +105,7 @@
 
 /* 활성화된 아이템에 대한 스타일 */
 .carousel-item.active {
-    transform: scale(1.05); /* 활성화된 이미지 확대 */
+    transform: scale(1.05);
     opacity: 1;
 }
 
