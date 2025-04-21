@@ -25,19 +25,19 @@
 }
 
 /* 라인업 섹션 */
-#lineup {
+#lineup1 {
     margin-top: 30px;
     text-align: center;
     width: 100%;
 }
 
-#lineup h2 {
+#lineup1 h2 {
     font-size: 28px;
     font-weight: bold;
     color: white;
 }
 
-#lineup .section-line {
+#lineup1 .section-line {
     width: 50%;
     height: 2px;
     background-color: white;
