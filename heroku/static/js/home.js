@@ -38,20 +38,30 @@ document.addEventListener("DOMContentLoaded", function () {
     // 지정된 시간에 맞춰 이미지 슬라이드를 변경
     const revealDates = {
         "reveal1": new Date("2025-04-22T00:00:00"),
-        "reveal2": new Date("2025-05-05T10:00:00"),
-        "reveal3": new Date("2025-05-12T10:00:00"),
-        "reveal4": new Date("2025-05-19T10:00:00"),
-        "reveal5": new Date("2025-05-26T10:00:00"),
-        "reveal6": new Date("2025-06-02T10:00:00")
+        "reveal2": new Date("2025-04-22T00:00:00"),
+        "reveal3": new Date("2025-04-22T00:00:00"),
+        "reveal4": new Date("2025-04-22T00:00:00"),
+        "reveal5": new Date("2025-04-22T00:00:00"),
+        "reveal6": new Date("2025-04-22T00:00:00")
     };
 
     const revealChangeDates = {
-        "reveal1": new Date("2025-04-22T02:31:00"),
-        "reveal2": new Date("2025-05-06T10:00:00"),
-        "reveal3": new Date("2025-05-13T10:00:00"),
+        "reveal1": new Date("2025-04-22T02:36:00"),
+        "reveal2": new Date("2025-04-22T02:37:00"),
+        "reveal3": new Date("2025-04-22T02:38:00"),
         "reveal4": new Date("2025-05-20T10:00:00"),
         "reveal5": new Date("2025-05-27T10:00:00"),
         "reveal6": new Date("2025-06-03T10:00:00")
+    };
+
+    // 1일 뒤 이미지 변경 (또는 추가적인 이미지 변경)
+    const secondImageChangeDates = {
+        "reveal1": new Date("2025-04-22T02:40:00"),
+        "reveal2": new Date("2025-04-22T02:41:00"),
+        "reveal3": new Date("2025-04-22T02:42:00"),
+        "reveal4": new Date("2025-05-21T10:00:00"),
+        "reveal5": new Date("2025-05-28T10:00:00"),
+        "reveal6": new Date("2025-06-04T10:00:00")
     };
 
     // 현재 시간을 기준으로 이미지 변경
@@ -62,14 +72,15 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let key in revealDates) {
             const revealDate = revealDates[key];
             const changeDate = revealChangeDates[key];
+            const secondChangeDate = secondImageChangeDates[key];
             const revealSection = document.getElementById(key); // 각 reveal 섹션 선택
             const image = revealSection.querySelector("img"); // 해당 섹션 내 이미지 선택
 
-            console.log(`${key} - Reveal Date: ${revealDate}, Change Date: ${changeDate}`);  // 각 날짜 확인
+            console.log(`${key} - Reveal Date: ${revealDate}, Change Date: ${changeDate}, Second Change Date: ${secondChangeDate}`);  // 각 날짜 확인
 
             if (currentDate >= revealDate) {
                 if (currentDate >= changeDate) {
-                    // 1일 뒤에 이미지 변경
+                    // 첫 번째 이미지 변경
                     if (key === "reveal1") {
                         image.src = "static/images/reveal4.jpg";  // 이미지 변경
                     } else if (key === "reveal2") {
@@ -84,6 +95,23 @@ document.addEventListener("DOMContentLoaded", function () {
                         image.src = "static/images/reveal9.jpg";  // 이미지 변경
                     }
                     console.log(`Image changed for ${key}: `, image.src);  // 이미지 경로 확인
+                }
+                // 두 번째 이미지 변경
+                if (currentDate >= secondChangeDate) {
+                    if (key === "reveal1") {
+                        image.src = "static/images/reveal10.jpg";  // 두 번째 이미지 변경
+                    } else if (key === "reveal2") {
+                        image.src = "static/images/reveal11.jpg";  // 두 번째 이미지 변경
+                    } else if (key === "reveal3") {
+                        image.src = "static/images/reveal12.jpg";  // 두 번째 이미지 변경
+                    } else if (key === "reveal4") {
+                        image.src = "static/images/reveal13.jpg";  // 두 번째 이미지 변경
+                    } else if (key === "reveal5") {
+                        image.src = "static/images/reveal14.jpg";  // 두 번째 이미지 변경
+                    } else if (key === "reveal6") {
+                        image.src = "static/images/reveal15.jpg";  // 두 번째 이미지 변경
+                    }
+                    console.log(`Second Image changed for ${key}: `, image.src);  // 두 번째 이미지 경로 확인
                 }
             }
         }
