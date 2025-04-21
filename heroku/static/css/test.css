@@ -4,15 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background: transparent;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
 /* 슬라이더 컨테이너 */
 .container {
     width: 100%;
