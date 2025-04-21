@@ -34,26 +34,24 @@ document.addEventListener("DOMContentLoaded", function () {
         day2Content.classList.remove("active");
     });
 
-    // Reveal 섹션 이미지 슬라이드 기능
-    const revealSections = document.querySelectorAll(".reveal-section");
-    let currentIndex = 0; // 현재 보이는 이미지의 인덱스
-
+    // 카드 전환 기능 (Day 1, 2 공통)
+    let currentCardIndex = 0; // 현재 보이는 카드의 인덱스
     const prevButton = document.querySelector('.carousel-prev');
     const nextButton = document.querySelector('.carousel-next');
-    const images = document.querySelectorAll('.reveal-section img'); // 모든 이미지 요소들
+    const cards = document.querySelectorAll('.card'); // 모든 카드 요소들
 
-    // prev 버튼 클릭 시 이미지 하나씩 뒤로 이동
+    // prev 버튼 클릭 시 카드 하나씩 뒤로 이동
     prevButton.addEventListener('click', () => {
-        images[currentIndex].style.display = 'none'; // 현재 이미지 숨기기
-        currentIndex = (currentIndex - 1 + images.length) % images.length; // 인덱스를 1 감소
-        images[currentIndex].style.display = 'block'; // 새 이미지 보이기
+        cards[currentCardIndex].style.display = 'none'; // 현재 카드 숨기기
+        currentCardIndex = (currentCardIndex - 1 + cards.length) % cards.length; // 인덱스를 1 감소
+        cards[currentCardIndex].style.display = 'block'; // 새 카드 보이기
     });
 
-    // next 버튼 클릭 시 이미지 하나씩 앞으로 이동
+    // next 버튼 클릭 시 카드 하나씩 앞으로 이동
     nextButton.addEventListener('click', () => {
-        images[currentIndex].style.display = 'none'; // 현재 이미지 숨기기
-        currentIndex = (currentIndex + 1) % images.length; // 인덱스를 1 증가
-        images[currentIndex].style.display = 'block'; // 새 이미지 보이기
+        cards[currentCardIndex].style.display = 'none'; // 현재 카드 숨기기
+        currentCardIndex = (currentCardIndex + 1) % cards.length; // 인덱스를 1 증가
+        cards[currentCardIndex].style.display = 'block'; // 새 카드 보이기
     });
 
     // 공개 날짜 처리
