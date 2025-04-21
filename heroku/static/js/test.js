@@ -1,38 +1,21 @@
-let next = document.querySelector('.next');
-let prev = document.querySelector('.prev');
-let track = document.querySelector('.carousel-track');
-let items = document.querySelectorAll('.carousel-item');
-let interval;
+let next = document.querySelector('.carousel-next');
+let prev = document.querySelector('.carousel-prev');
 
-// 버튼 클릭 시 슬라이드 전환
+// 자동 슬라이드 전환 설정 (4초마다)
+setInterval(function() {
+    let items = document.querySelectorAll('.carousel-item');
+    let firstItem = items[0];
+    document.querySelector('.carousel-track').appendChild(firstItem);
+}, 4000); // 4초마다 전환
+
 next.addEventListener('click', function() {
-    track.appendChild(items[0]); // 마지막 아이템을 첫 번째로 이동
-    updateActiveClass();
-    clearInterval(interval);
-    startAutoSlide();
+    let items = document.querySelectorAll('.carousel-item');
+    let firstItem = items[0];
+    document.querySelector('.carousel-track').appendChild(firstItem);  // 마지막 아이템을 첫 번째로 이동
 });
 
 prev.addEventListener('click', function() {
-    track.prepend(items[items.length - 1]); // 첫 번째 아이템을 마지막으로 이동
-    updateActiveClass();
-    clearInterval(interval);
-    startAutoSlide();
+    let items = document.querySelectorAll('.carousel-item');
+    let lastItem = items[items.length - 1];
+    document.querySelector('.carousel-track').prepend(lastItem); // 첫 번째 아이템을 마지막으로 이동
 });
-
-// 4초마다 자동으로 이미지 슬라이드 전환
-function startAutoSlide() {
-    interval = setInterval(function() {
-        track.appendChild(items[0]);
-        updateActiveClass();
-    }, 4000);
-}
-
-// 자동 슬라이드 전환 시작
-startAutoSlide();
-
-// 활성화된 클래스 추가 (애니메이션 효과 적용)
-function updateActiveClass() {
-    items = document.querySelectorAll('.carousel-item'); 
-    items.forEach(item => item.classList.remove('active'));
-    items[0].classList.add('active');
-}

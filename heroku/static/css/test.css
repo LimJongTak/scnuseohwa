@@ -1,3 +1,4 @@
+/* 전체 스타일 */
 * {
     margin: 0;
     padding: 0;
@@ -13,31 +14,113 @@ body {
     min-height: 100vh;
 }
 
+/* 슬라이더 컨테이너 */
 .container {
     width: 100%;
     max-width: 1000px;
     height: auto;
-    aspect-ratio: 5 / 3;
+    aspect-ratio: 5 / 3; /* 예: 1000x600 비율 유지 */
     background: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
     position: relative;
     overflow: hidden;
 }
 
+/* 슬라이드 항목 */
 .container .slide .item {
-    width: 200px;
-    height: 300px;
+    width: 100%; /* 화면 크기에 맞게 100% */
+    height: 100%; /* 슬라이더 크기 100% */
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
     border-radius: 20px;
     box-shadow: 0 30px 50px #505050;
-    background-position: 50% 50%;
+    background-position: center center;
     background-size: cover;
     display: inline-block;
-    transition: 0.5s;
+    transition: transform 0.5s ease;
 }
 
+/* 슬라이드 전환 스타일 */
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .item:nth-child(3) {
+    left: 50%;
+}
+.slide .item:nth-child(4) {
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5) {
+    left: calc(50% + 440px);
+}
+
+.slide .item:nth-child(n + 6) {
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+/* 텍스트 내용 */
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+.slide .item:nth-child(2) .content {
+    display: block;
+}
+
+.content .name {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+/* 버튼 */
 .button {
     width: 100%;
     text-align: center;
@@ -61,9 +144,10 @@ body {
     color: #fff;
 }
 
+/* 반응형 스타일 */
 @media (max-width: 768px) {
     .container {
-        aspect-ratio: 2 / 1;
+        aspect-ratio: 2 / 1; /* 더 세로로 압축된 비율 */
     }
 
     .container .slide .item {
