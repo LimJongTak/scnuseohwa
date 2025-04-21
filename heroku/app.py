@@ -80,10 +80,6 @@ def booth_info(booth_id):
 def notice():
     return render_template("notice.html", page_title="공지사항", show_header_info=False)
 
-@app.route('/lineupinfo')
-def lineupinfo():
-    return render_template("lineupinfo.html", page_title="라인업 공개", show_header_info=False)
-
 # 부스 & 푸드트럭 페이지
 @app.route('/booth-food')
 def booth_food():
