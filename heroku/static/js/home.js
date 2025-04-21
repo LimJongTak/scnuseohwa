@@ -11,28 +11,33 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
+    // 캐러셀 슬라이드 업데이트 함수
     function updateCarousel() {
         const itemWidth = carouselItems[0].offsetWidth;
         carouselTrack.style.transition = 'transform 0.3s ease';
         carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
     }
 
+    // 다음 슬라이드로 이동
     function showNextSlide() {
         currentIndex = (currentIndex + 1) % carouselItems.length;
         updateCarousel();
     }
 
+    // 이전 슬라이드로 이동
     function showPrevSlide() {
         currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
         updateCarousel();
     }
 
+    // 이전/다음 버튼 클릭 이벤트
     prevBtn.addEventListener('click', showPrevSlide);
     nextBtn.addEventListener('click', showNextSlide);
 
+    // 창 크기 변경 시 캐러셀 업데이트
     window.addEventListener('resize', updateCarousel);
 
-    // ✅ 자동 슬라이드 기능
+    // 자동 슬라이드 기능
     function startAutoSlide() {
         autoSlideInterval = setInterval(showNextSlide, 4000); // 4초마다 자동 이동
     }
@@ -41,11 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
         clearInterval(autoSlideInterval);
     }
 
-    // 마우스 올리면 정지 / 벗어나면 재시작
+    // 마우스 올리면 자동 슬라이드 멈추고, 벗어나면 다시 시작
     carouselTrack.addEventListener("mouseenter", stopAutoSlide);
     carouselTrack.addEventListener("mouseleave", startAutoSlide);
 
-    // ✅ 터치(모바일 스와이프) 기능
+    // 터치(모바일 스와이프) 기능
     let startX = 0;
     let isDragging = false;
 
@@ -72,6 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
         startAutoSlide();
     });
 
+    // 페이지 로딩 후 자동 슬라이드 시작
     updateCarousel();
-    startAutoSlide(); // 시작 시 자동 슬라이드 작동
+    startAutoSlide(); // 자동 슬라이드 시작
+
 });
