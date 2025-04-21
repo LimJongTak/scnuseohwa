@@ -14,24 +14,24 @@
     </header>
 
     <div class="lineup-content">
-        <!-- Day 1 Section with Cards -->
+        <!-- Day 1 Section -->
         <div id="day1-content" class="day-content active">
             <div class="card-container">
-                <div class="card">
+                <div class="card" style="display: block;">
                     <img src="{{ url_for('static', filename='images/reveal1.jpg') }}" class="artist-image" alt="유재석">
                     <div class="card-content">
                         <h2>추후 공개 예정</h2>
                         <p>아티스트 정보</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" style="display: none;">
                     <img src="{{ url_for('static', filename='images/reveal2.jpg') }}" class="artist-image" alt="강호동">
                     <div class="card-content">
                         <h2>추후 공개 예정</h2>
                         <p>아티스트 정보</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" style="display: none;">
                     <img src="{{ url_for('static', filename='images/reveal3.jpg') }}" class="artist-image" alt="박명수">
                     <div class="card-content">
                         <h2>추후 공개 예정</h2>
@@ -39,28 +39,28 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-prev">&#10094; Prev</button>
-            <button class="carousel-next">Next &#10095;</button>
+            <button class="prev">Previous</button>
+            <button class="next">Next</button>
         </div>
 
-        <!-- Day 2 Section with Cards -->
+        <!-- Day 2 Section -->
         <div id="day2-content" class="day-content">
             <div class="card-container">
-                <div class="card">
+                <div class="card" style="display: block;">
                     <img src="{{ url_for('static', filename='images/reveal1.jpg') }}" class="artist-image" alt="이경규">
                     <div class="card-content">
                         <h2>추후 공개 예정</h2>
                         <p>아티스트 정보</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" style="display: none;">
                     <img src="{{ url_for('static', filename='images/reveal2.jpg') }}" class="artist-image" alt="신동엽">
                     <div class="card-content">
                         <h2>추후 공개 예정</h2>
                         <p>아티스트 정보</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" style="display: none;">
                     <img src="{{ url_for('static', filename='images/reveal3.jpg') }}" class="artist-image" alt="김구라">
                     <div class="card-content">
                         <h2>추후 공개 예정</h2>
@@ -68,8 +68,8 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-prev">&#10094; Prev</button>
-            <button class="carousel-next">Next &#10095;</button>
+            <button class="prev">Previous</button>
+            <button class="next">Next</button>
         </div>
 
         <!-- Reveal Section -->
