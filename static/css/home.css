@@ -80,13 +80,15 @@
 }
 
 .carousel-item img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* 이미지 크기 제한 */
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.6s;
 }
 
+/* 캐러셀 버튼 */
 .carousel-prev, .carousel-next {
     position: absolute;
     top: 50%;
