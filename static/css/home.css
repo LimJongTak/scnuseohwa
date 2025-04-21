@@ -55,14 +55,13 @@
     justify-content: center;
 }
 
-/* 슬라이드 트랙 */
 .carousel-track {
     display: flex;
     transition: transform 0.3s ease;
     width: 100%;
+    transform-style: preserve-3d;
 }
 
-/* 개별 슬라이드 */
 .carousel-item {
     min-width: 100%;
     flex-shrink: 0;
@@ -70,6 +69,14 @@
     justify-content: center;
     align-items: center;
     padding: 10px 0;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+/* 카드 회전 효과 */
+.carousel-item:nth-child(odd) {
+    transform: rotateY(180deg);
 }
 
 .carousel-item img {
@@ -77,9 +84,9 @@
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.6s;
 }
 
-/* 캐러셀 버튼 */
 .carousel-prev, .carousel-next {
     position: absolute;
     top: 50%;
