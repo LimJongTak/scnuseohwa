@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const revealChangeDates = {
-        "reveal1": new Date("2025-04-22T02:26:00"),
+        "reveal1": new Date("2025-04-22T02:31:00"),
         "reveal2": new Date("2025-05-06T10:00:00"),
         "reveal3": new Date("2025-05-13T10:00:00"),
         "reveal4": new Date("2025-05-20T10:00:00"),
@@ -62,7 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let key in revealDates) {
             const revealDate = revealDates[key];
             const changeDate = revealChangeDates[key];
-            const image = items[0].querySelector("img"); // 첫 번째 슬라이드 이미지 선택
+            const revealSection = document.getElementById(key); // 각 reveal 섹션 선택
+            const image = revealSection.querySelector("img"); // 해당 섹션 내 이미지 선택
 
             console.log(`${key} - Reveal Date: ${revealDate}, Change Date: ${changeDate}`);  // 각 날짜 확인
 
