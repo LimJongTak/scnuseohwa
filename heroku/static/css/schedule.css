@@ -73,10 +73,14 @@
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     width: 100%;  /* 일정 항목의 가로 크기 */
-    text-align: left;
+    text-align: center; /* 일정 텍스트를 가로로 중앙 정렬 */
     transition: background-color 0.3s ease, border 0.3s ease;
     margin: 0 auto;  /* 일정 항목을 가운데로 정렬 */
     max-width: 800px;
+    display: flex; /* Flexbox를 사용하여 세로 중앙 정렬 */
+    flex-direction: column; /* 텍스트를 세로로 배치 */
+    align-items: center;  /* 세로로 중앙 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
 }
 
 /* 일정 시간 스타일 */
