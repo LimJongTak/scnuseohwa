@@ -23,13 +23,6 @@ booths = {
         "details": "아이부터 어른까지 모두 참여할 수 있는 다채로운 체험 활동 제공",
         "image": "booth_blue.jpg"
     },
-    "orange_2": {
-        "name": "푸드존",
-        "number": "3",
-        "description": "다양한 음식을 제공하는 부스입니다.",
-        "details": "주황색 부스에서는 특선 메뉴와 함께 다양한 음식을 즐길 수 있습니다.",
-        "image": "booth_orange.jpg"
-    },
     "green_3": {
         "name": "친환경 부스",
         "number": "4",

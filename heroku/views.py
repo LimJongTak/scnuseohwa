@@ -10,7 +10,6 @@ def booth_detail(booth_id):
     booth_data = {
         "blue_1": {"name": "게임부스", "description": "재미있는 게임이 가득한 부스입니다.", "image_url": "/static/images/booth_blue.jpg"},
         "blue_2": {"name": "체험존", "description": "재미있는 체험이 가득한 부스입니다.", "image_url": "/static/images/booth_blue.jpg"},
-        "orange_2": {"name": "푸드존", "description": "다양한 음식을 제공하는 부스입니다.", "image_url": "/static/images/booth_orange.jpg"},
         "green_3": {"name": "친환경 부스", "description": "체험형 놀이 부스입니다.", "image_url": "/static/images/booth_green.jpg"},
         "food_1": {"name": "핫도그 푸드트럭", "description": "핫도그 푸드트럭입니다.", "image_url": "/static/images/hotdog.jpg"},
         "food_2": {"name": "디저트 트럭", "description": "디저트 트럭입니다.", "image_url": "/static/images/desert.jpg"},
