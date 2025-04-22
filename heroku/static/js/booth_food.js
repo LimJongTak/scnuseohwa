@@ -7,9 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
         green: [
             { id: "green_3", name: "친환경 부스", number: "3번", description: "지속 가능한 활동을 소개합니다." }
         ],
-        orange: [
-            { id: "orange_2", name: "푸드존", number: "4번", description: "맛있는 먹거리가 가득한 부스입니다." }
-        ],
         foodtruck1: [
             { id: "food_1", name: "핫도그 푸드트럭", number: "5번", description: "따끈한 핫도그가 기다리고 있어요." }
         ],
