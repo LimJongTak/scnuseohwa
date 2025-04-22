@@ -6,6 +6,7 @@
     color: white;
     z-index: 1;
     position: relative;
+    font-weight: bold;
 }
 
 .qna-logo {
