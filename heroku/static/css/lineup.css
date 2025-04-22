@@ -1,4 +1,3 @@
-/* lineup.css */
 .lineup-container {
     display: flex;
     flex-direction: column;
@@ -69,7 +68,6 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    position: relative; /* 버튼을 카드 양옆에 배치할 때 필요 */
 }
 
 .card {
@@ -82,7 +80,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
     display: none; /* 기본적으로 모든 카드는 숨김 처리 */
-    position: relative; /* 버튼 배치 시 기준점으로 사용 */
 }
 
 .card:hover {
@@ -92,8 +89,8 @@
 /* artist-image 크기 수정 */
 .artist-image {
     width: 100%;  /* 부모 요소인 card 크기에 맞춰 이미지 크기 조정 */
-    height: auto;  /* 이미지의 높이를 자동으로 설정 */
-    max-height: 250px;  /* 이미지가 너무 커지지 않도록 최대 높이 설정 */
+    height: 0;
+    padding-bottom: 100%;  /* 높이를 비율에 맞게 설정 (1:1 비율) */
     border-radius: 10px;
     object-fit: cover;  /* 이미지가 잘리지 않고 카드 영역을 채우도록 설정 */
     margin-bottom: 10px;
@@ -101,9 +98,6 @@
 
 .prev,
 .next {
-    position: absolute; /* 카드 내부에서 절대 위치 */
-    top: 50%; /* 카드의 세로 가운데로 배치 */
-    transform: translateY(-50%); /* 세로 가운데 정렬 */
     padding: 10px 20px;
     background-color: #5A3F7D;
     color: white;
@@ -111,20 +105,12 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    margin: 0; /* 버튼 간 여백 제거 */
+    margin: 10px;
 }
 
 .prev:hover,
 .next:hover {
     background-color: #3A2742;
-}
-
-.prev {
-    left: -40px; /* 카드의 왼쪽에 여백 두기 */
-}
-
-.next {
-    right: -40px; /* 카드의 오른쪽에 여백 두기 */
 }
 
 /* reveal 섹션 스타일 */
@@ -179,14 +165,7 @@
 
     .artist-image {
         width: 100%;  /* 카드 크기에 맞춰 이미지 크기 조정 */
-        max-height: 220px; /* 이미지가 너무 커지지 않도록 제한 */
-        height: auto;
-    }
-
-    .prev,
-    .next {
-        left: -30px; /* 모바일에서 버튼 간격을 조금 좁힘 */
-        right: -30px;
+        padding-bottom: 100%;  /* 1:1 비율 유지 */
     }
 }
 
@@ -201,13 +180,6 @@
 
     .artist-image {
         width: 100%;  /* 카드 크기에 맞춰 이미지 크기 조정 */
-        max-height: 200px; /* 이미지가 너무 커지지 않도록 제한 */
-        height: auto;
-    }
-
-    .prev,
-    .next {
-        left: -20px; /* 모바일에서 버튼 간격을 더 좁힘 */
-        right: -20px;
+        padding-bottom: 100%;  /* 1:1 비율 유지 */
     }
 }
