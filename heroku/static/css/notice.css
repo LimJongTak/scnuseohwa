@@ -29,8 +29,8 @@
     padding: 16px 28px;
     border-radius: 50px;
     display: flex;
-    justify-content: center; /* 글씨를 수평으로 가운데 정렬 */
-    align-items: center; /* 글씨를 수직으로 가운데 정렬 */
+    justify-content: space-between;
+    align-items: center;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
     transition: transform 0.2s ease;
     cursor: pointer;
