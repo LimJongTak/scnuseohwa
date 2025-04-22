@@ -14,6 +14,7 @@
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .tab-button, .booth-section-button {
@@ -25,6 +26,7 @@
     color: white;
     cursor: pointer;
     transition: background 0.3s;
+    font-weight: bold;
 }
 
 .tab-button.active, .booth-section-button.active,
