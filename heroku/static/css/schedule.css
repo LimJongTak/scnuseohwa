@@ -76,6 +76,7 @@
     text-align: left;
     transition: background-color 0.3s ease, border 0.3s ease;
     margin: 0 auto;  /* 일정 항목을 가운데로 정렬 */
+    max-width: 800px;
 }
 
 /* 일정 시간 스타일 */
