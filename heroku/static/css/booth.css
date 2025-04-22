@@ -62,6 +62,7 @@
 }
 
 .booth-card {
+    max-width: 1000;
     width: auto; /* 부스 카드 너비 */
     background: rgba(255, 255, 255, 0.8);
     padding: 15px;
@@ -119,6 +120,7 @@
     background-color: rgba(255, 255, 255, 0.2);
     padding: 10px;
     border-radius: 10px;
+    font-weight: bold;
 }
 
 /* Mobile responsiveness */
