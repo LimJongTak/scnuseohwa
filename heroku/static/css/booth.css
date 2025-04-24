@@ -56,7 +56,9 @@
     gap: 20px;
     margin-top: 20px;
     width: 100%; /* 부모 요소가 전체 너비를 차지하도록 설정 */
-    margin: 0 auto; /* 왼쪽과 오른쪽 여백을 동일하게 자동으로 설정 */
+    margin: 0; /* 왼쪽과 오른쪽 여백을 동일하게 자동으로 설정 */
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
 }
 
 .booth-card {
