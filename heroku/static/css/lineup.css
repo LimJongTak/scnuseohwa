@@ -97,6 +97,7 @@
 }
 
 .card-content h2 {
+    border-top: 2px solid #ccc;
     padding-top: 15px;
     margin-top: 10px;
 }
@@ -110,9 +111,9 @@
 
 /* 아티스트 소개와 주요 인기곡 사이 구분선 */
 .card-content p:nth-of-type(1) {
-    border-bottom: 3px solid #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .prev,
