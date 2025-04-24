@@ -4,7 +4,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
@@ -170,10 +169,6 @@
 
 /* 반응형 스타일 */
 @media (max-width: 768px) {
-    .lineup-container {
-        padding: 10px;
-    }
-
     .card {
         width: 350px;
         height: auto;
@@ -187,10 +182,6 @@
 }
 
 @media (max-width: 480px) {
-    .lineup-container {
-        padding: 10px;
-    }
-
     .card {
         width: 350px;
         height: auto;
