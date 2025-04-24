@@ -85,7 +85,8 @@
 }
 
 .card {
-    width: 280px;
+    width: 350px;
+    height: auto;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 20px;
@@ -102,7 +103,7 @@
 
 /* artist-image 크기 수정 */
 .artist-image {
-    width: 100%;  /* 부모 요소인 card 크기에 맞춰 이미지 크기 조정 */
+    width: auto;  /* 부모 요소인 card 크기에 맞춰 이미지 크기 조정 */
     height: auto;  /* 이미지의 높이를 자동으로 설정 */
     max-height: 250px;  /* 이미지가 너무 커지지 않도록 최대 높이 설정 */
     border-radius: 10px;
@@ -174,11 +175,12 @@
     }
 
     .card {
-        width: 280px;
+        width: 350px;
+        height: auto;
     }
 
     .artist-image {
-        width: 100%;  /* 카드 크기에 맞춰 이미지 크기 조정 */
+        width: auto;  /* 카드 크기에 맞춰 이미지 크기 조정 */
         max-height: 220px; /* 이미지가 너무 커지지 않도록 제한 */
         height: auto;
     }
@@ -190,11 +192,12 @@
     }
 
     .card {
-        width: 280px;
+        width: 350px;
+        height: auto;
     }
 
     .artist-image {
-        width: 100%;  /* 카드 크기에 맞춰 이미지 크기 조정 */
+        width: auto;  /* 카드 크기에 맞춰 이미지 크기 조정 */
         max-height: 200px; /* 이미지가 너무 커지지 않도록 제한 */
         height: auto;
     }
