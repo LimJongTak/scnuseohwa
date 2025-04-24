@@ -1,11 +1,57 @@
 document.addEventListener("DOMContentLoaded", function () {
     // 설정된 날짜와 시간에 맞춰 변경될 앨범 내용들
+    const imageChanges = [
+        {
+            id: 'artist-image1',  // 이미지 태그 ID
+            firstImage: 'static/images/reveal4.jpg',  // 첫 번째 이미지
+            secondImage: 'static/images/reveal5.jpg',  // 두 번째 이미지
+            time: new Date("2025-04-25T01:37:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-04-25T01:38:00").getTime()  // 두 번째 이미지 변경 시간
+        },
+        {
+            id: 'artist-image2',  // 이미지 태그 ID
+            firstImage: 'static/images/reveal1.jpg',  // 첫 번째 이미지
+            secondImage: 'static/images/reveal2.jpg',  // 두 번째 이미지
+            time: new Date("2025-04-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-04-29T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+        },
+        {
+            id: 'artist-image3',  // 이미지 태그 ID
+            firstImage: 'static/images/reveal1.jpg',  // 첫 번째 이미지
+            secondImage: 'static/images/reveal2.jpg',  // 두 번째 이미지
+            time: new Date("2025-04-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-04-29T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+        },
+        {
+            id: 'artist-image4',  // 이미지 태그 ID
+            firstImage: 'static/images/reveal1.jpg',  // 첫 번째 이미지
+            secondImage: 'static/images/reveal2.jpg',  // 두 번째 이미지
+            time: new Date("2025-04-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-04-29T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+        },
+        {
+            id: 'artist-image5',  // 이미지 태그 ID
+            firstImage: 'static/images/reveal1.jpg',  // 첫 번째 이미지
+            secondImage: 'static/images/reveal2.jpg',  // 두 번째 이미지
+            time: new Date("2025-04-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-04-29T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+        },
+        {
+            id: 'artist-image6',  // 이미지 태그 ID
+            firstImage: 'static/images/reveal1.jpg',  // 첫 번째 이미지
+            secondImage: 'static/images/reveal2.jpg',  // 두 번째 이미지
+            time: new Date("2025-04-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-04-29T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+        },
+        // 추가 이미지 변경 설정 (필요한 만큼)
+    ];   
+    
     const albumChanges = [
         {
             id: 'album1',
-            image: 'static/images/reveal5.jpg',
-            title: '김가온누리',
-            artist: '문빛누리',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범1',
+            artist: '새 아티스트 1',
             link: 'https://www.scnu.ac.kr',  // 새로운 링크 추가
             time: new Date("2025-04-25T01:26:00").getTime()  // 첫 번째 앨범 변경 시간
         },
@@ -210,6 +256,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         });
+        imageChanges.forEach(change => {
+            // 첫 번째 이미지 변경
+            if (currentTime >= change.time && currentTime < change.nextTime) {
+                document.getElementById(change.id).src = change.firstImage;
+            }
+            // 두 번째 이미지 변경
+            if (currentTime >= change.nextTime) {
+                document.getElementById(change.id).src = change.secondImage;
+            }
+        });
     }, 1000); // 1초마다 현재 시간을 확인하여 변경이 필요한지 체크
 
     // 탭 버튼 처리
@@ -277,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 공개 날짜 처리
     const revealDates = {
-        "reveal1": new Date("2025-04-25T01:26:00"),
+        "reveal1": new Date("2025-04-28T10:00:00"),
         "reveal2": new Date("2025-05-05T10:00:00"),
         "reveal3": new Date("2025-05-12T10:00:00")
     };
