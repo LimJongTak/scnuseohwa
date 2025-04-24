@@ -54,8 +54,6 @@
 .booth-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* 수평 중앙 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
     gap: 20px;
     margin-top: 20px;
     width: 100%; /* 부모 요소가 전체 너비를 차지하도록 설정 */
@@ -73,10 +71,6 @@
     cursor: pointer;
     transition: transform 0.2s;
     color: black;
-    text-align: center; /* 카드 내부 텍스트를 가로 중앙 정렬 */
-    display: flex; /* flexbox를 사용하여 수직 중앙 정렬 */
-    justify-content: center; /* 수평 중앙 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
     flex-direction: column; /* 세로로 배치 */
 }
 
