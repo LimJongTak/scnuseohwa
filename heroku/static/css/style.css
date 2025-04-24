@@ -127,3 +127,21 @@ body {
     color: white;
     border-radius: 5px;
 }
+
+.vr-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.vr-button {
+    background-color: #4CAF50; /* 원하는 색상 */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.vr-button:hover {
+    background-color: #45a049;
+}
