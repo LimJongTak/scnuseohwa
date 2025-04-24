@@ -52,27 +52,24 @@
 
 .booth-cards {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    margin-top: 20px;
-    width: 100%; /* 부모 요소가 전체 너비를 차지하도록 설정 */
-    margin: 0; /* 왼쪽과 오른쪽 여백을 동일하게 자동으로 설정 */
-    justify-content: center; /* 가로 방향 중앙 정렬 */
-    align-items: center; /* 세로 방향 중앙 정렬 */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 👈 세로 방향 정렬 (한 줄에 하나만) */
+    margin: 0 auto;
+    padding: 0;
 }
 
 .booth-card {
-    width: 100%; /* 부스 카드 너비 */
-    max-width: 320px;
-    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    max-width: 360px; /* 👈 카드 최대 너비 제한 */
+    margin: 20px auto; /* 👈 위아래 여백 + 수평 가운데 정렬 */
     padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.2s;
     color: black;
-    flex-direction: column; /* 세로로 배치 */
-    margin: 0; /* 부스 카드 양쪽 여백 제거 */
 }
 
 .booth-card:hover {
