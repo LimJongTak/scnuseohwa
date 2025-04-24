@@ -95,6 +95,7 @@
     border-radius: 10px;
     object-fit: cover;  /* 이미지가 잘리지 않고 카드 영역을 채우도록 설정 */
     margin-bottom: 10px;
+    border-bottom: 3px solid #ccc; /* 구분선 추가 */
 }
 
 .prev,
@@ -107,6 +108,13 @@
     cursor: pointer;
     font-size: 1rem;
     margin: 10px;
+}
+.card-content p:nth-of-type(1) {
+    font-size: 1.17rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ccc; /* 구분선 한 줄 */
 }
 
 .prev:hover,
