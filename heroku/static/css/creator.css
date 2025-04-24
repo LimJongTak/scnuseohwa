@@ -68,9 +68,14 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
     transition: transform 0.2s ease;
     cursor: pointer;
-
     animation: slideUpFadeIn 0.8s ease-out forwards;
     opacity: 0;
+}
+
+/* 기본적으로 PC에 맞게 설정 */
+.notice-item {
+    padding-left: 50px;  /* 기본 좌측 여백 */
+    padding-right: 50px; /* 기본 우측 여백 */
 }
 
 /* notice-item hover 효과 */
@@ -141,4 +146,17 @@
     display: inline-block;  /* inline-block으로 설정하여 줄바꿈 적용 */
     max-width: calc(100% - 30px);  /* 아이콘을 제외한 나머지 공간만 차지하도록 설정 */
     margin-right: 10px; /* 아이콘과 텍스트 사이 간격 추가 */
+}
+@media (max-width: 768px) {
+    .notice-item {
+        padding-left: 20px;  /* 모바일에서 좌측 여백 */
+        padding-right: 20px; /* 모바일에서 우측 여백 */
+    }
+}
+
+@media (max-width: 480px) {
+    .notice-item {
+        padding-left: 10px;  /* 모바일에서 좌측 여백 */
+        padding-right: 10px; /* 모바일에서 우측 여백 */
+    }
 }
