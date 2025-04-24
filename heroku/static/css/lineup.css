@@ -85,7 +85,7 @@
 }
 
 .card {
-    width: 320px;
+    width: 350px;
     height: auto;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -175,7 +175,7 @@
     }
 
     .card {
-        width: 320px;
+        width: 350px;
         height: auto;
     }
 
@@ -192,7 +192,7 @@
     }
 
     .card {
-        width: 320px;
+        width: 350px;
         height: auto;
     }
 
