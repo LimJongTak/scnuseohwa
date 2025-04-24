@@ -238,18 +238,21 @@
 .album-details {
     display: flex;
     flex-direction: column; /* 제목을 아티스트명 위로 올림 */
-    align-items: flex-start; /* 텍스트를 왼쪽 정렬 */
+    align-items: center; /* 텍스트를 왼쪽 정렬 */
 }
 
 .album-title {
     font-size: 18px;
     font-weight: bold;
+    color: white;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .album-artist {
     font-size: 14px;
-    color: #888;
+    color: white;
+    text-align: center;
 }
 
 /* 반응형 스타일 */

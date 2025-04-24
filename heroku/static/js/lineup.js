@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '김가온누리',
             artist: '문빛누리',
             link: 'https://www.scnu.ac.kr',  // 새로운 링크 추가
-            time: new Date("2025-04-25T01:20:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-04-25T01:26:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album2',
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const textChanges = [
         {
             id: 1,
-            time: new Date("2025-04-25T01:20:00").getTime(),
+            time: new Date("2025-04-25T01:26:00").getTime(),
             newHeadline: "드디어 공개!",
             newDesc: "이 아티스트는 대한민국 최고의 엔터테이너입니다."
         },
@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 공개 날짜 처리
     const revealDates = {
-        "reveal1": new Date("2025-04-28T10:00:00"),
+        "reveal1": new Date("2025-04-25T01:26:00"),
         "reveal2": new Date("2025-05-05T10:00:00"),
         "reveal3": new Date("2025-05-12T10:00:00")
     };
