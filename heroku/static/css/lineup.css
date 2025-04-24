@@ -133,6 +133,7 @@
     background-color: rgba(255, 255, 255, 0.2);
     padding: 20px;
     margin: 0;
+    margin-left: 0; /* 왼쪽 여백 제거 */
     border-radius: 10px;
     text-align: center;
     color: white;
