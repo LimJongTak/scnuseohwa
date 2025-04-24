@@ -62,8 +62,8 @@
 }
 
 .booth-card {
-    max-width: 800px;
-    width: auto; /* 부스 카드 너비 */
+    max-width: 1200px;
+    width: 100%; /* 부스 카드 너비 */
     background: rgba(255, 255, 255, 0.8);
     padding: 15px;
     border-radius: 12px;
@@ -132,6 +132,21 @@
 
     .booth-card {
         width: 90%; /* 모바일 화면에서 부스 카드 너비를 넓게 설정 */
+        margin-bottom: 15px;
+    }
+
+    .booth-cards {
+        flex-direction: column; /* 모바일에서는 부스 카드를 세로로 쌓도록 설정 */
+    }
+}
+@media (max-width: 480px) {
+    #map {
+        width: 100%; /* 모바일에서 지도는 전체 너비 차지 */
+        margin: 20px 0; /* 지도와 상하 간격 추가 */
+    }
+
+    .booth-card {
+        width: 80%; /* 모바일 화면에서 부스 카드 너비를 넓게 설정 */
         margin-bottom: 15px;
     }
 
