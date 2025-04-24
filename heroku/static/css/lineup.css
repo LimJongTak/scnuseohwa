@@ -255,38 +255,3 @@
     text-align: center;
 }
 
-/* 반응형 스타일 */
-@media (max-width: 768px) {
-    .album-item {
-        flex-direction: column;  /* 모바일에서 항목들을 세로로 배치 */
-        align-items: center;     /* 앨범 제목과 아티스트명을 가운데 정렬 */
-        text-align: center;      /* 텍스트를 중앙 정렬 */
-    }
-
-    .album-image {
-        width: 120px;  /* 모바일에서 앨범 이미지 크기 줄임 */
-        height: 120px;
-    }
-
-    .album-details {
-        gap: 10px;  /* 제목과 아티스트명 간격 조정 */
-    }
-}
-
-@media (max-width: 480px) {
-    .album-item {
-        flex-direction: column;  /* 모바일에서 항목들을 세로로 배치 */
-        align-items: center;     /* 앨범 제목과 아티스트명을 가운데 정렬 */
-        text-align: center;      /* 텍스트를 중앙 정렬 */
-    }
-
-    .album-image {
-        width: 100px;  /* 모바일에서 앨범 이미지 크기 더 줄임 */
-        height: 100px;
-    }
-
-    .album-details {
-        gap: 8px;  /* 제목과 아티스트명 간격 조정 */
-    }
-}
-
