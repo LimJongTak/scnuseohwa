@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
             id: 'artist-image1',  // 이미지 태그 ID
             firstImage: 'static/images/reveal4.jpg',  // 첫 번째 이미지
             secondImage: 'static/images/reveal5.jpg',  // 두 번째 이미지
-            time: new Date("2025-04-25T01:37:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-04-25T01:38:00").getTime()  // 두 번째 이미지 변경 시간
+            time: new Date("2025-04-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-04-29T10:00:00").getTime()  // 두 번째 이미지 변경 시간
         },
         {
             id: 'artist-image2',  // 이미지 태그 ID
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
             image: 'static/images/new-album1.jpg',
             title: '새 앨범1',
             artist: '새 아티스트 1',
-            link: 'https://www.scnu.ac.kr',  // 새로운 링크 추가
-            time: new Date("2025-04-25T01:26:00").getTime()  // 첫 번째 앨범 변경 시간
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album2',
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const textChanges = [
         {
             id: 1,
-            time: new Date("2025-04-25T01:26:00").getTime(),
+            time: new Date("2025-04-28T10:00:00").getTime(),
             newHeadline: "드디어 공개!",
             newDesc: "이 아티스트는 대한민국 최고의 엔터테이너입니다."
         },
