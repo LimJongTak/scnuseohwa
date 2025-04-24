@@ -57,12 +57,10 @@
     gap: 20px;
     margin-top: 20px;
     width: 100%; /* 부모 요소가 전체 너비를 차지하도록 설정 */
-    max-width: 1200px; /* 최대 너비 설정 (필요시 조정) */
     margin: 0 auto; /* 왼쪽과 오른쪽 여백을 동일하게 자동으로 설정 */
 }
 
 .booth-card {
-    max-width: 1200px;
     width: 100%; /* 부스 카드 너비 */
     background: rgba(255, 255, 255, 0.8);
     padding: 15px;
