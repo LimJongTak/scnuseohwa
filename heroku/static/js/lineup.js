@@ -148,18 +148,66 @@ document.addEventListener("DOMContentLoaded", function () {
         // ... album4부터 album18까지 추가
     ];
 
+    const textChanges = [
+        {
+            id: 1,
+            time: new Date("2025-04-28T10:00:00").getTime(),
+            newHeadline: "드디어 공개!",
+            newDesc: "이 아티스트는 대한민국 최고의 엔터테이너입니다."
+        },
+        {
+            id: 2,
+            time: new Date("2025-05-05T10:00:00").getTime(),
+            newHeadline: "두 번째 아티스트!",
+            newDesc: "두 번째로 공개된 전설의 뮤지션입니다."
+        },
+        {
+            id: 3,
+            time: new Date("2025-05-12T10:00:00").getTime(),
+            newHeadline: "마지막 공개!",
+            newDesc: "세 번째 아티스트는 해외에서 온 힙합스타입니다."
+        },
+        {
+            id: 4,
+            time: new Date("2025-05-05T10:00:00").getTime(),
+            newHeadline: "첫 번째 아티스트!",
+            newDesc: "첫첫 번째로 공개된 전설의 뮤지션입니다."
+        },
+        {
+            id: 5,
+            time: new Date("2025-05-05T10:00:00").getTime(),
+            newHeadline: "두 번째 아티스트!",
+            newDesc: "두 번째로 공개된 전설의 뮤지션입니다."
+        },
+        {
+            id: 6,
+            time: new Date("2025-05-05T10:00:00").getTime(),
+            newHeadline: "세 번째 아티스트!",
+            newDesc: "세 번째로 공개된 전설의 뮤지션입니다."
+        }
+    ];
     // 일정 시간 후에 앨범 내용 바꾸기
-    setInterval(function() {
-        const currentTime = new Date().getTime(); // 현재 시간
-        console.log("Current time: ", new Date(currentTime));  // 콘솔로 현재 시간 확인
+    setInterval(function () {
+        const currentTime = new Date().getTime();
 
         albumChanges.forEach(album => {
             if (currentTime >= album.time) {
-                // 해당 시간이 되면 앨범 정보 변경
-                document.getElementById('album-image' + album.id.substring(album.id.length - 1)).src = album.image;
-                document.getElementById('album-title' + album.id.substring(album.id.length - 1)).textContent = album.title;
-                document.getElementById('album-artist' + album.id.substring(album.id.length - 1)).textContent = album.artist;
-                document.getElementById(album.id).setAttribute('href', album.link);  // 링크 주소 변경
+                const index = album.id.substring(album.id.length - 1);
+                document.getElementById('album-image' + index).src = album.image;
+                document.getElementById('album-title' + index).textContent = album.title;
+                document.getElementById('album-artist' + index).textContent = album.artist;
+                document.getElementById(album.id).setAttribute('href', album.link);
+            }
+        });
+
+        textChanges.forEach(text => {
+            if (currentTime >= text.time) {
+                const headline = document.getElementById('headline' + text.id);
+                const desc = document.getElementById('desc' + text.id);
+                if (headline && desc) {
+                    headline.textContent = text.newHeadline;
+                    desc.textContent = text.newDesc;
+                }
             }
         });
     }, 1000); // 1초마다 현재 시간을 확인하여 변경이 필요한지 체크
