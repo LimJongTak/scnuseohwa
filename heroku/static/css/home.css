@@ -202,8 +202,5 @@ html {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
-}
-
-.vr-button:hover {
-    background-color: rgb(177, 12, 177);
+    font-weight: bold;
 }
