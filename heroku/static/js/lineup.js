@@ -1,4 +1,169 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // 설정된 날짜와 시간에 맞춰 변경될 앨범 내용들
+    const albumChanges = [
+        {
+            id: 'album1',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album2',
+            image: 'static/images/new-album2.jpg',
+            title: '새 앨범 2',
+            artist: '새 아티스트 2',
+            link: 'https://example.com/album2',  // 새로운 링크 추가
+            time: new Date("2025-05-05T10:00:00").getTime()  // 두 번째 앨범 변경 시간
+        },
+        {
+            id: 'album3',
+            image: 'static/images/new-album3.jpg',
+            title: '새 앨범 3',
+            artist: '새 아티스트 3',
+            link: 'https://example.com/album3',  // 새로운 링크 추가
+            time: new Date("2025-05-12T10:00:00").getTime()  // 세 번째 앨범 변경 시간
+        }, 
+        {
+            id: 'album4',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 4',
+            artist: '새 아티스트 4',
+            link: 'https://example.com/album4',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album5',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album6',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album7',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album8',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album9',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album10',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album11',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album12',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album13',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album14',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album15',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album16',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album17',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        {
+            id: 'album18',
+            image: 'static/images/new-album1.jpg',
+            title: '새 앨범 1',
+            artist: '새 아티스트 1',
+            link: 'https://example.com/album1',  // 새로운 링크 추가
+            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+        },
+        // ... album4부터 album18까지 추가
+    ];
+
+    // 일정 시간 후에 앨범 내용 바꾸기
+    setInterval(function() {
+        const currentTime = new Date().getTime(); // 현재 시간
+        console.log("Current time: ", new Date(currentTime));  // 콘솔로 현재 시간 확인
+
+        albumChanges.forEach(album => {
+            if (currentTime >= album.time) {
+                // 해당 시간이 되면 앨범 정보 변경
+                document.getElementById('album-image' + album.id.substring(album.id.length - 1)).src = album.image;
+                document.getElementById('album-title' + album.id.substring(album.id.length - 1)).textContent = album.title;
+                document.getElementById('album-artist' + album.id.substring(album.id.length - 1)).textContent = album.artist;
+                document.getElementById(album.id).setAttribute('href', album.link);  // 링크 주소 변경
+            }
+        });
+    }, 1000); // 1초마다 현재 시간을 확인하여 변경이 필요한지 체크
+
     // 탭 버튼 처리
     const day1Tab = document.getElementById("day1-tab");
     const day2Tab = document.getElementById("day2-tab");
