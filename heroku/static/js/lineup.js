@@ -5,43 +5,43 @@ document.addEventListener("DOMContentLoaded", function () {
             id: 'artist-image1',  // 이미지 태그 ID
             firstImage: 'static/images/reveal4.jpg',  // 첫 번째 이미지
             secondImage: 'static/images/reveal5.jpg',  // 두 번째 이미지
-            time: new Date("2025-04-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-04-29T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
         },
         {
             id: 'artist-image2',  // 이미지 태그 ID
             firstImage: 'static/images/reveal1.jpg',  // 첫 번째 이미지
             secondImage: 'static/images/reveal2.jpg',  // 두 번째 이미지
-            time: new Date("2025-04-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-04-29T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
         },
         {
             id: 'artist-image3',  // 이미지 태그 ID
             firstImage: 'static/images/reveal1.jpg',  // 첫 번째 이미지
             secondImage: 'static/images/reveal2.jpg',  // 두 번째 이미지
-            time: new Date("2025-04-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-04-29T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
         },
         {
             id: 'artist-image4',  // 이미지 태그 ID
             firstImage: 'static/images/reveal1.jpg',  // 첫 번째 이미지
             secondImage: 'static/images/reveal2.jpg',  // 두 번째 이미지
-            time: new Date("2025-04-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-04-29T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
         },
         {
             id: 'artist-image5',  // 이미지 태그 ID
             firstImage: 'static/images/reveal1.jpg',  // 첫 번째 이미지
             secondImage: 'static/images/reveal2.jpg',  // 두 번째 이미지
-            time: new Date("2025-04-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-04-29T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
         },
         {
             id: 'artist-image6',  // 이미지 태그 ID
             firstImage: 'static/images/reveal1.jpg',  // 첫 번째 이미지
             secondImage: 'static/images/reveal2.jpg',  // 두 번째 이미지
-            time: new Date("2025-04-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-04-29T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
+            nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
         },
         // 추가 이미지 변경 설정 (필요한 만큼)
     ];   
