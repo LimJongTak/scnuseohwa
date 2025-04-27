@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album2',
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 2',
             artist: '새 아티스트 2',
             link: 'https://example.com/album2',  // 새로운 링크 추가
-            time: new Date("2025-05-05T10:00:00").getTime()  // 두 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 앨범 변경 시간
         },
         {
             id: 'album3',
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 3',
             artist: '새 아티스트 3',
             link: 'https://example.com/album3',  // 새로운 링크 추가
-            time: new Date("2025-05-12T10:00:00").getTime()  // 세 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 세 번째 앨범 변경 시간
         }, 
         {
             id: 'album4',
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 4',
             artist: '새 아티스트 4',
             link: 'https://example.com/album4',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album5',
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album6',
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album7',
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album8',
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album9',
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album10',
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album11',
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album12',
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album13',
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album14',
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album15',
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album16',
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album17',
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album18',
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '새 앨범 1',
             artist: '새 아티스트 1',
             link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-04-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         // ... album4부터 album18까지 추가
     ];
@@ -197,37 +197,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const textChanges = [
         {
             id: 1,
-            time: new Date("2025-04-28T10:00:00").getTime(),
+            time: new Date("2025-05-28T10:00:00").getTime(),
             newHeadline: "드디어 공개!",
             newDesc: "이 아티스트는 대한민국 최고의 엔터테이너입니다."
         },
         {
             id: 2,
-            time: new Date("2025-05-05T10:00:00").getTime(),
+            time: new Date("2025-05-28T10:00:00").getTime(),
             newHeadline: "두 번째 아티스트!",
             newDesc: "두 번째로 공개된 전설의 뮤지션입니다."
         },
         {
             id: 3,
-            time: new Date("2025-05-12T10:00:00").getTime(),
+            time: new Date("2025-05-28T10:00:00").getTime(),
             newHeadline: "마지막 공개!",
             newDesc: "세 번째 아티스트는 해외에서 온 힙합스타입니다."
         },
         {
             id: 4,
-            time: new Date("2025-05-05T10:00:00").getTime(),
+            time: new Date("2025-05-28T10:00:00").getTime(),
             newHeadline: "첫 번째 아티스트!",
             newDesc: "첫첫 번째로 공개된 전설의 뮤지션입니다."
         },
         {
             id: 5,
-            time: new Date("2025-05-05T10:00:00").getTime(),
+            time: new Date("2025-05-28T10:00:00").getTime(),
             newHeadline: "두 번째 아티스트!",
             newDesc: "두 번째로 공개된 전설의 뮤지션입니다."
         },
         {
             id: 6,
-            time: new Date("2025-05-05T10:00:00").getTime(),
+            time: new Date("2025-05-28T10:00:00").getTime(),
             newHeadline: "세 번째 아티스트!",
             newDesc: "세 번째로 공개된 전설의 뮤지션입니다."
         }
@@ -333,16 +333,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 공개 날짜 처리
     const revealDates = {
-        "reveal1": new Date("2025-04-28T10:00:00"),
-        "reveal2": new Date("2025-05-05T10:00:00"),
-        "reveal3": new Date("2025-05-12T10:00:00")
+        "reveal1": new Date("2025-05-28T10:00:00"),
+        "reveal2": new Date("2025-05-28T10:00:00"),
+        "reveal3": new Date("2025-05-28T10:00:00")
     };
 
     // 1일 뒤 이미지 변경 날짜 설정
     const revealChangeDates = {
-        "reveal1": new Date("2025-04-29T10:00:00"),
-        "reveal2": new Date("2025-05-06T10:00:00"),
-        "reveal3": new Date("2025-05-13T10:00:00")
+        "reveal1": new Date("2025-05-28T10:00:00"),
+        "reveal2": new Date("2025-05-28T10:00:00"),
+        "reveal3": new Date("2025-05-28T10:00:00")
     };
 
     function updateRevealSections() {

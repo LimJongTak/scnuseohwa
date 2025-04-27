@@ -46,22 +46,22 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const revealChangeDates = {
-        "reveal1": new Date("2025-04-28T10:00:00"),
-        "reveal2": new Date("2025-04-28T10:00:00"),
-        "reveal3": new Date("2025-05-05T10:00:00"),
-        "reveal4": new Date("2025-05-05T10:00:00"),
-        "reveal5": new Date("2025-05-12T10:00:00"),
-        "reveal6": new Date("2025-05-12T10:00:00")
+        "reveal1": new Date("2025-05-28T10:00:00"),
+        "reveal2": new Date("2025-05-28T10:00:00"),
+        "reveal3": new Date("2025-05-28T10:00:00"),
+        "reveal4": new Date("2025-05-28T10:00:00"),
+        "reveal5": new Date("2025-05-28T10:00:00"),
+        "reveal6": new Date("2025-05-28T10:00:00")
     };
 
     // 1일 뒤 이미지 변경 (또는 추가적인 이미지 변경)
     const secondImageChangeDates = {
-        "reveal1": new Date("2025-04-29T10:00:00"),
-        "reveal2": new Date("2025-04-29T10:00:00"),
-        "reveal3": new Date("2025-05-06T10:00:00"),
-        "reveal4": new Date("2025-05-06T10:00:00"),
-        "reveal5": new Date("2025-05-13T10:00:00"),
-        "reveal6": new Date("2025-05-13T10:00:00")
+        "reveal1": new Date("2025-05-28T10:00:00"),
+        "reveal2": new Date("2025-05-28T10:00:00"),
+        "reveal3": new Date("2025-05-28T10:00:00"),
+        "reveal4": new Date("2025-05-28T10:00:00"),
+        "reveal5": new Date("2025-05-28T10:00:00"),
+        "reveal6": new Date("2025-05-28T10:00:00")
     };
 
     // 현재 시간을 기준으로 이미지 변경
