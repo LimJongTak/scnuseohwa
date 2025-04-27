@@ -8,11 +8,11 @@ booth_blueprint = Blueprint('booth', __name__)
 def booth_detail(booth_id):
     # 부스 데이터 예시
     booth_data = {
-        "blue_1": {"name": "게임부스", "description": "재미있는 게임이 가득한 부스입니다.", "image_url": "/static/images/booth_blue.jpg"},
-        "blue_2": {"name": "체험존", "description": "재미있는 체험이 가득한 부스입니다.", "image_url": "/static/images/booth_blue.jpg"},
-        "green_3": {"name": "친환경 부스", "description": "체험형 놀이 부스입니다.", "image_url": "/static/images/booth_green.jpg"},
-        "food_1": {"name": "핫도그 푸드트럭", "description": "핫도그 푸드트럭입니다.", "image_url": "/static/images/hotdog.jpg"},
-        "food_2": {"name": "디저트 트럭", "description": "디저트 트럭입니다.", "image_url": "/static/images/desert.jpg"},
+        "blue_1": {"name": "안내 부스 1", "description": "안내 부스 1입니다.", "image_url": "/static/images/booth_blue.jpg"},
+        "blue_2": {"name": "안내 부스 2", "description": "안내 부스 2입니다.", "image_url": "/static/images/booth_blue.jpg"},
+        "green_3": {"name": "서화 총학생회", "description": "서화총학생회 부스입니다.", "image_url": "/static/images/booth_green.jpg"},
+        "food_1": {"name": "푸드트럭 1", "description": "추후 안내해 드리겠습니다.", "image_url": "/static/images/hotdog.jpg"},
+        "food_2": {"name": "푸드트럭 2", "description": "추후 안내해 드리겠습니다.", "image_url": "/static/images/desert.jpg"},
         # 다른 부스들 추가
     }
 

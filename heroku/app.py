@@ -10,38 +10,38 @@ app.register_blueprint(booth_blueprint, url_prefix='/booth')
 # 부스 정보 설정
 booths = {
     "blue_1": {
-        "name": "게임부스",
+        "name": "안내 부스 1",
         "number": "1",
-        "description": "재미있는 게임이 가득한 부스입니다.",
-        "details": "아이부터 어른까지 모두 참여할 수 있는 다채로운 게임 활동",
+        "description": "안내 부스 1입니다.",
+        "details": "추후 안내",
         "image": "booth_blue.jpg"
     },
     "blue_2": {
-        "name": "체험존",
+        "name": "안내 부스 2",
         "number": "2",
-        "description": "재미있는 체험이 가득한 부스입니다.",
-        "details": "아이부터 어른까지 모두 참여할 수 있는 다채로운 체험 활동 제공",
+        "description": "안내 부스 2입니다.",
+        "details": "추후 안내내",
         "image": "booth_blue.jpg"
     },
     "green_3": {
-        "name": "친환경 부스",
+        "name": "서화 총학생회",
         "number": "4",
-        "description": "체험형 놀이 부스입니다.",
-        "details": "초록색 부스에서는 다양한 체험 활동이 제공됩니다. 가족 단위로 즐길 수 있습니다.",
+        "description": "서화총학생회 입니다.",
+        "details": "추후 안내",
         "image": "booth_green.jpg"
     },
     "food_1": {
-        "name": "핫도그 푸드트럭",
+        "name": "푸드트럭 1",
         "number": "5",
-        "description": "핫도그 푸드트럭입니다.",
-        "details": "핫도그 푸드트럭에서 다양한 메뉴를 만나보세요.",
+        "description": "추후 안내",
+        "details": "추후 안내",
         "image": "hotdog.jpg"
     },
     "food_2": {
-        "name": "디저트 트럭",
+        "name": "푸드트럭 2",
         "number": "6",
-        "description": "디저트 트럭입니다.",
-        "details": "디저트 트럭에서 다양한 메뉴를 만나보세요.",
+        "description": "추후 안내",
+        "details": "추후 안내",
         "image": "desert.jpg"
     }
 }

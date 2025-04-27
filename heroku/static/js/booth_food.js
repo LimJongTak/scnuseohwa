@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const boothData = {
         blue: [
-            { id: "blue_1", name: "게임부스", number: "1번", description: "재미있는 게임을 즐길 수 있는 부스입니다." },
-            { id: "blue_2", name: "체험존", number: "2번", description: "다양한 체험을 할 수 있어요." }
+            { id: "blue_1", name: "안내 부스 1", number: "1번", description: "안내 부스 1입니다." },
+            { id: "blue_2", name: "안내 부스 2", number: "2번", description: "안내 부스 2입니다." }
         ],
         green: [
-            { id: "green_3", name: "친환경 부스", number: "3번", description: "지속 가능한 활동을 소개합니다." }
+            { id: "green_3", name: "서화 총학생회", number: "3번", description: "서화총학생회 부스입니다." }
         ],
         foodtruck1: [
-            { id: "food_1", name: "핫도그 푸드트럭", number: "5번", description: "따끈한 핫도그가 기다리고 있어요." }
+            { id: "food_1", name: "푸드트럭 1", number: "5번", description: "추후 안내해 드리겠습니다." }
         ],
         foodtruck2: [
-            { id: "food_2", name: "디저트 트럭", number: "6번", description: "달콤한 디저트가 가득해요." }
+            { id: "food_2", name: "푸드트럭 2", number: "6번", description: "추후 안내해 드리겠습니다다." }
         ]
     };
 
