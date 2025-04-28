@@ -45,9 +45,6 @@ booths = {
         "image": "desert.jpg"
     }
 }
-@app.route('/')
-def index():
-    return render_template('index.html')
 # 메인 페이지 (로고 및 날짜 포함)
 @app.route('/')
 def home():
