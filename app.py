@@ -52,7 +52,7 @@ def home():
     meta_info = {
         "og_title": "국립순천대학교 서화총학생회 대동제",
         "og_description": "90년의 동화를, 100년의 서약으로",
-        "og_image": "https://seohwa.store/images/thumbnail2.png",
+        "og_image": "https://drive.google.com/u/0/drive-viewer/AKGpihbC0qWzrX1pstCoe2zJiVTr911OMZ7iJe9bwbiHfMoL25D-Hk-d63Y7siOYM-AuTYRrPfWc1efNHXjo17-fWfwigxxBSAM2=s1600-rw-v1",
         "og_url": "https://seohwa.store",
         "og_type": "website",
         "favicon": "images/favicon.ico"  # 파비콘 경로
