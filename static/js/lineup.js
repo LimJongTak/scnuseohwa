@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 공개 날짜 처리
     const revealDates = {
-        "reveal1": new Date("2025-05-02T22:18:00"),
+        "reveal1": new Date("2025-05-28T10:00:00"),
         "reveal2": new Date("2025-05-28T10:00:00")
     };
 
