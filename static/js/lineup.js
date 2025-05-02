@@ -302,16 +302,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 공개 날짜 처리
     const revealDates = {
-        "reveal1": new Date("2025-05-28T10:00:00"),
-        "reveal2": new Date("2025-05-28T10:00:00"),
-        "reveal3": new Date("2025-05-28T10:00:00")
+        "reveal1": new Date("2025-05-02T22:18:00"),
+        "reveal2": new Date("2025-05-28T10:00:00")
     };
 
     // 1일 뒤 이미지 변경 날짜 설정
     const revealChangeDates = {
         "reveal1": new Date("2025-05-28T10:00:00"),
-        "reveal2": new Date("2025-05-28T10:00:00"),
-        "reveal3": new Date("2025-05-28T10:00:00")
+        "reveal2": new Date("2025-05-28T10:00:00")
     };
 
     function updateRevealSections() {
@@ -337,8 +335,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         image.src = "static/images/reveal4.jpg";  // 이미지 변경
                     } else if (key === "reveal2") {
                         image.src = "static/images/reveal5.jpg";  // 이미지 변경
-                    } else if (key === "reveal3") {
-                        image.src = "static/images/reveal6.jpg";  // 이미지 변경
                     }
                     console.log(`Image changed for ${key}: `, image.src);  // 이미지 경로 확인
                 }
