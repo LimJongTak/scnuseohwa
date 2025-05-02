@@ -16,13 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
             nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
         },
         {
-            id: 'artist-image3',  // 이미지 태그 ID
-            firstImage: 'static/images/reveal1.jpg',  // 첫 번째 이미지
-            secondImage: 'static/images/reveal2.jpg',  // 두 번째 이미지
-            time: new Date("2025-05-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
-        },
-        {
             id: 'artist-image4',  // 이미지 태그 ID
             firstImage: 'static/images/reveal1.jpg',  // 첫 번째 이미지
             secondImage: 'static/images/reveal2.jpg',  // 두 번째 이미지
@@ -89,30 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'album6',
-            image: 'static/images/new-album1.jpg',
-            title: '새 앨범 1',
-            artist: '새 아티스트 1',
-            link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
-        },
-        {
-            id: 'album7',
-            image: 'static/images/new-album1.jpg',
-            title: '새 앨범 1',
-            artist: '새 아티스트 1',
-            link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
-        },
-        {
-            id: 'album8',
-            image: 'static/images/new-album1.jpg',
-            title: '새 앨범 1',
-            artist: '새 아티스트 1',
-            link: 'https://example.com/album1',  // 새로운 링크 추가
-            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
-        },
-        {
-            id: 'album9',
             image: 'static/images/new-album1.jpg',
             title: '새 앨범 1',
             artist: '새 아티스트 1',
