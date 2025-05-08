@@ -20,7 +20,7 @@ booths = {
         "name": "안내 부스 2",
         "number": "2",
         "description": "안내 부스 2입니다.",
-        "details": "추후 안내내",
+        "details": "추후 안내",
         "image": "booth_blue.jpg"
     },
     "green_3": {
