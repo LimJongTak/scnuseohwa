@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
     createCarousel('day1-content');
     createCarousel('day2-content');
 
-    // 공개 날짜 처리
+    // 공개 날짜 처리 라인업 공개 탭 부분
     const revealDates = {
         "reveal1": new Date("2025-05-28T10:00:00"),
         "reveal2": new Date("2025-05-28T10:00:00")
