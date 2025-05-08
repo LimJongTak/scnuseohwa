@@ -79,30 +79,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (currentDate >= changeDate) {
                     // 첫 번째 이미지 변경
                     if (key === "reveal1") {
-                        image.src = "static/images/reveal4.jpg";  // 이미지 변경
+                        image.src = "static/images/psy.svg";  // 이미지 변경
                     } else if (key === "reveal2") {
-                        image.src = "static/images/reveal5.jpg";  // 이미지 변경
+                        image.src = "static/images/nerd.svg";  // 이미지 변경
                     } else if (key === "reveal3") {
-                        image.src = "static/images/reveal6.jpg";  // 이미지 변경
+                        image.src = "static/images/bh.svg";  // 이미지 변경
                     } else if (key === "reveal4") {
-                        image.src = "static/images/reveal7.jpg";  // 이미지 변경
+                        image.src = "static/images/hz.svg";  // 이미지 변경
                     } else if (key === "reveal5") {
-                        image.src = "static/images/reveal8.jpg";  // 이미지 변경
+                        image.src = "static/images/qw.svg";  // 이미지 변경
                     }
                     console.log(`Image changed for ${key}: `, image.src);  // 이미지 경로 확인
                 }
                 // 두 번째 이미지 변경
                 if (currentDate >= secondChangeDate) {
                     if (key === "reveal1") {
-                        image.src = "static/images/reveal10.jpg";  // 두 번째 이미지 변경
+                        image.src = "static/images/psy.svg";  // 두 번째 이미지 변경
                     } else if (key === "reveal2") {
-                        image.src = "static/images/reveal11.jpg";  // 두 번째 이미지 변경
+                        image.src = "static/images/nerd2.svg";  // 두 번째 이미지 변경
                     } else if (key === "reveal3") {
-                        image.src = "static/images/reveal12.jpg";  // 두 번째 이미지 변경
+                        image.src = "static/images/bh2.svg";  // 두 번째 이미지 변경
                     } else if (key === "reveal4") {
-                        image.src = "static/images/reveal13.jpg";  // 두 번째 이미지 변경
+                        image.src = "static/images/hz2.svg";  // 두 번째 이미지 변경
                     } else if (key === "reveal5") {
-                        image.src = "static/images/reveal14.jpg";  // 두 번째 이미지 변경
+                        image.src = "static/images/qw2.svg";  // 두 번째 이미지 변경
                     }
                     console.log(`Second Image changed for ${key}: `, image.src);  // 두 번째 이미지 경로 확인
                 }

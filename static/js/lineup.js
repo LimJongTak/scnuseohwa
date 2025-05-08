@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 
         {
             id: 'album4', // 1일차 2번
-            image: 'static/images/new-album1.jpg',
+            image: 'static/images/new-album4.jpg',
             title: '그대만 있다면',
             artist: '싱글앨범',
             link: 'https://youtu.be/IMWT6937uUs?si=aSl6TSj3MzMWXDfI',  // 새로운 링크 추가
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'album5', // 1일차 2번
-            image: 'static/images/new-album1.jpg',
+            image: 'static/images/new-album5.jpg',
             title: '좋은 밤 좋은 꿈',
             artist: '싱글 앨범',
             link: 'https://youtu.be/g-rZeTNIw7E?si=OwbrSvva_u7OrTCc',  // 새로운 링크 추가
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'album6', // 1일차 2번
-            image: 'static/images/new-album1.jpg',
+            image: 'static/images/new-album6.jpg',
             title: '조용히 완전히 영원히',
             artist: 'New Century Masterpiece Cinema',
             link: 'https://youtu.be/W25_xvZWKMw?si=EUouvpbTI7-0-KHt',  // 새로운 링크 추가
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'album10', // 2일차 1번
-            image: 'static/images/new-album1.jpg',
+            image: 'static/images/new-album7.jpg',
             title: 'No Rules',
             artist: 'Absolute Zero',
             link: 'https://youtu.be/XqfnTlwcjuQ?si=LC4jI-bxt7NrEU-C',  // 새로운 링크 추가
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'album11', // 2일차 1번
-            image: 'static/images/new-album1.jpg',
+            image: 'static/images/new-album8.jpg',
             title: '엘리베이터',
             artist: '싱글앨범',
             link: 'https://youtu.be/OiX8H-_sJuA?si=50LeIXcewuhFrvtA',  // 새로운 링크 추가
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'album12', // 2일차 1번
-            image: 'static/images/new-album1.jpg',
+            image: 'static/images/new-album9.jpg',
             title: '너티 너티 (Nutty Nutty)',
             artist: '싱글앨범',
             link: 'https://youtu.be/szXpSZanlqs?si=W6_1dCbkeh13bWjY',  // 새로운 링크 추가
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'album13', // 2일차 2번
-            image: 'static/images/new-album1.jpg',
+            image: 'static/images/new-album10.jpg',
             title: '저 별',
             artist: '싱글앨범',
             link: 'https://youtu.be/XUR8QByF2As?si=6V3KcN3kARrFxgzS',  // 새로운 링크 추가
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'album14', // 2일차 2번
-            image: 'static/images/new-album1.jpg',
+            image: 'static/images/new-album11.jpg',
             title: '비도 오고 그래서',
             artist: '/// (너 먹구름 비)',
             link: 'https://youtu.be/afxLaQiLu-o?si=w5f_EtWioeL15w6p',  // 새로운 링크 추가
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'album15', // 2일차 2번
-            image: 'static/images/new-album1.jpg',
+            image: 'static/images/new-album12.jpg',
             title: 'And July',
             artist: 'And July',
             link: 'https://youtu.be/rCeM57e2BfU?si=hqXOrd_N63pTP8q1',  // 새로운 링크 추가
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'album16', // 2일차 3번
-            image: 'static/images/new-album1.jpg',
+            image: 'static/images/new-album13.jpg',
             title: '고민중독',
             artist: '1st Mini Album \'MANITO\'',
             link: 'https://youtu.be/ImuWa3SJulY?si=uPpFGUs0xcEkcBk_',  // 새로운 링크 추가
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'album17', // 2일차 3번
-            image: 'static/images/new-album1.jpg',
+            image: 'static/images/new-album14.jpg',
             title: 'Discord',
             artist: 'Harmony from Discord',
             link: 'https://youtu.be/WGm2HmXeeRI?si=rKnhmcZbg6nCjq5O',  // 새로운 링크 추가
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'album18', // 2일차 3번
-            image: 'static/images/new-album1.jpg',
+            image: 'static/images/new-album15.jpg',
             title: '내 이름 맑음',
             artist: 'Algorithm\'s Blossom',
             link: 'https://youtu.be/AlirzLFEHUI?si=qZxpsjYqkELtTj8W',  // 새로운 링크 추가
