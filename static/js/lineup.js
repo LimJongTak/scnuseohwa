@@ -1,44 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 설정된 날짜와 시간에 맞춰 변경될 앨범 내용들
     const imageChanges = [
         {
-            id: 'artist-image1',  // 이미지 태그 ID 1일차 1번
-            firstImage: 'static/images/psy.svg',  // 첫 번째 이미지 
-            secondImage: 'static/images/psy.svg',  // 두 번째 이미지
-            time: new Date("2025-05-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+            id: 'artist-image1',
+            firstImage: 'static/images/psy.svg',
+            secondImage: 'static/images/psy.svg',
+            time: new Date("2025-05-28T10:00:00").getTime(),
+            nextTime: new Date("2025-05-28T10:00:00").getTime()
         },
         {
-            id: 'artist-image2',  // 이미지 태그 ID 1일차 2번
-            firstImage: 'static/images/nerd.svg',  // 첫 번째 이미지
-            secondImage: 'static/images/nerd2.svg',  // 두 번째 이미지
-            time: new Date("2025-05-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+            id: 'artist-image2',
+            firstImage: 'static/images/nerd.svg',
+            secondImage: 'static/images/nerd2.svg',
+            time: new Date("2025-05-28T10:00:00").getTime(),
+            nextTime: new Date("2025-05-28T10:00:00").getTime()
         },
         {
-            id: 'artist-image4',  // 이미지 태그 ID 2일차 1번
-            firstImage: 'static/images/bh.svg',  // 첫 번째 이미지
-            secondImage: 'static/images/bh2.svg',  // 두 번째 이미지
-            time: new Date("2025-05-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+            id: 'artist-image4',
+            firstImage: 'static/images/bh.svg',
+            secondImage: 'static/images/bh2.svg',
+            time: new Date("2025-05-28T10:00:00").getTime(),
+            nextTime: new Date("2025-05-28T10:00:00").getTime()
         },
         {
-            id: 'artist-image5',  // 이미지 태그 ID 2일차 2번
-            firstImage: 'static/images/hz.svg',  // 첫 번째 이미지
-            secondImage: 'static/images/hz2.svg',  // 두 번째 이미지
-            time: new Date("2025-05-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+            id: 'artist-image5',
+            firstImage: 'static/images/hz.svg',
+            secondImage: 'static/images/hz2.svg',
+            time: new Date("2025-05-28T10:00:00").getTime(),
+            nextTime: new Date("2025-05-28T10:00:00").getTime()
         },
         {
-            id: 'artist-image6',  // 이미지 태그 ID 2일차 3번
-            firstImage: 'static/images/qw.svg',  // 첫 번째 이미지
-            secondImage: 'static/images/qw2.svg',  // 두 번째 이미지
-            time: new Date("2025-05-28T10:00:00").getTime(),  // 첫 번째 이미지 변경 시간
-            nextTime: new Date("2025-05-28T10:00:00").getTime()  // 두 번째 이미지 변경 시간
+            id: 'artist-image6',
+            firstImage: 'static/images/qw.svg',
+            secondImage: 'static/images/qw2.svg',
+            time: new Date("2025-05-28T10:00:00").getTime(),
+            nextTime: new Date("2025-05-28T10:00:00").getTime()
         },
-        // 추가 이미지 변경 설정 (필요한 만큼)
-    ];   
-    
+    ];
+
     const albumChanges = [
         {
             id: 'album1', // 1일차 1번
@@ -160,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
             link: 'https://youtu.be/AlirzLFEHUI?si=qZxpsjYqkELtTj8W',  // 새로운 링크 추가
             time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
-        // ... album4부터 album18까지 추가
     ];
 
     const textChanges = [
@@ -195,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
             newDesc: "QWER는 뉴미디어 콘텐츠 스튜디오 3Y코퍼레이션의 타마고 프로덕션과 뮤직 퍼블리셔 프리즘필터가 공동 제작한 글로벌 걸밴드이다. 이름은 온라인 게임의 스킬 키(Q·W·E·R)를 의미하며, 각기 다른 매력과 능력을 지닌 4인 4색의 멤버가 모여 다채로운 음악을 선보이겠다는 포부로 결성되었다."
         }
     ];
-    // 일정 시간 후에 앨범 내용 바꾸기
+
     setInterval(function () {
         const currentTime = new Date().getTime();
 
@@ -219,134 +216,59 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         });
+
         imageChanges.forEach(change => {
-            // 첫 번째 이미지 변경
             if (currentTime >= change.time && currentTime < change.nextTime) {
                 document.getElementById(change.id).src = change.firstImage;
             }
-            // 두 번째 이미지 변경
             if (currentTime >= change.nextTime) {
                 document.getElementById(change.id).src = change.secondImage;
             }
         });
-    }, 1000); // 1초마다 현재 시간을 확인하여 변경이 필요한지 체크
+    }, 1000);
 
-    // 탭 버튼 처리
+    // 탭 버튼
     const day1Tab = document.getElementById("day1-tab");
     const day2Tab = document.getElementById("day2-tab");
-    const revealTab = document.getElementById("reveal-tab");
     const day1Content = document.getElementById("day1-content");
     const day2Content = document.getElementById("day2-content");
-    const revealContent = document.getElementById("reveal-content");
 
     day1Tab.addEventListener("click", () => {
         day1Tab.classList.add("active");
         day2Tab.classList.remove("active");
-        revealTab.classList.remove("active");
         day1Content.classList.add("active");
         day2Content.classList.remove("active");
-        revealContent.classList.remove("active");
     });
 
     day2Tab.addEventListener("click", () => {
         day2Tab.classList.add("active");
         day1Tab.classList.remove("active");
-        revealTab.classList.remove("active");
         day2Content.classList.add("active");
         day1Content.classList.remove("active");
-        revealContent.classList.remove("active");
     });
 
-    revealTab.addEventListener("click", () => {
-        revealTab.classList.add("active");
-        day1Tab.classList.remove("active");
-        day2Tab.classList.remove("active");
-        revealContent.classList.add("active");
-        day1Content.classList.remove("active");
-        day2Content.classList.remove("active");
-    });
-
-    // Reveal 섹션 이미지 슬라이드 기능 (1DAY & 2DAY 공통)
+    // 캐러셀 기능
     function createCarousel(tabContentId) {
-        const content = document.getElementById(tabContentId); // 1DAY 또는 2DAY 콘텐츠
+        const content = document.getElementById(tabContentId);
         const cards = content.querySelectorAll('.card');
-        let currentCardIndex = 0; // 현재 보이는 카드의 인덱스
+        let currentCardIndex = 0;
 
         const prevButton = content.querySelector('.carousel-prev');
         const nextButton = content.querySelector('.carousel-next');
 
-        // prev 버튼 클릭 시 카드 하나씩 뒤로 이동
         prevButton.addEventListener('click', () => {
-            cards[currentCardIndex].style.display = 'none'; // 현재 카드 숨기기
-            currentCardIndex = (currentCardIndex - 1 + cards.length) % cards.length; // 인덱스를 1 감소
-            cards[currentCardIndex].style.display = 'block'; // 새 카드 보이기
+            cards[currentCardIndex].style.display = 'none';
+            currentCardIndex = (currentCardIndex - 1 + cards.length) % cards.length;
+            cards[currentCardIndex].style.display = 'block';
         });
 
-        // next 버튼 클릭 시 카드 하나씩 앞으로 이동
         nextButton.addEventListener('click', () => {
-            cards[currentCardIndex].style.display = 'none'; // 현재 카드 숨기기
-            currentCardIndex = (currentCardIndex + 1) % cards.length; // 인덱스를 1 증가
-            cards[currentCardIndex].style.display = 'block'; // 새 카드 보이기
+            cards[currentCardIndex].style.display = 'none';
+            currentCardIndex = (currentCardIndex + 1) % cards.length;
+            cards[currentCardIndex].style.display = 'block';
         });
     }
 
-    // 1DAY, 2DAY 각각에 대해 카드 슬라이드 기능 적용
     createCarousel('day1-content');
     createCarousel('day2-content');
-
-    // 공개 날짜 처리 라인업 공개 탭 부분
-    const revealDates = {
-        "reveal1": new Date("2025-05-28T10:00:00"),
-        "reveal2": new Date("2025-05-28T10:00:00"),
-        "reveal3": new Date("2025-05-28T10:00:00")
-    };
-
-    // 1일 뒤 이미지 변경 날짜 설정
-    const revealChangeDates = {
-        "reveal1": new Date("2025-05-28T10:00:00"),
-        "reveal2": new Date("2025-05-28T10:00:00"),
-        "reveal3": new Date("2025-05-28T10:00:00")
-    };
-
-    function updateRevealSections() {
-        const currentDate = new Date();
-        console.log("Current Date: ", currentDate);  // 콘솔로 현재 시간 확인
-
-        for (let key in revealDates) {
-            const revealSection = document.getElementById(key);
-            const revealDate = revealDates[key];
-            const changeDate = revealChangeDates[key];
-            const image = revealSection.querySelector("img");
-
-            console.log(`${key} - Reveal Date: ${revealDate}, Change Date: ${changeDate}`);  // 각 날짜 확인
-
-            if (currentDate >= revealDate) {
-                revealSection.querySelector(".coming-soon").style.display = 'none';  // COMING SOON 숨기기
-                revealSection.querySelector(".revealed").style.display = 'block';  // 공개 텍스트 표시
-                image.style.display = 'block';  // 공개 이미지 표시
-
-                if (currentDate >= changeDate) {
-                    // 이미지가 1일 뒤에 변경됨
-                    if (key === "reveal1") {
-                        image.src = "static/images/psy.svg";  // 이미지 변경 1차공개꺼
-                    } else if (key === "reveal2") {
-                        image.src = "static/images/nerd2.svg";  // 이미지 변경 2차공개꺼
-                    } else if (key === "reveal3") {
-                        image.src = "static/images/2day1.svg";  // 이미지 변경 2차공개꺼
-                    }
-                    console.log(`Image changed for ${key}: `, image.src);  // 이미지 경로 확인
-                }
-            } else {
-                revealSection.querySelector(".coming-soon").style.display = 'block';  // COMING SOON 표시
-                revealSection.querySelector(".revealed").style.display = 'none';  // 공개 텍스트 숨기기
-                image.style.display = 'none';  // 이미지 숨기기
-            }
-        }
-    }
-
-    // 페이지 로드 시 공개 상태 업데이트
-    updateRevealSections();
-
-    // 매초마다 공개 상태를 업데이트
-    setInterval(updateRevealSections, 1000);
 });
