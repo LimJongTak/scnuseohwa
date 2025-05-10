@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageChanges = [
         {
             id: 'artist-image1',
-            firstImage: 'static/images/psy.svg',
-            secondImage: 'static/images/psy.svg',
-            time: new Date("2025-05-28T10:00:00").getTime(),
-            nextTime: new Date("2025-05-28T10:00:00").getTime()
+            firstImage: 'static/images/psy.png',
+            secondImage: 'static/images/psy.png',
+            time: new Date("2025-05-28T00:00:00").getTime(),
+            nextTime: new Date("2025-05-28T00:00:00").getTime()
         },
         {
             id: 'artist-image2',
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '강남스타일',
             artist: '싸이6',
             link: 'https://youtu.be/9bZkp7q19f0',  // 새로운 링크 추가
-            time: new Date("2025-05-28T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-11T00:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album2', // 1일차 1번

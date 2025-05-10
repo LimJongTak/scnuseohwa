@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (currentDate >= changeDate) {
                     // 첫 번째 이미지 변경
                     if (key === "reveal1") {
-                        image.src = "static/images/psy.svg";  // 이미지 변경
+                        image.src = "static/images/psy.png";  // 이미지 변경
                     } else if (key === "reveal2") {
                         image.src = "static/images/nerd.svg";  // 이미지 변경
                     } else if (key === "reveal3") {
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // 두 번째 이미지 변경
                 if (currentDate >= secondChangeDate) {
                     if (key === "reveal1") {
-                        image.src = "static/images/psy.svg";  // 두 번째 이미지 변경
+                        image.src = "static/images/psy.png";  // 두 번째 이미지 변경
                     } else if (key === "reveal2") {
                         image.src = "static/images/nerd2.svg";  // 두 번째 이미지 변경
                     } else if (key === "reveal3") {
