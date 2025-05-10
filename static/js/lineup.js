@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: '강남스타일',
             artist: '싸이6',
             link: 'https://youtu.be/9bZkp7q19f0',  // 새로운 링크 추가
-            time: new Date("2025-05-11T00:00:00").getTime()  // 첫 번째 앨범 변경 시간
+            time: new Date("2025-05-12T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
         {
             id: 'album2', // 1일차 1번
