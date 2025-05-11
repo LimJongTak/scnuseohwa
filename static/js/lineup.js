@@ -9,29 +9,29 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'artist-image2',
-            firstImage: 'static/images/nerd.svg',
-            secondImage: 'static/images/nerd2.svg',
+            firstImage: 'static/images/nerd.png',
+            secondImage: 'static/images/nerd2.png',
             time: new Date("2025-05-12T10:00:00").getTime(),
             nextTime: new Date("2025-05-13T10:00:00").getTime()
         },
         {
             id: 'artist-image4',
-            firstImage: 'static/images/bh.svg',
-            secondImage: 'static/images/bh2.svg',
+            firstImage: 'static/images/bh.png',
+            secondImage: 'static/images/bh2.png',
             time: new Date("2025-05-13T10:00:00").getTime(),
             nextTime: new Date("2025-05-14T10:00:00").getTime()
         },
         {
             id: 'artist-image5',
-            firstImage: 'static/images/hz.svg',
-            secondImage: 'static/images/hz2.svg',
+            firstImage: 'static/images/hz.png',
+            secondImage: 'static/images/hz2.png',
             time: new Date("2025-05-13T10:00:00").getTime(),
             nextTime: new Date("2025-05-14T10:00:00").getTime()
         },
         {
             id: 'artist-image6',
-            firstImage: 'static/images/qw.svg',
-            secondImage: 'static/images/qw2.svg',
+            firstImage: 'static/images/qw.png',
+            secondImage: 'static/images/qw2.png',
             time: new Date("2025-05-13T10:00:00").getTime(),
             nextTime: new Date("2025-05-14T10:00:00").getTime()
         },
