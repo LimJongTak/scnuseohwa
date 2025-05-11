@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 'artist-image2',
-            firstImage: 'static/images/nerd.png',
-            secondImage: 'static/images/nerd2.png',
+            firstImage: 'static/images/nd.png',
+            secondImage: 'static/images/nd2.png',
             time: new Date("2025-05-12T10:00:00").getTime(),
             nextTime: new Date("2025-05-13T10:00:00").getTime()
         },

@@ -81,13 +81,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (key === "reveal1") {
                         image.src = "static/images/psy.png";  // 이미지 변경
                     } else if (key === "reveal2") {
-                        image.src = "static/images/nerd.svg";  // 이미지 변경
+                        image.src = "static/images/nd.png";  // 이미지 변경
                     } else if (key === "reveal3") {
-                        image.src = "static/images/bh.svg";  // 이미지 변경
+                        image.src = "static/images/bh.png";  // 이미지 변경
                     } else if (key === "reveal4") {
-                        image.src = "static/images/hz.svg";  // 이미지 변경
+                        image.src = "static/images/hz.png";  // 이미지 변경
                     } else if (key === "reveal5") {
-                        image.src = "static/images/qw.svg";  // 이미지 변경
+                        image.src = "static/images/qw.png";  // 이미지 변경
                     }
                     console.log(`Image changed for ${key}: `, image.src);  // 이미지 경로 확인
                 }
@@ -96,13 +96,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (key === "reveal1") {
                         image.src = "static/images/psy.png";  // 두 번째 이미지 변경
                     } else if (key === "reveal2") {
-                        image.src = "static/images/nerd2.svg";  // 두 번째 이미지 변경
+                        image.src = "static/images/nd2.png";  // 두 번째 이미지 변경
                     } else if (key === "reveal3") {
-                        image.src = "static/images/bh2.svg";  // 두 번째 이미지 변경
+                        image.src = "static/images/bh2.png";  // 두 번째 이미지 변경
                     } else if (key === "reveal4") {
-                        image.src = "static/images/hz2.svg";  // 두 번째 이미지 변경
+                        image.src = "static/images/hz2.png";  // 두 번째 이미지 변경
                     } else if (key === "reveal5") {
-                        image.src = "static/images/qw2.svg";  // 두 번째 이미지 변경
+                        image.src = "static/images/qw2.png";  // 두 번째 이미지 변경
                     }
                     console.log(`Second Image changed for ${key}: `, image.src);  // 두 번째 이미지 경로 확인
                 }
