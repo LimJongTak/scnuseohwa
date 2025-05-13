@@ -195,12 +195,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(function () {
     const currentTime = new Date().getTime();
-    console.log("Current Time: " + currentTime); // 현재 시간 출력
+    console.log("Current Time: ", currentTime); // 디버깅 로그 추가
 
     albumChanges.forEach(album => {
+        console.log("Album time: ", album.time); // 각 앨범 시간 출력
         if (currentTime >= album.time) {
             const index = album.id.substring(album.id.length - 1);
-            console.log("Updating album with ID: " + album.id);
             document.getElementById('album-image' + index).src = album.image;
             document.getElementById('album-title' + index).textContent = album.title;
             document.getElementById('album-artist' + index).textContent = album.artist;
@@ -209,6 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     textChanges.forEach(text => {
+        console.log("Text time: ", text.time); // 각 텍스트 변경 시간 출력
         if (currentTime >= text.time) {
             const headline = document.getElementById('headline' + text.id);
             const desc = document.getElementById('desc' + text.id);
@@ -220,6 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     imageChanges.forEach(change => {
+        console.log("Image change time: ", change.time); // 이미지 변경 시간 출력
         if (currentTime >= change.time && currentTime < change.nextTime) {
             document.getElementById(change.id).src = change.firstImage;
         }
@@ -227,7 +229,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById(change.id).src = change.secondImage;
         }
     });
-}, 1000); 
+}, 1000);
 
     // 탭 버튼
     const day1Tab = document.getElementById("day1-tab");
