@@ -345,24 +345,7 @@ def not_found_error(error):
 @app.route('/lineup')
 def lineup():
     artist_data = [
-        {
-            'name': '유재석',
-            'job': '국민MC',
-            'songs': [
-                {'album': '무한도전', 'artist': '유재석', 'image': 'mudo.jpg'},
-                {'album': '런닝맨', 'artist': '유재석', 'image': 'runningman.jpg'},
-                {'album': '유퀴즈', 'artist': '유재석', 'image': 'uquiz.jpg'}
-            ]
-        },
-        {
-            'name': '강호동',
-            'job': '천하장사',
-            'songs': [
-                {'album': '1박2일', 'artist': '강호동', 'image': 'day.jpg'},
-                {'album': '아는형님', 'artist': '강호동', 'image': 'ahyung.jpg'},
-                {'album': '강심장', 'artist': '강호동', 'image': 'strongheart.jpg'}
-            ]
-        }
+       
     ]
     return render_template("lineup.html", page_title="라인업", artists=artist_data)
 
@@ -383,41 +366,7 @@ def creator():
 
 # 아티스트 데이터 딕셔너리
 artist_data = {
-    "apink": {
-        "name": "에이핑크",
-        "image": "apink_festa_insta.jpg",
-        "description": "에이핑크는 2011년 데뷔한 대한민국의 걸그룹으로, 청순한 콘셉트로 많은 사랑을 받고 있습니다."
-    },
-    "roy": {
-        "name": "로이킴",
-        "image": "roy_festa_insta.jpg",
-        "description": "로이킴은 감성적인 음색으로 많은 히트곡을 낸 싱어송라이터입니다."
-    },
-    "gummy": {
-        "name": "거미",
-        "image": "gummy_festa_insta.jpg",
-        "description": "거미는 폭발적인 가창력으로 사랑받는 보컬리스트입니다."
-    },
-    "kwon-eunbi": {
-        "name": "권은비",
-        "image": "kwon_eunbi_festa_insta.jpg",
-        "description": "권은비는 솔로 가수이자 댄서로 다채로운 퍼포먼스를 선보입니다."
-    },
-    "glen-chenck": {
-        "name": "글렌체크",
-        "image": "glen_cenck_festa_insta.jpg",
-        "description": "글렌체크는 전자 음악 기반의 밴드로 개성 있는 음악을 만듭니다."
-    },
-    "choi-yu-ree": {
-        "name": "최유리",
-        "image": "choi_yu_ree_festa_insta.jpg",
-        "description": "최유리는 서정적인 감성의 싱어송라이터입니다."
-    },
-    "creespy": {
-        "name": "크리스피",
-        "image": "creespy_festa_insta.jpg",
-        "description": "크리스피는 재기발랄한 음악 스타일로 젊은 층에게 인기가 많습니다."
-    }
+    
 }
 
 @app.route('/artist/<name>')
