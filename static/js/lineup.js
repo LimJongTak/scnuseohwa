@@ -194,38 +194,40 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     setInterval(function () {
-        const currentTime = new Date().getTime();
+    const currentTime = new Date().getTime();
+    console.log("Current Time: " + currentTime); // 현재 시간 출력
 
-        albumChanges.forEach(album => {
-            if (currentTime >= album.time) {
-                const index = album.id.substring(album.id.length - 1);
-                document.getElementById('album-image' + index).src = album.image;
-                document.getElementById('album-title' + index).textContent = album.title;
-                document.getElementById('album-artist' + index).textContent = album.artist;
-                document.getElementById(album.id).setAttribute('href', album.link);
-            }
-        });
+    albumChanges.forEach(album => {
+        if (currentTime >= album.time) {
+            const index = album.id.substring(album.id.length - 1);
+            console.log("Updating album with ID: " + album.id);
+            document.getElementById('album-image' + index).src = album.image;
+            document.getElementById('album-title' + index).textContent = album.title;
+            document.getElementById('album-artist' + index).textContent = album.artist;
+            document.getElementById(album.id).setAttribute('href', album.link);
+        }
+    });
 
-        textChanges.forEach(text => {
-            if (currentTime >= text.time) {
-                const headline = document.getElementById('headline' + text.id);
-                const desc = document.getElementById('desc' + text.id);
-                if (headline && desc) {
-                    headline.textContent = text.newHeadline;
-                    desc.textContent = text.newDesc;
-                }
+    textChanges.forEach(text => {
+        if (currentTime >= text.time) {
+            const headline = document.getElementById('headline' + text.id);
+            const desc = document.getElementById('desc' + text.id);
+            if (headline && desc) {
+                headline.textContent = text.newHeadline;
+                desc.textContent = text.newDesc;
             }
-        });
+        }
+    });
 
-        imageChanges.forEach(change => {
-            if (currentTime >= change.time && currentTime < change.nextTime) {
-                document.getElementById(change.id).src = change.firstImage;
-            }
-            if (currentTime >= change.nextTime) {
-                document.getElementById(change.id).src = change.secondImage;
-            }
-        });
-    }, 1000);
+    imageChanges.forEach(change => {
+        if (currentTime >= change.time && currentTime < change.nextTime) {
+            document.getElementById(change.id).src = change.firstImage;
+        }
+        if (currentTime >= change.nextTime) {
+            document.getElementById(change.id).src = change.secondImage;
+        }
+    });
+}, 1000); 
 
     // 탭 버튼
     const day1Tab = document.getElementById("day1-tab");
