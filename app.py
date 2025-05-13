@@ -10,16 +10,16 @@ app.register_blueprint(booth_blueprint, url_prefix='/booth')
 # 부스 정보 설정
 booths = {
     "blue_1": {
-        "name": "부스 1",
+        "name": "운영 부스",
         "number": "1",
-        "description": "부스 1입니다.",
+        "description": "운영 부스입니다.",
         "details": "추후 안내",
         "image": "booth_blue.jpg"
     },
     "blue_2": {
-        "name": "부스 2",
+        "name": "운영 부스",
         "number": "2",
-        "description": "부스 2입니다.",
+        "description": "운영 부스입니다.",
         "details": "추후 안내",
         "image": "booth_blue.jpg"
     },
@@ -79,12 +79,12 @@ booths = {
         "details": "추후 안내",
         "image": "booth_blue.jpg"
     },
-    "blue_11": {
+    "green_11": {
         "name": "부스 11",
         "number": "11",
         "description": "부스 11입니다.",
         "details": "추후 안내",
-        "image": "booth_blue.jpg"
+        "image": "booth_green.jpg"
     },
     "green_12": {
         "name": "부스 12",
@@ -156,149 +156,107 @@ booths = {
         "details": "추후 안내",
         "image": "booth_green.jpg"
     },
-    "green_22": {
-        "name": "부스 22",
-        "number": "22",
-        "description": "부스 22입니다.",
-        "details": "추후 안내",
-        "image": "booth_green.jpg"
-    },
     "food_1": {
         "name": "푸드트럭 1",
-        "number": "23",
+        "number": "22",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "hotdog.jpg"
     },
     "food_2": {
         "name": "푸드트럭 2",
-        "number": "24",
+        "number": "23",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_3": {
         "name": "푸드트럭 3",
-        "number": "25",
+        "number": "24",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_4": {
         "name": "푸드트럭 4",
-        "number": "26",
+        "number": "25",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_5": {
         "name": "푸드트럭 5",
-        "number": "27",
+        "number": "26",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_6": {
         "name": "푸드트럭 6",
-        "number": "28",
+        "number": "27",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_7": {
         "name": "푸드트럭 7",
-        "number": "29",
+        "number": "28",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_8": {
         "name": "푸드트럭 8",
-        "number": "30",
+        "number": "29",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_9": {
         "name": "푸드트럭 9",
-        "number": "31",
+        "number": "30",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_10": {
         "name": "푸드트럭 10",
-        "number": "32",
+        "number": "31",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_11": {
         "name": "푸드트럭 11",
-        "number": "33",
+        "number": "32",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_12": {
         "name": "푸드트럭 12",
-        "number": "34",
+        "number": "33",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_13": {
         "name": "푸드트럭 13",
-        "number": "35",
+        "number": "34",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_14": {
         "name": "푸드트럭 14",
-        "number": "36",
+        "number": "35",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_15": {
         "name": "푸드트럭 15",
-        "number": "37",
-        "description": "추후 안내",
-        "details": "추후 안내",
-        "image": "desert.jpg"
-    },
-    "food_16": {
-        "name": "푸드트럭 16",
-        "number": "38",
-        "description": "추후 안내",
-        "details": "추후 안내",
-        "image": "desert.jpg"
-    },
-    "food_17": {
-        "name": "푸드트럭 17",
-        "number": "39",
-        "description": "추후 안내",
-        "details": "추후 안내",
-        "image": "desert.jpg"
-    },
-    "food_18": {
-        "name": "푸드트럭 18",
-        "number": "40",
-        "description": "추후 안내",
-        "details": "추후 안내",
-        "image": "desert.jpg"
-    },
-    "food_19": {
-        "name": "푸드트럭 19",
-        "number": "41",
-        "description": "추후 안내",
-        "details": "추후 안내",
-        "image": "desert.jpg"
-    },
-    "food_20": {
-        "name": "푸드트럭 20",
-        "number": "42",
+        "number": "36",
         "description": "추후 안내",
         "details": "추후 안내",
         "image": "desert.jpg"

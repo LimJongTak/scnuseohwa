@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const boothData = {
         blue: [
-            { id: "blue_1", name: "1번 부스", number: "1번", description: "1번 부스입니다." },
-            { id: "blue_2", name: "2번 부스", number: "2번", description: "2번 부스입니다." },
-            { id: "blue_3", name: "3번 부스", number: "3번", description: "3번 부스입니다." },
+            { id: "blue_1", name: "운영 부스", number: "1번", description: "1번 부스입니다." },
+            { id: "blue_2", name: "운영 부스", number: "2번", description: "2번 부스입니다." },
+            { id: "blue_3", name: "3번 부스스", number: "3번", description: "3번 부스입니다." },
             { id: "blue_4", name: "4번 부스", number: "4번", description: "4번 부스입니다." },
             { id: "blue_5", name: "5번 부스", number: "5번", description: "5번 부스입니다." },
             { id: "blue_6", name: "6번 부스", number: "6번", description: "6번 부스입니다." },
@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
             { id: "blue_8", name: "8번 부스", number: "8번", description: "8번 부스입니다." },
             { id: "blue_9", name: "9번 부스", number: "9번", description: "9번 부스입니다." },
             { id: "blue_10", name: "10번 부스", number: "10번", description: "10번 부스입니다." },
-            { id: "blue_11", name: "11번 부스", number: "11번", description: "11번 부스입니다." }
         ],
         green: [
+            { id: "green_11", name: "11번 부스", number: "11번", description: "11번 부스입니다." },
             { id: "green_12", name: "12번 부스", number: "12번", description: "12번 부스입니다." },
             { id: "green_13", name: "13번 부스", number: "13번", description: "13번 부스입니다." },
             { id: "green_14", name: "14번 부스", number: "14번", description: "14번 부스입니다." },
@@ -24,32 +24,26 @@ document.addEventListener("DOMContentLoaded", function () {
             { id: "green_19", name: "19번 부스", number: "19번", description: "19번 부스입니다." },
             { id: "green_20", name: "20번 부스", number: "20번", description: "20번 부스입니다." },
             { id: "green_21", name: "21번 부스", number: "21번", description: "21번 부스입니다." },
-            { id: "green_22", name: "22번 부스", number: "22번", description: "22번 부스입니다." },
 
         ],
         foodtruck1: [
-            { id: "food_1", name: "푸드트럭 1", number: "23번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_2", name: "푸드트럭 2", number: "24번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_3", name: "푸드트럭 3", number: "25번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_4", name: "푸드트럭 4", number: "26번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_5", name: "푸드트럭 5", number: "27번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_6", name: "푸드트럭 6", number: "28번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_7", name: "푸드트럭 7", number: "29번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_8", name: "푸드트럭 8", number: "30번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_9", name: "푸드트럭 9", number: "31번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_10", name: "푸드트럭 10", number: "32번", description: "추후 안내해 드리겠습니다." }
+            { id: "food_1", name: "푸드트럭 1", number: "22번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_2", name: "푸드트럭 2", number: "23번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_3", name: "푸드트럭 3", number: "24번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_4", name: "푸드트럭 4", number: "25번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_5", name: "푸드트럭 5", number: "26번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_6", name: "푸드트럭 6", number: "27번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_7", name: "푸드트럭 7", number: "28번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_8", name: "푸드트럭 8", number: "29번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_9", name: "푸드트럭 9", number: "30번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_10", name: "푸드트럭 10", number: "31번", description: "추후 안내해 드리겠습니다." }
         ],
         foodtruck2: [
-            { id: "food_11", name: "푸드트럭 11", number: "33번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_12", name: "푸드트럭 12", number: "34번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_13", name: "푸드트럭 13", number: "35번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_14", name: "푸드트럭 14", number: "36번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_15", name: "푸드트럭 15", number: "37번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_16", name: "푸드트럭 16", number: "38번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_17", name: "푸드트럭 17", number: "39번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_18", name: "푸드트럭 18", number: "40번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_19", name: "푸드트럭 19", number: "41번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_20", name: "푸드트럭 20", number: "42번", description: "추후 안내해 드리겠습니다." }
+            { id: "food_11", name: "푸드트럭 11", number: "32번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_12", name: "푸드트럭 12", number: "33번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_13", name: "푸드트럭 13", number: "34번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_14", name: "푸드트럭 14", number: "35번", description: "추후 안내해 드리겠습니다." },
+            { id: "food_15", name: "푸드트럭 15", number: "36번", description: "추후 안내해 드리겠습니다." }
         ]
     };
 
