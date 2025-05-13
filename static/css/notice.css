@@ -91,6 +91,7 @@
 .notice-item:nth-child(1) { animation-delay: 0s; }
 .notice-item:nth-child(3) { animation-delay: 0.7s; }
 .notice-item:nth-child(5) { animation-delay: 0.9s; }
+.notice-item:nth-child(5) { animation-delay: 1.1s; }
 
 /* 텍스트가 길어질 때 줄바꿈을 위한 스타일 */
 .notice-item span {
