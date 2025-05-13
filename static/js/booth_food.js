@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const boothData = {
         blue: [
-            { id: "blue_1", name: "운영 부스", number: "1번", description: "1번 부스입니다." },
-            { id: "blue_2", name: "운영 부스", number: "2번", description: "2번 부스입니다." },
-            { id: "blue_3", name: "3번 부스스", number: "3번", description: "3번 부스입니다." },
+            { id: "blue_1", name: "운영 부스", number: "1번", description: "운영 부스입니다." },
+            { id: "blue_2", name: "운영 부스", number: "2번", description: "운영 부스입니다." },
+            { id: "blue_3", name: "3번 부스", number: "3번", description: "3번 부스입니다." },
             { id: "blue_4", name: "4번 부스", number: "4번", description: "4번 부스입니다." },
             { id: "blue_5", name: "5번 부스", number: "5번", description: "5번 부스입니다." },
             { id: "blue_6", name: "6번 부스", number: "6번", description: "6번 부스입니다." },
