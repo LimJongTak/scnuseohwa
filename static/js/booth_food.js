@@ -36,9 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             { id: "food_7", name: "푸드트럭 7", number: "28번", description: "추후 안내해 드리겠습니다." },
             { id: "food_8", name: "푸드트럭 8", number: "29번", description: "추후 안내해 드리겠습니다." },
             { id: "food_9", name: "푸드트럭 9", number: "30번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_10", name: "푸드트럭 10", number: "31번", description: "추후 안내해 드리겠습니다." }
-        ],
-        foodtruck2: [
+            { id: "food_10", name: "푸드트럭 10", number: "31번", description: "추후 안내해 드리겠습니다." },
             { id: "food_11", name: "푸드트럭 11", number: "32번", description: "추후 안내해 드리겠습니다." },
             { id: "food_12", name: "푸드트럭 12", number: "33번", description: "추후 안내해 드리겠습니다." },
             { id: "food_13", name: "푸드트럭 13", number: "34번", description: "추후 안내해 드리겠습니다." },
