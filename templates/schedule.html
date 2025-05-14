@@ -13,36 +13,36 @@
     <div class="schedule-day" id="day1">
         <!-- Day 1 일정 (2025년 5월 28일) -->
         <div class="schedule-item" id="item-1">
-            <p class="schedule-time">10:00 ~ 19:00</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">11:00 ~ 18:00</p>
+            <p class="schedule-detail">주간 프로그램 운영(부스 운영)</p>
         </div>
         <div class="schedule-item" id="item-2">
-            <p class="schedule-time">16:00 ~ 17:00</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">16:00 ~ 18:00</p>
+            <p class="schedule-detail">학생자치기구 출범식</p>
         </div>
         <div class="schedule-item" id="item-3">
             <p class="schedule-time">18:00 ~ 19:00</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-detail">개회식</p>
         </div>
         <div class="schedule-item" id="item-4">
-            <p class="schedule-time">19:00 ~ 19:30</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">19:00 ~ 20:00</p>
+            <p class="schedule-detail">초청 가수 공연 (싸이(PSY))</p>
         </div>
         <div class="schedule-item" id="item-5">
-            <p class="schedule-time">19:30 ~ 20:30</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">20:00 ~ 20:30</p>
+            <p class="schedule-detail">무대정리 및 안전확보</p>
         </div>
         <div class="schedule-item" id="item-6">
             <p class="schedule-time">20:30 ~ 21:00</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-detail">초청 가수 공연 (현서)</p>
         </div>
         <div class="schedule-item" id="item-7">
-            <p class="schedule-time">21:00 ~ 21:30</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">21:00 ~ 21:40</p>
+            <p class="schedule-detail">초청 가수 공연 (너드커넥션)</p>
         </div>
         <div class="schedule-item" id="item-8">
-            <p class="schedule-time">21:30 ~ 22:00</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">21:40 ~ </p>
+            <p class="schedule-detail">무대 정리</p>
         </div>
     </div>
 
@@ -50,36 +50,32 @@
     <div class="schedule-day" id="day2" style="display: none;">
         <!-- Day 2 일정 (2025년 5월 29일) -->
         <div class="schedule-item" id="item-9">
-            <p class="schedule-time">10:00 ~ 19:00</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">11:00 ~ 18:00</p>
+            <p class="schedule-detail">주간 프로그램 운영 (부스 운영)</p>
         </div>
         <div class="schedule-item" id="item-10">
-            <p class="schedule-time">18:00 ~ 19:00</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">15:00 ~ 18:00</p>
+            <p class="schedule-detail">동아리 공연</p>
         </div>
         <div class="schedule-item" id="item-11">
-            <p class="schedule-time">19:00 ~ 19:30</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">18:00 ~ 20:00</p>
+            <p class="schedule-detail">향림 가요제</p>
         </div>
         <div class="schedule-item" id="item-12">
-            <p class="schedule-time">19:30 ~ 20:00</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">20:00 ~ 20:30</p>
+            <p class="schedule-detail">초청 가수 공연 (백호)</p>
         </div>
         <div class="schedule-item" id="item-13">
-            <p class="schedule-time">20:00 ~ 20:30</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">20:30 ~ 21:00</p>
+            <p class="schedule-detail">초청 가수 공연 (헤이즈)</p>
         </div>
         <div class="schedule-item" id="item-14">
-            <p class="schedule-time">20:30 ~ 21:00</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">21:20 ~ 22:10</p>
+            <p class="schedule-detail">초청 가수 공연 (QWER)</p>
         </div>
         <div class="schedule-item" id="item-15">
-            <p class="schedule-time">21:00 ~ 21:30</p>
-            <p class="schedule-detail">추후 공개 예정</p>
-        </div>
-        <div class="schedule-item" id="item-16">
-            <p class="schedule-time">22:00 ~ 22:10</p>
-            <p class="schedule-detail">추후 공개 예정</p>
+            <p class="schedule-time">22:10 ~ </p>
+            <p class="schedule-detail">폐막식</p>
         </div>
     </div>
 </div>
@@ -87,25 +83,26 @@
 <script>
 // 일정 정보 (startTime, endTime 포함)
 const schedule = [
-    { title: "주간 프로그램 운영", description: "부스 운영 등", startTime: new Date("2025-05-28 10:00"), endTime: new Date("2025-05-28 19:00"), id: "item-1" },
-    { title: "축제 부스 리허설 및 안전점검", description: "", startTime: new Date("2025-05-28 16:00"), endTime: new Date("2025-05-28 17:00"), id: "item-2" },
-    { title: "동아리 오프닝 공연", description: "", startTime: new Date("2025-05-28 18:00"), endTime: new Date("2025-05-28 19:00"), id: "item-3" },
-    { title: "개회식", description: "", startTime: new Date("2025-05-28 19:00"), endTime: new Date("2025-05-28 19:30"), id: "item-4" },
-    { title: "출범식", description: "", startTime: new Date("2025-05-28 19:30"), endTime: new Date("2025-05-28 20:30"), id: "item-5" },
-    { title: "초청 가수 공연(1)", description: "초청 아티스트 공연", startTime: new Date("2025-05-28 20:30"), endTime: new Date("2025-05-28 21:00"), id: "item-6" },
-    { title: "초청 가수 공연(2)", description: "초청 아티스트 공연", startTime: new Date("2025-05-28 21:00"), endTime: new Date("2025-05-28 21:30"), id: "item-7" },
-    { title: "초청 가수 공연(3)", description: "초청 아티스트 공연", startTime: new Date("2025-05-28 21:30"), endTime: new Date("2025-05-28 22:00"), id: "item-8" },
+    // 1day 일정 (2025-05-28)
+    { title: "주간 프로그램 운영(부스 운영)", description: "", startTime: new Date("2025-05-28T11:00:00"), endTime: new Date("2025-05-28T18:00:00"), id: "item-1" },
+    { title: "학생자치기구 출범식", description: "", startTime: new Date("2025-05-28T16:00:00"), endTime: new Date("2025-05-28T18:00:00"), id: "item-2" },
+    { title: "개회식", description: "", startTime: new Date("2025-05-28T18:00:00"), endTime: new Date("2025-05-28T19:00:00"), id: "item-3" },
+    { title: "초청 가수 공연 (싸이(PSY))", description: "", startTime: new Date("2025-05-28T19:00:00"), endTime: new Date("2025-05-28T20:00:00"), id: "item-4" },
+    { title: "무대정리 및 안전확보", description: "", startTime: new Date("2025-05-28T20:00:00"), endTime: new Date("2025-05-28T20:30:00"), id: "item-5" },
+    { title: "초청 가수 공연 (현서)", description: "", startTime: new Date("2025-05-28T20:30:00"), endTime: new Date("2025-05-28T21:00:00"), id: "item-6" },
+    { title: "초청 가수 공연 (너드커넥션)", description: "", startTime: new Date("2025-05-28T21:00:00"), endTime: new Date("2025-05-28T21:40:00"), id: "item-7" },
+    { title: "무대 정리", description: "", startTime: new Date("2025-05-28T21:40:00"), endTime: new Date("2025-05-28T23:59:59"), id: "item-8" },
 
-    // 2일차 일정 추가 (2025년 5월 29일)
-    { title: "주간 프로그램 운영", description: "부스 운영 등", startTime: new Date("2025-05-29 10:00"), endTime: new Date("2025-05-29 19:00"), id: "item-9" },
-    { title: "동아리 오프닝 공연", description: "", startTime: new Date("2025-05-29 18:00"), endTime: new Date("2025-05-29 19:00"), id: "item-10" },
-    { title: "개회식", description: "", startTime: new Date("2025-05-29 19:00"), endTime: new Date("2025-05-29 19:30"), id: "item-11" },
-    { title: "향림 가요제", description: "", startTime: new Date("2025-05-29 19:30"), endTime: new Date("2025-05-29 20:00"), id: "item-12" },
-    { title: "장기자랑", description: "", startTime: new Date("2025-05-29 20:00"), endTime: new Date("2025-05-29 20:30"), id: "item-13" },
-    { title: "초청 가수 공연(1)", description: "초청 아티스트 공연", startTime: new Date("2025-05-29 20:30"), endTime: new Date("2025-05-29 21:00"), id: "item-14" },
-    { title: "초청 가수 공연(2)", description: "초청 아티스트 공연", startTime: new Date("2025-05-29 21:00"), endTime: new Date("2025-05-29 21:30"), id: "item-15" },
-    { title: "폐막식", description: "", startTime: new Date("2025-05-29 22:00"), endTime: new Date("2025-05-29 22:10"), id: "item-16" }
+    // 2day 일정 (2025-05-29)
+    { title: "주간 프로그램 운영(부스 운영)", description: "", startTime: new Date("2025-05-29T11:00:00"), endTime: new Date("2025-05-29T18:00:00"), id: "item-9" },
+    { title: "동아리 공연", description: "", startTime: new Date("2025-05-29T15:00:00"), endTime: new Date("2025-05-29T18:00:00"), id: "item-10" },
+    { title: "향림 가요제", description: "", startTime: new Date("2025-05-29T18:00:00"), endTime: new Date("2025-05-29T20:00:00"), id: "item-11" },
+    { title: "초청 가수 공연 (백호)", description: "", startTime: new Date("2025-05-29T20:00:00"), endTime: new Date("2025-05-29T20:30:00"), id: "item-12" },
+    { title: "초청 가수 공연 (헤이즈)", description: "", startTime: new Date("2025-05-29T20:30:00"), endTime: new Date("2025-05-29T21:20:00"), id: "item-13" },
+    { title: "초청 가수 공연 (QWER)", description: "", startTime: new Date("2025-05-29T21:20:00"), endTime: new Date("2025-05-29T22:10:00"), id: "item-14" },
+    { title: "폐막식", description: "", startTime: new Date("2025-05-29T22:10:00"), endTime: new Date("2025-05-29T23:59:59"), id: "item-15" }
 ];
+
 
 // 탭 클릭 시 Day 1, Day 2 일정 표시
 const day1Tab = document.getElementById("day1-tab");

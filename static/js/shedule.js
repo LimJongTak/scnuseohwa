@@ -32,26 +32,25 @@ window.onload = function () {
     
         // 1day 일정 (2025년 5월 28일)
         const itemsDay1 = [
-            { start: new Date("2025-05-28 10:00"), end: new Date("2025-05-28 19:00"), id: "item-1" },
-            { start: new Date("2025-05-28 16:00"), end: new Date("2025-05-28 17:00"), id: "item-2" },
+            { start: new Date("2025-05-28 11:00"), end: new Date("2025-05-28 18:00"), id: "item-1" },
+            { start: new Date("2025-05-28 16:00"), end: new Date("2025-05-28 18:00"), id: "item-2" },
             { start: new Date("2025-05-28 18:00"), end: new Date("2025-05-28 19:00"), id: "item-3" },
-            { start: new Date("2025-05-28 19:00"), end: new Date("2025-05-28 19:30"), id: "item-4" },
-            { start: new Date("2025-05-28 19:30"), end: new Date("2025-05-28 20:30"), id: "item-5" },
+            { start: new Date("2025-05-28 19:00"), end: new Date("2025-05-28 20:00"), id: "item-4" },
+            { start: new Date("2025-05-28 20:00"), end: new Date("2025-05-28 20:30"), id: "item-5" },
             { start: new Date("2025-05-28 20:30"), end: new Date("2025-05-28 21:00"), id: "item-6" },
-            { start: new Date("2025-05-28 21:00"), end: new Date("2025-05-28 21:30"), id: "item-7" },
-            { start: new Date("2025-05-28 21:30"), end: new Date("2025-05-28 22:00"), id: "item-8" }
+            { start: new Date("2025-05-28 21:00"), end: new Date("2025-05-28 21:40"), id: "item-7" },
+            { start: new Date("2025-05-28 21:40"), end: new Date("2025-05-28 23:59"), id: "item-8" }
         ];
     s
         // 2day 일정 (2025년 5월 29일)
         const itemsDay2 = [
-            { start: new Date("2025-05-29 10:00"), end: new Date("2025-05-29 19:00"), id: "item-9" },
-            { start: new Date("2025-05-29 18:00"), end: new Date("2025-05-29 19:00"), id: "item-10" },
-            { start: new Date("2025-05-29 19:00"), end: new Date("2025-05-29 19:30"), id: "item-11" },
-            { start: new Date("2025-05-29 19:30"), end: new Date("2025-05-29 20:00"), id: "item-12" },
-            { start: new Date("2025-05-29 20:00"), end: new Date("2025-05-29 20:30"), id: "item-13" },
-            { start: new Date("2025-05-29 20:30"), end: new Date("2025-05-29 21:00"), id: "item-14" },
-            { start: new Date("2025-05-29 21:00"), end: new Date("2025-05-29 21:30"), id: "item-15" },
-            { start: new Date("2025-05-29 22:00"), end: new Date("2025-05-29 22:10"), id: "item-16" }
+            { start: new Date("2025-05-29 11:00"), end: new Date("2025-05-29 18:00"), id: "item-9" },
+            { start: new Date("2025-05-29 15:00"), end: new Date("2025-05-29 18:00"), id: "item-10" },
+            { start: new Date("2025-05-29 18:00"), end: new Date("2025-05-29 20:00"), id: "item-11" },
+            { start: new Date("2025-05-29 20:00"), end: new Date("2025-05-29 20:30"), id: "item-12" },
+            { start: new Date("2025-05-29 20:30"), end: new Date("2025-05-29 21:00"), id: "item-13" },
+            { start: new Date("2025-05-29 21:20"), end: new Date("2025-05-29 22:10"), id: "item-14" },
+            { start: new Date("2025-05-29 22:10"), end: new Date("2025-05-29 23:59"), id: "item-15" }
         ];
     
         // 시간대 비교 및 active 추가

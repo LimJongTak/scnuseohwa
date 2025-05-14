@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "reveal2": new Date("2025-04-22T00:00:00"),
         "reveal3": new Date("2025-04-22T00:00:00"),
         "reveal4": new Date("2025-04-22T00:00:00"),
-        "reveal5": new Date("2025-04-22T00:00:00")
+        "reveal5": new Date("2025-04-22T00:00:00"),
+        "reveal6": new Date("2025-04-22T00:00:00")
     };
 
     const revealChangeDates = {
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "reveal3": new Date("2025-05-13T10:00:00"),
         "reveal4": new Date("2025-05-13T10:00:00"),
         "reveal5": new Date("2025-05-13T10:00:00"),
+        "reveal6": new Date("2025-05-13T10:00:00")
     };
 
     // 1일 뒤 이미지 변경 (또는 추가적인 이미지 변경)
@@ -59,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "reveal3": new Date("2025-05-14T10:00:00"),
         "reveal4": new Date("2025-05-14T10:00:00"),
         "reveal5": new Date("2025-05-14T10:00:00"),
+        "reveal6": new Date("2025-05-14T10:00:00")
     };
 
     // 현재 시간을 기준으로 이미지 변경
@@ -88,6 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         image.src = "static/images/hz.png";  // 이미지 변경
                     } else if (key === "reveal5") {
                         image.src = "static/images/qw.png";  // 이미지 변경
+                    } else if (key === "reveal6") {
+                        image.src = "static/images/hs.png";  // 이미지 변경
                     }
                     console.log(`Image changed for ${key}: `, image.src);  // 이미지 경로 확인
                 }
@@ -103,6 +108,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         image.src = "static/images/hz2.png";  // 두 번째 이미지 변경
                     } else if (key === "reveal5") {
                         image.src = "static/images/qw2.png";  // 두 번째 이미지 변경
+                    } else if (key === "reveal6") {
+                        image.src = "static/images/hs.png";  // 두 번째 이미지 변경
                     }
                     console.log(`Second Image changed for ${key}: `, image.src);  // 두 번째 이미지 경로 확인
                 }
