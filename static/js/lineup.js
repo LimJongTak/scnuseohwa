@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
             nextTime: new Date("2025-05-13T10:00:00").getTime()
         },
         {
+    id: 'artist-image3',
+    firstImage: 'static/images/hyunseo.png',
+    secondImage: 'static/images/hyunseo.png',  // 필요시 변경 이미지 있으면 지정
+    time: new Date("2025-05-12T10:00:00").getTime(),
+    nextTime: new Date("2025-05-13T10:00:00").getTime()
+},
+        {
             id: 'artist-image4',
             firstImage: 'static/images/bh.png',
             secondImage: 'static/images/bh2.png',
@@ -86,6 +93,30 @@ document.addEventListener("DOMContentLoaded", function () {
             link: 'https://youtu.be/W25_xvZWKMw?si=EUouvpbTI7-0-KHt',  // 새로운 링크 추가
             time: new Date("2025-05-13T10:00:00").getTime()  // 첫 번째 앨범 변경 시간
         },
+        {
+    id: 'album7',
+    image: 'static/images/new-album7-hyunseo.jpg',
+    title: '그 해 여름 우리는',
+    artist: '그 해 여름 우리는 (2024)',
+    link: 'https://youtu.be/E4RrwK0fEzE?si=dVAkuVSjWGgtVLdJ',
+    time: new Date("2025-05-12T10:00:00").getTime()
+},
+{
+    id: 'album8',
+    image: 'static/images/new-album8-hyunseo.jpg',
+    title: '춘몽',
+    artist: '춘몽 (2025)',
+    link: 'https://youtu.be/_BHhwjk0kmk?si=XpqH3cCSA_at18tY',
+    time: new Date("2025-05-12T10:00:00").getTime()
+},
+{
+    id: 'album9',
+    image: 'static/images/new-album9-hyunseo.jpg',
+    title: '1분 1초',
+    artist: '1분 1초 (소녀의 세계 X 현서) (2025)',
+    link: 'https://youtu.be/93KKf0ZQ0sw?si=KJePCeVROkFXQyye',
+    time: new Date("2025-05-12T10:00:00").getTime()
+},
         {
             id: 'album10', // 2일차 1번
             image: 'static/images/new-album7.jpg',
@@ -173,6 +204,12 @@ document.addEventListener("DOMContentLoaded", function () {
             newHeadline: "너드커넥션",
             newDesc: "너드커넥션(Nerd Connection)은 2017년에 결성된 대한민국의 4인조 록 밴드로, 감성적인 록 발라드와 서정적인 멜로디로 주목받고 있다. 이들은 '어지러운 세상, 따뜻한 음악'이라는 슬로건을 내세워 활동하며, 1990~2000년대의 영국 록 밴드들(Radiohead, Coldplay, Oasis 등)과 한국의 김광석, 넬 등으로부터 영향을 받았다."
         },
+        {
+    id: 3,
+    time: new Date("2025-05-12T10:00:00").getTime(),
+    newHeadline: "현서 (HYUN SEO)",
+    newDesc: "현서(HYUN SEO)는 대한민국의 인디 R&B 싱어송라이터로, 감성적인 보컬과 섬세한 가사로 주목받고 있습니다. 2024년부터 본격적인 음악 활동을 시작하여, '그 해 여름 우리는', '춘몽', '1분 1초' 등 다양한 곡을 발표하며 인디 음악 팬들 사이에서 인기를 얻고 있습니다. 특히, 드라마 OST 참여와 다양한 아티스트와의 협업을 통해 음악적 스펙트럼을 넓혀가고 있습니다."
+},
         {
             id: 4, //2일차 1번
             time: new Date("2025-05-14T10:00:00").getTime(),
