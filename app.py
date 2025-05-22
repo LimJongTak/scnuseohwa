@@ -157,108 +157,108 @@ booths = {
         "image": "booth_green.jpg"
     },
     "food_1": {
-        "name": "푸드트럭 1",
-        "number": "22",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "만동만길",
+        "number": "1",
+        "description": "떡순어묵",
+        "details": "떡볶이 : 6,000원\n순대 : 6,000원\n어묵(5개) : 6,000원\n우동 : 6,000원",
         "image": "hotdog.jpg"
     },
     "food_2": {
-        "name": "푸드트럭 2",
-        "number": "23",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "VIP",
+        "number": "2",
+        "description": "크림, 칠리새우",
+        "details": "크림새우/칠리새우\n중 : 10,000원\n대 : 15,000원",
         "image": "desert.jpg"
     },
     "food_3": {
-        "name": "푸드트럭 3",
-        "number": "24",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "키다리푸드",
+        "number": "3",
+        "description": "야끼소바, 오코노미야끼",
+        "details": "야끼소바 : 10,000원\n오코노미야끼 : 10,000원",
         "image": "desert.jpg"
     },
     "food_4": {
-        "name": "푸드트럭 4",
-        "number": "25",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "부엉이푸드",
+        "number": "4",
+        "description": "닭꼬치",
+        "details": "닭꼬치 : 5,000원",
         "image": "desert.jpg"
     },
     "food_5": {
-        "name": "푸드트럭 5",
-        "number": "26",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "로드리",
+        "number": "5",
+        "description": "야채곱창, 무뼈닭발",
+        "details": "야채곱창/무뼈닭발 : 13,000원",
         "image": "desert.jpg"
     },
     "food_6": {
-        "name": "푸드트럭 6",
-        "number": "27",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "뽀라츄러스",
+        "number": "6",
+        "description": "츄러스, 아이스크림",
+        "details": "츄러스 : 4,000원\n아이스크림 : 4,000원\n아이스크림 츄러스 : 7,000원",
         "image": "desert.jpg"
     },
     "food_7": {
-        "name": "푸드트럭 7",
-        "number": "28",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "이삭",
+        "number": "7",
+        "description": "생과일주스, 과일화채",
+        "details": "생과일쥬스 : 6,000원\n컵과일 : 7,000원\n과일화채 : 5,000원\n아이스 아메리카노 : 4,000원",
         "image": "desert.jpg"
     },
     "food_8": {
-        "name": "푸드트럭 8",
-        "number": "29",
-        "description": "추후 안내",
+        "name": "알코홀릭",
+        "number": "8",
+        "description": "주류판매",
         "details": "추후 안내",
         "image": "desert.jpg"
     },
     "food_9": {
-        "name": "푸드트럭 9",
-        "number": "30",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "톡톡팡팡",
+        "number": "9",
+        "description": "구슬아이스크림",
+        "details": "구슬아이스크림\n싱글 : 4,000원\n더블 : 7,000\n전체 10,000원",
         "image": "desert.jpg"
     },
     "food_10": {
-        "name": "푸드트럭 10",
-        "number": "31",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "핑크제이",
+        "number": "10",
+        "description": "소고기불초밥, 연어초밥",
+        "details": "소고기불초밥 : 12,000원\n 연어초밥 : 13,000원",
         "image": "desert.jpg"
     },
     "food_11": {
-        "name": "푸드트럭 11",
-        "number": "32",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "꽃길만걷자6",
+        "number": "11",
+        "description": "스테이크&덮밥",
+        "details": "스테이크&덮밥 : 12,000원",
         "image": "desert.jpg"
     },
     "food_12": {
-        "name": "푸드트럭 12",
-        "number": "33",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "유에프오",
+        "number": "12",
+        "description": "뉴욕핫도그, 감자튀김",
+        "details": "뉴욕핫도그(5종) : 5,500원\n감자튀김 : 5,000원\n세트 : 10,000원",
         "image": "desert.jpg"
     },
     "food_13": {
-        "name": "푸드트럭 13",
-        "number": "34",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "꽃길만걷자",
+        "number": "13",
+        "description": "닭강정",
+        "details": "닭강정\n중 : 10,000원\n대 : 17,000원",
         "image": "desert.jpg"
     },
     "food_14": {
-        "name": "푸드트럭 14",
-        "number": "35",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "명리푸드",
+        "number": "14",
+        "description": "통닭, 목살바베큐",
+        "details": "통닭바베큐 10,000원\n목살바베큐 18,000원",
         "image": "desert.jpg"
     },
     "food_15": {
-        "name": "푸드트럭 15",
-        "number": "36",
-        "description": "추후 안내",
-        "details": "추후 안내",
+        "name": "타임푸드",
+        "number": "15",
+        "description": "타코야끼",
+        "details": "타코야끼(10알) : 6,000원",
         "image": "desert.jpg"
     }
 }

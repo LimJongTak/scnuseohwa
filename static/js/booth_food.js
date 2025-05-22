@@ -27,21 +27,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         ],
         foodtruck1: [
-            { id: "food_1", name: "푸드트럭 1", number: "22번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_2", name: "푸드트럭 2", number: "23번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_3", name: "푸드트럭 3", number: "24번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_4", name: "푸드트럭 4", number: "25번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_5", name: "푸드트럭 5", number: "26번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_6", name: "푸드트럭 6", number: "27번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_7", name: "푸드트럭 7", number: "28번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_8", name: "푸드트럭 8", number: "29번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_9", name: "푸드트럭 9", number: "30번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_10", name: "푸드트럭 10", number: "31번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_11", name: "푸드트럭 11", number: "32번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_12", name: "푸드트럭 12", number: "33번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_13", name: "푸드트럭 13", number: "34번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_14", name: "푸드트럭 14", number: "35번", description: "추후 안내해 드리겠습니다." },
-            { id: "food_15", name: "푸드트럭 15", number: "36번", description: "추후 안내해 드리겠습니다." }
+            { id: "food_1", name: "만동만길", number: "1번", description: "떡순어묵" },
+            { id: "food_2", name: "VIP", number: "2번", description: "크림, 칠리새우" },
+            { id: "food_3", name: "키다리푸드", number: "3번", description: "야끼소바, 오코노미야끼" },
+            { id: "food_4", name: "부엉이푸드", number: "4번", description: "닭꼬치" },
+            { id: "food_5", name: "로드리", number: "5번", description: "야채곱창, 무뼈닭발" },
+            { id: "food_6", name: "뽀라츄러스", number: "6번", description: "츄러스, 아이스크림" },
+            { id: "food_7", name: "이삭", number: "7번", description: "생과일주스, 과일화채" },
+            { id: "food_8", name: "알코홀릭", number: "8번", description: "주류판매" },
+            { id: "food_9", name: "톡톡팡팡", number: "9번", description: "구슬아이스크림" },
+            { id: "food_10", name: "핑크제이", number: "10번", description: "소고기불초밥, 연어초밥" },
+            { id: "food_11", name: "꽃길만걷자6", number: "11번", description: "스테이크&덮밥" },
+            { id: "food_12", name: "유에프오", number: "12번", description: "뉴욕핫도그, 감자튀김" },
+            { id: "food_13", name: "꽃길만걷자", number: "13번", description: "닭강정" },
+            { id: "food_14", name: "명리푸드", number: "14번", description: "통닭, 목살바베큐" },
+            { id: "food_15", name: "타임푸드", number: "15번", description: "타코야끼" }
         ]
     };
 
