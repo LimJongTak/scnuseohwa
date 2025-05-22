@@ -22,118 +22,118 @@ booths = {
         "details": "추후 안내"
     },
     "blue_3": {
-        "name": "부스 3",
+        "name": "또굿집",
         "number": "3",
-        "description": "부스 3입니다.",
-        "details": "추후 안내"
+        "description": "축제준비위원회",
+        "details": "Fairy Tale 향림 대동제의 MD를 현장구매·수령할 수 있는 부스"
     },
     "blue_4": {
-        "name": "부스 4",
+        "name": "과일을 찾아라!",
         "number": "4",
-        "description": "부스 4입니다.",
-        "details": "추후 안내"
+        "description": "총학생회(서화)",
+        "details": "랜덤으로 보여주는 과일·채소 장난감이 일치하면 상품을 받는 확률형 게임형 부스"
     },
     "blue_5": {
-        "name": "부스 5",
+        "name": "슬리퍼 발로 차",
         "number": "5",
-        "description": "부스 5입니다.",
-        "details": "추후 안내"
+        "description": "총동아리연합회(결)",
+        "details": "슬리퍼를 던져 과녁에 넣는 게임을 체험할 수 있는 부스"
     },
     "blue_6": {
-        "name": "부스 6",
+        "name": "탁구공 던지기 게임",
         "number": "6",
-        "description": "부스 6입니다.",
-        "details": "추후 안내"
+        "description": "그린스마트팜스쿨학생회(화랑)",
+        "details": "탁구공을 던져서 맥주잔 안에 넣는 게임을 체험할 수 있는 부스"
     },
     "blue_7": {
-        "name": "부스 7",
+        "name": "소원을 말해봐",
         "number": "7",
-        "description": "부스 7입니다.",
-        "details": "추후 안내"
+        "description": "우주항공첨단소재스쿨학생회(SO:ONE)",
+        "details": "참가자가 동전 던지기 게임을 통해 소원을 적을 수 있는 부스"
     },
     "blue_8": {
-        "name": "부스 8",
+        "name": "2025년 마약류 중독 및 오남용 예방 캠페인",
         "number": "8",
-        "description": "부스 8입니다.",
-        "details": "추후 안내"
+        "description": "약학대학 학생회(도파민)",
+        "details": "약물고글 체험과 올바른 정보 제공을 통해 마약의 위험성을 알리고 안전한 학교 환경 조성을 위한 예방 캠페인을 진행하는 부스"
     },
     "blue_9": {
-        "name": "부스 9",
+        "name": "월하랑 놀자",
         "number": "9",
-        "description": "부스 9입니다.",
-        "details": "추후 안내"
+        "description": "애니메이션문화콘텐츠스쿨",
+        "details": "다채로운 게임과 추첨, SNS 연계 이벤트를 통해 즐거움과 상품을 동시에 제공하는 참여형 부스"
     },
     "blue_10": {
-        "name": "부스 10",
+        "name": "GTEP 사업단",
         "number": "10",
-        "description": "부스 10입니다.",
-        "details": "추후 안내"
+        "description": "GTEP 사업단",
+        "details": "국립순천대학교 GTEP 사업단 홍보활동 및 설명회를 진행하는 부스"
     },
     "green_11": {
-        "name": "부스 11",
+        "name": "양말목 티코스터&음료 리필스테이션",
         "number": "11",
-        "description": "부스 11입니다.",
-        "details": "추후 안내"
+        "description": "중앙 동아리(새순)",
+        "details": "업사이클링 공예와 음료 리필을 통해 탄소중립과 제로웨이스트를 실천하는 환경봉사 동아리 ‘새순’의 체험형 친환경 부스"
     },
     "green_12": {
-        "name": "부스 12",
+        "name": "취향을 담은 꾸러미",
         "number": "12",
-        "description": "부스 12입니다.",
-        "details": "추후 안내"
+        "description": "창업동아리(방향을 잡는 사람들)",
+        "details": "석고 방향제, 팔찌 제작 및 판매를 진행하는 부스"
     },
     "green_13": {
-        "name": "부스 13",
+        "name": "디망쉬",
         "number": "13",
-        "description": "부스 13입니다.",
-        "details": "추후 안내"
+        "description": "디망쉬",
+        "details": "캐릭터소품,굿즈류 판매와 포켓키링,비즈발만들기 체험 진행하는 부스"
     },
     "green_14": {
-        "name": "부스 14",
+        "name": "대학본부 1",
         "number": "14",
-        "description": "부스 14입니다.",
+        "description": "대학본부 1",
         "details": "추후 안내"
     },
     "green_15": {
-        "name": "부스 15",
+        "name": "대학본부 2",
         "number": "15",
-        "description": "부스 15입니다.",
+        "description": "대학본부 2",
         "details": "추후 안내"
     },
     "green_16": {
-        "name": "부스 16",
+        "name": "대학본부 3",
         "number": "16",
-        "description": "부스 16입니다.",
+        "description": "대학본부 3",
         "details": "추후 안내"
     },
     "green_17": {
-        "name": "부스 17",
+        "name": "대학본부 4",
         "number": "17",
-        "description": "부스 17입니다.",
+        "description": "대학본부 4",
         "details": "추후 안내"
     },
     "green_18": {
-        "name": "부스 18",
+        "name": "대학본부 5",
         "number": "18",
-        "description": "부스 18입니다.",
+        "description": "대학본부 5",
         "details": "추후 안내"
     },
     "green_19": {
-        "name": "부스 19",
+        "name": "대학본부 6",
         "number": "19",
-        "description": "부스 19입니다.",
+        "description": "대학본부 6",
         "details": "추후 안내"
     },
     "green_20": {
-        "name": "부스 20",
+        "name": "동화 속 한 장면",
         "number": "20",
-        "description": "부스 20입니다.",
-        "details": "추후 안내"
+        "description": "총학생회(서화)",
+        "details": "인생네컷"
     },
     "green_21": {
-        "name": "부스 21",
+        "name": "동화 속 한 장면",
         "number": "21",
-        "description": "부스 21입니다.",
-        "details": "추후 안내"
+        "description": "총학생회(서화)",
+        "details": "인생네컷"
     },
     "food_1": {
         "name": "만동만길",
