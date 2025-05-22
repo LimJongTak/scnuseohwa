@@ -13,253 +13,217 @@ booths = {
         "name": "운영 부스",
         "number": "1",
         "description": "운영 부스입니다.",
-        "details": "추후 안내",
-        "image": "booth_blue.jpg"
+        "details": "추후 안내"
     },
     "blue_2": {
         "name": "운영 부스",
         "number": "2",
         "description": "운영 부스입니다.",
-        "details": "추후 안내",
-        "image": "booth_blue.jpg"
+        "details": "추후 안내"
     },
     "blue_3": {
         "name": "부스 3",
         "number": "3",
         "description": "부스 3입니다.",
-        "details": "추후 안내",
-        "image": "booth_blue.jpg"
+        "details": "추후 안내"
     },
     "blue_4": {
         "name": "부스 4",
         "number": "4",
         "description": "부스 4입니다.",
-        "details": "추후 안내",
-        "image": "booth_blue.jpg"
+        "details": "추후 안내"
     },
     "blue_5": {
         "name": "부스 5",
         "number": "5",
         "description": "부스 5입니다.",
-        "details": "추후 안내",
-        "image": "booth_blue.jpg"
+        "details": "추후 안내"
     },
     "blue_6": {
         "name": "부스 6",
         "number": "6",
         "description": "부스 6입니다.",
-        "details": "추후 안내",
-        "image": "booth_blue.jpg"
+        "details": "추후 안내"
     },
     "blue_7": {
         "name": "부스 7",
         "number": "7",
         "description": "부스 7입니다.",
-        "details": "추후 안내",
-        "image": "booth_blue.jpg"
+        "details": "추후 안내"
     },
     "blue_8": {
         "name": "부스 8",
         "number": "8",
         "description": "부스 8입니다.",
-        "details": "추후 안내",
-        "image": "booth_blue.jpg"
+        "details": "추후 안내"
     },
     "blue_9": {
         "name": "부스 9",
         "number": "9",
         "description": "부스 9입니다.",
-        "details": "추후 안내",
-        "image": "booth_blue.jpg"
+        "details": "추후 안내"
     },
     "blue_10": {
         "name": "부스 10",
         "number": "10",
         "description": "부스 10입니다.",
-        "details": "추후 안내",
-        "image": "booth_blue.jpg"
+        "details": "추후 안내"
     },
     "green_11": {
         "name": "부스 11",
         "number": "11",
         "description": "부스 11입니다.",
-        "details": "추후 안내",
-        "image": "booth_green.jpg"
+        "details": "추후 안내"
     },
     "green_12": {
         "name": "부스 12",
         "number": "12",
         "description": "부스 12입니다.",
-        "details": "추후 안내",
-        "image": "booth_green.jpg"
+        "details": "추후 안내"
     },
     "green_13": {
         "name": "부스 13",
         "number": "13",
         "description": "부스 13입니다.",
-        "details": "추후 안내",
-        "image": "booth_green.jpg"
+        "details": "추후 안내"
     },
     "green_14": {
         "name": "부스 14",
         "number": "14",
         "description": "부스 14입니다.",
-        "details": "추후 안내",
-        "image": "booth_green.jpg"
+        "details": "추후 안내"
     },
     "green_15": {
         "name": "부스 15",
         "number": "15",
         "description": "부스 15입니다.",
-        "details": "추후 안내",
-        "image": "booth_green.jpg"
+        "details": "추후 안내"
     },
     "green_16": {
         "name": "부스 16",
         "number": "16",
         "description": "부스 16입니다.",
-        "details": "추후 안내",
-        "image": "booth_green.jpg"
+        "details": "추후 안내"
     },
     "green_17": {
         "name": "부스 17",
         "number": "17",
         "description": "부스 17입니다.",
-        "details": "추후 안내",
-        "image": "booth_green.jpg"
+        "details": "추후 안내"
     },
     "green_18": {
         "name": "부스 18",
         "number": "18",
         "description": "부스 18입니다.",
-        "details": "추후 안내",
-        "image": "booth_green.jpg"
+        "details": "추후 안내"
     },
     "green_19": {
         "name": "부스 19",
         "number": "19",
         "description": "부스 19입니다.",
-        "details": "추후 안내",
-        "image": "booth_green.jpg"
+        "details": "추후 안내"
     },
     "green_20": {
         "name": "부스 20",
         "number": "20",
         "description": "부스 20입니다.",
-        "details": "추후 안내",
-        "image": "booth_green.jpg"
+        "details": "추후 안내"
     },
     "green_21": {
         "name": "부스 21",
         "number": "21",
         "description": "부스 21입니다.",
-        "details": "추후 안내",
-        "image": "booth_green.jpg"
+        "details": "추후 안내"
     },
     "food_1": {
         "name": "만동만길",
         "number": "1",
         "description": "떡순어묵",
-        "details": "떡볶이 : 6,000원\n순대 : 6,000원\n어묵(5개) : 6,000원\n우동 : 6,000원",
-        "image": "hotdog.jpg"
+        "details": "떡볶이 : 6,000원\n순대 : 6,000원\n어묵(5개) : 6,000원\n우동 : 6,000원"
     },
     "food_2": {
         "name": "VIP",
         "number": "2",
         "description": "크림, 칠리새우",
-        "details": "크림새우/칠리새우\n중 : 10,000원\n대 : 15,000원",
-        "image": "desert.jpg"
+        "details": "크림새우/칠리새우\n중 : 10,000원\n대 : 15,000원"
     },
     "food_3": {
         "name": "키다리푸드",
         "number": "3",
         "description": "야끼소바, 오코노미야끼",
-        "details": "야끼소바 : 10,000원\n오코노미야끼 : 10,000원",
-        "image": "desert.jpg"
+        "details": "야끼소바 : 10,000원\n오코노미야끼 : 10,000원"
     },
     "food_4": {
         "name": "부엉이푸드",
         "number": "4",
         "description": "닭꼬치",
-        "details": "닭꼬치 : 5,000원",
-        "image": "desert.jpg"
+        "details": "닭꼬치 : 5,000원"
     },
     "food_5": {
         "name": "로드리",
         "number": "5",
         "description": "야채곱창, 무뼈닭발",
-        "details": "야채곱창/무뼈닭발 : 13,000원",
-        "image": "desert.jpg"
+        "details": "야채곱창/무뼈닭발 : 13,000원"
     },
     "food_6": {
         "name": "뽀라츄러스",
         "number": "6",
         "description": "츄러스, 아이스크림",
-        "details": "츄러스 : 4,000원\n아이스크림 : 4,000원\n아이스크림 츄러스 : 7,000원",
-        "image": "desert.jpg"
+        "details": "츄러스 : 4,000원\n아이스크림 : 4,000원\n아이스크림 츄러스 : 7,000원"
     },
     "food_7": {
         "name": "이삭",
         "number": "7",
         "description": "생과일주스, 과일화채",
-        "details": "생과일쥬스 : 6,000원\n컵과일 : 7,000원\n과일화채 : 5,000원\n아이스 아메리카노 : 4,000원",
-        "image": "desert.jpg"
+        "details": "생과일쥬스 : 6,000원\n컵과일 : 7,000원\n과일화채 : 5,000원\n아이스 아메리카노 : 4,000원"
     },
     "food_8": {
         "name": "알코홀릭",
         "number": "8",
         "description": "주류판매",
-        "details": "추후 안내",
-        "image": "desert.jpg"
+        "details": "추후 안내"
     },
     "food_9": {
         "name": "톡톡팡팡",
         "number": "9",
         "description": "구슬아이스크림",
-        "details": "구슬아이스크림\n싱글 : 4,000원\n더블 : 7,000\n전체 10,000원",
-        "image": "desert.jpg"
+        "details": "구슬아이스크림\n싱글 : 4,000원\n더블 : 7,000\n전체 10,000원"
     },
     "food_10": {
         "name": "핑크제이",
         "number": "10",
         "description": "소고기불초밥, 연어초밥",
-        "details": "소고기불초밥 : 12,000원\n 연어초밥 : 13,000원",
-        "image": "desert.jpg"
+        "details": "소고기불초밥 : 12,000원\n 연어초밥 : 13,000원"
     },
     "food_11": {
         "name": "꽃길만걷자6",
         "number": "11",
         "description": "스테이크&덮밥",
-        "details": "스테이크&덮밥 : 12,000원",
-        "image": "desert.jpg"
+        "details": "스테이크&덮밥 : 12,000원"
     },
     "food_12": {
         "name": "유에프오",
         "number": "12",
         "description": "뉴욕핫도그, 감자튀김",
-        "details": "뉴욕핫도그(5종) : 5,500원\n감자튀김 : 5,000원\n세트 : 10,000원",
-        "image": "desert.jpg"
+        "details": "뉴욕핫도그(5종) : 5,500원\n감자튀김 : 5,000원\n세트 : 10,000원"
     },
     "food_13": {
         "name": "꽃길만걷자",
         "number": "13",
         "description": "닭강정",
-        "details": "닭강정\n중 : 10,000원\n대 : 17,000원",
-        "image": "desert.jpg"
+        "details": "닭강정\n중 : 10,000원\n대 : 17,000원"
     },
     "food_14": {
         "name": "명리푸드",
         "number": "14",
         "description": "통닭, 목살바베큐",
-        "details": "통닭바베큐 10,000원\n목살바베큐 18,000원",
-        "image": "desert.jpg"
+        "details": "통닭바베큐 10,000원\n목살바베큐 18,000원"
     },
     "food_15": {
         "name": "타임푸드",
         "number": "15",
         "description": "타코야끼",
-        "details": "타코야끼(10알) : 6,000원",
-        "image": "desert.jpg"
+        "details": "타코야끼(10알) : 6,000원"
     }
 }
 # 메인 페이지 (로고 및 날짜 포함)
