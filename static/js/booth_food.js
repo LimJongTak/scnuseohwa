@@ -73,33 +73,31 @@ green: [
     };
 
     window.toggleButtons = function (type) {
-        const daeun = document.getElementById("daeun-buttons");
-        const food = document.getElementById("foodtruck-buttons");
+    const daeun = document.getElementById("daeun-buttons");
+    const food = document.getElementById("foodtruck-buttons");
+    const mapImage = document.getElementById("map-image");
 
-        // 버튼 활성화 상태 관리
-        document.querySelectorAll(".tab-button").forEach(btn => {
-            btn.classList.remove("active"); // 모든 탭 버튼에서 active 제거
-        });
-        document.querySelectorAll(".booth-section-button").forEach(btn => {
-            btn.classList.remove("active"); // 모든 부스 버튼에서 active 제거
-        });
+    // 버튼 상태 초기화
+    document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+    document.querySelectorAll(".booth-section-button").forEach(btn => btn.classList.remove("active"));
 
-        // 탭 버튼 활성화
-        document.getElementById(`${type}-tab`).classList.add("active");
+    // 탭 버튼 활성화
+    document.getElementById(`${type}-tab`).classList.add("active");
 
-        // 각 탭 버튼 클릭 시, 해당 부스 종류를 보이게 함
-        if (type === "daeun") {
-            daeun.style.display = "block";
-            food.style.display = "none";
-            showBoothCards("blue"); // 대운동장 부스
-            document.getElementById("booth-blue").classList.add("active"); // 부스(파랑) 버튼 활성화
-        } else if (type === "foodtruck") {
-            daeun.style.display = "none";
-            food.style.display = "block";
-            showBoothCards("foodtruck1"); // 푸드트럭 1존
-            document.getElementById("foodtruck-1").classList.add("active"); // 푸드트럭(1존) 버튼 활성화
-        }
-    };
+    if (type === "daeun") {
+        daeun.style.display = "block";
+        food.style.display = "none";
+        showBoothCards("blue");
+        document.getElementById("booth-blue").classList.add("active");
+        if (mapImage) mapImage.src = window.map1Url;
+    } else if (type === "foodtruck") {
+        daeun.style.display = "none";
+        food.style.display = "block";
+        showBoothCards("foodtruck1");
+        document.getElementById("foodtruck-1").classList.add("active");
+        if (mapImage) mapImage.src = window.map2Url;
+    }
+};
 
     // 부스(파랑), 부스(초록), 부스(주황), 푸드트럭(1존), 푸드트럭(2존) 버튼 클릭 시 active 클래스 관리
     document.querySelectorAll(".booth-section-button").forEach(button => {
