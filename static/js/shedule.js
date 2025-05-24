@@ -46,11 +46,12 @@ window.onload = function () {
         const itemsDay2 = [
             { start: new Date("2025-05-29 11:00"), end: new Date("2025-05-29 18:00"), id: "item-9" },
             { start: new Date("2025-05-29 15:00"), end: new Date("2025-05-29 18:00"), id: "item-10" },
-            { start: new Date("2025-05-29 18:00"), end: new Date("2025-05-29 20:00"), id: "item-11" },
-            { start: new Date("2025-05-29 20:00"), end: new Date("2025-05-29 20:30"), id: "item-12" },
-            { start: new Date("2025-05-29 20:30"), end: new Date("2025-05-29 21:00"), id: "item-13" },
-            { start: new Date("2025-05-29 21:20"), end: new Date("2025-05-29 22:10"), id: "item-14" },
-            { start: new Date("2025-05-29 22:10"), end: new Date("2025-05-29 23:59"), id: "item-15" }
+            { start: new Date("2025-05-29 18:00"), end: new Date("2025-05-29 19:00"), id: "item-11" },
+            { start: new Date("2025-05-29 20:00"), end: new Date("2025-05-29 20:30"), id: "item-16" },
+            { start: new Date("2025-05-29 20:30"), end: new Date("2025-05-29 21:00"), id: "item-12" },
+            { start: new Date("2025-05-29 21:00"), end: new Date("2025-05-29 21:30"), id: "item-13" },
+            { start: new Date("2025-05-29 22:00"), end: new Date("2025-05-29 22:40"), id: "item-14" },
+            { start: new Date("2025-05-29 22:40"), end: new Date("2025-05-29 23:59"), id: "item-15" }
         ];
     
         // 시간대 비교 및 active 추가
