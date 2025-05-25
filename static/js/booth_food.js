@@ -10,20 +10,19 @@ document.addEventListener("DOMContentLoaded", function () {
     { id: "blue_7", name: "소원을 말해봐", number: "7번", description: "우주항공첨단소재스쿨학생회(SO:ONE)" },
     { id: "blue_8", name: "2025년 마약류 중독 및 오남용 예방 캠페인", number: "8번", description: "약학대학 학생회(도파민)" },
     { id: "blue_9", name: "월하랑 놀자", number: "9번", description: "애니메이션문화콘텐츠스쿨" },
-    { id: "blue_10", name: "GTEP 사업단", number: "10번", description: "GTEP 사업단" }
-],
-green: [
-    { id: "green_11", name: "양말목 티코스터&음료 리필스테이션", number: "11번", description: "중앙 동아리(새순)" },
-    { id: "green_12", name: "취향을 담은 꾸러미", number: "12번", description: "창업동아리(방향을 잡는 사람들)" },
-    { id: "green_13", name: "디망쉬", number: "13번", description: "디망쉬" },
-    { id: "green_14", name: "대학본부 1", number: "14번", description: "대학본부 1" },
-    { id: "green_15", name: "대학본부 2", number: "15번", description: "대학본부 2" },
-    { id: "green_16", name: "대학본부 3", number: "16번", description: "대학본부 3" },
-    { id: "green_17", name: "대학본부 4", number: "17번", description: "대학본부 4" },
-    { id: "green_18", name: "대학본부 5", number: "18번", description: "대학본부 5" },
-    { id: "green_19", name: "대학본부 6", number: "19번", description: "대학본부 6" },
-    { id: "green_20", name: "동화 속 한 장면", number: "20번", description: "인생네컷" },
-    { id: "green_21", name: "동화 속 한 장면", number: "21번", description: "인생네컷" }
+    { id: "blue_10", name: "GTEP 사업단", number: "10번", description: "GTEP 사업단" },
+    { id: "blue_11", name: "양말목 티코스터&음료 리필스테이션", number: "11번", description: "중앙 동아리(새순)" },
+    { id: "blue_12", name: "취향을 담은 꾸러미", number: "12번", description: "창업동아리(방향을 잡는 사람들)" },
+    { id: "blue_13", name: "디망쉬", number: "13번", description: "디망쉬" },
+    { id: "blue_14", name: "대학본부 1", number: "14번", description: "대학본부 1" },
+    { id: "blue_15", name: "대학본부 2", number: "15번", description: "대학본부 2" },
+    { id: "blue_16", name: "대학본부 3", number: "16번", description: "대학본부 3" },
+    { id: "blue_17", name: "대학본부 4", number: "17번", description: "대학본부 4" },
+    { id: "blue_18", name: "대학본부 5", number: "18번", description: "대학본부 5" },
+    { id: "blue_19", name: "대학본부 6", number: "19번", description: "대학본부 6" },
+    { id: "blue_20", name: "동화 속 한 장면", number: "20번", description: "인생네컷" },
+    { id: "blue_21", name: "동화 속 한 장면", number: "21번", description: "인생네컷" }
+
 ],
         foodtruck1: [
             { id: "food_1", name: "만동만길", number: "1번", description: "떡순어묵" },

@@ -79,82 +79,82 @@ booths = {
         "details": "booth10.png",
         # "image": "j.png"
     },
-    "green_11": {
+    "blue_11": {
         "name": "양말목 티코스터&음료 리필스테이션",
         "number": "11",
         "description": "중앙 동아리(새순)",
         "details": "booth11.png",
-        # "image": "k.png"
+    # "image": "k.png"
     },
-    "green_12": {
+    "blue_12": {
         "name": "취향을 담은 꾸러미",
         "number": "12",
         "description": "창업동아리(방향을 잡는 사람들)",
         "details": "booth12.png",
-        # "image": "l.png"
+    # "image": "l.png"
     },
-    "green_13": {
+    "blue_13": {
         "name": "디망쉬",
         "number": "13",
         "description": "디망쉬",
         "details": "booth13.png",
-        # "image": "m.png"
+    # "image": "m.png"
     },
-    "green_14": {
+    "blue_14": {
         "name": "대학본부 1",
         "number": "14",
         "description": "대학본부 1",
         "details": "booth14.png",
-        # "image": "n.png"
+    # "image": "n.png"
     },
-    "green_15": {
+    "blue_15": {
         "name": "대학본부 2",
         "number": "15",
         "description": "대학본부 2",
         "details": "booth15.png",
-        # "image": "o.png"
+    # "image": "o.png"
     },
-    "green_16": {
+    "blue_16": {
         "name": "대학본부 3",
         "number": "16",
         "description": "대학본부 3",
         "details": "booth16.png",
-        # "image": "p.png"
+    # "image": "p.png"
     },
-    "green_17": {
+    "blue_17": {
         "name": "대학본부 4",
         "number": "17",
         "description": "대학본부 4",
         "details": "booth17.png",
-        # "image": "q.png"
+    # "image": "q.png"
     },
-    "green_18": {
+    "blue_18": {
         "name": "대학본부 5",
         "number": "18",
         "description": "대학본부 5",
         "details": "booth18.png",
-        # "image": "r.png"
+    # "image": "r.png"
     },
-    "green_19": {
+    "blue_19": {
         "name": "대학본부 6",
         "number": "19",
         "description": "대학본부 6",
         "details": "booth19.png",
-        # "image": "s.png"
+    # "image": "s.png"
     },
-    "green_20": {
+    "blue_20": {
         "name": "동화 속 한 장면",
         "number": "20",
         "description": "총학생회(서화)",
         "details": "booth20.png",
-        # "image": "t.png"
+    # "image": "t.png"
     },
-    "green_21": {
+    "blue_21": {
         "name": "동화 속 한 장면",
         "number": "21",
         "description": "총학생회(서화)",
         "details": "booth21.png",
-        # "image": "u.png"
+    # "image": "u.png"
     },
     "food_1": {
         "name": "만동만길",
