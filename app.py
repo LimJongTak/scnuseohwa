@@ -10,151 +10,144 @@ app.register_blueprint(booth_blueprint, url_prefix='/booth')
 # 부스 정보 설정
 booths = {
     "blue_1": {
-        "name": "운영 부스",
+        "name": "운영 및 안내부스",
         "number": "1",
-        "description": "운영 부스입니다.",
+        "description": "운영 및 안내부스입니다.",
         "details": "booth1.png",
         # "image": "a.png"
     },
     "blue_2": {
-        "name": "운영 부스",
+        "name": "운영 및 안내부스",
         "number": "2",
-        "description": "운영 부스입니다.",
+        "description": "운영 및 안내부스입니다.",
         "details": "booth2.png",
         # "image": "b.png"
     },
     "blue_3": {
-        "name": "또굿집",
+        "name": "보건진료실",
         "number": "3",
-        "description": "축제준비위원회",
-        "details": "booth3.png",
+        "description": "보건진료실",
+        "details": "booth18.png",
         # "image": "c.png"
     },
     "blue_4": {
-        "name": "과일을 찾아라!",
+        "name": "대외협력과",
         "number": "4",
-        "description": "총학생회(서화)",
-        "details": "booth4.png",
+        "description": "대외협력과",
+        "details": "booth18.png",
         # "image": "d.png"
     },
     "blue_5": {
-        "name": "슬리퍼 발로 차",
+        "name": "학생상담센터",
         "number": "5",
-        "description": "총동아리연합회(결)",
-        "details": "booth5.png",
+        "description": "학생상담센터",
+        "details": "booth18.png",
         # "image": "e.png"
     },
     "blue_6": {
-        "name": "탁구공 던지기 게임",
+        "name": "인권센터",
         "number": "6",
-        "description": "그린스마트팜스쿨학생회(화랑)",
-        "details": "booth6.png",
+        "description": "인권센터",
+        "details": "booth18.png",
         # "image": "f.png"
     },
     "blue_7": {
-        "name": "소원을 말해봐",
+        "name": "또굿집",
         "number": "7",
-        "description": "우주항공첨단소재스쿨학생회(SO:ONE)",
-        "details": "booth7.png",
+        "description": "축제준비위원회",
+        "details": "booth3.png",
         # "image": "g.png"
     },
     "blue_8": {
-        "name": "2025년 마약류 중독 및 오남용 예방 캠페인",
+        "name": "과일을 찾아라!",
         "number": "8",
-        "description": "약학대학 학생회(도파민)",
-        "details": "booth8.png",
+        "description": "총학생회(서화)",
+        "details": "booth4.png",
         # "image": "h.png"
     },
     "blue_9": {
-        "name": "월하랑 놀자",
+        "name": "슬리퍼 발로 차",
         "number": "9",
-        "description": "애니메이션문화콘텐츠스쿨",
-        "details": "booth9.png",
+        "description": "총동아리연합회(결결)",
+        "details": "booth5.png",
         # "image": "i.png"
     },
     "blue_10": {
-        "name": "GTEP 사업단",
+        "name": "탁구공 던지기 게임",
         "number": "10",
-        "description": "GTEP 사업단",
-        "details": "booth10.png",
+        "description": "그린스마트팜스쿨학생회(화랑)",
+        "details": "booth6.png",
         # "image": "j.png"
     },
     "blue_11": {
-        "name": "양말목 티코스터&음료 리필스테이션",
+        "name": "소원을 말해봐",
         "number": "11",
-        "description": "중앙 동아리(새순)",
-        "details": "booth11.png",
+        "description": "우주항공첨단소재스쿨학생회(SO:ONE)",
+        "details": "booth7.png",
     # "image": "k.png"
     },
     "blue_12": {
-        "name": "취향을 담은 꾸러미",
+        "name": "2025년 마약류 중독 및 오남용 예방 캠페인",
         "number": "12",
-        "description": "창업동아리(방향을 잡는 사람들)",
-        "details": "booth12.png",
+        "description": "약학대학 학생회(도파민)",
+        "details": "booth8.png",
     # "image": "l.png"
     },
     "blue_13": {
-        "name": "디망쉬",
+        "name": "월하랑 놀자",
         "number": "13",
-        "description": "디망쉬",
-        "details": "booth13.png",
+        "description": "애니메이션문화콘텐츠스쿨",
+        "details": "booth9.png",
     # "image": "m.png"
     },
     "blue_14": {
-        "name": "대학본부 1",
+        "name": "GTEP 사업단",
         "number": "14",
-        "description": "대학본부 1",
-        "details": "booth14.png",
+        "description": "GTEP 사업단",
+        "details": "booth10.png",
     # "image": "n.png"
     },
     "blue_15": {
-        "name": "대학본부 2",
+        "name": "양말목 티코스터&음료 리필스테이션",
         "number": "15",
-        "description": "대학본부 2",
-        "details": "booth15.png",
+        "description": "중앙 동아리(새순)",
+        "details": "booth11.png",
     # "image": "o.png"
     },
     "blue_16": {
-        "name": "대학본부 3",
+        "name": "취향을 담은 꾸러미",
         "number": "16",
-        "description": "대학본부 3",
-        "details": "booth16.png",
+        "description": "창업동아리(방향을 잡는 사람들)",
+        "details": "booth12.png",
     # "image": "p.png"
     },
     "blue_17": {
-        "name": "대학본부 4",
+        "name": "디망쉬",
         "number": "17",
-        "description": "대학본부 4",
-        "details": "booth17.png",
+        "description": "디망쉬",
+        "details": "booth13.png",
     # "image": "q.png"
     },
     "blue_18": {
-        "name": "대학본부 5",
+        "name": "농협",
         "number": "18",
-        "description": "대학본부 5",
+        "description": "농협",
         "details": "booth18.png",
     # "image": "r.png"
     },
     "blue_19": {
-        "name": "대학본부 6",
+        "name": "동화 속 한 장면",
         "number": "19",
-        "description": "대학본부 6",
-        "details": "booth19.png",
+        "description": "총학생회(서화)",
+        "details": "booth20.png",
     # "image": "s.png"
     },
     "blue_20": {
         "name": "동화 속 한 장면",
         "number": "20",
         "description": "총학생회(서화)",
-        "details": "booth20.png",
-    # "image": "t.png"
-    },
-    "blue_21": {
-        "name": "동화 속 한 장면",
-        "number": "21",
-        "description": "총학생회(서화)",
         "details": "booth21.png",
-    # "image": "u.png"
+    # "image": "t.png"
     },
     "food_1": {
         "name": "만동만길",
