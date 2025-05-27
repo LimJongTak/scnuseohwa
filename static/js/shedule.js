@@ -50,8 +50,8 @@ window.onload = function () {
             { start: new Date("2025-05-29 20:00"), end: new Date("2025-05-29 20:30"), id: "item-16" },
             { start: new Date("2025-05-29 20:30"), end: new Date("2025-05-29 21:00"), id: "item-12" },
             { start: new Date("2025-05-29 21:00"), end: new Date("2025-05-29 21:30"), id: "item-13" },
-            { start: new Date("2025-05-29 22:00"), end: new Date("2025-05-29 22:40"), id: "item-14" },
-            { start: new Date("2025-05-29 22:40"), end: new Date("2025-05-29 23:59"), id: "item-15" }
+            { start: new Date("2025-05-29 21:30"), end: new Date("2025-05-29 22:00"), id: "item-14" },
+            { start: new Date("2025-05-29 22:00"), end: new Date("2025-05-29 23:59"), id: "item-15" }
         ];
     
         // 시간대 비교 및 active 추가
